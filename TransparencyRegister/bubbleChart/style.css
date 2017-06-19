@@ -27,6 +27,7 @@ a, a:visited {
 
 .bubble-hover {
   fill: #4682B4;
+  cursor: default!important;
 }
 
 .bubble-selected {
@@ -49,4 +50,8 @@ a.bubble-label {
 .bubble-label .bubble-label-value {
   font: 10px Lucida Sans Unicode;
   white-space: nowrap;
+}
+
+.bubble-label {
+  cursor: default!important;
 }

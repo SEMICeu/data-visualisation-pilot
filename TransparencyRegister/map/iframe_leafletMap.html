@@ -36,11 +36,11 @@
             text-align: left;
             line-height: 18px;
             color: #555;
-            width: 120px;
+            width: 125px;
           }
 
           .legend i {
-            width: 40px;
+            width: 42px;
             height: 18px;
             float: left;
             margin-right: 21px;
@@ -135,7 +135,7 @@
 
         <script type="text/javascript" src="../Datasets/eu-states.js"></script>
         <script type="text/javascript" src="../Datasets/datasetMap.js"></script>
-        
+
         <script type="text/javascript">
 
         $(document).bind('click', function(e) {
@@ -171,10 +171,16 @@
 			};
 
 			info.update = function (props) {
-				value = getValueFromRadioButton("group1");
-				this._div.innerHTML = (props ?
-					'<b>' + props + '</b><br />' + 'Number of entities: ' + categoriesData[props][value]
-					: 'Hover over a state');
+        if(props){
+          var cbList = getValuesFromCBWithoutUpdate();
+          var totNbr = 0;
+          cbList.forEach(function(cat){
+            totNbr += categoriesData[props][cat];
+          });
+  				this._div.innerHTML = (props ?
+  					'<b>' + props + '</b><br />' + 'Number of entities: ' + totNbr
+  					: 'Hover over a state');
+        }
 			};
 
             info.addTo(map);
@@ -280,6 +286,27 @@
                 }
               }
               //////////
+              /*var res = [];
+              $('.main-cb').each(function(){
+                if($(this).is(":checked")){
+                  res.push($(this).attr('value'));
+                }
+                else{
+                  var cbID = $(this).attr('id');
+                  $('.'+cbID).each(function(){
+                    if($(this).is(":checked")){
+                      res.push($(this).attr('value'));
+                    }
+                  });
+                }
+              });
+
+              return res*/
+              var res = getValuesFromCBWithoutUpdate();
+              return res;
+            }
+
+            function getValuesFromCBWithoutUpdate(){
               var res = [];
               $('.main-cb').each(function(){
                 if($(this).is(":checked")){
@@ -295,7 +322,7 @@
                 }
               });
 
-              return res
+              return res;
             }
 
             function setColors(element) {
@@ -359,12 +386,16 @@
             function calculateScales () {
               scale.length = 0;
               max = 0;
-              var value = getValueFromRadioButton("group1");
+              var cbList = getValuesFromCBWithoutUpdate();
 
               geojson.eachLayer(function(layer) {
-                if(categoriesData[layer.feature.properties.name][value] != undefined) {
-                  max = categoriesData[layer.feature.properties.name][value] > max ? categoriesData[layer.feature.properties.name][value] : max;
-                }
+                  var totNbr = 0;
+                  cbList.forEach(function(cat){
+                    if(categoriesData[layer.feature.properties.name][cat]){
+                      totNbr += categoriesData[layer.feature.properties.name][cat];
+                    }
+                  });
+                  max = totNbr > max ? totNbr : max;
               });
 
               if(max < 5) {
@@ -390,12 +421,15 @@
                 var  grades = [0, 1, scale[0], scale[1], scale[2], scale[3]],
                     labels = [],
                     from, to;
-
+					scale[4] = scale[4] + 1
                     labels.push("<b>Number of entities:</b>")
 
                 for (var i = 0; i < grades.length; i++) {
                       from = grades[i];
-                      to = grades[i+1] -1;
+                      
+                          to = grades[i+1] -1;
+                      
+
 
                       labels.push(
                           '<i style="background:' + getColor(from) + '"></i> ' +
