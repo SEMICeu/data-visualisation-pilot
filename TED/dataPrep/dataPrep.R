@@ -1,6 +1,10 @@
 install.packages("jsonlite",repos = "http://cran.us.r-project.org")
 library(jsonlite)
 
+
+
+
+
 ### download file###
 args <- commandArgs(trailingOnly=TRUE)
 apiKey <- args[1]
@@ -10,14 +14,20 @@ downloadData <- function(pagenum) {
                        apiKey,
                        "&q=AC%3D[1]&scope=2&pageSize=1000&pageNum=",
                        pagenum,
-                       "&sortField=ND&fields=ND,NUTS,DT,NC,ND,PD,PR,TD,MA,DI",
-                       sep="")
+#                       "&sortField=ND&fields=ND,NUTS,DT,NC,ND,PD,PR,TD,MA,DI",
+#                       "&sortField=ND&fields=AA,AC,CY,DS,MA,NC,ND,OC,OJ,OL,OY,PC,PD,PR,RC,RP,TD,TY,NUTS",
+#                       "&sortField=ND&fields=AA,AC,CY,DI,DS,DT,MA,NC,ND,OC,OJ,OL,OY,PC,PD,PR,RC,RN,RP,TD,TY,NUTS,content",
+"&sortField=ND&fields=ND,RC,MA,DI,TD,PD,DT",
+  sep="")
   downloadURL <- URLencode(downloadURL)
   downloadData <- readLines(downloadURL, warn="F") 
+  cat(toJSON(downloadData, pretty=TRUE), file = "../Datasets/APIoutput.js", append = TRUE)
   downloadData <- fromJSON(downloadData)
   downloadData <- downloadData$results 
   return(downloadData)
 }
+
+
 
 pageNum <- 1 
 PreviousData<- NULL
@@ -40,6 +50,7 @@ remove(PreviousData)
 remove(apiKey)
 remove(pageNum)
 
+#write.table(TEDData, "../Datasets/APIOutput.csv", sep = ",", quote = FALSE, row.names = FALSE)
 
 TEDData <- unique(TEDData)
 
@@ -73,7 +84,7 @@ save <- TEDData
 
 TEDData <- save
 
-
+TEDData <- subset(TEDData, select = c("ND","RC","MA","DI"))
 
 ### create output ###
 
@@ -85,10 +96,10 @@ for (i in 1:nrow(TEDData)) { #for each notice
   noticeID <- substr(noticeID, 5, nchar(noticeID))
   
   noticeID <- paste(noticeID, noticeYear, sep = "-")
-  noticeDescription <- list(ID= noticeID, NC = TEDData$NC[[i]], PR= TEDData$PR[[i]])
+  noticeDescription <- list(ID= noticeID, LB= TEDData$DI[[i]], MA=TEDData$MA[[i]])
   
-  for (j in 1:length(TEDData$NUTS[[i]])) { # for each NUTS
-    NUTSregionName <- TEDData$NUTS[[i]][j]
+  for (j in 1:length(TEDData$RC[[i]])) { # for each NUTS
+    NUTSregionName <- TEDData$RC[[i]][j]
     NUTSLevel <- nchar(gsub('[^0-9]*', "",NUTSregionName))
 
     for (k in 0:NUTSLevel) {
