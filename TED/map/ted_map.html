@@ -176,7 +176,7 @@
         <div id="map_frame">
           <button class="filter-button" id="mainActivity-filter-button" onclick="openMAPanel()">Main activities</button>
           <button class="filter-button" id="legalBasis-filter-button" onclick="openLBPanel()">Legal Basis</button>
-          <button class="filter-button" id="nuts-filter-button" onclick="openNUTSPanel()">NUTS level</button>
+          <button class="filter-button" id="nuts-filter-button" onclick="openNUTSPanel()">NUTS</button>
           <!--<div id="NUTS-filter-button">
             <select onchange="selectNuts(this)" id="NUTS-filter-dd">
               <option value="nuts0_data">NUTS 0</option>
@@ -191,7 +191,7 @@
             <!--<h2 style="padding-left:10px; float:left; width:90%">Filters</h2>-->
             <div class="filter_panel" id="mainActivity_filterColumn">
               <form>
-                <h4 class="filters_title">Main activities for notices publishes by a contracting authority</h4>
+                <h4 id="ma-title-0" class="filters_title">Main activities for notices publishes by a contracting authority</h4>
                 <input id= "ma0" type="checkbox" name="mainActivity" value="A" checked onClick="JavaScript:setColors(this)"><label id="ma0_label" for="ma0">Housing and community amenities</label><br>
                 <input id= "ma1" type="checkbox" name="mainActivity" value="B" checked onClick="JavaScript:setColors(this)"><label id="ma1_label" for="ma1">Social protection</label><br>
                 <input id= "ma2" type="checkbox" name="mainActivity" value="C" checked onClick="JavaScript:setColors(this)"><label id="ma2_label" for="ma2">Recreation, culture and religion</label><br>
@@ -204,7 +204,7 @@
                 <input id= "ma9" type="checkbox" name="mainActivity" value="L" checked onClick="JavaScript:setColors(this)"><label id="ma9_label" for="ma9">Education</label><br>
                 <input id= "ma10" type="checkbox" name="mainActivity" value="S" checked onClick="JavaScript:setColors(this)"><label id="ma10_label" for="ma10">General public services</label><br>
                 <input id= "ma11" type="checkbox" name="mainActivity" value="U" checked onClick="JavaScript:setColors(this)"><label id="ma11_label" for="ma11">Public order and safety</label><br>
-                <h4 class="filters_title">Main activities for notices publishes by a contracting entity</h4>
+                <h4 id="ma-title-1" class="filters_title">Main activities for notices publishes by a contracting entity</h4>
                 <input id= "ma12" type="checkbox" name="mainActivity" value="G" checked onClick="JavaScript:setColors(this)"><label id="ma12_label" for="ma12">Production, transport and distribution of gas and heat</label><br>
                 <input id= "ma13" type="checkbox" name="mainActivity" value="J" checked onClick="JavaScript:setColors(this)"><label id="ma13_label" for="ma13">Extraction of gas and oil</label><br>
                 <input id= "ma14" type="checkbox" name="mainActivity" value="M" checked onClick="JavaScript:setColors(this)"><label id="ma14_label" for="ma14">Exploration and extraction of coal and other solid fuels</label><br>
@@ -214,13 +214,13 @@
                 <input id= "ma18" type="checkbox" name="mainActivity" value="S" checked onClick="JavaScript:setColors(this)"><label id="ma18_label" for="ma18">General public services</label><br>
                 <input id= "ma19" type="checkbox" name="mainActivity" value="T" checked onClick="JavaScript:setColors(this)"><label id="ma19_label" for="ma19">Urban railway/light rail, metro, tramway, trolleybus or bus services</label><br>
                 <input id= "ma20" type="checkbox" name="mainActivity" value="W" checked onClick="JavaScript:setColors(this)"><label id="ma20_label" for="ma20">Water</label><br>
-                <h4 class="filters_title">Other activity</h4>
+                <h4 id="ma-title-2" class="filters_title">Other activity</h4>
                 <input id= "ma21" type="checkbox" name="mainActivity" value="O" checked onClick="JavaScript:setColors(this)"><label id="ma21_label" for="ma21">Other activity</label><br>
               </form>
             </div>
             <div id="legalBasis_filterColumn" class="filter_panel">
               <form action="/action_page.php" method="get">
-                <h4 class="filters_title">Legal basis</h4>
+                <h4 id="lb-title-0" class="filters_title">Legal basis</h4>
                 <input id= "lb0" type="checkbox" name="legalBasis" value="2004/18/EC" checked onClick="JavaScript:setColors(this)">Classical Directive (2004/18/EC)<br>
                 <input id= "lb1" type="checkbox" name="legalBasis" value="2004/17/EC" checked onClick="JavaScript:setColors(this)">Utilities Directive (2004/17/EC)<br>
                 <input id= "lb2" type="checkbox" name="legalBasis" value="2009/81/EC" checked onClick="JavaScript:setColors(this)">Defence Directive (2009/81/EC)<br>
@@ -232,7 +232,7 @@
             </div>
             <div id="nuts_filterColumn" class="filter_panel">
               <form action="/action_page.php" method="get">
-                <h4 class="filters_title">NUTS level</h4>
+                <h4 class="filters_title">NUTS</h4>
                 <input type="radio" name="nuts" value="nuts0_data" checked onClick="JavaScript:selectNuts(this)">NUTS 0<br>
                 <input type="radio" name="nuts" value="nuts1_data" onClick="JavaScript:selectNuts(this)">NUTS 1<br>
                 <input type="radio" name="nuts" value="nuts2_data" onClick="JavaScript:selectNuts(this)">NUTS 2<br>
@@ -341,6 +341,13 @@
             userLang = 'en-US';
           }
           $('#list-header').text(texts[userLang].tList);
+          $('#mainActivity-filter-button').text(texts[userLang].mainActivities);
+          $('#legalBasis-filter-button').text(texts[userLang].legalBasis);
+          $('#ma-title-0').text(texts[userLang].matitle0);
+          $('#ma-title-1').text(texts[userLang].matitle1);
+          $('#ma-title-2').text(texts[userLang].matitle2);
+          $('#lb-title-0').text(texts[userLang].legalBasis);
+
 
           var xmlLang = userLang.split('-')[0].toUpperCase();
 
@@ -350,9 +357,6 @@
 				if (this.readyState == 4 && this.status == 200) {
 					updateLabels(this);
 				}
-        else{
-          console.log('amot');
-        }
 			};
 			xhttp.open("GET", "../datasets/Doc/code_mainactivities.xml", true);
 			xhttp.send();
@@ -509,12 +513,12 @@
                     $('#list').append('<h3 style="text-align:center;">'+texts[userLang].noTenders+'</h3>');
                   }
                   else {
-                    $('#list').append("<div id='first-col' style='width:120px; float:left;'></div>");
+                    $('#list').append("<div id='first-col' style='width:130px; float:left;'></div>");
                     $('#first-col').append('<h3>ID</h3>');
-                    $('#list').append("<div id='second-col' style='width:502px; float:left;'></div>");
-                    $('#second-col').append('<h3>Main activity</h3>');
+                    $('#list').append("<div id='second-col' style='width:450px; float:left;'></div>");
+                    $('#second-col').append('<h3>'+texts[userLang].mainActivities+'</h3>');
                     $('#list').append("<div id='third-col' style='width:110px; float:left;'></div>");
-                    $('#third-col').append('<h3>Legal basis</h3>');
+                    $('#third-col').append('<h3>'+texts[userLang].legalBasis+'</h3>');
                     for (var t in TEDdata[e.target.feature.properties.NUTS_ID]){
                       if( filtersList.indexOf(TEDdata[e.target.feature.properties.NUTS_ID][t]['MA'][0]) >= 0
                           && filtersList.indexOf(TEDdata[e.target.feature.properties.NUTS_ID][t]['LB'][0]) >= 0) {

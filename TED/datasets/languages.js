@@ -2,9 +2,19 @@ var texts = {
 'en-US': {hover:"Hover over a state",
         nTenders:"Number of tenders: ",
         tList:"List of tenders",
-        noTenders:"No tenders"},
+        noTenders:"No tenders",
+		mainActivities:"Main activities",
+		legalBasis:"Legal basis",
+		matitle0:"Main activities for notices published by a contracting authority",
+		matitle1:"Main activities for notices published by a contracting entity",
+		matitle2:"Other activity"},
 'fr': {hover:"Sélectionner un pays",
         nTenders:"Nombre d'offres: ",
         tList:"Liste d'offres",
-        noTenders:"Aucune offre"}
+        noTenders:"Aucune offre",
+		mainActivities:"Activités",
+		legalBasis:"Bases légales",
+		matitle0:"Activités pour les offres publiées par une autorité contractante",
+		matitle1:"Activités pour les offres publiées par une entité contractante",
+		matitle2:"Autres"}
 }
