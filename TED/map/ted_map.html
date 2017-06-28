@@ -336,6 +336,7 @@
           }
 
           var userLang = navigator.language || navigator.userLanguage;
+		  console.log(userLang);
           if(!texts[userLang]){
             userLang = 'en-US';
           }
