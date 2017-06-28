@@ -8,11 +8,13 @@
         <link rel="stylesheet" href="css/leaflet.css" />
         <script src='js/jquery-1.11.0.min.js' type="text/javascript"></script>
         <script src="js/leaflet.js"></script>
+        <script src='http://underscorejs.org/underscore-min.js' type="text/javascript"></script>
+
 
         <style>
 
           #map {
-            width: 750px;
+            width: 969px;
             height: 600px;
           }
 
@@ -45,16 +47,19 @@
             opacity: 1;
           }
 
-          select { text-indent: 30px; }
+          select { text-indent: 20px; }
 
-          #filter_panel {
+          .filter_panel {
             position: absolute;
-            background-color: #DDD;
-            z-index:10000;
-            display: none;
+            //background-color: #DDD;
+            z-index:10006;
             font-size: 15px;
-            height: 600px;
+            height: 575px;
             top:0;
+            padding-top:25px;
+            width:450px!important;
+            background:rgba(255,255,255,0.8);
+            box-shadow: 0 0 15px rgba(0,0,0,0.2);
           }
 
           #openFilterPanel {
@@ -70,22 +75,121 @@
             width:30px;
             height: 30px;
             background-image:url(images/Cross.svg);
+            position: relative;
+            top:0px;
+            left:360px;
           }
 
           .filters_title {
             margin: 8px 8px 8px 3px;
           }
 
+          .filter-button{
+            position: relative;
+            z-index: 10007;
+            top: -10px;
+            height: 25px;
+            width: 154px;
+            background-color: #F9F9F9;
+            border: 1px solid #777;
+            background-image:url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxOCIgaGVpZ2h0PSIxOCIgdmlld0JveD0iMCAwIDE4IDE4Ij4KICAgIDxwYXRoIGQ9Ik01IDhsNCA0IDQtNHoiLz4KICAgIDxwYXRoIGQ9Ik0wIDBoMTh2MThIMHoiIGZpbGw9Im5vbmUiLz4KPC9zdmc+Cg==);
+            background-repeat:no-repeat;
+            background-position: right;
+          }
+
+          #mainActivity-filter-button {
+            right: 0px;
+          }
+
+          #legalBasis-filter-button {
+            right: 5px;
+          }
+
+          #nuts-filter-button {
+            right: 10px;
+          }
+
+          #NUTS-filter-button {
+            float: left;
+            z-index: 10007;
+            position: relative;
+            top: -10px;
+            left:258px;
+            border: 1px solid #777;
+          }
+
+          #NUTS-filter-dd {
+            height: 23px;
+            width: 130px;
+          }
+
+          #mainActivity_filterColumn {
+            display:none;
+            padding-left:10px;
+          }
+
+          #legalBasis_filterColumn {
+            display:none;
+            padding-left:10px;
+          }
+
+          #nuts_filterColumn {
+            display:none;
+            padding-left:10px;
+          }
+
+          #tenders-list {
+            position:absolute;
+            top:32px;
+            left:115px;
+            text-align:center;
+            font: 14px/16px Arial, Helvetica, sans-serif;
+            z-index: 10006;
+            //background-color: #EEE;
+            width: 750px;
+            display: none;
+            padding-bottom:23px;
+            background:rgba(255,255,255,0.8);
+            box-shadow: 0 0 15px rgba(0,0,0,0.2);
+            border-radius: 5px;
+          }
+
+          .click-div {
+            width:900px;
+            height:600px;
+            z-index:10005;
+            position:absolute;
+            top:0;
+            left:0;
+            display: none;
+          }
+
+          .leaflet-control-zoom {
+            margin-top: 30px!important;
+          }
+
         </style>
     </head>
 
     <body>
+        <div class="click-div"></div>
         <div id="map_frame">
-          <button id="openFilterPanel" onclick="openFilterPanel()"></button>
-          <div id="filter_panel">
+          <button class="filter-button" id="mainActivity-filter-button" onclick="openMAPanel()">Main activities</button>
+          <button class="filter-button" id="legalBasis-filter-button" onclick="openLBPanel()">Legal Basis</button>
+          <button class="filter-button" id="nuts-filter-button" onclick="openNUTSPanel()">NUTS level</button>
+          <!--<div id="NUTS-filter-button">
+            <select onchange="selectNuts(this)" id="NUTS-filter-dd">
+              <option value="nuts0_data">NUTS 0</option>
+              <option value="nuts1_data">NUTS 1</option>
+              <option value="nuts2_data">NUTS 2</option>
+              <option value="nuts3_data">NUTS 3</option>
+            </select>
+          </div>-->
+
+          <!--<button id="openFilterPanel" onclick="openFilterPanel()"></button>-->
+          <!--<div id="filter_panel">-->
             <!--<h2 style="padding-left:10px; float:left; width:90%">Filters</h2>-->
-            <button id="closeFilterPanel" style="float:right;" onclick="closeFilterPanel()"></button>
-            <div id="mainActiviy_filterColumn" style="float:left; padding-left:10px; width:440px;">
+            <div class="filter_panel" id="mainActivity_filterColumn">
               <form>
                 <h4 class="filters_title">Main activities for notices publishes by a contracting authority</h4>
                 <input id= "ma0" type="checkbox" name="mainActivity" value="A" checked onClick="JavaScript:setColors(this)"><label id="ma0_label" for="ma0">Housing and community amenities</label><br>
@@ -114,68 +218,121 @@
                 <input id= "ma21" type="checkbox" name="mainActivity" value="O" checked onClick="JavaScript:setColors(this)"><label id="ma21_label" for="ma21">Other activity</label><br>
               </form>
             </div>
-            <div id="legalBasis_filterColumn" style="float:left; padding-right:10px; width:440px;">
-              <h4 class="filters_title">NUTS Level</h4>
-              <div>
-                <select onchange="selectNuts(this)" style="width:183px;">
-                  <option value="nuts0_data">NUTS 0</option>
-                  <option value="nuts1_data">NUTS 1</option>
-                  <option value="nuts2_data">NUTS 2</option>
-                  <option value="nuts3_data">NUTS 3</option>
-                </select>
-              </div>
+            <div id="legalBasis_filterColumn" class="filter_panel">
               <form action="/action_page.php" method="get">
                 <h4 class="filters_title">Legal basis</h4>
-                <input id= "lb0" type="checkbox" name="legalBasis" value="Classical Directive (2004/18/EC)" checked onClick="JavaScript:setColors(this)">Classical Directive (2004/18/EC)<br>
-                <input id= "lb1" type="checkbox" name="legalBasis" value="Utilities Directive (2004/17/EC)" checked onClick="JavaScript:setColors(this)">Utilities Directive (2004/17/EC)<br>
-                <input id= "lb2" type="checkbox" name="legalBasis" value="Defence Directive (2009/81/EC)" checked onClick="JavaScript:setColors(this)">Defence Directive (2009/81/EC)<br>
-                <input id= "lb3" type="checkbox" name="legalBasis" value='Regulation "Public passenger transport" (1370/2007)' checked onClick="JavaScript:setColors(this)">Regulation "Public passenger transport" (1370/2007)<br>
-                <input id= "lb4" type="checkbox" name="legalBasis" value="Concession contract Directive (2014/23/EU)" checked onClick="JavaScript:setColors(this)">Concession contract Directive (2014/23/EU)<br>
-                <input id= "lb5" type="checkbox" name="legalBasis" value="Public procurement Directive (2014/24/EU)" checked onClick="JavaScript:setColors(this)">Public procurement Directive (2014/24/EU)<br>
-                <input id= "lb6" type="checkbox" name="legalBasis" value="Utilities (water, energy, transport and postal services) Directive (2014/25/EU)" checked onClick="JavaScript:setColors(this)">Utilities (water, energy, transport and postal services) Directive (2014/25/EU)<br>
+                <input id= "lb0" type="checkbox" name="legalBasis" value="2004/18/EC" checked onClick="JavaScript:setColors(this)">Classical Directive (2004/18/EC)<br>
+                <input id= "lb1" type="checkbox" name="legalBasis" value="2004/17/EC" checked onClick="JavaScript:setColors(this)">Utilities Directive (2004/17/EC)<br>
+                <input id= "lb2" type="checkbox" name="legalBasis" value="2009/81/EC" checked onClick="JavaScript:setColors(this)">Defence Directive (2009/81/EC)<br>
+                <input id= "lb3" type="checkbox" name="legalBasis" value='1370/2007' checked onClick="JavaScript:setColors(this)">Regulation "Public passenger transport" (1370/2007)<br>
+                <input id= "lb4" type="checkbox" name="legalBasis" value="2014/23/EU" checked onClick="JavaScript:setColors(this)">Concession contract Directive (2014/23/EU)<br>
+                <input id= "lb5" type="checkbox" name="legalBasis" value="2014/24/EU" checked onClick="JavaScript:setColors(this)">Public procurement Directive (2014/24/EU)<br>
+                <input id= "lb6" type="checkbox" name="legalBasis" value="2014/25/EU" checked onClick="JavaScript:setColors(this)">Utilities (water, energy, transport and postal services) Directive (2014/25/EU)<br>
               </form>
             </div>
-          </div>
+            <div id="nuts_filterColumn" class="filter_panel">
+              <form action="/action_page.php" method="get">
+                <h4 class="filters_title">NUTS level</h4>
+                <input type="radio" name="nuts" value="nuts0_data" checked onClick="JavaScript:selectNuts(this)">NUTS 0<br>
+                <input type="radio" name="nuts" value="nuts1_data" onClick="JavaScript:selectNuts(this)">NUTS 1<br>
+                <input type="radio" name="nuts" value="nuts2_data" onClick="JavaScript:selectNuts(this)">NUTS 2<br>
+                <input type="radio" name="nuts" value='nuts3_data' onClick="JavaScript:selectNuts(this)">NUTS 3<br>
+              </form>
+            </div>
+          <!--</div>-->
           <div id="map_container" style="position:absolute;top:0;">
             <div id='map'></div>
           </div>
         </div>
-        <div style="position:absolute; top:10px; left:776px; text-align:left; font: 14px/16px Arial, Helvetica, sans-serif;">
-          <div style="width:183px; text-align:center;">
-            <h3 id="list-header" style="padding-top:11px;"></h3>
+        <div id="tenders-list" class="tenders_list" style="overflow-y:auto;">
+          <button id="closeFilterPanel" onclick="closeTendersList()"></button>
+          <div style="text-align:center;">
+            <h1 id="list-header" style="margin-top:2px;"></h1>
           </div>
-          <div id="list" style="height:508px; overflow-y:scroll; width:200px;"><div>
+          <div id="list" style="height:420px; overflow-y:scroll; width:100%;"><div>
         </div>
 
         <script type="text/javascript" src="../datasets/languages.js"></script>
-        <script type="text/javascript" src="../datasets/TEDtest.js"></script>
+        <script type="text/javascript" src="../datasets/TEDdata.js"></script>
         <script type="text/javascript" src="../datasets/nuts_0.js"></script>
         <script type="text/javascript" src="../datasets/nuts_1.js"></script>
         <script type="text/javascript" src="../datasets/nuts_2.js"></script>
         <script type="text/javascript" src="../datasets/nuts_3.js"></script>
         <script type="text/javascript">
 
+        $(document).bind('click', function(e) {
+            if ($(e.target).hasClass("click-div"))
+            {
+                $("#tenders-list").hide();
+                $('#legalBasis_filterColumn').hide();
+                $('#mainActivity_filterColumn').hide();
+                $('#nuts_filterColumn').hide();
+                $('.click-div').hide();
+            }
+        });
+
           var filtersList = [ "A", "B", "C", "D", "E", "F", "H", "I", "K", "L", "S", "U",
                               "G", "J", "M", "N", "P", "R", "S", "T", "W", "O",
-                              "Classical Directive (2004/18/EC)", "Utilities Directive (2004/17/EC)",
-                              "Defence Directive (2009/81/EC)",
-                              'Regulation "Public passenger transport" (1370/2007)',
-                              "Concession contract Directive (2014/23/EU)",
-                              "Public procurement Directive (2014/24/EU)",
-                              "Utilities (water, energy, transport and postal services) Directive (2014/25/EU)"];
+                              "2004/18/EC", "2004/17/EC",
+                              "2009/81/EC",
+                              '1370/2007',
+                              "2014/23/EU",
+                              "2014/24/EU",
+                              "2014/25/EU"];
 
           var cb_attr = ["A", "B", "C", "D", "E", "F", "H", "I", "K", "L", "S",
                          "U", "G", "J", "M", "N", "P", "R", "S", "T", "W", "O"];
 
+          var ma_language={};
+
           var geojson;
           var scale;
 
-          function closeFilterPanel(){
-            $("#filter_panel").hide();
+          function closeTendersList() {
+            $("#tenders-list").hide();
+            $('.click-div').hide();
           }
 
-          function openFilterPanel(){
-            $("#filter_panel").show();
+          function openMAPanel(){
+            $('#legalBasis_filterColumn').hide();
+            $('#nuts_filterColumn').hide();
+            $("#tenders-list").hide();
+            if($('#mainActivity_filterColumn').is(':visible')){
+              $('#mainActivity_filterColumn').hide();
+              ('.click-div').hide();
+            }
+            else {
+              $('.click-div').show();
+              $('#mainActivity_filterColumn').show();
+            }
+          }
+
+          function openLBPanel(){
+            $('#mainActivity_filterColumn').hide();
+            $('#nuts_filterColumn').hide();
+            $("#tenders-list").hide();
+            if($('#legalBasis_filterColumn').is(':visible')){
+              $('#legalBasis_filterColumn').hide();
+              $('.click-div').hide();
+            }
+            else {
+              $('.click-div').show();
+              $('#legalBasis_filterColumn').show();
+            }
+          }
+
+          function openNUTSPanel(){
+            $('#mainActivity_filterColumn').hide();
+            $('#legalBasis_filterColumn').hide();
+            $("#tenders-list").hide();
+            if($('#nuts_filterColumn').is(':visible')){
+              $('#nuts_filterColumn').hide();
+              $('.click-div').hide();
+            }
+            else {
+              $('.click-div').show();
+              $('#nuts_filterColumn').show();
+            }
           }
 
           var userLang = navigator.language || navigator.userLanguage;
@@ -186,22 +343,15 @@
 
           var xmlLang = userLang.split('-')[0].toUpperCase();
 
-          /*$.ajax({
-              url: "/data-visualisation-pilot/TED/datasets/Doc/code_mainactivities.xml",
-              async: false,   // asynchronous request? (synchronous requests are discouraged...)
-              cache: false,   // with this, you can force the browser to not make cache of the retrieved data
-              dataType: "text",  // jQuery will infer this, but you can set explicitly
-              success: function( data, textStatus, jqXHR ) {
-                  console.log(data);
-              }
-          });*/
-
 
 			var xhttp = new XMLHttpRequest();
 			xhttp.onreadystatechange = function() {
 				if (this.readyState == 4 && this.status == 200) {
 					updateLabels(this);
 				}
+        else{
+          console.log('amot');
+        }
 			};
 			xhttp.open("GET", "../datasets/Doc/code_mainactivities.xml", true);
 			xhttp.send();
@@ -210,15 +360,15 @@
 				var xmlDoc = xml.responseXML;
 				var x = xmlDoc.getElementsByTagName('MA')[0].getElementsByTagName('elem')[0];
 				var y = x.childNodes[0];
-				console.log(x.length);
-        console.log(y.nodeValue);
-        console.log(xmlDoc.getElementsByTagName('MA').length)
+
+        console.log("is life amazing?")
 
         for(var i = 0; i < xmlDoc.getElementsByTagName('MA').length; i++){
           if(cb_attr.indexOf(xmlDoc.getElementsByTagName('MA')[i].getAttribute('code')) > -1){
             for(var j=0; j<xmlDoc.getElementsByTagName('MA')[i].getElementsByTagName('elem').length; j++){
               if(xmlDoc.getElementsByTagName('MA')[i].getElementsByTagName('elem')[j].getAttribute('lg')==xmlLang){
                 $('#ma'+cb_attr.indexOf(xmlDoc.getElementsByTagName('MA')[i].getAttribute('code'))+'_label').text(xmlDoc.getElementsByTagName('MA')[i].getElementsByTagName('elem')[j].childNodes[0].nodeValue);
+                ma_language[xmlDoc.getElementsByTagName('MA')[i].getAttribute('code')] = xmlDoc.getElementsByTagName('MA')[i].getElementsByTagName('elem')[j].childNodes[0].nodeValue;
               }
             }
           }
@@ -233,9 +383,7 @@
           }
         });*/
 			}
-          /*for (var i=0; i<22; i++) {
-            console.log($(xml).find('MA[code='+$("#ma"+1).attr("value")+']'));
-          }*/
+
 
           drawMap(nuts0_data);
 
@@ -253,7 +401,7 @@
 
               var map = L.map('map').setView([52, 15], 4);
 
-			var cartodbAttribution = '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, Credit; <a href="http://ec.europa.eu/eurostat/web/gisco/overview">EC-GISCO</a>';
+			var cartodbAttribution = '&copy; <a target="_blank" href="http://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, Credit; <a target="_blank" href="http://ec.europa.eu/eurostat/web/gisco/overview">EC-GISCO</a>';
 
 			var positron = L.tileLayer('http://europa.eu/webtools/maps/tiles/coast/{z}/{y}/{x}', {
 				attribution: cartodbAttribution
@@ -286,17 +434,6 @@
 
               info.addTo(map);
 
-
-              // get color depending on value
-              /*function getColor(d) {
-                  return  d >= scale[3]  ? '#145FAB' :
-                          d >= scale[2]  ? '#0092C2' :
-                          d >= scale[1]  ? '#47B5C0' :
-                          d >= scale[0]  ? '#80CCBA' :
-                          d >= 1         ? '#C5E9B0' :
-                                           '#F5F59C' ;
-              }*/
-
               function style(feature) {
                   return {
                       weight: 1,
@@ -320,33 +457,6 @@
 
                info.update(layer.feature.properties);
               }
-
-              /*function setColors(elem) {
-                  if(elem != undefined) {
-                    if($("#"+elem.id).is(":checked")) {
-                      filtersList.push($("#"+elem.id).attr("value"));
-                    }
-                    else {
-                      filtersList.splice(filtersList.indexOf($("#"+elem.id).attr("value")),1);
-                    }
-                  }
-
-                  geojson.eachLayer(function(layer) {
-                      if(TEDdata[layer.feature.properties.NUTS_ID] != undefined) {
-                        var val = getNumberOfTenders(layer.feature.properties.NUTS_ID);
-                        layer.setStyle({
-                            fillColor: getColor(val)
-                        });
-                      }
-                      else{
-                        layer.setStyle({
-                            fillColor: getColor(0)
-                        });
-                      }
-                  });
-              }*/
-
-              //var geojson;
 
               function resetHighlight(e) {
                   var layer = e.target;
@@ -381,29 +491,52 @@
 
 
               function updatePanel(e){
-                var myNode = document.getElementById("list");
-                while (myNode.firstChild) {
-                  myNode.removeChild(myNode.firstChild);
-                }
-                if(TEDdata[e.target.feature.properties.NUTS_ID] == undefined){
-                  $('#list').append('<h5 style="text-align:center;">'+texts[userLang].noTenders+'</h5>');
+                $('#mainActivity_filterColumn').hide();
+                $('#legalBasis_filterColumn').hide();
+                if($('#tenders-list').is(':visible')){
+                  $('#tenders-list').hide();
                 }
                 else {
-                  for (var t in TEDdata[e.target.feature.properties.NUTS_ID]){
-                    if( filtersList.indexOf(TEDdata[e.target.feature.properties.NUTS_ID][t]['mainActivity']) >= 0
-                        || filtersList.indexOf(TEDdata[e.target.feature.properties.NUTS_ID][t]['legalBasis']) >= 0) {
-                          var url = "http://ted.europa.eu/udl?uri=TED:NOTICE:" + TEDdata[e.target.feature.properties.NUTS_ID][t]['name'] + ":TEXT:EN:HTML";
-                          $('#list').append('<div style="border-bottom: 0.5px solid grey; text-align:center;"><a target="_blank" href='+url+'>'+
-                                            TEDdata[e.target.feature.properties.NUTS_ID][t]['name']+'</a>'+
-                                            '<p>'+TEDdata[e.target.feature.properties.NUTS_ID][t]['mainActivity']+'</p>'+
-                                            '<p>'+TEDdata[e.target.feature.properties.NUTS_ID][t]['legalBasis']+'</p>'
-                                            +'</div>');
-                    }
+                  $("#list-header").text($("#list-header").text().split('(')[0]+'('+e.target.feature.properties.NUTS_ID+')');
+                  $('#tenders-list').show();
+                  $('.click-div').show();
+                  var myNode = document.getElementById("list");
+                  while (myNode.firstChild) {
+                    myNode.removeChild(myNode.firstChild);
                   }
-                  /*TEDdata[e.target.feature.properties.NUTS_ID].forEach(function(t){
-                    var url = "http://ted.europa.eu/udl?uri=TED:NOTICE:" + t + ":TEXT:EN:HTML";
-                    $('#list').append('<div style="border-bottom: 0.5px solid grey; text-align:center;"><a target="_blank" href='+url+'>'+t+'</a></div>');
-                  });*/
+                  if(TEDdata[e.target.feature.properties.NUTS_ID] == undefined){
+                    $('#list').append('<h3 style="text-align:center;">'+texts[userLang].noTenders+'</h3>');
+                  }
+                  else {
+                    $('#list').append("<div id='first-col' style='width:120px; float:left;'></div>");
+                    $('#first-col').append('<h3>ID</h3>');
+                    $('#list').append("<div id='second-col' style='width:502px; float:left;'></div>");
+                    $('#second-col').append('<h3>Main activity</h3>');
+                    $('#list').append("<div id='third-col' style='width:110px; float:left;'></div>");
+                    $('#third-col').append('<h3>Legal basis</h3>');
+                    for (var t in TEDdata[e.target.feature.properties.NUTS_ID]){
+                      if( filtersList.indexOf(TEDdata[e.target.feature.properties.NUTS_ID][t]['MA'][0]) >= 0
+                          && filtersList.indexOf(TEDdata[e.target.feature.properties.NUTS_ID][t]['LB'][0]) >= 0) {
+                            var url = "http://ted.europa.eu/udl?uri=TED:NOTICE:" + TEDdata[e.target.feature.properties.NUTS_ID][t]['ID'][0] + ":TEXT:EN:HTML";
+                            $('#first-col').append('<div>'+
+                                              '<a target="_blank" href='+url+'>'+TEDdata[e.target.feature.properties.NUTS_ID][t]['ID'][0]+'</a>'+
+                                              '</div>'
+                                              );
+                            $('#second-col').append('<div>'+
+                                              ma_language[TEDdata[e.target.feature.properties.NUTS_ID][t]['MA'][0]]+
+                                              '</div>'
+                                              );
+                            $('#third-col').append('<div>'+
+                                              TEDdata[e.target.feature.properties.NUTS_ID][t]['LB'][0]+
+                                              '</div>'
+                                              );
+                      }
+                    }
+                    /*TEDdata[e.target.feature.properties.NUTS_ID].forEach(function(t){
+                      var url = "http://ted.europa.eu/udl?uri=TED:NOTICE:" + t + ":TEXT:EN:HTML";
+                      $('#list').append('<div style="border-bottom: 0.5px solid grey; text-align:center;"><a target="_blank" href='+url+'>'+t+'</a></div>');
+                    });*/
+                  }
                 }
               }
 
@@ -414,7 +547,7 @@
               var max = 0;
               geojson.eachLayer(function(layer) {
                 if(TEDdata[layer.feature.properties.NUTS_ID] != undefined) {
-                  max = TEDdata[layer.feature.properties.NUTS_ID].length > max ? TEDdata[layer.feature.properties.NUTS_ID].length : max;
+                  max =  _.size(TEDdata[layer.feature.properties.NUTS_ID]) > max ?  _.size(TEDdata[layer.feature.properties.NUTS_ID]) : max;
                 }
               });
 
@@ -451,24 +584,12 @@
 
               setColors();
 
-              /*function getNumberOfTenders(nid){
-                var count=0;
-                console.log(TEDdata[nid]);
-                for (var t in TEDdata[nid]){
-                  if(filtersList.indexOf(TEDdata[nid][t]['mainActivity']) >= 0 || filtersList.indexOf(TEDdata[nid][t]['legalBasis']) >= 0) {
-                    count+=1;
-                  }
-                }
-                return count;
-              }*/
-
           }
 
           function getNumberOfTenders(nid){
             var count=0;
             for (var t in TEDdata[nid]){
-              if(filtersList.indexOf(TEDdata[nid][t]['mainActivity']) >= 0 || filtersList.indexOf(TEDdata[nid][t]['legalBasis']) >= 0) {
-                console.log(filtersList.indexOf(TEDdata[nid][t]['mainActivity']) + ' - ' + filtersList.indexOf(TEDdata[nid][t]['legalBasis']));
+              if(filtersList.indexOf(TEDdata[nid][t]['MA'][0]) >= 0 && filtersList.indexOf(TEDdata[nid][t]['LB'][0]) >= 0) {
                 count+=1;
               }
             }
@@ -477,16 +598,13 @@
 
           function setColors(elem) {
               if(elem != undefined) {
-                console.log(elem.id);
                 if($("#"+elem.id).is(":checked")) {
                   filtersList.push($("#"+elem.id).attr("value"));
                 }
                 else {
-                  console.log(filtersList.indexOf($("#"+elem.id).attr("value")));
                   filtersList.splice(filtersList.indexOf($("#"+elem.id).attr("value")),1);
                 }
               }
-              console.log(filtersList);
 
               geojson.eachLayer(function(layer) {
                   if(TEDdata[layer.feature.properties.NUTS_ID] != undefined) {

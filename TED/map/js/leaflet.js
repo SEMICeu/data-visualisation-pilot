@@ -5331,7 +5331,7 @@ Leaflet 1.0.3, a JS library for interactive maps. http://leafletjs.com
 	o.Control.Attribution = o.Control.extend({
 			options: {
 				position: "bottomright",
-				prefix: '<a href="http://leafletjs.com" title="A JS library for interactive maps">Leaflet</a>'
+				prefix: '<a target="_blank" href="http://leafletjs.com" title="A JS library for interactive maps">Leaflet</a>'
 			},
 			initialize: function (t) {
 				o.setOptions(this, t),
