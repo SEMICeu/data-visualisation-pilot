@@ -3,8 +3,6 @@ library(jsonlite)
 
 
 
-
-
 ### download file###
 args <- commandArgs(trailingOnly=TRUE)
 apiKey <- args[1]
@@ -85,7 +83,7 @@ save <- TEDData
 TEDData <- save
 
 TEDData <- subset(TEDData, select = c("ND","RC","MA","DI"))
-
+TEDData <- unique(TEDData)
 ### create output ###
 
 OutputData <- list() 
@@ -94,7 +92,6 @@ for (i in 1:nrow(TEDData)) { #for each notice
   noticeID <- TEDData$ND[i]
   noticeYear <- substr(noticeID, 1, 4)
   noticeID <- substr(noticeID, 5, nchar(noticeID))
-  
   noticeID <- paste(noticeID, noticeYear, sep = "-")
   noticeDescription <- list(ID= noticeID, LB= TEDData$DI[[i]], MA=TEDData$MA[[i]])
   
@@ -105,6 +102,7 @@ for (i in 1:nrow(TEDData)) { #for each notice
     for (k in 0:NUTSLevel) {
       if (any(names(OutputData) == NUTSregionName)) {
         OutputData[[NUTSregionName]] <- append(OutputData[[NUTSregionName]], list(notice=noticeDescription))
+        OutputData[[NUTSregionName]] <- unique(OutputData[[NUTSregionName]])
       } else {
         tmp <- list (notice = noticeDescription)
         OutputData[[NUTSregionName]] <-  tmp
