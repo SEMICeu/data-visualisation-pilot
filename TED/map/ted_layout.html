@@ -13,6 +13,9 @@
         <link type="text/css" rel="stylesheet" href="https://cdn.jsdelivr.net/jquery.jssocials/1.4.0/jssocials.css" />
         <link type="text/css" rel="stylesheet" href="https://cdn.jsdelivr.net/jquery.jssocials/1.4.0/jssocials-theme-flat.css" />
         <script src="https://use.fontawesome.com/bfab9f1eb9.js"></script>
+        <script type="text/javascript" src="../datasets/languages.js"></script>
+
+
 
         <title>TED - Tender Electronic Daily</title>
     </head>
@@ -64,6 +67,12 @@
             showLabel: false,
             shares: ["email", "twitter", "facebook", "googleplus", "linkedin", "pinterest"]
           });
+
+          var userLang = navigator.language || navigator.userLanguage;
+          if(!texts[userLang]){
+            userLang = 'en-US';
+          }
+          $('.explanation').html(texts[userLang].mainDescription);
         </script>
 	</body>
 </html>

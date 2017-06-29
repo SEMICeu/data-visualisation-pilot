@@ -7,7 +7,8 @@ var texts = {
 		legalBasis:"Legal basis",
 		matitle0:"Main activities for notices published by a contracting authority",
 		matitle1:"Main activities for notices published by a contracting entity",
-		matitle2:"Other activity"},
+		matitle2:"Other activity",
+		mainDescription: "The visualisation on this page allows to visualise the number of tenders for each NUTS of the displayed level. Use the filter buttons on the left to display the filters. You can decide to filter on main activities or legal basis, or to change the NUTS level to be displayed.<br><br>Note that, given the zoom and position of the map, some territories are not visible on the map (e.g., French Guyanna). To see information about these territories, move and/or reduce the zoom level, dragging the map with your mouse or using the zooming buttons on the top left corner. "},
 'fr': {hover:"Sélectionner un pays",
         nTenders:"Nombre d'offres: ",
         tList:"Liste d'offres",
@@ -16,5 +17,6 @@ var texts = {
 		legalBasis:"Bases juridique",
 		matitle0:"Activités publié par un pouvoir adjudicateur",
 		matitle1:"Activités publié par une entité adjudicatrice",
-		matitle2:"Autre activité"}
+		matitle2:"Autre activité",
+		mainDescription:"La visualisation présentée sur cette page permet de visualiser le nombres d'offre pour chaque NUTS selon le niveau représenté. Les boutons présents en haut à gauche permettent d'afficher les filtres. Il est possible de filtrer sur bases des activités ou des bases légales ainsi que de changer le niveau des NUTS.<br><br>Notez que, en fonction du niveau de zoom et de la position sur la carte, certains territoires peuvent ne pas être visible sur la carte (par exemple, la Guyanne Française). Pour voir les informations relatives à ces territoires, changer d'emplacement et/ou changer le iveau de zzom, en cliquant et tirant sur la carte avec la souris ou en utilisant les boutons de zoom en situés en haut à gauche."}
 }

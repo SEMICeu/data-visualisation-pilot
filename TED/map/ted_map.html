@@ -13,6 +13,7 @@
 
         <style>
 
+
           #map {
             width: 969px;
             height: 600px;
@@ -74,7 +75,7 @@
           #closeFilterPanel {
             width:30px;
             height: 30px;
-            background-image:url(images/Cross.svg);
+            background-image:url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBkPSJNMTQuNTkgOEwxMiAxMC41OSA5LjQxIDggOCA5LjQxIDEwLjU5IDEyIDggMTQuNTkgOS40MSAxNiAxMiAxMy40MSAxNC41OSAxNiAxNiAxNC41OSAxMy40MSAxMiAxNiA5LjQxIDE0LjU5IDh6TTEyIDJDNi40NyAyIDIgNi40NyAyIDEyczQuNDcgMTAgMTAgMTAgMTAtNC40NyAxMC0xMFMxNy41MyAyIDEyIDJ6bTAgMThjLTQuNDEgMC04LTMuNTktOC04czMuNTktOCA4LTggOCAzLjU5IDggOC0zLjU5IDgtOCA4eiIvPjwvc3ZnPg==);
             position: relative;
             top:0px;
             left:360px;
@@ -177,14 +178,6 @@
           <button class="filter-button" id="mainActivity-filter-button" onclick="openMAPanel()">Main activities</button>
           <button class="filter-button" id="legalBasis-filter-button" onclick="openLBPanel()">Legal Basis</button>
           <button class="filter-button" id="nuts-filter-button" onclick="openNUTSPanel()">NUTS</button>
-          <!--<div id="NUTS-filter-button">
-            <select onchange="selectNuts(this)" id="NUTS-filter-dd">
-              <option value="nuts0_data">NUTS 0</option>
-              <option value="nuts1_data">NUTS 1</option>
-              <option value="nuts2_data">NUTS 2</option>
-              <option value="nuts3_data">NUTS 3</option>
-            </select>
-          </div>-->
 
           <!--<button id="openFilterPanel" onclick="openFilterPanel()"></button>-->
           <!--<div id="filter_panel">-->
@@ -248,6 +241,7 @@
           <button id="closeFilterPanel" onclick="closeTendersList()"></button>
           <div style="text-align:center;">
             <h1 id="list-header" style="margin-top:2px;"></h1>
+            <h1 id='list-nuts-name'></h1>
           </div>
           <div id="list" style="height:420px; overflow-y:scroll; width:100%;"><div>
         </div>
@@ -283,7 +277,16 @@
           var cb_attr = ["A", "B", "C", "D", "E", "F", "H", "I", "K", "L", "S",
                          "U", "G", "J", "M", "N", "P", "R", "S", "T", "W", "O"];
 
+          var cb_attr_lb = ["2004/18/EC", "2004/17/EC",
+          "2009/81/EC",
+          '1370/2007',
+          "2014/23/EU",
+          "2014/24/EU",
+          "2014/25/EU"];
+
           var ma_language={};
+          var lb_language={};
+          var nuts_mapping={};
 
           var geojson;
           var scale;
@@ -366,8 +369,6 @@
 				var x = xmlDoc.getElementsByTagName('MA')[0].getElementsByTagName('elem')[0];
 				var y = x.childNodes[0];
 
-        console.log("is life amazing?")
-
         for(var i = 0; i < xmlDoc.getElementsByTagName('MA').length; i++){
           if(cb_attr.indexOf(xmlDoc.getElementsByTagName('MA')[i].getAttribute('code')) > -1){
             for(var j=0; j<xmlDoc.getElementsByTagName('MA')[i].getElementsByTagName('elem').length; j++){
@@ -378,15 +379,67 @@
             }
           }
         }
-        /*xmlDoc.getElementsByTagName('MA').forEach(function(elem){
-          if(cb_attr.indexOf(elem.getAttribute('code')) > -1){
-            elem.getElementsByTagName('elem').childNodes.forEach(function(l){
-              if(l.getAttribute('lg')==xmlLang) {
-                $('#ma'+cb_attr.indexOf(xmlDoc.getElementsByTagName('MA')[i].getElementsByTagName('elem'))+'_label').text(l.nodeValue);
+			}
+
+      var xhttp2 = new XMLHttpRequest();
+			xhttp2.onreadystatechange = function() {
+				if (this.readyState == 4 && this.status == 200) {
+					updateLabelsLB(this);
+				}
+			};
+			xhttp2.open("GET", "../datasets/Doc/LegalBasis.xml", true);
+			xhttp2.send();
+
+      function updateLabelsLB(xml) {
+				var xmlDoc = xml.responseXML;
+
+        var x = xmlDoc.getElementsByTagName('LB')[0].getElementsByTagName('elem')[0];
+				var y = x.childNodes[0];
+
+        for(var i = 0; i < xmlDoc.getElementsByTagName('LB').length; i++){
+          if(cb_attr_lb.indexOf(xmlDoc.getElementsByTagName('LB')[i].getAttribute('code')) > -1){
+
+            var found=false;
+            for(var j=0; j<xmlDoc.getElementsByTagName('LB')[i].getElementsByTagName('elem').length; j++){
+              if(xmlDoc.getElementsByTagName('LB')[i].getElementsByTagName('elem')[j].getAttribute('lg')==xmlLang){
+                found=true;
+                $('#lb'+cb_attr.indexOf(xmlDoc.getElementsByTagName('LB')[i].getAttribute('code'))+'_label').text(xmlDoc.getElementsByTagName('LB')[i].getElementsByTagName('elem')[j].childNodes[0].nodeValue);
+                lb_language[xmlDoc.getElementsByTagName('LB')[i].getAttribute('code')] = xmlDoc.getElementsByTagName('LB')[i].getElementsByTagName('elem')[j].childNodes[0].nodeValue;
               }
-            });
+            }
+            if(!found){
+              for(var j=0; j<xmlDoc.getElementsByTagName('LB')[i].getElementsByTagName('elem').length; j++){
+                if(xmlDoc.getElementsByTagName('LB')[i].getElementsByTagName('elem')[j].getAttribute('lg')=="EN"){
+                  $('#lb'+cb_attr.indexOf(xmlDoc.getElementsByTagName('LB')[i].getAttribute('code'))+'_label').text(xmlDoc.getElementsByTagName('LB')[i].getElementsByTagName('elem')[j].childNodes[0].nodeValue);
+                  lb_language[xmlDoc.getElementsByTagName('LB')[i].getAttribute('code')] = xmlDoc.getElementsByTagName('LB')[i].getElementsByTagName('elem')[j].childNodes[0].nodeValue;
+                }
+              }
+            }
           }
-        });*/
+        }
+			}
+
+      var xhttp3 = new XMLHttpRequest();
+			xhttp3.onreadystatechange = function() {
+				if (this.readyState == 4 && this.status == 200) {
+					getNUTSname(this);
+				}
+			};
+			xhttp3.open("GET", "../datasets/Doc/NUTS_NAME.xml", true);
+			xhttp3.send();
+
+      function getNUTSname(xml) {
+				var xmlDoc = xml.responseXML;
+
+        console.log(xmlDoc.getElementsByTagName('NN')[0]);
+        console.log(xmlDoc.getElementsByTagName('NN')[0].getAttribute('code'));
+        console.log(xmlDoc.getElementsByTagName('NN')[0].getElementsByTagName('elem'));
+        console.log(xmlDoc.getElementsByTagName('NN')[0].getElementsByTagName('elem')[0].childNodes[0].nodeValue);
+
+
+        for(var i = 0; i < xmlDoc.getElementsByTagName('NN').length; i++){
+          nuts_mapping[xmlDoc.getElementsByTagName('NN')[i].getAttribute('code')]=xmlDoc.getElementsByTagName('NN')[i].getElementsByTagName('elem')[0].childNodes[0].nodeValue;
+        }
 			}
 
 
@@ -433,7 +486,7 @@
                     }
                   }
                   this._div.innerHTML = (props ?
-                      '<b>' + props.NUTS_ID + '</b><br />' + texts[userLang].nTenders + nbrTenders
+                      '<b>' + nuts_mapping[props.NUTS_ID] + '</b><br />' + texts[userLang].nTenders + nbrTenders
                       : texts[userLang].hover);
               };
 
@@ -502,7 +555,7 @@
                   $('#tenders-list').hide();
                 }
                 else {
-                  $("#list-header").text($("#list-header").text().split('(')[0]+'('+e.target.feature.properties.NUTS_ID+')');
+                  $('#list-nuts-name').text('('+nuts_mapping[e.target.feature.properties.NUTS_ID]+')');
                   $('#tenders-list').show();
                   $('.click-div').show();
                   var myNode = document.getElementById("list");
@@ -513,28 +566,39 @@
                     $('#list').append('<h3 style="text-align:center;">'+texts[userLang].noTenders+'</h3>');
                   }
                   else {
-                    $('#list').append("<div id='first-col' style='width:130px; float:left;'></div>");
+                    $('#list').append("<div id='first-col' style='width:130px; float:left; text-align:left; padding-left:10px;'></div>");
                     $('#first-col').append('<h3>ID</h3>');
-                    $('#list').append("<div id='second-col' style='width:450px; float:left;'></div>");
+                    $('#list').append("<div id='second-col' style='width:350px; float:left; text-align:left;'></div>");
                     $('#second-col').append('<h3>'+texts[userLang].mainActivities+'</h3>');
-                    $('#list').append("<div id='third-col' style='width:110px; float:left;'></div>");
+                    $('#list').append("<div id='third-col' style='width:210px; float:left; text-align:left;'></div>");
                     $('#third-col').append('<h3>'+texts[userLang].legalBasis+'</h3>');
                     for (var t in TEDdata[e.target.feature.properties.NUTS_ID]){
                       if( filtersList.indexOf(TEDdata[e.target.feature.properties.NUTS_ID][t]['MA'][0]) >= 0
                           && filtersList.indexOf(TEDdata[e.target.feature.properties.NUTS_ID][t]['LB'][0]) >= 0) {
                             var url = "http://ted.europa.eu/udl?uri=TED:NOTICE:" + TEDdata[e.target.feature.properties.NUTS_ID][t]['ID'][0] + ":TEXT:EN:HTML";
-                            $('#first-col').append('<div>'+
+                            $('#list').append( "<div class='row' style='width:100%;'>"+
+                                                      "<div style='width:130px; float:left; text-align:left; padding-left:10px;'>"+
+                                                            '<a target="_blank" href='+url+'>'+TEDdata[e.target.feature.properties.NUTS_ID][t]['ID'][0]+'</a>'+
+                                                      "</div>"+
+                                                      "<div style='width:350px; float:left; text-align:left;'>"+
+                                                            ma_language[TEDdata[e.target.feature.properties.NUTS_ID][t]['MA'][0]]+
+                                                      "</div>"+
+                                                      "<div style='width:210px; float:left; text-align:left;'>"+
+                                                            lb_language[TEDdata[e.target.feature.properties.NUTS_ID][t]['LB'][0]]+
+                                                      "</div>"+
+                                                "</div>");
+                            /*$('#first-col').append('<div style="text-align:left;">'+
                                               '<a target="_blank" href='+url+'>'+TEDdata[e.target.feature.properties.NUTS_ID][t]['ID'][0]+'</a>'+
                                               '</div>'
                                               );
-                            $('#second-col').append('<div>'+
+                            $('#second-col').append('<div style="text-align:left;">'+
                                               ma_language[TEDdata[e.target.feature.properties.NUTS_ID][t]['MA'][0]]+
                                               '</div>'
                                               );
-                            $('#third-col').append('<div>'+
-                                              TEDdata[e.target.feature.properties.NUTS_ID][t]['LB'][0]+
+                            $('#third-col').append('<div style="text-align:left;">'+
+                                              lb_language[TEDdata[e.target.feature.properties.NUTS_ID][t]['LB'][0]]+
                                               '</div>'
-                                              );
+                                            );*/
                       }
                     }
                     /*TEDdata[e.target.feature.properties.NUTS_ID].forEach(function(t){
