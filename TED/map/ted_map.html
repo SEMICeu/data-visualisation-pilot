@@ -658,7 +658,9 @@
           function getNumberOfTenders(nid){
             var count=0;
             for (var t in TEDdata[nid]){
-              if(filtersList.indexOf(TEDdata[nid][t]['MA'][0]) >= 0 && filtersList.indexOf(TEDdata[nid][t]['LB'][0]) >= 0) {
+              var idx = filtersList.indexOf(TEDdata[nid][t]['MA'][0]);
+              var idx2 = filtersList.indexOf(TEDdata[nid][t]['LB'][0]);
+              if(idx >= 0 && idx2 >= 0) {
                 count+=1;
               }
             }
@@ -676,7 +678,7 @@
               else{
                 $('.'+cbID).each(function(){
                   $(this).prop('checked', false);
-                  filtersList.splice($(this).attr("value"),1);
+                  filtersList.splice(filtersList.indexOf($(this).attr("value")),1);
                 });
               }
             }
@@ -699,7 +701,7 @@
                 }
               }
               else{
-                filtersList.splice($("#"+cbID).attr("value"),1);
+                filtersList.splice(filtersList.indexOf($("#"+cbID).attr("value")),1);
                 var checkedCount = 0;
                 $('.'+$("#"+cbID).attr("class")).each(function(){
                   if($(this).is(':checked')){
