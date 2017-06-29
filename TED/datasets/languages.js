@@ -12,9 +12,9 @@ var texts = {
         nTenders:"Nombre d'offres: ",
         tList:"Liste d'offres",
         noTenders:"Aucune offre",
-		mainActivities:"Activités",
-		legalBasis:"Bases légales",
-		matitle0:"Activités pour les offres publiées par une autorité contractante",
-		matitle1:"Activités pour les offres publiées par une entité contractante",
-		matitle2:"Autres"}
+		mainActivities:"Activité principale",
+		legalBasis:"Bases juridique",
+		matitle0:"Activités publié par un pouvoir adjudicateur",
+		matitle1:"Activités publié par une entité adjudicatrice",
+		matitle2:"Autre activité"}
 }
