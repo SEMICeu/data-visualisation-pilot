@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LEGAL_BASIS>
+	<LB code="2004/18/EC">
+		<elem lg="EN">Classical Directive (2004/18/EC)</elem>
+		<elem lg="FR">Directive classique (2004/18/CE)</elem>
+	</LB>
+	<LB code="2004/17/EC">
+		<elem lg="EN">Utilities Directive (2004/17/EC)</elem>
+		<elem lg="FR">Directive «Secteurs spéciaux» (2004/17/CE)</elem>
+	</LB>
+	<LB code="2009/81/EC">
+		<elem lg="EN">Defence Directive (2009/81/EC)</elem>
+		<elem lg="FR">Directive «Défense» (2009/81/CE)</elem>
+	</LB>
+	<LB code="1370/2007">
+		<elem lg="EN">Regulation ”Public passenger transport” (1370/2007)</elem>
+		<elem lg="FR">Règlement relatif aux services publics de transport de voyageurs (1370/2007)</elem>
+	</LB>
+	<LB code="2014/23/EU">
+		<elem lg="EN">Concession contract Directive (2014/23/EU)</elem>
+		<elem lg="FR">Directive sur les contrats de concession (2014/23/UE)</elem>
+	</LB>
+	<LB code="2014/24/EU">
+		<elem lg="EN">Public procurement Directive (2014/24/EU)</elem>
+		<elem lg="FR">Directive sur la passation de marchés publics (2014/24/UE)</elem>
+	</LB>
+	<LB code="2014/25/EU">
+		<elem lg="EN">Utilities (water, energy, transport and postal services) Directive (2014/25/EU)</elem>
+		<elem lg="FR">Directive sur les entités opérant dans les secteurs de l’eau, de l’énergie, des transports et des services postaux (2014/25/UE)</elem>
+	</LB>
+</LEGAL_BASIS>

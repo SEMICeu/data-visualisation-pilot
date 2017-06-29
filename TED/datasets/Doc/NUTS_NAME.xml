@@ -1,0 +1,5656 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<NUTS_NAME>
+	<NN code="BE">
+		<elem>BELGIQUE-BELGIË</elem>
+	</NN>
+	<NN code="BE1">
+		<elem>RÉGION DE BRUXELLES-CAPITALE / BRUSSELS HOOFDSTEDELIJK GEWEST</elem>
+	</NN>
+	<NN code="BE2">
+		<elem>VLAAMS GEWEST</elem>
+	</NN>
+	<NN code="BE3">
+		<elem>RÉGION WALLONNE</elem>
+	</NN>
+	<NN code="BEZ">
+		<elem>EXTRA-REGIO NUTS 1</elem>
+	</NN>
+	<NN code="BG">
+		<elem>БЪЛГАРИЯ (BULGARIA)</elem>
+	</NN>
+	<NN code="BG3">
+		<elem>СЕВЕРНА И ЮГОИЗТОЧНА БЪЛГАРИЯ (SEVERNA I YUGOIZTOCHNA BULGARIA)</elem>
+	</NN>
+	<NN code="BG4">
+		<elem>ЮГОЗАПАДНА И ЮЖНА ЦЕНТРАЛНА БЪЛГАРИЯ (YUGOZAPADNA I YUZHNA TSENTRALNA BULGARIA)</elem>
+	</NN>
+	<NN code="BGZ">
+		<elem>EXTRA-REGIO NUTS 1</elem>
+	</NN>
+	<NN code="CZ">
+		<elem>ČESKÁ REPUBLIKA</elem>
+	</NN>
+	<NN code="CZ0">
+		<elem>ČESKÁ REPUBLIKA</elem>
+	</NN>
+	<NN code="CZZ">
+		<elem>EXTRA-REGIO NUTS 1</elem>
+	</NN>
+	<NN code="DK">
+		<elem>DANMARK</elem>
+	</NN>
+	<NN code="DK0">
+		<elem>DANMARK</elem>
+	</NN>
+	<NN code="DKZ">
+		<elem>EXTRA-REGIO NUTS 1</elem>
+	</NN>
+	<NN code="DE">
+		<elem>DEUTSCHLAND</elem>
+	</NN>
+	<NN code="DE1">
+		<elem>BADEN-WÜRTTEMBERG</elem>
+	</NN>
+	<NN code="DE2">
+		<elem>BAYERN</elem>
+	</NN>
+	<NN code="DE3">
+		<elem>BERLIN</elem>
+	</NN>
+	<NN code="DE4">
+		<elem>BRANDENBURG</elem>
+	</NN>
+	<NN code="DE5">
+		<elem>BREMEN</elem>
+	</NN>
+	<NN code="DE6">
+		<elem>HAMBURG</elem>
+	</NN>
+	<NN code="DE7">
+		<elem>HESSEN</elem>
+	</NN>
+	<NN code="DE8">
+		<elem>MECKLENBURG-VORPOMMERN</elem>
+	</NN>
+	<NN code="DE9">
+		<elem>NIEDERSACHSEN</elem>
+	</NN>
+	<NN code="DEA">
+		<elem>NORDRHEIN-WESTFALEN</elem>
+	</NN>
+	<NN code="DEB">
+		<elem>RHEINLAND-PFALZ</elem>
+	</NN>
+	<NN code="DEC">
+		<elem>SAARLAND</elem>
+	</NN>
+	<NN code="DED">
+		<elem>SACHSEN</elem>
+	</NN>
+	<NN code="DEE">
+		<elem>SACHSEN-ANHALT</elem>
+	</NN>
+	<NN code="DEF">
+		<elem>SCHLESWIG-HOLSTEIN</elem>
+	</NN>
+	<NN code="DEG">
+		<elem>THÜRINGEN</elem>
+	</NN>
+	<NN code="DEZ">
+		<elem>EXTRA-REGIO NUTS 1</elem>
+	</NN>
+	<NN code="EE">
+		<elem>EESTI</elem>
+	</NN>
+	<NN code="EE0">
+		<elem>EESTI</elem>
+	</NN>
+	<NN code="EEZ">
+		<elem>EXTRA-REGIO NUTS 1</elem>
+	</NN>
+	<NN code="IE">
+		<elem>IRELAND</elem>
+	</NN>
+	<NN code="IE0">
+		<elem>IRELAND</elem>
+	</NN>
+	<NN code="IEZ">
+		<elem>EXTRA-REGIO NUTS 1</elem>
+	</NN>
+	<NN code="EL">
+		<elem>ΕΛΛΑΔΑ (ELLADA)</elem>
+	</NN>
+	<NN code="EL3">
+		<elem>ATTIKΗ (ATTIKI)</elem>
+	</NN>
+	<NN code="EL4">
+		<elem>NΗΣΙΑ ΑΙΓΑΙΟΥ, KΡΗΤΗ (NISIA AIGAIOU, KRITI)</elem>
+	</NN>
+	<NN code="EL5">
+		<elem>ΒΟΡΕΙΑ ΕΛΛΑΔΑ (VOREIA ELLADA)</elem>
+	</NN>
+	<NN code="EL6">
+		<elem>ΚΕΝΤΡΙΚΗ ΕΛΛΑΔΑ (KENTRIKI ELLADA)</elem>
+	</NN>
+	<NN code="ELZ">
+		<elem>EXTRA-REGIO NUTS 1</elem>
+	</NN>
+	<NN code="ES">
+		<elem>ESPAÑA</elem>
+	</NN>
+	<NN code="ES1">
+		<elem>NOROESTE</elem>
+	</NN>
+	<NN code="ES2">
+		<elem>NORESTE</elem>
+	</NN>
+	<NN code="ES3">
+		<elem>COMUNIDAD DE MADRID</elem>
+	</NN>
+	<NN code="ES4">
+		<elem>CENTRO (ES)</elem>
+	</NN>
+	<NN code="ES5">
+		<elem>ESTE</elem>
+	</NN>
+	<NN code="ES6">
+		<elem>SUR</elem>
+	</NN>
+	<NN code="ES7">
+		<elem>CANARIAS</elem>
+	</NN>
+	<NN code="ESZ">
+		<elem>EXTRA-REGIO NUTS 1</elem>
+	</NN>
+	<NN code="FR">
+		<elem>FRANCE</elem>
+	</NN>
+	<NN code="FR1">
+		<elem>ÎLE DE FRANCE</elem>
+	</NN>
+	<NN code="FR2">
+		<elem>BASSIN PARISIEN</elem>
+	</NN>
+	<NN code="FR3">
+		<elem>NORD - PAS-DE-CALAIS</elem>
+	</NN>
+	<NN code="FR4">
+		<elem>EST</elem>
+	</NN>
+	<NN code="FR5">
+		<elem>OUEST</elem>
+	</NN>
+	<NN code="FR6">
+		<elem>SUD-OUEST</elem>
+	</NN>
+	<NN code="FR7">
+		<elem>CENTRE-EST</elem>
+	</NN>
+	<NN code="FR8">
+		<elem>MÉDITERRANÉE</elem>
+	</NN>
+	<NN code="FRA">
+		<elem>DÉPARTEMENTS D'OUTRE-MER</elem>
+	</NN>
+	<NN code="FRZ">
+		<elem>EXTRA-REGIO NUTS 1</elem>
+	</NN>
+	<NN code="HR">
+		<elem>HRVATSKA</elem>
+	</NN>
+	<NN code="HR0">
+		<elem>HRVATSKA</elem>
+	</NN>
+	<NN code="HRZ">
+		<elem>EXTRA-REGIO NUTS 1</elem>
+	</NN>
+	<NN code="IT">
+		<elem>ITALIA</elem>
+	</NN>
+	<NN code="ITC">
+		<elem>NORD-OVEST</elem>
+	</NN>
+	<NN code="ITF">
+		<elem>SUD</elem>
+	</NN>
+	<NN code="ITG">
+		<elem>ISOLE</elem>
+	</NN>
+	<NN code="ITH">
+		<elem>NORD-EST</elem>
+	</NN>
+	<NN code="ITI">
+		<elem>CENTRO (IT)</elem>
+	</NN>
+	<NN code="ITZ">
+		<elem>EXTRA-REGIO NUTS 1</elem>
+	</NN>
+	<NN code="CY">
+		<elem>ΚΥΠΡΟΣ (KYPROS)</elem>
+	</NN>
+	<NN code="CY0">
+		<elem>ΚΥΠΡΟΣ (Kypros)</elem>
+	</NN>
+	<NN code="CYZ">
+		<elem>EXTRA-REGIO NUTS 1</elem>
+	</NN>
+	<NN code="LV">
+		<elem>LATVIJA</elem>
+	</NN>
+	<NN code="LV0">
+		<elem>LATVIJA</elem>
+	</NN>
+	<NN code="LVZ">
+		<elem>EXTRA-REGIO NUTS 1</elem>
+	</NN>
+	<NN code="LT">
+		<elem>LIETUVA</elem>
+	</NN>
+	<NN code="LT0">
+		<elem>LIETUVA</elem>
+	</NN>
+	<NN code="LTZ">
+		<elem>EXTRA-REGIO NUTS 1</elem>
+	</NN>
+	<NN code="LU">
+		<elem>LUXEMBOURG</elem>
+	</NN>
+	<NN code="LU0">
+		<elem>LUXEMBOURG</elem>
+	</NN>
+	<NN code="LUZ">
+		<elem>EXTRA-REGIO NUTS 1</elem>
+	</NN>
+	<NN code="HU">
+		<elem>MAGYARORSZÁG</elem>
+	</NN>
+	<NN code="HU1">
+		<elem>KÖZÉP-MAGYARORSZÁG</elem>
+	</NN>
+	<NN code="HU2">
+		<elem>DUNÁNTÚL</elem>
+	</NN>
+	<NN code="HU3">
+		<elem>ALFÖLD ÉS ÉSZAK</elem>
+	</NN>
+	<NN code="HUZ">
+		<elem>EXTRA-REGIO NUTS 1</elem>
+	</NN>
+	<NN code="MT">
+		<elem>MALTA</elem>
+	</NN>
+	<NN code="MT0">
+		<elem>MALTA</elem>
+	</NN>
+	<NN code="MTZ">
+		<elem>EXTRA-REGIO NUTS 1</elem>
+	</NN>
+	<NN code="NL">
+		<elem>NEDERLAND</elem>
+	</NN>
+	<NN code="NL1">
+		<elem>NOORD-NEDERLAND</elem>
+	</NN>
+	<NN code="NL2">
+		<elem>OOST-NEDERLAND</elem>
+	</NN>
+	<NN code="NL3">
+		<elem>WEST-NEDERLAND</elem>
+	</NN>
+	<NN code="NL4">
+		<elem>ZUID-NEDERLAND</elem>
+	</NN>
+	<NN code="NLZ">
+		<elem>EXTRA-REGIO NUTS 1</elem>
+	</NN>
+	<NN code="AT">
+		<elem>ÖSTERREICH</elem>
+	</NN>
+	<NN code="AT1">
+		<elem>OSTÖSTERREICH</elem>
+	</NN>
+	<NN code="AT2">
+		<elem>SÜDÖSTERREICH</elem>
+	</NN>
+	<NN code="AT3">
+		<elem>WESTÖSTERREICH</elem>
+	</NN>
+	<NN code="ATZ">
+		<elem>EXTRA-REGIO NUTS 1</elem>
+	</NN>
+	<NN code="PL">
+		<elem>POLSKA</elem>
+	</NN>
+	<NN code="PL1">
+		<elem>REGION CENTRALNY</elem>
+	</NN>
+	<NN code="PL2">
+		<elem>REGION POŁUDNIOWY</elem>
+	</NN>
+	<NN code="PL3">
+		<elem>REGION WSCHODNI</elem>
+	</NN>
+	<NN code="PL4">
+		<elem>REGION PÓŁNOCNO-ZACHODNI</elem>
+	</NN>
+	<NN code="PL5">
+		<elem>REGION POŁUDNIOWO-ZACHODNI</elem>
+	</NN>
+	<NN code="PL6">
+		<elem>REGION PÓŁNOCNY</elem>
+	</NN>
+	<NN code="PLZ">
+		<elem>EXTRA-REGIO NUTS 1</elem>
+	</NN>
+	<NN code="PT">
+		<elem>PORTUGAL</elem>
+	</NN>
+	<NN code="PT1">
+		<elem>CONTINENTE</elem>
+	</NN>
+	<NN code="PT2">
+		<elem>REGIÃO AUTÓNOMA DOS AÇORES</elem>
+	</NN>
+	<NN code="PT3">
+		<elem>REGIÃO AUTÓNOMA DA MADEIRA</elem>
+	</NN>
+	<NN code="PTZ">
+		<elem>EXTRA-REGIO NUTS 1</elem>
+	</NN>
+	<NN code="RO">
+		<elem>ROMÂNIA</elem>
+	</NN>
+	<NN code="RO1">
+		<elem>MACROREGIUNEA UNU</elem>
+	</NN>
+	<NN code="RO2">
+		<elem>MACROREGIUNEA DOI</elem>
+	</NN>
+	<NN code="RO3">
+		<elem>MACROREGIUNEA TREI</elem>
+	</NN>
+	<NN code="RO4">
+		<elem>MACROREGIUNEA PATRU</elem>
+	</NN>
+	<NN code="ROZ">
+		<elem>EXTRA-REGIO NUTS 1</elem>
+	</NN>
+	<NN code="SI">
+		<elem>SLOVENIJA</elem>
+	</NN>
+	<NN code="SI0">
+		<elem>SLOVENIJA</elem>
+	</NN>
+	<NN code="SIZ">
+		<elem>EXTRA-REGIO NUTS 1</elem>
+	</NN>
+	<NN code="SK">
+		<elem>SLOVENSKO</elem>
+	</NN>
+	<NN code="SK0">
+		<elem>SLOVENSKO</elem>
+	</NN>
+	<NN code="SKZ">
+		<elem>EXTRA-REGIO NUTS 1</elem>
+	</NN>
+	<NN code="FI">
+		<elem>SUOMI / FINLAND</elem>
+	</NN>
+	<NN code="FI1">
+		<elem>MANNER-SUOMI</elem>
+	</NN>
+	<NN code="FI2">
+		<elem>ÅLAND</elem>
+	</NN>
+	<NN code="FIZ">
+		<elem>EXTRA-REGIO NUTS 1</elem>
+	</NN>
+	<NN code="SE">
+		<elem>SVERIGE</elem>
+	</NN>
+	<NN code="SE1">
+		<elem>ÖSTRA SVERIGE</elem>
+	</NN>
+	<NN code="SE2">
+		<elem>SÖDRA SVERIGE</elem>
+	</NN>
+	<NN code="SE3">
+		<elem>NORRA SVERIGE</elem>
+	</NN>
+	<NN code="SEZ">
+		<elem>EXTRA-REGIO NUTS 1</elem>
+	</NN>
+	<NN code="UK">
+		<elem>UNITED KINGDOM</elem>
+	</NN>
+	<NN code="UKC">
+		<elem>NORTH EAST (ENGLAND)</elem>
+	</NN>
+	<NN code="UKD">
+		<elem>NORTH WEST (ENGLAND)</elem>
+	</NN>
+	<NN code="UKE">
+		<elem>YORKSHIRE AND THE HUMBER</elem>
+	</NN>
+	<NN code="UKF">
+		<elem>EAST MIDLANDS (ENGLAND)</elem>
+	</NN>
+	<NN code="UKG">
+		<elem>WEST MIDLANDS (ENGLAND)</elem>
+	</NN>
+	<NN code="UKH">
+		<elem>EAST OF ENGLAND</elem>
+	</NN>
+	<NN code="UKI">
+		<elem>LONDON</elem>
+	</NN>
+	<NN code="UKJ">
+		<elem>SOUTH EAST (ENGLAND)</elem>
+	</NN>
+	<NN code="UKK">
+		<elem>SOUTH WEST (ENGLAND)</elem>
+	</NN>
+	<NN code="UKL">
+		<elem>WALES</elem>
+	</NN>
+	<NN code="UKM">
+		<elem>SCOTLAND</elem>
+	</NN>
+	<NN code="UKN">
+		<elem>NORTHERN IRELAND</elem>
+	</NN>
+	<NN code="UKZ">
+		<elem>EXTRA-REGIO NUTS 1</elem>
+	</NN>
+	<NN code="BE">
+		<elem>BELGIQUE-BELGIË</elem>
+	</NN>
+	<NN code="BE10">
+		<elem>Région de Bruxelles-Capitale / Brussels Hoofdstedelijk Gewest</elem>
+	</NN>
+	<NN code="BE21">
+		<elem>Prov. Antwerpen</elem>
+	</NN>
+	<NN code="BE22">
+		<elem>Prov. Limburg (BE)</elem>
+	</NN>
+	<NN code="BE23">
+		<elem>Prov. Oost-Vlaanderen</elem>
+	</NN>
+	<NN code="BE24">
+		<elem>Prov. Vlaams-Brabant</elem>
+	</NN>
+	<NN code="BE25">
+		<elem>Prov. West-Vlaanderen</elem>
+	</NN>
+	<NN code="BE31">
+		<elem>Prov. Brabant Wallon</elem>
+	</NN>
+	<NN code="BE32">
+		<elem>Prov. Hainaut</elem>
+	</NN>
+	<NN code="BE33">
+		<elem>Prov. Liège</elem>
+	</NN>
+	<NN code="BE34">
+		<elem>Prov. Luxembourg (BE)</elem>
+	</NN>
+	<NN code="BE35">
+		<elem>Prov. Namur</elem>
+	</NN>
+	<NN code="BEZZ">
+		<elem>Extra-Regio NUTS 2</elem>
+	</NN>
+	<NN code="BG">
+		<elem>БЪЛГАРИЯ (BULGARIA)</elem>
+	</NN>
+	<NN code="BG31">
+		<elem>Северозападен (Severozapaden)</elem>
+	</NN>
+	<NN code="BG32">
+		<elem>Северен централен (Severen tsentralen)</elem>
+	</NN>
+	<NN code="BG33">
+		<elem>Североизточен (Severoiztochen)</elem>
+	</NN>
+	<NN code="BG34">
+		<elem>Югоизточен (Yugoiztochen)</elem>
+	</NN>
+	<NN code="BG41">
+		<elem>Югозападен (Yugozapaden)</elem>
+	</NN>
+	<NN code="BG42">
+		<elem>Южен централен (Yuzhen tsentralen)</elem>
+	</NN>
+	<NN code="BGZZ">
+		<elem>Extra-Regio NUTS 2</elem>
+	</NN>
+	<NN code="CZ">
+		<elem>ČESKÁ REPUBLIKA</elem>
+	</NN>
+	<NN code="CZ01">
+		<elem>Praha</elem>
+	</NN>
+	<NN code="CZ02">
+		<elem>Střední Čechy</elem>
+	</NN>
+	<NN code="CZ03">
+		<elem>Jihozápad</elem>
+	</NN>
+	<NN code="CZ04">
+		<elem>Severozápad</elem>
+	</NN>
+	<NN code="CZ05">
+		<elem>Severovýchod</elem>
+	</NN>
+	<NN code="CZ06">
+		<elem>Jihovýchod</elem>
+	</NN>
+	<NN code="CZ07">
+		<elem>Střední Morava</elem>
+	</NN>
+	<NN code="CZ08">
+		<elem>Moravskoslezsko</elem>
+	</NN>
+	<NN code="CZZZ">
+		<elem>Extra-Regio NUTS 2</elem>
+	</NN>
+	<NN code="DK">
+		<elem>DANMARK</elem>
+	</NN>
+	<NN code="DK01">
+		<elem>Hovedstaden</elem>
+	</NN>
+	<NN code="DK02">
+		<elem>Sjælland</elem>
+	</NN>
+	<NN code="DK03">
+		<elem>Syddanmark</elem>
+	</NN>
+	<NN code="DK04">
+		<elem>Midtjylland</elem>
+	</NN>
+	<NN code="DK05">
+		<elem>Nordjylland</elem>
+	</NN>
+	<NN code="DKZZ">
+		<elem>Extra-Regio NUTS 2</elem>
+	</NN>
+	<NN code="DE">
+		<elem>DEUTSCHLAND</elem>
+	</NN>
+	<NN code="DE11">
+		<elem>Stuttgart</elem>
+	</NN>
+	<NN code="DE12">
+		<elem>Karlsruhe</elem>
+	</NN>
+	<NN code="DE13">
+		<elem>Freiburg</elem>
+	</NN>
+	<NN code="DE14">
+		<elem>Tübingen</elem>
+	</NN>
+	<NN code="DE21">
+		<elem>Oberbayern</elem>
+	</NN>
+	<NN code="DE22">
+		<elem>Niederbayern</elem>
+	</NN>
+	<NN code="DE23">
+		<elem>Oberpfalz</elem>
+	</NN>
+	<NN code="DE24">
+		<elem>Oberfranken</elem>
+	</NN>
+	<NN code="DE25">
+		<elem>Mittelfranken</elem>
+	</NN>
+	<NN code="DE26">
+		<elem>Unterfranken</elem>
+	</NN>
+	<NN code="DE27">
+		<elem>Schwaben</elem>
+	</NN>
+	<NN code="DE30">
+		<elem>Berlin</elem>
+	</NN>
+	<NN code="DE40">
+		<elem>Brandenburg</elem>
+	</NN>
+	<NN code="DE50">
+		<elem>Bremen</elem>
+	</NN>
+	<NN code="DE60">
+		<elem>Hamburg</elem>
+	</NN>
+	<NN code="DE71">
+		<elem>Darmstadt</elem>
+	</NN>
+	<NN code="DE72">
+		<elem>Gießen</elem>
+	</NN>
+	<NN code="DE73">
+		<elem>Kassel</elem>
+	</NN>
+	<NN code="DE80">
+		<elem>Mecklenburg-Vorpommern</elem>
+	</NN>
+	<NN code="DE91">
+		<elem>Braunschweig</elem>
+	</NN>
+	<NN code="DE92">
+		<elem>Hannover</elem>
+	</NN>
+	<NN code="DE93">
+		<elem>Lüneburg</elem>
+	</NN>
+	<NN code="DE94">
+		<elem>Weser-Ems</elem>
+	</NN>
+	<NN code="DEA1">
+		<elem>Düsseldorf</elem>
+	</NN>
+	<NN code="DEA2">
+		<elem>Köln</elem>
+	</NN>
+	<NN code="DEA3">
+		<elem>Münster</elem>
+	</NN>
+	<NN code="DEA4">
+		<elem>Detmold</elem>
+	</NN>
+	<NN code="DEA5">
+		<elem>Arnsberg</elem>
+	</NN>
+	<NN code="DEB1">
+		<elem>Koblenz</elem>
+	</NN>
+	<NN code="DEB2">
+		<elem>Trier</elem>
+	</NN>
+	<NN code="DEB3">
+		<elem>Rheinhessen-Pfalz</elem>
+	</NN>
+	<NN code="DEC0">
+		<elem>Saarland</elem>
+	</NN>
+	<NN code="DED2">
+		<elem>Dresden</elem>
+	</NN>
+	<NN code="DED4">
+		<elem>Chemnitz</elem>
+	</NN>
+	<NN code="DED5">
+		<elem>Leipzig</elem>
+	</NN>
+	<NN code="DEE0">
+		<elem>Sachsen-Anhalt</elem>
+	</NN>
+	<NN code="DEF0">
+		<elem>Schleswig-Holstein</elem>
+	</NN>
+	<NN code="DEG0">
+		<elem>Thüringen</elem>
+	</NN>
+	<NN code="DEZZ">
+		<elem>Extra-Regio NUTS 2</elem>
+	</NN>
+	<NN code="EE">
+		<elem>EESTI</elem>
+	</NN>
+	<NN code="EE00">
+		<elem>Eesti</elem>
+	</NN>
+	<NN code="EEZZ">
+		<elem>Extra-Regio NUTS 2</elem>
+	</NN>
+	<NN code="IE">
+		<elem>IRELAND</elem>
+	</NN>
+	<NN code="IE01">
+		<elem>Border, Midland and Western</elem>
+	</NN>
+	<NN code="IE02">
+		<elem>Southern and Eastern</elem>
+	</NN>
+	<NN code="IEZZ">
+		<elem>Extra-Regio NUTS 2</elem>
+	</NN>
+	<NN code="EL">
+		<elem>ΕΛΛΑΔΑ (ELLADA)</elem>
+	</NN>
+	<NN code="EL30">
+		<elem>Aττική (Attiki)</elem>
+	</NN>
+	<NN code="EL41">
+		<elem>Βόρειο Αιγαίο (Voreio Aigaio)</elem>
+	</NN>
+	<NN code="EL42">
+		<elem>Νότιο Αιγαίο (Notio Aigaio)</elem>
+	</NN>
+	<NN code="EL43">
+		<elem>Κρήτη (Kriti)</elem>
+	</NN>
+	<NN code="EL51">
+		<elem>Aνατολική Μακεδονία, Θράκη (Anatoliki Makedonia, Thraki)</elem>
+	</NN>
+	<NN code="EL52">
+		<elem>Κεντρική Μακεδονία (Kentriki Makedonia)</elem>
+	</NN>
+	<NN code="EL53">
+		<elem>Δυτική Μακεδονία (Dytiki Makedonia)</elem>
+	</NN>
+	<NN code="EL54">
+		<elem>Ήπειρος (Ipeiros)</elem>
+	</NN>
+	<NN code="EL61">
+		<elem>Θεσσαλία (Thessalia)</elem>
+	</NN>
+	<NN code="EL62">
+		<elem>Ιόνια Νησιά (Ionia Nisia)</elem>
+	</NN>
+	<NN code="EL63">
+		<elem>Δυτική Ελλάδα (Dytiki Ellada)</elem>
+	</NN>
+	<NN code="EL64">
+		<elem>Στερεά Ελλάδα (Sterea Ellada)</elem>
+	</NN>
+	<NN code="EL65">
+		<elem>Πελοπόννησος (Peloponnisos)</elem>
+	</NN>
+	<NN code="ELZZ">
+		<elem>Extra-Regio NUTS 2</elem>
+	</NN>
+	<NN code="ES">
+		<elem>ESPAÑA</elem>
+	</NN>
+	<NN code="ES11">
+		<elem>Galicia</elem>
+	</NN>
+	<NN code="ES12">
+		<elem>Principado de Asturias</elem>
+	</NN>
+	<NN code="ES13">
+		<elem>Cantabria</elem>
+	</NN>
+	<NN code="ES21">
+		<elem>País Vasco</elem>
+	</NN>
+	<NN code="ES22">
+		<elem>Comunidad Foral de Navarra</elem>
+	</NN>
+	<NN code="ES23">
+		<elem>La Rioja</elem>
+	</NN>
+	<NN code="ES24">
+		<elem>Aragón</elem>
+	</NN>
+	<NN code="ES30">
+		<elem>Comunidad de Madrid</elem>
+	</NN>
+	<NN code="ES41">
+		<elem>Castilla y León</elem>
+	</NN>
+	<NN code="ES42">
+		<elem>Castilla-La Mancha</elem>
+	</NN>
+	<NN code="ES43">
+		<elem>Extremadura</elem>
+	</NN>
+	<NN code="ES51">
+		<elem>Cataluña</elem>
+	</NN>
+	<NN code="ES52">
+		<elem>Comunidad Valenciana</elem>
+	</NN>
+	<NN code="ES53">
+		<elem>Illes Balears</elem>
+	</NN>
+	<NN code="ES61">
+		<elem>Andalucía</elem>
+	</NN>
+	<NN code="ES62">
+		<elem>Región de Murcia</elem>
+	</NN>
+	<NN code="ES63">
+		<elem>Ciudad Autónoma de Ceuta</elem>
+	</NN>
+	<NN code="ES64">
+		<elem>Ciudad Autónoma de Melilla</elem>
+	</NN>
+	<NN code="ES70">
+		<elem>Canarias</elem>
+	</NN>
+	<NN code="ESZZ">
+		<elem>Extra-Regio NUTS 2</elem>
+	</NN>
+	<NN code="FR">
+		<elem>FRANCE</elem>
+	</NN>
+	<NN code="FR10">
+		<elem>Île de France</elem>
+	</NN>
+	<NN code="FR21">
+		<elem>Champagne-Ardenne</elem>
+	</NN>
+	<NN code="FR22">
+		<elem>Picardie</elem>
+	</NN>
+	<NN code="FR23">
+		<elem>Haute-Normandie</elem>
+	</NN>
+	<NN code="FR24">
+		<elem>Centre</elem>
+	</NN>
+	<NN code="FR25">
+		<elem>Basse-Normandie</elem>
+	</NN>
+	<NN code="FR26">
+		<elem>Bourgogne</elem>
+	</NN>
+	<NN code="FR30">
+		<elem>Nord - Pas-de-Calais</elem>
+	</NN>
+	<NN code="FR41">
+		<elem>Lorraine</elem>
+	</NN>
+	<NN code="FR42">
+		<elem>Alsace</elem>
+	</NN>
+	<NN code="FR43">
+		<elem>Franche-Comté</elem>
+	</NN>
+	<NN code="FR51">
+		<elem>Pays de la Loire</elem>
+	</NN>
+	<NN code="FR52">
+		<elem>Bretagne</elem>
+	</NN>
+	<NN code="FR53">
+		<elem>Poitou-Charentes</elem>
+	</NN>
+	<NN code="FR61">
+		<elem>Aquitaine</elem>
+	</NN>
+	<NN code="FR62">
+		<elem>Midi-Pyrénées</elem>
+	</NN>
+	<NN code="FR63">
+		<elem>Limousin</elem>
+	</NN>
+	<NN code="FR71">
+		<elem>Rhône-Alpes</elem>
+	</NN>
+	<NN code="FR72">
+		<elem>Auvergne</elem>
+	</NN>
+	<NN code="FR81">
+		<elem>Languedoc-Roussillon</elem>
+	</NN>
+	<NN code="FR82">
+		<elem>Provence-Alpes-Côte d'Azur</elem>
+	</NN>
+	<NN code="FR83">
+		<elem>Corse</elem>
+	</NN>
+	<NN code="FRA1">
+		<elem>Guadeloupe</elem>
+	</NN>
+	<NN code="FRA2">
+		<elem>Martinique</elem>
+	</NN>
+	<NN code="FRA3">
+		<elem>Guyane</elem>
+	</NN>
+	<NN code="FRA4">
+		<elem>La Réunion</elem>
+	</NN>
+	<NN code="FRA5">
+		<elem>Mayotte</elem>
+	</NN>
+	<NN code="FRZZ">
+		<elem>Extra-Regio NUTS 2</elem>
+	</NN>
+	<NN code="HR">
+		<elem>HRVATSKA</elem>
+	</NN>
+	<NN code="HR03">
+		<elem>Jadranska Hrvatska</elem>
+	</NN>
+	<NN code="HR04">
+		<elem>Kontinentalna Hrvatska</elem>
+	</NN>
+	<NN code="HRZZ">
+		<elem>Extra-Regio NUTS 2</elem>
+	</NN>
+	<NN code="IT">
+		<elem>ITALIA</elem>
+	</NN>
+	<NN code="ITC1">
+		<elem>Piemonte</elem>
+	</NN>
+	<NN code="ITC2">
+		<elem>Valle d'Aosta/Vallée d'Aoste</elem>
+	</NN>
+	<NN code="ITC3">
+		<elem>Liguria</elem>
+	</NN>
+	<NN code="ITC4">
+		<elem>Lombardia</elem>
+	</NN>
+	<NN code="ITF1">
+		<elem>Abruzzo</elem>
+	</NN>
+	<NN code="ITF2">
+		<elem>Molise</elem>
+	</NN>
+	<NN code="ITF3">
+		<elem>Campania</elem>
+	</NN>
+	<NN code="ITF4">
+		<elem>Puglia</elem>
+	</NN>
+	<NN code="ITF5">
+		<elem>Basilicata</elem>
+	</NN>
+	<NN code="ITF6">
+		<elem>Calabria</elem>
+	</NN>
+	<NN code="ITG1">
+		<elem>Sicilia</elem>
+	</NN>
+	<NN code="ITG2">
+		<elem>Sardegna</elem>
+	</NN>
+	<NN code="ITH1">
+		<elem>Provincia Autonoma di Bolzano/Bozen</elem>
+	</NN>
+	<NN code="ITH2">
+		<elem>Provincia Autonoma di Trento</elem>
+	</NN>
+	<NN code="ITH3">
+		<elem>Veneto</elem>
+	</NN>
+	<NN code="ITH4">
+		<elem>Friuli-Venezia Giulia</elem>
+	</NN>
+	<NN code="ITH5">
+		<elem>Emilia-Romagna</elem>
+	</NN>
+	<NN code="ITI1">
+		<elem>Toscana</elem>
+	</NN>
+	<NN code="ITI2">
+		<elem>Umbria</elem>
+	</NN>
+	<NN code="ITI3">
+		<elem>Marche</elem>
+	</NN>
+	<NN code="ITI4">
+		<elem>Lazio</elem>
+	</NN>
+	<NN code="ITZZ">
+		<elem>Extra-Regio NUTS 2</elem>
+	</NN>
+	<NN code="CY">
+		<elem>ΚΥΠΡΟΣ (KYPROS)</elem>
+	</NN>
+	<NN code="CY00">
+		<elem>Κύπρος (Kypros)</elem>
+	</NN>
+	<NN code="CYZZ">
+		<elem>Extra-Regio NUTS 2</elem>
+	</NN>
+	<NN code="LV">
+		<elem>LATVIJA</elem>
+	</NN>
+	<NN code="LV00">
+		<elem>Latvija</elem>
+	</NN>
+	<NN code="LVZZ">
+		<elem>Extra-Regio NUTS 2</elem>
+	</NN>
+	<NN code="LT">
+		<elem>LIETUVA</elem>
+	</NN>
+	<NN code="LT00">
+		<elem>Lietuva</elem>
+	</NN>
+	<NN code="LTZZ">
+		<elem>Extra-Regio NUTS 2</elem>
+	</NN>
+	<NN code="LU">
+		<elem>LUXEMBOURG</elem>
+	</NN>
+	<NN code="LU00">
+		<elem>Luxembourg</elem>
+	</NN>
+	<NN code="LUZZ">
+		<elem>Extra-Regio NUTS 2</elem>
+	</NN>
+	<NN code="HU">
+		<elem>MAGYARORSZÁG</elem>
+	</NN>
+	<NN code="HU10">
+		<elem>Közép-Magyarország</elem>
+	</NN>
+	<NN code="HU21">
+		<elem>Közép-Dunántúl</elem>
+	</NN>
+	<NN code="HU22">
+		<elem>Nyugat-Dunántúl</elem>
+	</NN>
+	<NN code="HU23">
+		<elem>Dél-Dunántúl</elem>
+	</NN>
+	<NN code="HU31">
+		<elem>Észak-Magyarország</elem>
+	</NN>
+	<NN code="HU32">
+		<elem>Észak-Alföld</elem>
+	</NN>
+	<NN code="HU33">
+		<elem>Dél-Alföld</elem>
+	</NN>
+	<NN code="HUZZ">
+		<elem>Extra-Regio NUTS 2</elem>
+	</NN>
+	<NN code="MT">
+		<elem>MALTA</elem>
+	</NN>
+	<NN code="MT00">
+		<elem>Malta</elem>
+	</NN>
+	<NN code="MTZZ">
+		<elem>Extra-Regio NUTS 2</elem>
+	</NN>
+	<NN code="NL">
+		<elem>NEDERLAND</elem>
+	</NN>
+	<NN code="NL11">
+		<elem>Groningen</elem>
+	</NN>
+	<NN code="NL12">
+		<elem>Friesland (NL)</elem>
+	</NN>
+	<NN code="NL13">
+		<elem>Drenthe</elem>
+	</NN>
+	<NN code="NL21">
+		<elem>Overijssel</elem>
+	</NN>
+	<NN code="NL22">
+		<elem>Gelderland</elem>
+	</NN>
+	<NN code="NL23">
+		<elem>Flevoland</elem>
+	</NN>
+	<NN code="NL31">
+		<elem>Utrecht</elem>
+	</NN>
+	<NN code="NL32">
+		<elem>Noord-Holland</elem>
+	</NN>
+	<NN code="NL33">
+		<elem>Zuid-Holland</elem>
+	</NN>
+	<NN code="NL34">
+		<elem>Zeeland</elem>
+	</NN>
+	<NN code="NL41">
+		<elem>Noord-Brabant</elem>
+	</NN>
+	<NN code="NL42">
+		<elem>Limburg (NL)</elem>
+	</NN>
+	<NN code="NLZZ">
+		<elem>Extra-Regio NUTS 2</elem>
+	</NN>
+	<NN code="AT">
+		<elem>ÖSTERREICH</elem>
+	</NN>
+	<NN code="AT11">
+		<elem>Burgenland</elem>
+	</NN>
+	<NN code="AT12">
+		<elem>Niederösterreich</elem>
+	</NN>
+	<NN code="AT13">
+		<elem>Wien</elem>
+	</NN>
+	<NN code="AT21">
+		<elem>Kärnten</elem>
+	</NN>
+	<NN code="AT22">
+		<elem>Steiermark</elem>
+	</NN>
+	<NN code="AT31">
+		<elem>Oberösterreich</elem>
+	</NN>
+	<NN code="AT32">
+		<elem>Salzburg</elem>
+	</NN>
+	<NN code="AT33">
+		<elem>Tirol</elem>
+	</NN>
+	<NN code="AT34">
+		<elem>Vorarlberg</elem>
+	</NN>
+	<NN code="ATZZ">
+		<elem>Extra-Regio NUTS 2</elem>
+	</NN>
+	<NN code="PL">
+		<elem>POLSKA</elem>
+	</NN>
+	<NN code="PL11">
+		<elem>Łódzkie</elem>
+	</NN>
+	<NN code="PL12">
+		<elem>Mazowieckie</elem>
+	</NN>
+	<NN code="PL21">
+		<elem>Małopolskie</elem>
+	</NN>
+	<NN code="PL22">
+		<elem>Śląskie</elem>
+	</NN>
+	<NN code="PL31">
+		<elem>Lubelskie</elem>
+	</NN>
+	<NN code="PL32">
+		<elem>Podkarpackie</elem>
+	</NN>
+	<NN code="PL33">
+		<elem>Świętokrzyskie</elem>
+	</NN>
+	<NN code="PL34">
+		<elem>Podlaskie</elem>
+	</NN>
+	<NN code="PL41">
+		<elem>Wielkopolskie</elem>
+	</NN>
+	<NN code="PL42">
+		<elem>Zachodniopomorskie</elem>
+	</NN>
+	<NN code="PL43">
+		<elem>Lubuskie</elem>
+	</NN>
+	<NN code="PL51">
+		<elem>Dolnośląskie</elem>
+	</NN>
+	<NN code="PL52">
+		<elem>Opolskie</elem>
+	</NN>
+	<NN code="PL61">
+		<elem>Kujawsko-pomorskie</elem>
+	</NN>
+	<NN code="PL62">
+		<elem>Warmińsko-mazurskie</elem>
+	</NN>
+	<NN code="PL63">
+		<elem>Pomorskie</elem>
+	</NN>
+	<NN code="PLZZ">
+		<elem>Extra-Regio NUTS 2</elem>
+	</NN>
+	<NN code="PT">
+		<elem>PORTUGAL</elem>
+	</NN>
+	<NN code="PT11">
+		<elem>Norte</elem>
+	</NN>
+	<NN code="PT15">
+		<elem>Algarve</elem>
+	</NN>
+	<NN code="PT16">
+		<elem>Centro (PT)</elem>
+	</NN>
+	<NN code="PT17">
+		<elem>Área Metropolitana de Lisboa</elem>
+	</NN>
+	<NN code="PT18">
+		<elem>Alentejo</elem>
+	</NN>
+	<NN code="PT20">
+		<elem>Região Autónoma dos Açores</elem>
+	</NN>
+	<NN code="PT30">
+		<elem>Região Autónoma da Madeira</elem>
+	</NN>
+	<NN code="PTZZ">
+		<elem>Extra-Regio NUTS 2</elem>
+	</NN>
+	<NN code="RO">
+		<elem>ROMÂNIA</elem>
+	</NN>
+	<NN code="RO11">
+		<elem>Nord-Vest</elem>
+	</NN>
+	<NN code="RO12">
+		<elem>Centru</elem>
+	</NN>
+	<NN code="RO21">
+		<elem>Nord-Est</elem>
+	</NN>
+	<NN code="RO22">
+		<elem>Sud-Est</elem>
+	</NN>
+	<NN code="RO31">
+		<elem>Sud - Muntenia</elem>
+	</NN>
+	<NN code="RO32">
+		<elem>Bucureşti - Ilfov</elem>
+	</NN>
+	<NN code="RO41">
+		<elem>Sud-Vest Oltenia</elem>
+	</NN>
+	<NN code="RO42">
+		<elem>Vest</elem>
+	</NN>
+	<NN code="ROZZ">
+		<elem>Extra-Regio NUTS 2</elem>
+	</NN>
+	<NN code="SI">
+		<elem>SLOVENIJA</elem>
+	</NN>
+	<NN code="SI03">
+		<elem>Vzhodna Slovenija</elem>
+	</NN>
+	<NN code="SI04">
+		<elem>Zahodna Slovenija</elem>
+	</NN>
+	<NN code="SIZZ">
+		<elem>Extra-Regio NUTS 2</elem>
+	</NN>
+	<NN code="SK">
+		<elem>SLOVENSKO</elem>
+	</NN>
+	<NN code="SK01">
+		<elem>Bratislavský kraj</elem>
+	</NN>
+	<NN code="SK02">
+		<elem>Západné Slovensko</elem>
+	</NN>
+	<NN code="SK03">
+		<elem>Stredné Slovensko</elem>
+	</NN>
+	<NN code="SK04">
+		<elem>Východné Slovensko</elem>
+	</NN>
+	<NN code="SKZZ">
+		<elem>Extra-Regio NUTS 2</elem>
+	</NN>
+	<NN code="FI">
+		<elem>SUOMI / FINLAND</elem>
+	</NN>
+	<NN code="FI19">
+		<elem>Länsi-Suomi</elem>
+	</NN>
+	<NN code="FI1B">
+		<elem>Helsinki-Uusimaa</elem>
+	</NN>
+	<NN code="FI1C">
+		<elem>Etelä-Suomi</elem>
+	</NN>
+	<NN code="FI1D">
+		<elem>Pohjois- ja Itä-Suomi</elem>
+	</NN>
+	<NN code="FI20">
+		<elem>Åland</elem>
+	</NN>
+	<NN code="FIZZ">
+		<elem>Extra-Regio NUTS 2</elem>
+	</NN>
+	<NN code="SE">
+		<elem>SVERIGE</elem>
+	</NN>
+	<NN code="SE11">
+		<elem>Stockholm</elem>
+	</NN>
+	<NN code="SE12">
+		<elem>Östra Mellansverige</elem>
+	</NN>
+	<NN code="SE21">
+		<elem>Småland med öarna</elem>
+	</NN>
+	<NN code="SE22">
+		<elem>Sydsverige</elem>
+	</NN>
+	<NN code="SE23">
+		<elem>Västsverige</elem>
+	</NN>
+	<NN code="SE31">
+		<elem>Norra Mellansverige</elem>
+	</NN>
+	<NN code="SE32">
+		<elem>Mellersta Norrland</elem>
+	</NN>
+	<NN code="SE33">
+		<elem>Övre Norrland</elem>
+	</NN>
+	<NN code="SEZZ">
+		<elem>Extra-Regio NUTS 2</elem>
+	</NN>
+	<NN code="UK">
+		<elem>UNITED KINGDOM</elem>
+	</NN>
+	<NN code="UKC1">
+		<elem>Tees Valley and Durham</elem>
+	</NN>
+	<NN code="UKC2">
+		<elem>Northumberland and Tyne and Wear</elem>
+	</NN>
+	<NN code="UKD1">
+		<elem>Cumbria</elem>
+	</NN>
+	<NN code="UKD3">
+		<elem>Greater Manchester</elem>
+	</NN>
+	<NN code="UKD4">
+		<elem>Lancashire</elem>
+	</NN>
+	<NN code="UKD6">
+		<elem>Cheshire</elem>
+	</NN>
+	<NN code="UKD7">
+		<elem>Merseyside</elem>
+	</NN>
+	<NN code="UKE1">
+		<elem>East Yorkshire and Northern Lincolnshire</elem>
+	</NN>
+	<NN code="UKE2">
+		<elem>North Yorkshire</elem>
+	</NN>
+	<NN code="UKE3">
+		<elem>South Yorkshire</elem>
+	</NN>
+	<NN code="UKE4">
+		<elem>West Yorkshire</elem>
+	</NN>
+	<NN code="UKF1">
+		<elem>Derbyshire and Nottinghamshire</elem>
+	</NN>
+	<NN code="UKF2">
+		<elem>Leicestershire, Rutland and Northamptonshire</elem>
+	</NN>
+	<NN code="UKF3">
+		<elem>Lincolnshire</elem>
+	</NN>
+	<NN code="UKG1">
+		<elem>Herefordshire, Worcestershire and Warwickshire</elem>
+	</NN>
+	<NN code="UKG2">
+		<elem>Shropshire and Staffordshire</elem>
+	</NN>
+	<NN code="UKG3">
+		<elem>West Midlands</elem>
+	</NN>
+	<NN code="UKH1">
+		<elem>East Anglia</elem>
+	</NN>
+	<NN code="UKH2">
+		<elem>Bedfordshire and Hertfordshire</elem>
+	</NN>
+	<NN code="UKH3">
+		<elem>Essex</elem>
+	</NN>
+	<NN code="UKI3">
+		<elem>Inner London - West</elem>
+	</NN>
+	<NN code="UKI4">
+		<elem>Inner London - East</elem>
+	</NN>
+	<NN code="UKI5">
+		<elem>Outer London - East and North East</elem>
+	</NN>
+	<NN code="UKI6">
+		<elem>Outer London - South</elem>
+	</NN>
+	<NN code="UKI7">
+		<elem>Outer London - West and North West</elem>
+	</NN>
+	<NN code="UKJ1">
+		<elem>Berkshire, Buckinghamshire and Oxfordshire</elem>
+	</NN>
+	<NN code="UKJ2">
+		<elem>Surrey, East and West Sussex</elem>
+	</NN>
+	<NN code="UKJ3">
+		<elem>Hampshire and Isle of Wight</elem>
+	</NN>
+	<NN code="UKJ4">
+		<elem>Kent</elem>
+	</NN>
+	<NN code="UKK1">
+		<elem>Gloucestershire, Wiltshire and Bristol/Bath area</elem>
+	</NN>
+	<NN code="UKK2">
+		<elem>Dorset and Somerset</elem>
+	</NN>
+	<NN code="UKK3">
+		<elem>Cornwall and Isles of Scilly</elem>
+	</NN>
+	<NN code="UKK4">
+		<elem>Devon</elem>
+	</NN>
+	<NN code="UKL1">
+		<elem>West Wales and The Valleys</elem>
+	</NN>
+	<NN code="UKL2">
+		<elem>East Wales</elem>
+	</NN>
+	<NN code="UKM2">
+		<elem>Eastern Scotland</elem>
+	</NN>
+	<NN code="UKM3">
+		<elem>South Western Scotland</elem>
+	</NN>
+	<NN code="UKM5">
+		<elem>North Eastern Scotland</elem>
+	</NN>
+	<NN code="UKM6">
+		<elem>Highlands and Islands</elem>
+	</NN>
+	<NN code="UKN0">
+		<elem>Northern Ireland</elem>
+	</NN>
+	<NN code="UKZZ">
+		<elem>Extra-Regio NUTS 2</elem>
+	</NN>
+	<NN code="BE">
+		<elem>BELGIQUE-BELGIË</elem>
+	</NN>
+	<NN code="BE100">
+		<elem>Arr. de Bruxelles-Capitale / Arr. van Brussel-Hoofdstad</elem>
+	</NN>
+	<NN code="BE211">
+		<elem>Arr. Antwerpen</elem>
+	</NN>
+	<NN code="BE212">
+		<elem>Arr. Mechelen</elem>
+	</NN>
+	<NN code="BE213">
+		<elem>Arr. Turnhout</elem>
+	</NN>
+	<NN code="BE221">
+		<elem>Arr. Hasselt</elem>
+	</NN>
+	<NN code="BE222">
+		<elem>Arr. Maaseik</elem>
+	</NN>
+	<NN code="BE223">
+		<elem>Arr. Tongeren</elem>
+	</NN>
+	<NN code="BE231">
+		<elem>Arr. Aalst</elem>
+	</NN>
+	<NN code="BE232">
+		<elem>Arr. Dendermonde</elem>
+	</NN>
+	<NN code="BE233">
+		<elem>Arr. Eeklo</elem>
+	</NN>
+	<NN code="BE234">
+		<elem>Arr. Gent</elem>
+	</NN>
+	<NN code="BE235">
+		<elem>Arr. Oudenaarde</elem>
+	</NN>
+	<NN code="BE236">
+		<elem>Arr. Sint-Niklaas</elem>
+	</NN>
+	<NN code="BE241">
+		<elem>Arr. Halle-Vilvoorde</elem>
+	</NN>
+	<NN code="BE242">
+		<elem>Arr. Leuven</elem>
+	</NN>
+	<NN code="BE251">
+		<elem>Arr. Brugge</elem>
+	</NN>
+	<NN code="BE252">
+		<elem>Arr. Diksmuide</elem>
+	</NN>
+	<NN code="BE253">
+		<elem>Arr. Ieper</elem>
+	</NN>
+	<NN code="BE254">
+		<elem>Arr. Kortrijk</elem>
+	</NN>
+	<NN code="BE255">
+		<elem>Arr. Oostende</elem>
+	</NN>
+	<NN code="BE256">
+		<elem>Arr. Roeselare</elem>
+	</NN>
+	<NN code="BE257">
+		<elem>Arr. Tielt</elem>
+	</NN>
+	<NN code="BE258">
+		<elem>Arr. Veurne</elem>
+	</NN>
+	<NN code="BE310">
+		<elem>Arr. Nivelles</elem>
+	</NN>
+	<NN code="BE321">
+		<elem>Arr. Ath</elem>
+	</NN>
+	<NN code="BE322">
+		<elem>Arr. Charleroi</elem>
+	</NN>
+	<NN code="BE323">
+		<elem>Arr. Mons</elem>
+	</NN>
+	<NN code="BE324">
+		<elem>Arr. Mouscron</elem>
+	</NN>
+	<NN code="BE325">
+		<elem>Arr. Soignies</elem>
+	</NN>
+	<NN code="BE326">
+		<elem>Arr. Thuin</elem>
+	</NN>
+	<NN code="BE327">
+		<elem>Arr. Tournai</elem>
+	</NN>
+	<NN code="BE331">
+		<elem>Arr. Huy</elem>
+	</NN>
+	<NN code="BE332">
+		<elem>Arr. Liège</elem>
+	</NN>
+	<NN code="BE334">
+		<elem>Arr. Waremme</elem>
+	</NN>
+	<NN code="BE335">
+		<elem>Arr. Verviers - communes francophones</elem>
+	</NN>
+	<NN code="BE336">
+		<elem>Bezirk Verviers - Deutschsprachige Gemeinschaft</elem>
+	</NN>
+	<NN code="BE341">
+		<elem>Arr. Arlon</elem>
+	</NN>
+	<NN code="BE342">
+		<elem>Arr. Bastogne</elem>
+	</NN>
+	<NN code="BE343">
+		<elem>Arr. Marche-en-Famenne</elem>
+	</NN>
+	<NN code="BE344">
+		<elem>Arr. Neufchâteau</elem>
+	</NN>
+	<NN code="BE345">
+		<elem>Arr. Virton</elem>
+	</NN>
+	<NN code="BE351">
+		<elem>Arr. Dinant</elem>
+	</NN>
+	<NN code="BE352">
+		<elem>Arr. Namur</elem>
+	</NN>
+	<NN code="BE353">
+		<elem>Arr. Philippeville</elem>
+	</NN>
+	<NN code="BEZZZ">
+		<elem>Extra-Regio NUTS 3</elem>
+	</NN>
+	<NN code="BG">
+		<elem>БЪЛГАРИЯ (BULGARIA)</elem>
+	</NN>
+	<NN code="BG311">
+		<elem>Видин (Vidin)</elem>
+	</NN>
+	<NN code="BG312">
+		<elem>Монтана (Montana)</elem>
+	</NN>
+	<NN code="BG313">
+		<elem>Враца (Vratsa)</elem>
+	</NN>
+	<NN code="BG314">
+		<elem>Плевен (Pleven)</elem>
+	</NN>
+	<NN code="BG315">
+		<elem>Ловеч (Lovech)</elem>
+	</NN>
+	<NN code="BG321">
+		<elem>Велико Търново (Veliko Tarnovo)</elem>
+	</NN>
+	<NN code="BG322">
+		<elem>Габрово (Gabrovo)</elem>
+	</NN>
+	<NN code="BG323">
+		<elem>Русе (Ruse)</elem>
+	</NN>
+	<NN code="BG324">
+		<elem>Разград (Razgrad)</elem>
+	</NN>
+	<NN code="BG325">
+		<elem>Силистра (Silistra)</elem>
+	</NN>
+	<NN code="BG331">
+		<elem>Варна (Varna)</elem>
+	</NN>
+	<NN code="BG332">
+		<elem>Добрич (Dobrich)</elem>
+	</NN>
+	<NN code="BG333">
+		<elem>Шумен (Shumen)</elem>
+	</NN>
+	<NN code="BG334">
+		<elem>Търговище (Targovishte)</elem>
+	</NN>
+	<NN code="BG341">
+		<elem>Бургас (Burgas)</elem>
+	</NN>
+	<NN code="BG342">
+		<elem>Сливен (Sliven)</elem>
+	</NN>
+	<NN code="BG343">
+		<elem>Ямбол (Yambol)</elem>
+	</NN>
+	<NN code="BG344">
+		<elem>Стара Загора (Stara Zagora)</elem>
+	</NN>
+	<NN code="BG411">
+		<elem>София (столица) (Sofia (stolitsa))</elem>
+	</NN>
+	<NN code="BG412">
+		<elem>София (Sofia)</elem>
+	</NN>
+	<NN code="BG413">
+		<elem>Благоевград (Blagoevgrad)</elem>
+	</NN>
+	<NN code="BG414">
+		<elem>Перник (Pernik)</elem>
+	</NN>
+	<NN code="BG415">
+		<elem>Кюстендил (Kyustendil)</elem>
+	</NN>
+	<NN code="BG421">
+		<elem>Пловдив (Plovdiv)</elem>
+	</NN>
+	<NN code="BG422">
+		<elem>Хасково (Haskovo)</elem>
+	</NN>
+	<NN code="BG423">
+		<elem>Пазарджик (Pazardzhik)</elem>
+	</NN>
+	<NN code="BG424">
+		<elem>Смолян (Smolyan)</elem>
+	</NN>
+	<NN code="BG425">
+		<elem>Кърджали (Kardzhali)</elem>
+	</NN>
+	<NN code="BGZZZ">
+		<elem>Extra-Regio NUTS 3</elem>
+	</NN>
+	<NN code="CZ">
+		<elem>ČESKÁ REPUBLIKA</elem>
+	</NN>
+	<NN code="CZ010">
+		<elem>Hlavní město Praha</elem>
+	</NN>
+	<NN code="CZ020">
+		<elem>Středočeský kraj</elem>
+	</NN>
+	<NN code="CZ031">
+		<elem>Jihočeský kraj</elem>
+	</NN>
+	<NN code="CZ032">
+		<elem>Plzeňský kraj</elem>
+	</NN>
+	<NN code="CZ041">
+		<elem>Karlovarský kraj</elem>
+	</NN>
+	<NN code="CZ042">
+		<elem>Ústecký kraj</elem>
+	</NN>
+	<NN code="CZ051">
+		<elem>Liberecký kraj</elem>
+	</NN>
+	<NN code="CZ052">
+		<elem>Královéhradecký kraj</elem>
+	</NN>
+	<NN code="CZ053">
+		<elem>Pardubický kraj</elem>
+	</NN>
+	<NN code="CZ063">
+		<elem>Kraj Vysočina</elem>
+	</NN>
+	<NN code="CZ064">
+		<elem>Jihomoravský kraj</elem>
+	</NN>
+	<NN code="CZ071">
+		<elem>Olomoucký kraj</elem>
+	</NN>
+	<NN code="CZ072">
+		<elem>Zlínský kraj</elem>
+	</NN>
+	<NN code="CZ080">
+		<elem>Moravskoslezský kraj</elem>
+	</NN>
+	<NN code="CZZZZ">
+		<elem>Extra-Regio NUTS 3</elem>
+	</NN>
+	<NN code="DK">
+		<elem>DANMARK</elem>
+	</NN>
+	<NN code="DK011">
+		<elem>Byen København</elem>
+	</NN>
+	<NN code="DK012">
+		<elem>Københavns omegn</elem>
+	</NN>
+	<NN code="DK013">
+		<elem>Nordsjælland</elem>
+	</NN>
+	<NN code="DK014">
+		<elem>Bornholm</elem>
+	</NN>
+	<NN code="DK021">
+		<elem>Østsjælland</elem>
+	</NN>
+	<NN code="DK022">
+		<elem>Vest- og Sydsjælland</elem>
+	</NN>
+	<NN code="DK031">
+		<elem>Fyn</elem>
+	</NN>
+	<NN code="DK032">
+		<elem>Sydjylland</elem>
+	</NN>
+	<NN code="DK041">
+		<elem>Vestjylland</elem>
+	</NN>
+	<NN code="DK042">
+		<elem>Østjylland</elem>
+	</NN>
+	<NN code="DK050">
+		<elem>Nordjylland</elem>
+	</NN>
+	<NN code="DKZZZ">
+		<elem>Extra-Regio NUTS 3</elem>
+	</NN>
+	<NN code="DE">
+		<elem>DEUTSCHLAND</elem>
+	</NN>
+	<NN code="DE111">
+		<elem>Stuttgart, Stadtkreis</elem>
+	</NN>
+	<NN code="DE112">
+		<elem>Böblingen</elem>
+	</NN>
+	<NN code="DE113">
+		<elem>Esslingen</elem>
+	</NN>
+	<NN code="DE114">
+		<elem>Göppingen</elem>
+	</NN>
+	<NN code="DE115">
+		<elem>Ludwigsburg</elem>
+	</NN>
+	<NN code="DE116">
+		<elem>Rems-Murr-Kreis</elem>
+	</NN>
+	<NN code="DE117">
+		<elem>Heilbronn, Stadtkreis</elem>
+	</NN>
+	<NN code="DE118">
+		<elem>Heilbronn, Landkreis</elem>
+	</NN>
+	<NN code="DE119">
+		<elem>Hohenlohekreis</elem>
+	</NN>
+	<NN code="DE11A">
+		<elem>Schwäbisch Hall</elem>
+	</NN>
+	<NN code="DE11B">
+		<elem>Main-Tauber-Kreis</elem>
+	</NN>
+	<NN code="DE11C">
+		<elem>Heidenheim</elem>
+	</NN>
+	<NN code="DE11D">
+		<elem>Ostalbkreis</elem>
+	</NN>
+	<NN code="DE121">
+		<elem>Baden-Baden, Stadtkreis</elem>
+	</NN>
+	<NN code="DE122">
+		<elem>Karlsruhe, Stadtkreis</elem>
+	</NN>
+	<NN code="DE123">
+		<elem>Karlsruhe, Landkreis</elem>
+	</NN>
+	<NN code="DE124">
+		<elem>Rastatt</elem>
+	</NN>
+	<NN code="DE125">
+		<elem>Heidelberg, Stadtkreis</elem>
+	</NN>
+	<NN code="DE126">
+		<elem>Mannheim, Stadtkreis</elem>
+	</NN>
+	<NN code="DE127">
+		<elem>Neckar-Odenwald-Kreis</elem>
+	</NN>
+	<NN code="DE128">
+		<elem>Rhein-Neckar-Kreis</elem>
+	</NN>
+	<NN code="DE129">
+		<elem>Pforzheim, Stadtkreis</elem>
+	</NN>
+	<NN code="DE12A">
+		<elem>Calw</elem>
+	</NN>
+	<NN code="DE12B">
+		<elem>Enzkreis</elem>
+	</NN>
+	<NN code="DE12C">
+		<elem>Freudenstadt</elem>
+	</NN>
+	<NN code="DE131">
+		<elem>Freiburg im Breisgau, Stadtkreis</elem>
+	</NN>
+	<NN code="DE132">
+		<elem>Breisgau-Hochschwarzwald</elem>
+	</NN>
+	<NN code="DE133">
+		<elem>Emmendingen</elem>
+	</NN>
+	<NN code="DE134">
+		<elem>Ortenaukreis</elem>
+	</NN>
+	<NN code="DE135">
+		<elem>Rottweil</elem>
+	</NN>
+	<NN code="DE136">
+		<elem>Schwarzwald-Baar-Kreis</elem>
+	</NN>
+	<NN code="DE137">
+		<elem>Tuttlingen</elem>
+	</NN>
+	<NN code="DE138">
+		<elem>Konstanz</elem>
+	</NN>
+	<NN code="DE139">
+		<elem>Lörrach</elem>
+	</NN>
+	<NN code="DE13A">
+		<elem>Waldshut</elem>
+	</NN>
+	<NN code="DE141">
+		<elem>Reutlingen</elem>
+	</NN>
+	<NN code="DE142">
+		<elem>Tübingen, Landkreis</elem>
+	</NN>
+	<NN code="DE143">
+		<elem>Zollernalbkreis</elem>
+	</NN>
+	<NN code="DE144">
+		<elem>Ulm, Stadtkreis</elem>
+	</NN>
+	<NN code="DE145">
+		<elem>Alb-Donau-Kreis</elem>
+	</NN>
+	<NN code="DE146">
+		<elem>Biberach</elem>
+	</NN>
+	<NN code="DE147">
+		<elem>Bodenseekreis</elem>
+	</NN>
+	<NN code="DE148">
+		<elem>Ravensburg</elem>
+	</NN>
+	<NN code="DE149">
+		<elem>Sigmaringen</elem>
+	</NN>
+	<NN code="DE211">
+		<elem>Ingolstadt, Kreisfreie Stadt</elem>
+	</NN>
+	<NN code="DE212">
+		<elem>München, Kreisfreie Stadt</elem>
+	</NN>
+	<NN code="DE213">
+		<elem>Rosenheim, Kreisfreie Stadt</elem>
+	</NN>
+	<NN code="DE214">
+		<elem>Altötting</elem>
+	</NN>
+	<NN code="DE215">
+		<elem>Berchtesgadener Land</elem>
+	</NN>
+	<NN code="DE216">
+		<elem>Bad Tölz-Wolfratshausen</elem>
+	</NN>
+	<NN code="DE217">
+		<elem>Dachau</elem>
+	</NN>
+	<NN code="DE218">
+		<elem>Ebersberg</elem>
+	</NN>
+	<NN code="DE219">
+		<elem>Eichstätt</elem>
+	</NN>
+	<NN code="DE21A">
+		<elem>Erding</elem>
+	</NN>
+	<NN code="DE21B">
+		<elem>Freising</elem>
+	</NN>
+	<NN code="DE21C">
+		<elem>Fürstenfeldbruck</elem>
+	</NN>
+	<NN code="DE21D">
+		<elem>Garmisch-Partenkirchen</elem>
+	</NN>
+	<NN code="DE21E">
+		<elem>Landsberg am Lech</elem>
+	</NN>
+	<NN code="DE21F">
+		<elem>Miesbach</elem>
+	</NN>
+	<NN code="DE21G">
+		<elem>Mühldorf a. Inn</elem>
+	</NN>
+	<NN code="DE21H">
+		<elem>München, Landkreis</elem>
+	</NN>
+	<NN code="DE21I">
+		<elem>Neuburg-Schrobenhausen</elem>
+	</NN>
+	<NN code="DE21J">
+		<elem>Pfaffenhofen a. d. Ilm</elem>
+	</NN>
+	<NN code="DE21K">
+		<elem>Rosenheim, Landkreis</elem>
+	</NN>
+	<NN code="DE21L">
+		<elem>Starnberg</elem>
+	</NN>
+	<NN code="DE21M">
+		<elem>Traunstein</elem>
+	</NN>
+	<NN code="DE21N">
+		<elem>Weilheim-Schongau</elem>
+	</NN>
+	<NN code="DE221">
+		<elem>Landshut, Kreisfreie Stadt</elem>
+	</NN>
+	<NN code="DE222">
+		<elem>Passau, Kreisfreie Stadt</elem>
+	</NN>
+	<NN code="DE223">
+		<elem>Straubing, Kreisfreie Stadt</elem>
+	</NN>
+	<NN code="DE224">
+		<elem>Deggendorf</elem>
+	</NN>
+	<NN code="DE225">
+		<elem>Freyung-Grafenau</elem>
+	</NN>
+	<NN code="DE226">
+		<elem>Kelheim</elem>
+	</NN>
+	<NN code="DE227">
+		<elem>Landshut, Landkreis</elem>
+	</NN>
+	<NN code="DE228">
+		<elem>Passau, Landkreis</elem>
+	</NN>
+	<NN code="DE229">
+		<elem>Regen</elem>
+	</NN>
+	<NN code="DE22A">
+		<elem>Rottal-Inn</elem>
+	</NN>
+	<NN code="DE22B">
+		<elem>Straubing-Bogen</elem>
+	</NN>
+	<NN code="DE22C">
+		<elem>Dingolfing-Landau</elem>
+	</NN>
+	<NN code="DE231">
+		<elem>Amberg, Kreisfreie Stadt</elem>
+	</NN>
+	<NN code="DE232">
+		<elem>Regensburg, Kreisfreie Stadt</elem>
+	</NN>
+	<NN code="DE233">
+		<elem>Weiden i. d. Opf, Kreisfreie Stadt</elem>
+	</NN>
+	<NN code="DE234">
+		<elem>Amberg-Sulzbach</elem>
+	</NN>
+	<NN code="DE235">
+		<elem>Cham</elem>
+	</NN>
+	<NN code="DE236">
+		<elem>Neumarkt i. d. OPf.</elem>
+	</NN>
+	<NN code="DE237">
+		<elem>Neustadt a. d. Waldnaab</elem>
+	</NN>
+	<NN code="DE238">
+		<elem>Regensburg, Landkreis</elem>
+	</NN>
+	<NN code="DE239">
+		<elem>Schwandorf</elem>
+	</NN>
+	<NN code="DE23A">
+		<elem>Tirschenreuth</elem>
+	</NN>
+	<NN code="DE241">
+		<elem>Bamberg, Kreisfreie Stadt</elem>
+	</NN>
+	<NN code="DE242">
+		<elem>Bayreuth, Kreisfreie Stadt</elem>
+	</NN>
+	<NN code="DE243">
+		<elem>Coburg, Kreisfreie Stadt</elem>
+	</NN>
+	<NN code="DE244">
+		<elem>Hof, Kreisfreie Stadt</elem>
+	</NN>
+	<NN code="DE245">
+		<elem>Bamberg, Landkreis</elem>
+	</NN>
+	<NN code="DE246">
+		<elem>Bayreuth, Landkreis</elem>
+	</NN>
+	<NN code="DE247">
+		<elem>Coburg, Landkreis</elem>
+	</NN>
+	<NN code="DE248">
+		<elem>Forchheim</elem>
+	</NN>
+	<NN code="DE249">
+		<elem>Hof, Landkreis</elem>
+	</NN>
+	<NN code="DE24A">
+		<elem>Kronach</elem>
+	</NN>
+	<NN code="DE24B">
+		<elem>Kulmbach</elem>
+	</NN>
+	<NN code="DE24C">
+		<elem>Lichtenfels</elem>
+	</NN>
+	<NN code="DE24D">
+		<elem>Wunsiedel i. Fichtelgebirge</elem>
+	</NN>
+	<NN code="DE251">
+		<elem>Ansbach, Kreisfreie Stadt</elem>
+	</NN>
+	<NN code="DE252">
+		<elem>Erlangen, Kreisfreie Stadt</elem>
+	</NN>
+	<NN code="DE253">
+		<elem>Fürth, Kreisfreie Stadt</elem>
+	</NN>
+	<NN code="DE254">
+		<elem>Nürnberg, Kreisfreie Stadt</elem>
+	</NN>
+	<NN code="DE255">
+		<elem>Schwabach, Kreisfreie Stadt</elem>
+	</NN>
+	<NN code="DE256">
+		<elem>Ansbach, Landkreis</elem>
+	</NN>
+	<NN code="DE257">
+		<elem>Erlangen-Höchstadt</elem>
+	</NN>
+	<NN code="DE258">
+		<elem>Fürth, Landkreis</elem>
+	</NN>
+	<NN code="DE259">
+		<elem>Nürnberger Land</elem>
+	</NN>
+	<NN code="DE25A">
+		<elem>Neustadt a. d. Aisch-Bad Windsheim</elem>
+	</NN>
+	<NN code="DE25B">
+		<elem>Roth</elem>
+	</NN>
+	<NN code="DE25C">
+		<elem>Weißenburg-Gunzenhausen</elem>
+	</NN>
+	<NN code="DE261">
+		<elem>Aschaffenburg, Kreisfreie Stadt</elem>
+	</NN>
+	<NN code="DE262">
+		<elem>Schweinfurt, Kreisfreie Stadt</elem>
+	</NN>
+	<NN code="DE263">
+		<elem>Würzburg, Kreisfreie Stadt</elem>
+	</NN>
+	<NN code="DE264">
+		<elem>Aschaffenburg, Landkreis</elem>
+	</NN>
+	<NN code="DE265">
+		<elem>Bad Kissingen</elem>
+	</NN>
+	<NN code="DE266">
+		<elem>Rhön-Grabfeld</elem>
+	</NN>
+	<NN code="DE267">
+		<elem>Haßberge</elem>
+	</NN>
+	<NN code="DE268">
+		<elem>Kitzingen</elem>
+	</NN>
+	<NN code="DE269">
+		<elem>Miltenberg</elem>
+	</NN>
+	<NN code="DE26A">
+		<elem>Main-Spessart</elem>
+	</NN>
+	<NN code="DE26B">
+		<elem>Schweinfurt, Landkreis</elem>
+	</NN>
+	<NN code="DE26C">
+		<elem>Würzburg, Landkreis</elem>
+	</NN>
+	<NN code="DE271">
+		<elem>Augsburg, Kreisfreie Stadt</elem>
+	</NN>
+	<NN code="DE272">
+		<elem>Kaufbeuren, Kreisfreie Stadt</elem>
+	</NN>
+	<NN code="DE273">
+		<elem>Kempten (Allgäu), Kreisfreie Stadt</elem>
+	</NN>
+	<NN code="DE274">
+		<elem>Memmingen, Kreisfreie Stadt</elem>
+	</NN>
+	<NN code="DE275">
+		<elem>Aichach-Friedberg</elem>
+	</NN>
+	<NN code="DE276">
+		<elem>Augsburg, Landkreis</elem>
+	</NN>
+	<NN code="DE277">
+		<elem>Dillingen a.d. Donau</elem>
+	</NN>
+	<NN code="DE278">
+		<elem>Günzburg</elem>
+	</NN>
+	<NN code="DE279">
+		<elem>Neu-Ulm</elem>
+	</NN>
+	<NN code="DE27A">
+		<elem>Lindau (Bodensee)</elem>
+	</NN>
+	<NN code="DE27B">
+		<elem>Ostallgäu</elem>
+	</NN>
+	<NN code="DE27C">
+		<elem>Unterallgäu</elem>
+	</NN>
+	<NN code="DE27D">
+		<elem>Donau-Ries</elem>
+	</NN>
+	<NN code="DE27E">
+		<elem>Oberallgäu</elem>
+	</NN>
+	<NN code="DE300">
+		<elem>Berlin</elem>
+	</NN>
+	<NN code="DE401">
+		<elem>Brandenburg an der Havel, Kreisfreie Stadt</elem>
+	</NN>
+	<NN code="DE402">
+		<elem>Cottbus, Kreisfreie Stadt</elem>
+	</NN>
+	<NN code="DE403">
+		<elem>Frankfurt (Oder), Kreisfreie Stadt</elem>
+	</NN>
+	<NN code="DE404">
+		<elem>Potsdam, Kreisfreie Stadt</elem>
+	</NN>
+	<NN code="DE405">
+		<elem>Barnim</elem>
+	</NN>
+	<NN code="DE406">
+		<elem>Dahme-Spreewald</elem>
+	</NN>
+	<NN code="DE407">
+		<elem>Elbe-Elster</elem>
+	</NN>
+	<NN code="DE408">
+		<elem>Havelland</elem>
+	</NN>
+	<NN code="DE409">
+		<elem>Märkisch-Oderland</elem>
+	</NN>
+	<NN code="DE40A">
+		<elem>Oberhavel</elem>
+	</NN>
+	<NN code="DE40B">
+		<elem>Oberspreewald-Lausitz</elem>
+	</NN>
+	<NN code="DE40C">
+		<elem>Oder-Spree</elem>
+	</NN>
+	<NN code="DE40D">
+		<elem>Ostprignitz-Ruppin</elem>
+	</NN>
+	<NN code="DE40E">
+		<elem>Potsdam-Mittelmark</elem>
+	</NN>
+	<NN code="DE40F">
+		<elem>Prignitz</elem>
+	</NN>
+	<NN code="DE40G">
+		<elem>Spree-Neiße</elem>
+	</NN>
+	<NN code="DE40H">
+		<elem>Teltow-Fläming</elem>
+	</NN>
+	<NN code="DE40I">
+		<elem>Uckermark</elem>
+	</NN>
+	<NN code="DE501">
+		<elem>Bremen, Kreisfreie Stadt</elem>
+	</NN>
+	<NN code="DE502">
+		<elem>Bremerhaven, Kreisfreie Stadt</elem>
+	</NN>
+	<NN code="DE600">
+		<elem>Hamburg</elem>
+	</NN>
+	<NN code="DE711">
+		<elem>Darmstadt, Kreisfreie Stadt</elem>
+	</NN>
+	<NN code="DE712">
+		<elem>Frankfurt am Main, Kreisfreie Stadt</elem>
+	</NN>
+	<NN code="DE713">
+		<elem>Offenbach am Main, Kreisfreie Stadt</elem>
+	</NN>
+	<NN code="DE714">
+		<elem>Wiesbaden, Kreisfreie Stadt</elem>
+	</NN>
+	<NN code="DE715">
+		<elem>Bergstraße</elem>
+	</NN>
+	<NN code="DE716">
+		<elem>Darmstadt-Dieburg</elem>
+	</NN>
+	<NN code="DE717">
+		<elem>Groß-Gerau</elem>
+	</NN>
+	<NN code="DE718">
+		<elem>Hochtaunuskreis</elem>
+	</NN>
+	<NN code="DE719">
+		<elem>Main-Kinzig-Kreis</elem>
+	</NN>
+	<NN code="DE71A">
+		<elem>Main-Taunus-Kreis</elem>
+	</NN>
+	<NN code="DE71B">
+		<elem>Odenwaldkreis</elem>
+	</NN>
+	<NN code="DE71C">
+		<elem>Offenbach, Landkreis</elem>
+	</NN>
+	<NN code="DE71D">
+		<elem>Rheingau-Taunus-Kreis</elem>
+	</NN>
+	<NN code="DE71E">
+		<elem>Wetteraukreis</elem>
+	</NN>
+	<NN code="DE721">
+		<elem>Gießen, Landkreis</elem>
+	</NN>
+	<NN code="DE722">
+		<elem>Lahn-Dill-Kreis</elem>
+	</NN>
+	<NN code="DE723">
+		<elem>Limburg-Weilburg</elem>
+	</NN>
+	<NN code="DE724">
+		<elem>Marburg-Biedenkopf</elem>
+	</NN>
+	<NN code="DE725">
+		<elem>Vogelsbergkreis</elem>
+	</NN>
+	<NN code="DE731">
+		<elem>Kassel, Kreisfreie Stadt</elem>
+	</NN>
+	<NN code="DE732">
+		<elem>Fulda</elem>
+	</NN>
+	<NN code="DE733">
+		<elem>Hersfeld-Rotenburg</elem>
+	</NN>
+	<NN code="DE734">
+		<elem>Kassel, Landkreis</elem>
+	</NN>
+	<NN code="DE735">
+		<elem>Schwalm-Eder-Kreis</elem>
+	</NN>
+	<NN code="DE736">
+		<elem>Waldeck-Frankenberg</elem>
+	</NN>
+	<NN code="DE737">
+		<elem>Werra-Meißner-Kreis</elem>
+	</NN>
+	<NN code="DE803">
+		<elem>Rostock, Kreisfreie Stadt</elem>
+	</NN>
+	<NN code="DE804">
+		<elem>Schwerin, Kreisfreie Stadt</elem>
+	</NN>
+	<NN code="DE80J">
+		<elem>Mecklenburgische Seenplatte</elem>
+	</NN>
+	<NN code="DE80K">
+		<elem>Landkreis Rostock</elem>
+	</NN>
+	<NN code="DE80L">
+		<elem>Vorpommern-Rügen</elem>
+	</NN>
+	<NN code="DE80M">
+		<elem>Nordwestmecklenburg</elem>
+	</NN>
+	<NN code="DE80N">
+		<elem>Vorpommern-Greifswald</elem>
+	</NN>
+	<NN code="DE80O">
+		<elem>Ludwigslust-Parchim</elem>
+	</NN>
+	<NN code="DE911">
+		<elem>Braunschweig, Kreisfreie Stadt</elem>
+	</NN>
+	<NN code="DE912">
+		<elem>Salzgitter, Kreisfreie Stadt</elem>
+	</NN>
+	<NN code="DE913">
+		<elem>Wolfsburg, Kreisfreie Stadt</elem>
+	</NN>
+	<NN code="DE914">
+		<elem>Gifhorn</elem>
+	</NN>
+	<NN code="DE915">
+		<elem>Göttingen</elem>
+	</NN>
+	<NN code="DE916">
+		<elem>Goslar</elem>
+	</NN>
+	<NN code="DE917">
+		<elem>Helmstedt</elem>
+	</NN>
+	<NN code="DE918">
+		<elem>Northeim</elem>
+	</NN>
+	<NN code="DE919">
+		<elem>Osterode am Harz</elem>
+	</NN>
+	<NN code="DE91A">
+		<elem>Peine</elem>
+	</NN>
+	<NN code="DE91B">
+		<elem>Wolfenbüttel</elem>
+	</NN>
+	<NN code="DE922">
+		<elem>Diepholz</elem>
+	</NN>
+	<NN code="DE923">
+		<elem>Hameln-Pyrmont</elem>
+	</NN>
+	<NN code="DE925">
+		<elem>Hildesheim</elem>
+	</NN>
+	<NN code="DE926">
+		<elem>Holzminden</elem>
+	</NN>
+	<NN code="DE927">
+		<elem>Nienburg (Weser)</elem>
+	</NN>
+	<NN code="DE928">
+		<elem>Schaumburg</elem>
+	</NN>
+	<NN code="DE929">
+		<elem>Region Hannover</elem>
+	</NN>
+	<NN code="DE931">
+		<elem>Celle</elem>
+	</NN>
+	<NN code="DE932">
+		<elem>Cuxhaven</elem>
+	</NN>
+	<NN code="DE933">
+		<elem>Harburg</elem>
+	</NN>
+	<NN code="DE934">
+		<elem>Lüchow-Dannenberg</elem>
+	</NN>
+	<NN code="DE935">
+		<elem>Lüneburg, Landkreis</elem>
+	</NN>
+	<NN code="DE936">
+		<elem>Osterholz</elem>
+	</NN>
+	<NN code="DE937">
+		<elem>Rotenburg (Wümme)</elem>
+	</NN>
+	<NN code="DE938">
+		<elem>Heidekreis</elem>
+	</NN>
+	<NN code="DE939">
+		<elem>Stade</elem>
+	</NN>
+	<NN code="DE93A">
+		<elem>Uelzen</elem>
+	</NN>
+	<NN code="DE93B">
+		<elem>Verden</elem>
+	</NN>
+	<NN code="DE941">
+		<elem>Delmenhorst, Kreisfreie Stadt</elem>
+	</NN>
+	<NN code="DE942">
+		<elem>Emden, Kreisfreie Stadt</elem>
+	</NN>
+	<NN code="DE943">
+		<elem>Oldenburg (Oldenburg), Kreisfreie Stadt</elem>
+	</NN>
+	<NN code="DE944">
+		<elem>Osnabrück, Kreisfreie Stadt</elem>
+	</NN>
+	<NN code="DE945">
+		<elem>Wilhelmshaven, Kreisfreie Stadt</elem>
+	</NN>
+	<NN code="DE946">
+		<elem>Ammerland</elem>
+	</NN>
+	<NN code="DE947">
+		<elem>Aurich</elem>
+	</NN>
+	<NN code="DE948">
+		<elem>Cloppenburg</elem>
+	</NN>
+	<NN code="DE949">
+		<elem>Emsland</elem>
+	</NN>
+	<NN code="DE94A">
+		<elem>Friesland (DE)</elem>
+	</NN>
+	<NN code="DE94B">
+		<elem>Grafschaft Bentheim</elem>
+	</NN>
+	<NN code="DE94C">
+		<elem>Leer</elem>
+	</NN>
+	<NN code="DE94D">
+		<elem>Oldenburg, Landkreis</elem>
+	</NN>
+	<NN code="DE94E">
+		<elem>Osnabrück, Landkreis</elem>
+	</NN>
+	<NN code="DE94F">
+		<elem>Vechta</elem>
+	</NN>
+	<NN code="DE94G">
+		<elem>Wesermarsch</elem>
+	</NN>
+	<NN code="DE94H">
+		<elem>Wittmund</elem>
+	</NN>
+	<NN code="DEA11">
+		<elem>Düsseldorf, Kreisfreie Stadt</elem>
+	</NN>
+	<NN code="DEA12">
+		<elem>Duisburg, Kreisfreie Stadt</elem>
+	</NN>
+	<NN code="DEA13">
+		<elem>Essen, Kreisfreie Stadt</elem>
+	</NN>
+	<NN code="DEA14">
+		<elem>Krefeld, Kreisfreie Stadt</elem>
+	</NN>
+	<NN code="DEA15">
+		<elem>Mönchengladbach, Kreisfreie Stadt</elem>
+	</NN>
+	<NN code="DEA16">
+		<elem>Mülheim an der Ruhr,Kreisfreie Stadt</elem>
+	</NN>
+	<NN code="DEA17">
+		<elem>Oberhausen, Kreisfreie Stadt</elem>
+	</NN>
+	<NN code="DEA18">
+		<elem>Remscheid, Kreisfreie Stadt</elem>
+	</NN>
+	<NN code="DEA19">
+		<elem>Solingen, Kreisfreie Stadt</elem>
+	</NN>
+	<NN code="DEA1A">
+		<elem>Wuppertal, Kreisfreie Stadt</elem>
+	</NN>
+	<NN code="DEA1B">
+		<elem>Kleve</elem>
+	</NN>
+	<NN code="DEA1C">
+		<elem>Mettmann</elem>
+	</NN>
+	<NN code="DEA1D">
+		<elem>Rhein-Kreis Neuss</elem>
+	</NN>
+	<NN code="DEA1E">
+		<elem>Viersen</elem>
+	</NN>
+	<NN code="DEA1F">
+		<elem>Wesel</elem>
+	</NN>
+	<NN code="DEA22">
+		<elem>Bonn, Kreisfreie Stadt</elem>
+	</NN>
+	<NN code="DEA23">
+		<elem>Köln, Kreisfreie Stadt</elem>
+	</NN>
+	<NN code="DEA24">
+		<elem>Leverkusen, Kreisfreie Stadt</elem>
+	</NN>
+	<NN code="DEA26">
+		<elem>Düren</elem>
+	</NN>
+	<NN code="DEA27">
+		<elem>Rhein-Erft-Kreis</elem>
+	</NN>
+	<NN code="DEA28">
+		<elem>Euskirchen</elem>
+	</NN>
+	<NN code="DEA29">
+		<elem>Heinsberg</elem>
+	</NN>
+	<NN code="DEA2A">
+		<elem>Oberbergischer Kreis</elem>
+	</NN>
+	<NN code="DEA2B">
+		<elem>Rheinisch-Bergischer Kreis</elem>
+	</NN>
+	<NN code="DEA2C">
+		<elem>Rhein-Sieg-Kreis</elem>
+	</NN>
+	<NN code="DEA2D">
+		<elem>Städteregion Aachen</elem>
+	</NN>
+	<NN code="DEA31">
+		<elem>Bottrop, Kreisfreie Stadt</elem>
+	</NN>
+	<NN code="DEA32">
+		<elem>Gelsenkirchen, Kreisfreie Stadt</elem>
+	</NN>
+	<NN code="DEA33">
+		<elem>Münster, Kreisfreie Stadt</elem>
+	</NN>
+	<NN code="DEA34">
+		<elem>Borken</elem>
+	</NN>
+	<NN code="DEA35">
+		<elem>Coesfeld</elem>
+	</NN>
+	<NN code="DEA36">
+		<elem>Recklinghausen</elem>
+	</NN>
+	<NN code="DEA37">
+		<elem>Steinfurt</elem>
+	</NN>
+	<NN code="DEA38">
+		<elem>Warendorf</elem>
+	</NN>
+	<NN code="DEA41">
+		<elem>Bielefeld, Kreisfreie Stadt</elem>
+	</NN>
+	<NN code="DEA42">
+		<elem>Gütersloh</elem>
+	</NN>
+	<NN code="DEA43">
+		<elem>Herford</elem>
+	</NN>
+	<NN code="DEA44">
+		<elem>Höxter</elem>
+	</NN>
+	<NN code="DEA45">
+		<elem>Lippe</elem>
+	</NN>
+	<NN code="DEA46">
+		<elem>Minden-Lübbecke</elem>
+	</NN>
+	<NN code="DEA47">
+		<elem>Paderborn</elem>
+	</NN>
+	<NN code="DEA51">
+		<elem>Bochum, Kreisfreie Stadt</elem>
+	</NN>
+	<NN code="DEA52">
+		<elem>Dortmund, Kreisfreie Stadt</elem>
+	</NN>
+	<NN code="DEA53">
+		<elem>Hagen, Kreisfreie Stadt</elem>
+	</NN>
+	<NN code="DEA54">
+		<elem>Hamm, Kreisfreie Stadt</elem>
+	</NN>
+	<NN code="DEA55">
+		<elem>Herne, Kreisfreie Stadt</elem>
+	</NN>
+	<NN code="DEA56">
+		<elem>Ennepe-Ruhr-Kreis</elem>
+	</NN>
+	<NN code="DEA57">
+		<elem>Hochsauerlandkreis</elem>
+	</NN>
+	<NN code="DEA58">
+		<elem>Märkischer Kreis</elem>
+	</NN>
+	<NN code="DEA59">
+		<elem>Olpe</elem>
+	</NN>
+	<NN code="DEA5A">
+		<elem>Siegen-Wittgenstein</elem>
+	</NN>
+	<NN code="DEA5B">
+		<elem>Soest</elem>
+	</NN>
+	<NN code="DEA5C">
+		<elem>Unna</elem>
+	</NN>
+	<NN code="DEB11">
+		<elem>Koblenz, Kreisfreie Stadt</elem>
+	</NN>
+	<NN code="DEB12">
+		<elem>Ahrweiler</elem>
+	</NN>
+	<NN code="DEB13">
+		<elem>Altenkirchen (Westerwald)</elem>
+	</NN>
+	<NN code="DEB14">
+		<elem>Bad Kreuznach</elem>
+	</NN>
+	<NN code="DEB15">
+		<elem>Birkenfeld</elem>
+	</NN>
+	<NN code="DEB16">
+		<elem>Cochem-Zell</elem>
+	</NN>
+	<NN code="DEB17">
+		<elem>Mayen-Koblenz</elem>
+	</NN>
+	<NN code="DEB18">
+		<elem>Neuwied</elem>
+	</NN>
+	<NN code="DEB19">
+		<elem>Rhein-Hunsrück-Kreis</elem>
+	</NN>
+	<NN code="DEB1A">
+		<elem>Rhein-Lahn-Kreis</elem>
+	</NN>
+	<NN code="DEB1B">
+		<elem>Westerwaldkreis</elem>
+	</NN>
+	<NN code="DEB21">
+		<elem>Trier, Kreisfreie Stadt</elem>
+	</NN>
+	<NN code="DEB22">
+		<elem>Bernkastel-Wittlich</elem>
+	</NN>
+	<NN code="DEB23">
+		<elem>Eifelkreis Bitburg-Prüm</elem>
+	</NN>
+	<NN code="DEB24">
+		<elem>Vulkaneifel</elem>
+	</NN>
+	<NN code="DEB25">
+		<elem>Trier-Saarburg</elem>
+	</NN>
+	<NN code="DEB31">
+		<elem>Frankenthal (Pfalz), Kreisfreie Stadt</elem>
+	</NN>
+	<NN code="DEB32">
+		<elem>Kaiserslautern, Kreisfreie Stadt</elem>
+	</NN>
+	<NN code="DEB33">
+		<elem>Landau in der Pfalz, Kreisfreie Stadt</elem>
+	</NN>
+	<NN code="DEB34">
+		<elem>Ludwigshafen am Rhein, Kreisfreie Stadt</elem>
+	</NN>
+	<NN code="DEB35">
+		<elem>Mainz, Kreisfreie Stadt</elem>
+	</NN>
+	<NN code="DEB36">
+		<elem>Neustadt an der Weinstraße, Kreisfreie Stadt</elem>
+	</NN>
+	<NN code="DEB37">
+		<elem>Pirmasens, Kreisfreie Stadt</elem>
+	</NN>
+	<NN code="DEB38">
+		<elem>Speyer, Kreisfreie Stadt</elem>
+	</NN>
+	<NN code="DEB39">
+		<elem>Worms, Kreisfreie Stadt</elem>
+	</NN>
+	<NN code="DEB3A">
+		<elem>Zweibrücken, Kreisfreie Stadt</elem>
+	</NN>
+	<NN code="DEB3B">
+		<elem>Alzey-Worms</elem>
+	</NN>
+	<NN code="DEB3C">
+		<elem>Bad Dürkheim</elem>
+	</NN>
+	<NN code="DEB3D">
+		<elem>Donnersbergkreis</elem>
+	</NN>
+	<NN code="DEB3E">
+		<elem>Germersheim</elem>
+	</NN>
+	<NN code="DEB3F">
+		<elem>Kaiserslautern, Landkreis</elem>
+	</NN>
+	<NN code="DEB3G">
+		<elem>Kusel</elem>
+	</NN>
+	<NN code="DEB3H">
+		<elem>Südliche Weinstraße</elem>
+	</NN>
+	<NN code="DEB3I">
+		<elem>Rhein-Pfalz-Kreis</elem>
+	</NN>
+	<NN code="DEB3J">
+		<elem>Mainz-Bingen</elem>
+	</NN>
+	<NN code="DEB3K">
+		<elem>Südwestpfalz</elem>
+	</NN>
+	<NN code="DEC01">
+		<elem>Regionalverband Saarbrücken</elem>
+	</NN>
+	<NN code="DEC02">
+		<elem>Merzig-Wadern</elem>
+	</NN>
+	<NN code="DEC03">
+		<elem>Neunkirchen</elem>
+	</NN>
+	<NN code="DEC04">
+		<elem>Saarlouis</elem>
+	</NN>
+	<NN code="DEC05">
+		<elem>Saarpfalz-Kreis</elem>
+	</NN>
+	<NN code="DEC06">
+		<elem>St. Wendel</elem>
+	</NN>
+	<NN code="DED21">
+		<elem>Dresden, Kreisfreie Stadt</elem>
+	</NN>
+	<NN code="DED2C">
+		<elem>Bautzen</elem>
+	</NN>
+	<NN code="DED2D">
+		<elem>Görlitz</elem>
+	</NN>
+	<NN code="DED2E">
+		<elem>Meißen</elem>
+	</NN>
+	<NN code="DED2F">
+		<elem>Sächsische Schweiz-Osterzgebirge</elem>
+	</NN>
+	<NN code="DED41">
+		<elem>Chemnitz, Kreisfreie Stadt</elem>
+	</NN>
+	<NN code="DED42">
+		<elem>Erzgebirgskreis</elem>
+	</NN>
+	<NN code="DED43">
+		<elem>Mittelsachsen</elem>
+	</NN>
+	<NN code="DED44">
+		<elem>Vogtlandkreis</elem>
+	</NN>
+	<NN code="DED45">
+		<elem>Zwickau</elem>
+	</NN>
+	<NN code="DED51">
+		<elem>Leipzig, Kreisfreie Stadt</elem>
+	</NN>
+	<NN code="DED52">
+		<elem>Leipzig</elem>
+	</NN>
+	<NN code="DED53">
+		<elem>Nordsachsen</elem>
+	</NN>
+	<NN code="DEE01">
+		<elem>Dessau-Roßlau, Kreisfreie Stadt</elem>
+	</NN>
+	<NN code="DEE02">
+		<elem>Halle (Saale), Kreisfreie Stadt</elem>
+	</NN>
+	<NN code="DEE03">
+		<elem>Magdeburg, Kreisfreie Stadt</elem>
+	</NN>
+	<NN code="DEE04">
+		<elem>Altmarkkreis Salzwedel</elem>
+	</NN>
+	<NN code="DEE05">
+		<elem>Anhalt-Bitterfeld</elem>
+	</NN>
+	<NN code="DEE06">
+		<elem>Jerichower Land</elem>
+	</NN>
+	<NN code="DEE07">
+		<elem>Börde</elem>
+	</NN>
+	<NN code="DEE08">
+		<elem>Burgenlandkreis</elem>
+	</NN>
+	<NN code="DEE09">
+		<elem>Harz</elem>
+	</NN>
+	<NN code="DEE0A">
+		<elem>Mansfeld-Südharz</elem>
+	</NN>
+	<NN code="DEE0B">
+		<elem>Saalekreis</elem>
+	</NN>
+	<NN code="DEE0C">
+		<elem>Salzlandkreis</elem>
+	</NN>
+	<NN code="DEE0D">
+		<elem>Stendal</elem>
+	</NN>
+	<NN code="DEE0E">
+		<elem>Wittenberg</elem>
+	</NN>
+	<NN code="DEF01">
+		<elem>Flensburg, Kreisfreie Stadt</elem>
+	</NN>
+	<NN code="DEF02">
+		<elem>Kiel, Kreisfreie Stadt</elem>
+	</NN>
+	<NN code="DEF03">
+		<elem>Lübeck, Kreisfreie Stadt</elem>
+	</NN>
+	<NN code="DEF04">
+		<elem>Neumünster, Kreisfreie Stadt</elem>
+	</NN>
+	<NN code="DEF05">
+		<elem>Dithmarschen</elem>
+	</NN>
+	<NN code="DEF06">
+		<elem>Herzogtum Lauenburg</elem>
+	</NN>
+	<NN code="DEF07">
+		<elem>Nordfriesland</elem>
+	</NN>
+	<NN code="DEF08">
+		<elem>Ostholstein</elem>
+	</NN>
+	<NN code="DEF09">
+		<elem>Pinneberg</elem>
+	</NN>
+	<NN code="DEF0A">
+		<elem>Plön</elem>
+	</NN>
+	<NN code="DEF0B">
+		<elem>Rendsburg-Eckernförde</elem>
+	</NN>
+	<NN code="DEF0C">
+		<elem>Schleswig-Flensburg</elem>
+	</NN>
+	<NN code="DEF0D">
+		<elem>Segeberg</elem>
+	</NN>
+	<NN code="DEF0E">
+		<elem>Steinburg</elem>
+	</NN>
+	<NN code="DEF0F">
+		<elem>Stormarn</elem>
+	</NN>
+	<NN code="DEG01">
+		<elem>Erfurt, Kreisfreie Stadt</elem>
+	</NN>
+	<NN code="DEG02">
+		<elem>Gera, Kreisfreie Stadt</elem>
+	</NN>
+	<NN code="DEG03">
+		<elem>Jena, Kreisfreie Stadt</elem>
+	</NN>
+	<NN code="DEG04">
+		<elem>Suhl, Kreisfreie Stadt</elem>
+	</NN>
+	<NN code="DEG05">
+		<elem>Weimar, Kreisfreie Stadt</elem>
+	</NN>
+	<NN code="DEG06">
+		<elem>Eichsfeld</elem>
+	</NN>
+	<NN code="DEG07">
+		<elem>Nordhausen</elem>
+	</NN>
+	<NN code="DEG09">
+		<elem>Unstrut-Hainich-Kreis</elem>
+	</NN>
+	<NN code="DEG0A">
+		<elem>Kyffhäuserkreis</elem>
+	</NN>
+	<NN code="DEG0B">
+		<elem>Schmalkalden-Meiningen</elem>
+	</NN>
+	<NN code="DEG0C">
+		<elem>Gotha</elem>
+	</NN>
+	<NN code="DEG0D">
+		<elem>Sömmerda</elem>
+	</NN>
+	<NN code="DEG0E">
+		<elem>Hildburghausen</elem>
+	</NN>
+	<NN code="DEG0F">
+		<elem>Ilm-Kreis</elem>
+	</NN>
+	<NN code="DEG0G">
+		<elem>Weimarer Land</elem>
+	</NN>
+	<NN code="DEG0H">
+		<elem>Sonneberg</elem>
+	</NN>
+	<NN code="DEG0I">
+		<elem>Saalfeld-Rudolstadt</elem>
+	</NN>
+	<NN code="DEG0J">
+		<elem>Saale-Holzland-Kreis</elem>
+	</NN>
+	<NN code="DEG0K">
+		<elem>Saale-Orla-Kreis</elem>
+	</NN>
+	<NN code="DEG0L">
+		<elem>Greiz</elem>
+	</NN>
+	<NN code="DEG0M">
+		<elem>Altenburger Land</elem>
+	</NN>
+	<NN code="DEG0N">
+		<elem>Eisenach, Kreisfreie Stadt</elem>
+	</NN>
+	<NN code="DEG0P">
+		<elem>Wartburgkreis</elem>
+	</NN>
+	<NN code="DEZZZ">
+		<elem>Extra-Regio NUTS 3</elem>
+	</NN>
+	<NN code="EE">
+		<elem>EESTI</elem>
+	</NN>
+	<NN code="EE001">
+		<elem>Põhja-Eesti</elem>
+	</NN>
+	<NN code="EE004">
+		<elem>Lääne-Eesti</elem>
+	</NN>
+	<NN code="EE006">
+		<elem>Kesk-Eesti</elem>
+	</NN>
+	<NN code="EE007">
+		<elem>Kirde-Eesti</elem>
+	</NN>
+	<NN code="EE008">
+		<elem>Lõuna-Eesti</elem>
+	</NN>
+	<NN code="EEZZZ">
+		<elem>Extra-Regio NUTS 3</elem>
+	</NN>
+	<NN code="IE">
+		<elem>IRELAND</elem>
+	</NN>
+	<NN code="IE011">
+		<elem>Border</elem>
+	</NN>
+	<NN code="IE012">
+		<elem>Midland</elem>
+	</NN>
+	<NN code="IE013">
+		<elem>West</elem>
+	</NN>
+	<NN code="IE021">
+		<elem>Dublin</elem>
+	</NN>
+	<NN code="IE022">
+		<elem>Mid-East</elem>
+	</NN>
+	<NN code="IE023">
+		<elem>Mid-West</elem>
+	</NN>
+	<NN code="IE024">
+		<elem>South-East (IE)</elem>
+	</NN>
+	<NN code="IE025">
+		<elem>South-West (IE)</elem>
+	</NN>
+	<NN code="IEZZZ">
+		<elem>Extra-Regio NUTS 3</elem>
+	</NN>
+	<NN code="EL">
+		<elem>ΕΛΛΑΔΑ (ELLADA)</elem>
+	</NN>
+	<NN code="EL301">
+		<elem>Βόρειος Τομέας Αθηνών (Voreios Tomeas Athinon)</elem>
+	</NN>
+	<NN code="EL302">
+		<elem>Δυτικός Τομέας Αθηνών (Dytikos Tomeas Athinon)</elem>
+	</NN>
+	<NN code="EL303">
+		<elem>Κεντρικός Τομέας Αθηνών (Kentrikos Tomeas Athinon)</elem>
+	</NN>
+	<NN code="EL304">
+		<elem>Νότιος Τομέας Αθηνών (Notios Tomeas Athinon)</elem>
+	</NN>
+	<NN code="EL305">
+		<elem>Ανατολική Αττική (Anatoliki Attiki)</elem>
+	</NN>
+	<NN code="EL306">
+		<elem>Δυτική Αττική (Dytiki Attiki)</elem>
+	</NN>
+	<NN code="EL307">
+		<elem>Πειραιάς, Νήσοι (Peiraias, Nisoi)</elem>
+	</NN>
+	<NN code="EL411">
+		<elem>Λέσβος, Λήμνος (Lesvos, Limnos)</elem>
+	</NN>
+	<NN code="EL412">
+		<elem>Ικαρία, Σάμος (Ikaria, Samos)</elem>
+	</NN>
+	<NN code="EL413">
+		<elem>Χίος (Chios)</elem>
+	</NN>
+	<NN code="EL421">
+		<elem>Κάλυμνος, Κάρπαθος, Κως, Ρόδος (Kalymnos, Karpathos, Kos, Rodos)</elem>
+	</NN>
+	<NN code="EL422">
+		<elem>Άνδρος, Θήρα, Κέα, Μήλος, Μύκονος, Νάξος, Πάρος, Σύρος, Τήνος (Andros, Thira, Kea, Milos, Mykonos, Naxos, Paros,  Syros, Tinos)</elem>
+	</NN>
+	<NN code="EL431">
+		<elem>Ηράκλειο (Irakleio)</elem>
+	</NN>
+	<NN code="EL432">
+		<elem>Λασίθι (Lasithi)</elem>
+	</NN>
+	<NN code="EL433">
+		<elem>Ρεθύμνη (Rethymni)</elem>
+	</NN>
+	<NN code="EL434">
+		<elem>Χανιά (Chania)</elem>
+	</NN>
+	<NN code="EL511">
+		<elem>Έβρος (Evros)</elem>
+	</NN>
+	<NN code="EL512">
+		<elem>Ξάνθη (Xanthi)</elem>
+	</NN>
+	<NN code="EL513">
+		<elem>Ροδόπη (Rodopi)</elem>
+	</NN>
+	<NN code="EL514">
+		<elem>Δράμα (Drama)</elem>
+	</NN>
+	<NN code="EL515">
+		<elem>Θάσος, Καβάλα (Thasos, Kavala)</elem>
+	</NN>
+	<NN code="EL521">
+		<elem>Ημαθία (Imathia)</elem>
+	</NN>
+	<NN code="EL522">
+		<elem>Θεσσαλονίκη (Thessaloniki)</elem>
+	</NN>
+	<NN code="EL523">
+		<elem>Κιλκίς (Kilkis)</elem>
+	</NN>
+	<NN code="EL524">
+		<elem>Πέλλα (Pella)</elem>
+	</NN>
+	<NN code="EL525">
+		<elem>Πιερία (Pieria)</elem>
+	</NN>
+	<NN code="EL526">
+		<elem>Σέρρες (Serres)</elem>
+	</NN>
+	<NN code="EL527">
+		<elem>Χαλκιδική (Chalkidiki)</elem>
+	</NN>
+	<NN code="EL531">
+		<elem>Γρεβενά, Κοζάνη (Grevena, Kozani)</elem>
+	</NN>
+	<NN code="EL532">
+		<elem>Καστοριά (Kastoria)</elem>
+	</NN>
+	<NN code="EL533">
+		<elem>Φλώρινα (Florina)</elem>
+	</NN>
+	<NN code="EL541">
+		<elem>Άρτα, Πρέβεζα (Arta, Preveza)</elem>
+	</NN>
+	<NN code="EL542">
+		<elem>Θεσπρωτία (Thesprotia)</elem>
+	</NN>
+	<NN code="EL543">
+		<elem>Ιωάννινα (Ioannina)</elem>
+	</NN>
+	<NN code="EL611">
+		<elem>Καρδίτσα, Τρίκαλα (Karditsa, Trikala)</elem>
+	</NN>
+	<NN code="EL612">
+		<elem>Λάρισα (Larisa)</elem>
+	</NN>
+	<NN code="EL613">
+		<elem>Μαγνησία, Σποράδες (Magnisia, Sporades)</elem>
+	</NN>
+	<NN code="EL621">
+		<elem>Ζάκυνθος (Zakynthos)</elem>
+	</NN>
+	<NN code="EL622">
+		<elem>Κέρκυρα (Kerkyra)</elem>
+	</NN>
+	<NN code="EL623">
+		<elem>Ιθάκη, Κεφαλληνία (Ithaki, Kefallinia)</elem>
+	</NN>
+	<NN code="EL624">
+		<elem>Λευκάδα (Lefkada)</elem>
+	</NN>
+	<NN code="EL631">
+		<elem>Αιτωλοακαρνανία (Aitoloakarnania)</elem>
+	</NN>
+	<NN code="EL632">
+		<elem>Αχαΐα (Achaia)</elem>
+	</NN>
+	<NN code="EL633">
+		<elem>Ηλεία (Ileia)</elem>
+	</NN>
+	<NN code="EL641">
+		<elem>Βοιωτία (Voiotia)</elem>
+	</NN>
+	<NN code="EL642">
+		<elem>Εύβοια (Evvoia)</elem>
+	</NN>
+	<NN code="EL643">
+		<elem>Ευρυτανία (Evrytania)</elem>
+	</NN>
+	<NN code="EL644">
+		<elem>Φθιώτιδα (Fthiotida)</elem>
+	</NN>
+	<NN code="EL645">
+		<elem>Φωκίδα (Fokida)</elem>
+	</NN>
+	<NN code="EL651">
+		<elem>Αργολίδα, Αρκαδία (Argolida, Arkadia)</elem>
+	</NN>
+	<NN code="EL652">
+		<elem>Κορινθία (Korinthia)</elem>
+	</NN>
+	<NN code="EL653">
+		<elem>Λακωνία, Μεσσηνία (Lakonia, Messinia)</elem>
+	</NN>
+	<NN code="ELZZZ">
+		<elem>Extra-Regio NUTS 3</elem>
+	</NN>
+	<NN code="ES">
+		<elem>ESPAÑA</elem>
+	</NN>
+	<NN code="ES111">
+		<elem>A Coruña</elem>
+	</NN>
+	<NN code="ES112">
+		<elem>Lugo</elem>
+	</NN>
+	<NN code="ES113">
+		<elem>Ourense</elem>
+	</NN>
+	<NN code="ES114">
+		<elem>Pontevedra</elem>
+	</NN>
+	<NN code="ES120">
+		<elem>Asturias</elem>
+	</NN>
+	<NN code="ES130">
+		<elem>Cantabria</elem>
+	</NN>
+	<NN code="ES211">
+		<elem>Araba/Álava</elem>
+	</NN>
+	<NN code="ES212">
+		<elem>Gipuzkoa</elem>
+	</NN>
+	<NN code="ES213">
+		<elem>Bizkaia</elem>
+	</NN>
+	<NN code="ES220">
+		<elem>Navarra</elem>
+	</NN>
+	<NN code="ES230">
+		<elem>La Rioja</elem>
+	</NN>
+	<NN code="ES241">
+		<elem>Huesca</elem>
+	</NN>
+	<NN code="ES242">
+		<elem>Teruel</elem>
+	</NN>
+	<NN code="ES243">
+		<elem>Zaragoza</elem>
+	</NN>
+	<NN code="ES300">
+		<elem>Madrid</elem>
+	</NN>
+	<NN code="ES411">
+		<elem>Ávila</elem>
+	</NN>
+	<NN code="ES412">
+		<elem>Burgos</elem>
+	</NN>
+	<NN code="ES413">
+		<elem>León</elem>
+	</NN>
+	<NN code="ES414">
+		<elem>Palencia</elem>
+	</NN>
+	<NN code="ES415">
+		<elem>Salamanca</elem>
+	</NN>
+	<NN code="ES416">
+		<elem>Segovia</elem>
+	</NN>
+	<NN code="ES417">
+		<elem>Soria</elem>
+	</NN>
+	<NN code="ES418">
+		<elem>Valladolid</elem>
+	</NN>
+	<NN code="ES419">
+		<elem>Zamora</elem>
+	</NN>
+	<NN code="ES421">
+		<elem>Albacete</elem>
+	</NN>
+	<NN code="ES422">
+		<elem>Ciudad Real</elem>
+	</NN>
+	<NN code="ES423">
+		<elem>Cuenca</elem>
+	</NN>
+	<NN code="ES424">
+		<elem>Guadalajara</elem>
+	</NN>
+	<NN code="ES425">
+		<elem>Toledo</elem>
+	</NN>
+	<NN code="ES431">
+		<elem>Badajoz</elem>
+	</NN>
+	<NN code="ES432">
+		<elem>Cáceres</elem>
+	</NN>
+	<NN code="ES511">
+		<elem>Barcelona</elem>
+	</NN>
+	<NN code="ES512">
+		<elem>Girona</elem>
+	</NN>
+	<NN code="ES513">
+		<elem>Lleida</elem>
+	</NN>
+	<NN code="ES514">
+		<elem>Tarragona</elem>
+	</NN>
+	<NN code="ES521">
+		<elem>Alicante / Alacant</elem>
+	</NN>
+	<NN code="ES522">
+		<elem>Castellón / Castelló</elem>
+	</NN>
+	<NN code="ES523">
+		<elem>Valencia / València</elem>
+	</NN>
+	<NN code="ES531">
+		<elem>Eivissa y Formentera</elem>
+	</NN>
+	<NN code="ES532">
+		<elem>Mallorca</elem>
+	</NN>
+	<NN code="ES533">
+		<elem>Menorca</elem>
+	</NN>
+	<NN code="ES611">
+		<elem>Almería</elem>
+	</NN>
+	<NN code="ES612">
+		<elem>Cádiz</elem>
+	</NN>
+	<NN code="ES613">
+		<elem>Córdoba</elem>
+	</NN>
+	<NN code="ES614">
+		<elem>Granada</elem>
+	</NN>
+	<NN code="ES615">
+		<elem>Huelva</elem>
+	</NN>
+	<NN code="ES616">
+		<elem>Jaén</elem>
+	</NN>
+	<NN code="ES617">
+		<elem>Málaga</elem>
+	</NN>
+	<NN code="ES618">
+		<elem>Sevilla</elem>
+	</NN>
+	<NN code="ES620">
+		<elem>Murcia</elem>
+	</NN>
+	<NN code="ES630">
+		<elem>Ceuta</elem>
+	</NN>
+	<NN code="ES640">
+		<elem>Melilla</elem>
+	</NN>
+	<NN code="ES703">
+		<elem>El Hierro</elem>
+	</NN>
+	<NN code="ES704">
+		<elem>Fuerteventura</elem>
+	</NN>
+	<NN code="ES705">
+		<elem>Gran Canaria</elem>
+	</NN>
+	<NN code="ES706">
+		<elem>La Gomera</elem>
+	</NN>
+	<NN code="ES707">
+		<elem>La Palma</elem>
+	</NN>
+	<NN code="ES708">
+		<elem>Lanzarote</elem>
+	</NN>
+	<NN code="ES709">
+		<elem>Tenerife</elem>
+	</NN>
+	<NN code="ESZZZ">
+		<elem>Extra-Regio NUTS 3</elem>
+	</NN>
+	<NN code="FR">
+		<elem>FRANCE</elem>
+	</NN>
+	<NN code="FR101">
+		<elem>Paris</elem>
+	</NN>
+	<NN code="FR102">
+		<elem>Seine-et-Marne</elem>
+	</NN>
+	<NN code="FR103">
+		<elem>Yvelines</elem>
+	</NN>
+	<NN code="FR104">
+		<elem>Essonne</elem>
+	</NN>
+	<NN code="FR105">
+		<elem>Hauts-de-Seine</elem>
+	</NN>
+	<NN code="FR106">
+		<elem>Seine-Saint-Denis</elem>
+	</NN>
+	<NN code="FR107">
+		<elem>Val-de-Marne</elem>
+	</NN>
+	<NN code="FR108">
+		<elem>Val-d'Oise</elem>
+	</NN>
+	<NN code="FR211">
+		<elem>Ardennes</elem>
+	</NN>
+	<NN code="FR212">
+		<elem>Aube</elem>
+	</NN>
+	<NN code="FR213">
+		<elem>Marne</elem>
+	</NN>
+	<NN code="FR214">
+		<elem>Haute-Marne</elem>
+	</NN>
+	<NN code="FR221">
+		<elem>Aisne</elem>
+	</NN>
+	<NN code="FR222">
+		<elem>Oise</elem>
+	</NN>
+	<NN code="FR223">
+		<elem>Somme</elem>
+	</NN>
+	<NN code="FR231">
+		<elem>Eure</elem>
+	</NN>
+	<NN code="FR232">
+		<elem>Seine-Maritime</elem>
+	</NN>
+	<NN code="FR241">
+		<elem>Cher</elem>
+	</NN>
+	<NN code="FR242">
+		<elem>Eure-et-Loir</elem>
+	</NN>
+	<NN code="FR243">
+		<elem>Indre</elem>
+	</NN>
+	<NN code="FR244">
+		<elem>Indre-et-Loire</elem>
+	</NN>
+	<NN code="FR245">
+		<elem>Loir-et-Cher</elem>
+	</NN>
+	<NN code="FR246">
+		<elem>Loiret</elem>
+	</NN>
+	<NN code="FR251">
+		<elem>Calvados</elem>
+	</NN>
+	<NN code="FR252">
+		<elem>Manche</elem>
+	</NN>
+	<NN code="FR253">
+		<elem>Orne</elem>
+	</NN>
+	<NN code="FR261">
+		<elem>Côte-d'Or</elem>
+	</NN>
+	<NN code="FR262">
+		<elem>Nièvre</elem>
+	</NN>
+	<NN code="FR263">
+		<elem>Saône-et-Loire</elem>
+	</NN>
+	<NN code="FR264">
+		<elem>Yonne</elem>
+	</NN>
+	<NN code="FR301">
+		<elem>Nord</elem>
+	</NN>
+	<NN code="FR302">
+		<elem>Pas-de-Calais</elem>
+	</NN>
+	<NN code="FR411">
+		<elem>Meurthe-et-Moselle</elem>
+	</NN>
+	<NN code="FR412">
+		<elem>Meuse</elem>
+	</NN>
+	<NN code="FR413">
+		<elem>Moselle</elem>
+	</NN>
+	<NN code="FR414">
+		<elem>Vosges</elem>
+	</NN>
+	<NN code="FR421">
+		<elem>Bas-Rhin</elem>
+	</NN>
+	<NN code="FR422">
+		<elem>Haut-Rhin</elem>
+	</NN>
+	<NN code="FR431">
+		<elem>Doubs</elem>
+	</NN>
+	<NN code="FR432">
+		<elem>Jura</elem>
+	</NN>
+	<NN code="FR433">
+		<elem>Haute-Saône</elem>
+	</NN>
+	<NN code="FR434">
+		<elem>Territoire de Belfort</elem>
+	</NN>
+	<NN code="FR511">
+		<elem>Loire-Atlantique</elem>
+	</NN>
+	<NN code="FR512">
+		<elem>Maine-et-Loire</elem>
+	</NN>
+	<NN code="FR513">
+		<elem>Mayenne</elem>
+	</NN>
+	<NN code="FR514">
+		<elem>Sarthe</elem>
+	</NN>
+	<NN code="FR515">
+		<elem>Vendée</elem>
+	</NN>
+	<NN code="FR521">
+		<elem>Côtes-d'Armor</elem>
+	</NN>
+	<NN code="FR522">
+		<elem>Finistère</elem>
+	</NN>
+	<NN code="FR523">
+		<elem>Ille-et-Vilaine</elem>
+	</NN>
+	<NN code="FR524">
+		<elem>Morbihan</elem>
+	</NN>
+	<NN code="FR531">
+		<elem>Charente</elem>
+	</NN>
+	<NN code="FR532">
+		<elem>Charente-Maritime</elem>
+	</NN>
+	<NN code="FR533">
+		<elem>Deux-Sèvres</elem>
+	</NN>
+	<NN code="FR534">
+		<elem>Vienne</elem>
+	</NN>
+	<NN code="FR611">
+		<elem>Dordogne</elem>
+	</NN>
+	<NN code="FR612">
+		<elem>Gironde</elem>
+	</NN>
+	<NN code="FR613">
+		<elem>Landes</elem>
+	</NN>
+	<NN code="FR614">
+		<elem>Lot-et-Garonne</elem>
+	</NN>
+	<NN code="FR615">
+		<elem>Pyrénées-Atlantiques</elem>
+	</NN>
+	<NN code="FR621">
+		<elem>Ariège</elem>
+	</NN>
+	<NN code="FR622">
+		<elem>Aveyron</elem>
+	</NN>
+	<NN code="FR623">
+		<elem>Haute-Garonne</elem>
+	</NN>
+	<NN code="FR624">
+		<elem>Gers</elem>
+	</NN>
+	<NN code="FR625">
+		<elem>Lot</elem>
+	</NN>
+	<NN code="FR626">
+		<elem>Hautes-Pyrénées</elem>
+	</NN>
+	<NN code="FR627">
+		<elem>Tarn</elem>
+	</NN>
+	<NN code="FR628">
+		<elem>Tarn-et-Garonne</elem>
+	</NN>
+	<NN code="FR631">
+		<elem>Corrèze</elem>
+	</NN>
+	<NN code="FR632">
+		<elem>Creuse</elem>
+	</NN>
+	<NN code="FR633">
+		<elem>Haute-Vienne</elem>
+	</NN>
+	<NN code="FR711">
+		<elem>Ain</elem>
+	</NN>
+	<NN code="FR712">
+		<elem>Ardèche</elem>
+	</NN>
+	<NN code="FR713">
+		<elem>Drôme</elem>
+	</NN>
+	<NN code="FR714">
+		<elem>Isère</elem>
+	</NN>
+	<NN code="FR715">
+		<elem>Loire</elem>
+	</NN>
+	<NN code="FR716">
+		<elem>Rhône</elem>
+	</NN>
+	<NN code="FR717">
+		<elem>Savoie</elem>
+	</NN>
+	<NN code="FR718">
+		<elem>Haute-Savoie</elem>
+	</NN>
+	<NN code="FR721">
+		<elem>Allier</elem>
+	</NN>
+	<NN code="FR722">
+		<elem>Cantal</elem>
+	</NN>
+	<NN code="FR723">
+		<elem>Haute-Loire</elem>
+	</NN>
+	<NN code="FR724">
+		<elem>Puy-de-Dôme</elem>
+	</NN>
+	<NN code="FR811">
+		<elem>Aude</elem>
+	</NN>
+	<NN code="FR812">
+		<elem>Gard</elem>
+	</NN>
+	<NN code="FR813">
+		<elem>Hérault</elem>
+	</NN>
+	<NN code="FR814">
+		<elem>Lozère</elem>
+	</NN>
+	<NN code="FR815">
+		<elem>Pyrénées-Orientales</elem>
+	</NN>
+	<NN code="FR821">
+		<elem>Alpes-de-Haute-Provence</elem>
+	</NN>
+	<NN code="FR822">
+		<elem>Hautes-Alpes</elem>
+	</NN>
+	<NN code="FR823">
+		<elem>Alpes-Maritimes</elem>
+	</NN>
+	<NN code="FR824">
+		<elem>Bouches-du-Rhône</elem>
+	</NN>
+	<NN code="FR825">
+		<elem>Var</elem>
+	</NN>
+	<NN code="FR826">
+		<elem>Vaucluse</elem>
+	</NN>
+	<NN code="FR831">
+		<elem>Corse-du-Sud</elem>
+	</NN>
+	<NN code="FR832">
+		<elem>Haute-Corse</elem>
+	</NN>
+	<NN code="FRA10">
+		<elem>Guadeloupe</elem>
+	</NN>
+	<NN code="FRA20">
+		<elem>Martinique</elem>
+	</NN>
+	<NN code="FRA30">
+		<elem>Guyane</elem>
+	</NN>
+	<NN code="FRA40">
+		<elem>La Réunion</elem>
+	</NN>
+	<NN code="FRA50">
+		<elem>Mayotte</elem>
+	</NN>
+	<NN code="FRZZZ">
+		<elem>Extra-Regio NUTS 3</elem>
+	</NN>
+	<NN code="HR">
+		<elem>HRVATSKA</elem>
+	</NN>
+	<NN code="HR031">
+		<elem>Primorsko-goranska županija</elem>
+	</NN>
+	<NN code="HR032">
+		<elem>Ličko-senjska županija</elem>
+	</NN>
+	<NN code="HR033">
+		<elem>Zadarska županija</elem>
+	</NN>
+	<NN code="HR034">
+		<elem>Šibensko-kninska županija</elem>
+	</NN>
+	<NN code="HR035">
+		<elem>Splitsko-dalmatinska županija</elem>
+	</NN>
+	<NN code="HR036">
+		<elem>Istarska županija</elem>
+	</NN>
+	<NN code="HR037">
+		<elem>Dubrovačko-neretvanska županija</elem>
+	</NN>
+	<NN code="HR041">
+		<elem>Grad Zagreb</elem>
+	</NN>
+	<NN code="HR042">
+		<elem>Zagrebačka županija</elem>
+	</NN>
+	<NN code="HR043">
+		<elem>Krapinsko-zagorska županija</elem>
+	</NN>
+	<NN code="HR044">
+		<elem>Varaždinska županija</elem>
+	</NN>
+	<NN code="HR045">
+		<elem>Koprivničko-križevačka županija</elem>
+	</NN>
+	<NN code="HR046">
+		<elem>Međimurska županija</elem>
+	</NN>
+	<NN code="HR047">
+		<elem>Bjelovarsko-bilogorska županija</elem>
+	</NN>
+	<NN code="HR048">
+		<elem>Virovitičko-podravska županija</elem>
+	</NN>
+	<NN code="HR049">
+		<elem>Požeško-slavonska županija</elem>
+	</NN>
+	<NN code="HR04A">
+		<elem>Brodsko-posavska županija</elem>
+	</NN>
+	<NN code="HR04B">
+		<elem>Osječko-baranjska županija</elem>
+	</NN>
+	<NN code="HR04C">
+		<elem>Vukovarsko-srijemska županija</elem>
+	</NN>
+	<NN code="HR04D">
+		<elem>Karlovačka županija</elem>
+	</NN>
+	<NN code="HR04E">
+		<elem>Sisačko-moslavačka županija</elem>
+	</NN>
+	<NN code="HRZZZ">
+		<elem>Extra-Regio NUTS 3</elem>
+	</NN>
+	<NN code="IT">
+		<elem>ITALIA</elem>
+	</NN>
+	<NN code="ITC11">
+		<elem>Torino</elem>
+	</NN>
+	<NN code="ITC12">
+		<elem>Vercelli</elem>
+	</NN>
+	<NN code="ITC13">
+		<elem>Biella</elem>
+	</NN>
+	<NN code="ITC14">
+		<elem>Verbano-Cusio-Ossola</elem>
+	</NN>
+	<NN code="ITC15">
+		<elem>Novara</elem>
+	</NN>
+	<NN code="ITC16">
+		<elem>Cuneo</elem>
+	</NN>
+	<NN code="ITC17">
+		<elem>Asti</elem>
+	</NN>
+	<NN code="ITC18">
+		<elem>Alessandria</elem>
+	</NN>
+	<NN code="ITC20">
+		<elem>Valle d'Aosta/Vallée d'Aoste</elem>
+	</NN>
+	<NN code="ITC31">
+		<elem>Imperia</elem>
+	</NN>
+	<NN code="ITC32">
+		<elem>Savona</elem>
+	</NN>
+	<NN code="ITC33">
+		<elem>Genova</elem>
+	</NN>
+	<NN code="ITC34">
+		<elem>La Spezia</elem>
+	</NN>
+	<NN code="ITC41">
+		<elem>Varese</elem>
+	</NN>
+	<NN code="ITC42">
+		<elem>Como</elem>
+	</NN>
+	<NN code="ITC43">
+		<elem>Lecco</elem>
+	</NN>
+	<NN code="ITC44">
+		<elem>Sondrio</elem>
+	</NN>
+	<NN code="ITC46">
+		<elem>Bergamo</elem>
+	</NN>
+	<NN code="ITC47">
+		<elem>Brescia</elem>
+	</NN>
+	<NN code="ITC48">
+		<elem>Pavia</elem>
+	</NN>
+	<NN code="ITC49">
+		<elem>Lodi</elem>
+	</NN>
+	<NN code="ITC4A">
+		<elem>Cremona</elem>
+	</NN>
+	<NN code="ITC4B">
+		<elem>Mantova</elem>
+	</NN>
+	<NN code="ITC4C">
+		<elem>Milano</elem>
+	</NN>
+	<NN code="ITC4D">
+		<elem>Monza e della Brianza</elem>
+	</NN>
+	<NN code="ITF11">
+		<elem>L'Aquila</elem>
+	</NN>
+	<NN code="ITF12">
+		<elem>Teramo</elem>
+	</NN>
+	<NN code="ITF13">
+		<elem>Pescara</elem>
+	</NN>
+	<NN code="ITF14">
+		<elem>Chieti</elem>
+	</NN>
+	<NN code="ITF21">
+		<elem>Isernia</elem>
+	</NN>
+	<NN code="ITF22">
+		<elem>Campobasso</elem>
+	</NN>
+	<NN code="ITF31">
+		<elem>Caserta</elem>
+	</NN>
+	<NN code="ITF32">
+		<elem>Benevento</elem>
+	</NN>
+	<NN code="ITF33">
+		<elem>Napoli</elem>
+	</NN>
+	<NN code="ITF34">
+		<elem>Avellino</elem>
+	</NN>
+	<NN code="ITF35">
+		<elem>Salerno</elem>
+	</NN>
+	<NN code="ITF43">
+		<elem>Taranto</elem>
+	</NN>
+	<NN code="ITF44">
+		<elem>Brindisi</elem>
+	</NN>
+	<NN code="ITF45">
+		<elem>Lecce</elem>
+	</NN>
+	<NN code="ITF46">
+		<elem>Foggia</elem>
+	</NN>
+	<NN code="ITF47">
+		<elem>Bari</elem>
+	</NN>
+	<NN code="ITF48">
+		<elem>Barletta-Andria-Trani</elem>
+	</NN>
+	<NN code="ITF51">
+		<elem>Potenza</elem>
+	</NN>
+	<NN code="ITF52">
+		<elem>Matera</elem>
+	</NN>
+	<NN code="ITF61">
+		<elem>Cosenza</elem>
+	</NN>
+	<NN code="ITF62">
+		<elem>Crotone</elem>
+	</NN>
+	<NN code="ITF63">
+		<elem>Catanzaro</elem>
+	</NN>
+	<NN code="ITF64">
+		<elem>Vibo Valentia</elem>
+	</NN>
+	<NN code="ITF65">
+		<elem>Reggio di Calabria</elem>
+	</NN>
+	<NN code="ITG11">
+		<elem>Trapani</elem>
+	</NN>
+	<NN code="ITG12">
+		<elem>Palermo</elem>
+	</NN>
+	<NN code="ITG13">
+		<elem>Messina</elem>
+	</NN>
+	<NN code="ITG14">
+		<elem>Agrigento</elem>
+	</NN>
+	<NN code="ITG15">
+		<elem>Caltanissetta</elem>
+	</NN>
+	<NN code="ITG16">
+		<elem>Enna</elem>
+	</NN>
+	<NN code="ITG17">
+		<elem>Catania</elem>
+	</NN>
+	<NN code="ITG18">
+		<elem>Ragusa</elem>
+	</NN>
+	<NN code="ITG19">
+		<elem>Siracusa</elem>
+	</NN>
+	<NN code="ITG25">
+		<elem>Sassari</elem>
+	</NN>
+	<NN code="ITG26">
+		<elem>Nuoro</elem>
+	</NN>
+	<NN code="ITG27">
+		<elem>Cagliari</elem>
+	</NN>
+	<NN code="ITG28">
+		<elem>Oristano</elem>
+	</NN>
+	<NN code="ITG29">
+		<elem>Olbia-Tempio</elem>
+	</NN>
+	<NN code="ITG2A">
+		<elem>Ogliastra</elem>
+	</NN>
+	<NN code="ITG2B">
+		<elem>Medio Campidano</elem>
+	</NN>
+	<NN code="ITG2C">
+		<elem>Carbonia-Iglesias</elem>
+	</NN>
+	<NN code="ITH10">
+		<elem>Bolzano-Bozen</elem>
+	</NN>
+	<NN code="ITH20">
+		<elem>Trento</elem>
+	</NN>
+	<NN code="ITH31">
+		<elem>Verona</elem>
+	</NN>
+	<NN code="ITH32">
+		<elem>Vicenza</elem>
+	</NN>
+	<NN code="ITH33">
+		<elem>Belluno</elem>
+	</NN>
+	<NN code="ITH34">
+		<elem>Treviso</elem>
+	</NN>
+	<NN code="ITH35">
+		<elem>Venezia</elem>
+	</NN>
+	<NN code="ITH36">
+		<elem>Padova</elem>
+	</NN>
+	<NN code="ITH37">
+		<elem>Rovigo</elem>
+	</NN>
+	<NN code="ITH41">
+		<elem>Pordenone</elem>
+	</NN>
+	<NN code="ITH42">
+		<elem>Udine</elem>
+	</NN>
+	<NN code="ITH43">
+		<elem>Gorizia</elem>
+	</NN>
+	<NN code="ITH44">
+		<elem>Trieste</elem>
+	</NN>
+	<NN code="ITH51">
+		<elem>Piacenza</elem>
+	</NN>
+	<NN code="ITH52">
+		<elem>Parma</elem>
+	</NN>
+	<NN code="ITH53">
+		<elem>Reggio nell'Emilia</elem>
+	</NN>
+	<NN code="ITH54">
+		<elem>Modena</elem>
+	</NN>
+	<NN code="ITH55">
+		<elem>Bologna</elem>
+	</NN>
+	<NN code="ITH56">
+		<elem>Ferrara</elem>
+	</NN>
+	<NN code="ITH57">
+		<elem>Ravenna</elem>
+	</NN>
+	<NN code="ITH58">
+		<elem>Forlì-Cesena</elem>
+	</NN>
+	<NN code="ITH59">
+		<elem>Rimini</elem>
+	</NN>
+	<NN code="ITI11">
+		<elem>Massa-Carrara</elem>
+	</NN>
+	<NN code="ITI12">
+		<elem>Lucca</elem>
+	</NN>
+	<NN code="ITI13">
+		<elem>Pistoia</elem>
+	</NN>
+	<NN code="ITI14">
+		<elem>Firenze</elem>
+	</NN>
+	<NN code="ITI15">
+		<elem>Prato</elem>
+	</NN>
+	<NN code="ITI16">
+		<elem>Livorno</elem>
+	</NN>
+	<NN code="ITI17">
+		<elem>Pisa</elem>
+	</NN>
+	<NN code="ITI18">
+		<elem>Arezzo</elem>
+	</NN>
+	<NN code="ITI19">
+		<elem>Siena</elem>
+	</NN>
+	<NN code="ITI1A">
+		<elem>Grosseto</elem>
+	</NN>
+	<NN code="ITI21">
+		<elem>Perugia</elem>
+	</NN>
+	<NN code="ITI22">
+		<elem>Terni</elem>
+	</NN>
+	<NN code="ITI31">
+		<elem>Pesaro e Urbino</elem>
+	</NN>
+	<NN code="ITI32">
+		<elem>Ancona</elem>
+	</NN>
+	<NN code="ITI33">
+		<elem>Macerata</elem>
+	</NN>
+	<NN code="ITI34">
+		<elem>Ascoli Piceno</elem>
+	</NN>
+	<NN code="ITI35">
+		<elem>Fermo</elem>
+	</NN>
+	<NN code="ITI41">
+		<elem>Viterbo</elem>
+	</NN>
+	<NN code="ITI42">
+		<elem>Rieti</elem>
+	</NN>
+	<NN code="ITI43">
+		<elem>Roma</elem>
+	</NN>
+	<NN code="ITI44">
+		<elem>Latina</elem>
+	</NN>
+	<NN code="ITI45">
+		<elem>Frosinone</elem>
+	</NN>
+	<NN code="ITZZZ">
+		<elem>Extra-Regio NUTS 3</elem>
+	</NN>
+	<NN code="CY">
+		<elem>ΚΥΠΡΟΣ (KYPROS)</elem>
+	</NN>
+	<NN code="CY000">
+		<elem>Κύπρος (Kypros)</elem>
+	</NN>
+	<NN code="CYZZZ">
+		<elem>Extra-Regio NUTS 3</elem>
+	</NN>
+	<NN code="LV">
+		<elem>LATVIJA</elem>
+	</NN>
+	<NN code="LV003">
+		<elem>Kurzeme</elem>
+	</NN>
+	<NN code="LV005">
+		<elem>Latgale</elem>
+	</NN>
+	<NN code="LV006">
+		<elem>Rīga</elem>
+	</NN>
+	<NN code="LV007">
+		<elem>Pierīga</elem>
+	</NN>
+	<NN code="LV008">
+		<elem>Vidzeme</elem>
+	</NN>
+	<NN code="LV009">
+		<elem>Zemgale</elem>
+	</NN>
+	<NN code="LVZZZ">
+		<elem>Extra-Regio NUTS 3</elem>
+	</NN>
+	<NN code="LT">
+		<elem>LIETUVA</elem>
+	</NN>
+	<NN code="LT001">
+		<elem>Alytaus apskritis</elem>
+	</NN>
+	<NN code="LT002">
+		<elem>Kauno apskritis</elem>
+	</NN>
+	<NN code="LT003">
+		<elem>Klaipėdos apskritis</elem>
+	</NN>
+	<NN code="LT004">
+		<elem>Marijampolės apskritis</elem>
+	</NN>
+	<NN code="LT005">
+		<elem>Panevėžio apskritis</elem>
+	</NN>
+	<NN code="LT006">
+		<elem>Šiaulių apskritis</elem>
+	</NN>
+	<NN code="LT007">
+		<elem>Tauragės apskritis</elem>
+	</NN>
+	<NN code="LT008">
+		<elem>Telšių apskritis</elem>
+	</NN>
+	<NN code="LT009">
+		<elem>Utenos apskritis</elem>
+	</NN>
+	<NN code="LT00A">
+		<elem>Vilniaus apskritis</elem>
+	</NN>
+	<NN code="LTZZZ">
+		<elem>Extra-Regio NUTS 3</elem>
+	</NN>
+	<NN code="LU">
+		<elem>LUXEMBOURG</elem>
+	</NN>
+	<NN code="LU000">
+		<elem>Luxembourg</elem>
+	</NN>
+	<NN code="LUZZZ">
+		<elem>Extra-Regio NUTS 3</elem>
+	</NN>
+	<NN code="HU">
+		<elem>MAGYARORSZÁG</elem>
+	</NN>
+	<NN code="HU101">
+		<elem>Budapest</elem>
+	</NN>
+	<NN code="HU102">
+		<elem>Pest</elem>
+	</NN>
+	<NN code="HU211">
+		<elem>Fejér</elem>
+	</NN>
+	<NN code="HU212">
+		<elem>Komárom-Esztergom</elem>
+	</NN>
+	<NN code="HU213">
+		<elem>Veszprém</elem>
+	</NN>
+	<NN code="HU221">
+		<elem>Győr-Moson-Sopron</elem>
+	</NN>
+	<NN code="HU222">
+		<elem>Vas</elem>
+	</NN>
+	<NN code="HU223">
+		<elem>Zala</elem>
+	</NN>
+	<NN code="HU231">
+		<elem>Baranya</elem>
+	</NN>
+	<NN code="HU232">
+		<elem>Somogy</elem>
+	</NN>
+	<NN code="HU233">
+		<elem>Tolna</elem>
+	</NN>
+	<NN code="HU311">
+		<elem>Borsod-Abaúj-Zemplén</elem>
+	</NN>
+	<NN code="HU312">
+		<elem>Heves</elem>
+	</NN>
+	<NN code="HU313">
+		<elem>Nógrád</elem>
+	</NN>
+	<NN code="HU321">
+		<elem>Hajdú-Bihar</elem>
+	</NN>
+	<NN code="HU322">
+		<elem>Jász-Nagykun-Szolnok</elem>
+	</NN>
+	<NN code="HU323">
+		<elem>Szabolcs-Szatmár-Bereg</elem>
+	</NN>
+	<NN code="HU331">
+		<elem>Bács-Kiskun</elem>
+	</NN>
+	<NN code="HU332">
+		<elem>Békés</elem>
+	</NN>
+	<NN code="HU333">
+		<elem>Csongrád</elem>
+	</NN>
+	<NN code="HUZZZ">
+		<elem>Extra-Regio NUTS 3</elem>
+	</NN>
+	<NN code="MT">
+		<elem>MALTA</elem>
+	</NN>
+	<NN code="MT001">
+		<elem>Malta</elem>
+	</NN>
+	<NN code="MT002">
+		<elem>Gozo and Comino / Għawdex u Kemmuna</elem>
+	</NN>
+	<NN code="MTZZZ">
+		<elem>Extra-Regio NUTS 3</elem>
+	</NN>
+	<NN code="NL">
+		<elem>NEDERLAND</elem>
+	</NN>
+	<NN code="NL111">
+		<elem>Oost-Groningen</elem>
+	</NN>
+	<NN code="NL112">
+		<elem>Delfzijl en omgeving</elem>
+	</NN>
+	<NN code="NL113">
+		<elem>Overig Groningen</elem>
+	</NN>
+	<NN code="NL121">
+		<elem>Noord-Friesland</elem>
+	</NN>
+	<NN code="NL122">
+		<elem>Zuidwest-Friesland</elem>
+	</NN>
+	<NN code="NL123">
+		<elem>Zuidoost-Friesland</elem>
+	</NN>
+	<NN code="NL131">
+		<elem>Noord-Drenthe</elem>
+	</NN>
+	<NN code="NL132">
+		<elem>Zuidoost-Drenthe</elem>
+	</NN>
+	<NN code="NL133">
+		<elem>Zuidwest-Drenthe</elem>
+	</NN>
+	<NN code="NL211">
+		<elem>Noord-Overijssel</elem>
+	</NN>
+	<NN code="NL212">
+		<elem>Zuidwest-Overijssel</elem>
+	</NN>
+	<NN code="NL213">
+		<elem>Twente</elem>
+	</NN>
+	<NN code="NL221">
+		<elem>Veluwe</elem>
+	</NN>
+	<NN code="NL224">
+		<elem>Zuidwest-Gelderland</elem>
+	</NN>
+	<NN code="NL225">
+		<elem>Achterhoek</elem>
+	</NN>
+	<NN code="NL226">
+		<elem>Arnhem/Nijmegen</elem>
+	</NN>
+	<NN code="NL230">
+		<elem>Flevoland</elem>
+	</NN>
+	<NN code="NL310">
+		<elem>Utrecht</elem>
+	</NN>
+	<NN code="NL321">
+		<elem>Kop van Noord-Holland</elem>
+	</NN>
+	<NN code="NL322">
+		<elem>Alkmaar en omgeving</elem>
+	</NN>
+	<NN code="NL323">
+		<elem>IJmond</elem>
+	</NN>
+	<NN code="NL324">
+		<elem>Agglomeratie Haarlem</elem>
+	</NN>
+	<NN code="NL325">
+		<elem>Zaanstreek</elem>
+	</NN>
+	<NN code="NL326">
+		<elem>Groot-Amsterdam</elem>
+	</NN>
+	<NN code="NL327">
+		<elem>Het Gooi en Vechtstreek</elem>
+	</NN>
+	<NN code="NL332">
+		<elem>Agglomeratie 's-Gravenhage</elem>
+	</NN>
+	<NN code="NL333">
+		<elem>Delft en Westland</elem>
+	</NN>
+	<NN code="NL337">
+		<elem>Agglomeratie Leiden en Bollenstreek</elem>
+	</NN>
+	<NN code="NL338">
+		<elem>Oost-Zuid-Holland</elem>
+	</NN>
+	<NN code="NL339">
+		<elem>Groot-Rijnmond</elem>
+	</NN>
+	<NN code="NL33A">
+		<elem>Zuidoost-Zuid-Holland</elem>
+	</NN>
+	<NN code="NL341">
+		<elem>Zeeuwsch-Vlaanderen</elem>
+	</NN>
+	<NN code="NL342">
+		<elem>Overig Zeeland</elem>
+	</NN>
+	<NN code="NL411">
+		<elem>West-Noord-Brabant</elem>
+	</NN>
+	<NN code="NL412">
+		<elem>Midden-Noord-Brabant</elem>
+	</NN>
+	<NN code="NL413">
+		<elem>Noordoost-Noord-Brabant</elem>
+	</NN>
+	<NN code="NL414">
+		<elem>Zuidoost-Noord-Brabant</elem>
+	</NN>
+	<NN code="NL421">
+		<elem>Noord-Limburg</elem>
+	</NN>
+	<NN code="NL422">
+		<elem>Midden-Limburg</elem>
+	</NN>
+	<NN code="NL423">
+		<elem>Zuid-Limburg</elem>
+	</NN>
+	<NN code="NLZZZ">
+		<elem>Extra-Regio NUTS 3</elem>
+	</NN>
+	<NN code="AT">
+		<elem>ÖSTERREICH</elem>
+	</NN>
+	<NN code="AT111">
+		<elem>Mittelburgenland</elem>
+	</NN>
+	<NN code="AT112">
+		<elem>Nordburgenland</elem>
+	</NN>
+	<NN code="AT113">
+		<elem>Südburgenland</elem>
+	</NN>
+	<NN code="AT121">
+		<elem>Mostviertel-Eisenwurzen</elem>
+	</NN>
+	<NN code="AT122">
+		<elem>Niederösterreich-Süd</elem>
+	</NN>
+	<NN code="AT123">
+		<elem>Sankt Pölten</elem>
+	</NN>
+	<NN code="AT124">
+		<elem>Waldviertel</elem>
+	</NN>
+	<NN code="AT125">
+		<elem>Weinviertel</elem>
+	</NN>
+	<NN code="AT126">
+		<elem>Wiener Umland/Nordteil</elem>
+	</NN>
+	<NN code="AT127">
+		<elem>Wiener Umland/Südteil</elem>
+	</NN>
+	<NN code="AT130">
+		<elem>Wien</elem>
+	</NN>
+	<NN code="AT211">
+		<elem>Klagenfurt-Villach</elem>
+	</NN>
+	<NN code="AT212">
+		<elem>Oberkärnten</elem>
+	</NN>
+	<NN code="AT213">
+		<elem>Unterkärnten</elem>
+	</NN>
+	<NN code="AT221">
+		<elem>Graz</elem>
+	</NN>
+	<NN code="AT222">
+		<elem>Liezen</elem>
+	</NN>
+	<NN code="AT223">
+		<elem>Östliche Obersteiermark</elem>
+	</NN>
+	<NN code="AT224">
+		<elem>Oststeiermark</elem>
+	</NN>
+	<NN code="AT225">
+		<elem>West- und Südsteiermark</elem>
+	</NN>
+	<NN code="AT226">
+		<elem>Westliche Obersteiermark</elem>
+	</NN>
+	<NN code="AT311">
+		<elem>Innviertel</elem>
+	</NN>
+	<NN code="AT312">
+		<elem>Linz-Wels</elem>
+	</NN>
+	<NN code="AT313">
+		<elem>Mühlviertel</elem>
+	</NN>
+	<NN code="AT314">
+		<elem>Steyr-Kirchdorf</elem>
+	</NN>
+	<NN code="AT315">
+		<elem>Traunviertel</elem>
+	</NN>
+	<NN code="AT321">
+		<elem>Lungau</elem>
+	</NN>
+	<NN code="AT322">
+		<elem>Pinzgau-Pongau</elem>
+	</NN>
+	<NN code="AT323">
+		<elem>Salzburg und Umgebung</elem>
+	</NN>
+	<NN code="AT331">
+		<elem>Außerfern</elem>
+	</NN>
+	<NN code="AT332">
+		<elem>Innsbruck</elem>
+	</NN>
+	<NN code="AT333">
+		<elem>Osttirol</elem>
+	</NN>
+	<NN code="AT334">
+		<elem>Tiroler Oberland</elem>
+	</NN>
+	<NN code="AT335">
+		<elem>Tiroler Unterland</elem>
+	</NN>
+	<NN code="AT341">
+		<elem>Bludenz-Bregenzer Wald</elem>
+	</NN>
+	<NN code="AT342">
+		<elem>Rheintal-Bodenseegebiet</elem>
+	</NN>
+	<NN code="ATZZZ">
+		<elem>Extra-Regio NUTS 3</elem>
+	</NN>
+	<NN code="PL">
+		<elem>POLSKA</elem>
+	</NN>
+	<NN code="PL113">
+		<elem>Miasto Łódź</elem>
+	</NN>
+	<NN code="PL114">
+		<elem>Łódzki</elem>
+	</NN>
+	<NN code="PL115">
+		<elem>Piotrkowski</elem>
+	</NN>
+	<NN code="PL116">
+		<elem>Sieradzki</elem>
+	</NN>
+	<NN code="PL117">
+		<elem>Skierniewicki</elem>
+	</NN>
+	<NN code="PL127">
+		<elem>Miasto Warszawa</elem>
+	</NN>
+	<NN code="PL128">
+		<elem>Radomski</elem>
+	</NN>
+	<NN code="PL129">
+		<elem>Warszawski wschodni</elem>
+	</NN>
+	<NN code="PL12A">
+		<elem>Warszawski zachodni</elem>
+	</NN>
+	<NN code="PL12B">
+		<elem>Ciechanowski</elem>
+	</NN>
+	<NN code="PL12C">
+		<elem>Płocki</elem>
+	</NN>
+	<NN code="PL12D">
+		<elem>Ostrołęcki</elem>
+	</NN>
+	<NN code="PL12E">
+		<elem>Siedlecki</elem>
+	</NN>
+	<NN code="PL213">
+		<elem>Miasto Kraków</elem>
+	</NN>
+	<NN code="PL214">
+		<elem>Krakowski</elem>
+	</NN>
+	<NN code="PL217">
+		<elem>Tarnowski</elem>
+	</NN>
+	<NN code="PL218">
+		<elem>Nowosądecki</elem>
+	</NN>
+	<NN code="PL219">
+		<elem>Nowotarski</elem>
+	</NN>
+	<NN code="PL21A">
+		<elem>Oświęcimski</elem>
+	</NN>
+	<NN code="PL224">
+		<elem>Częstochowski</elem>
+	</NN>
+	<NN code="PL225">
+		<elem>Bielski</elem>
+	</NN>
+	<NN code="PL227">
+		<elem>Rybnicki</elem>
+	</NN>
+	<NN code="PL228">
+		<elem>Bytomski</elem>
+	</NN>
+	<NN code="PL229">
+		<elem>Gliwicki</elem>
+	</NN>
+	<NN code="PL22A">
+		<elem>Katowicki</elem>
+	</NN>
+	<NN code="PL22B">
+		<elem>Sosnowiecki</elem>
+	</NN>
+	<NN code="PL22C">
+		<elem>Tyski</elem>
+	</NN>
+	<NN code="PL311">
+		<elem>Bialski</elem>
+	</NN>
+	<NN code="PL312">
+		<elem>Chełmsko-zamojski</elem>
+	</NN>
+	<NN code="PL314">
+		<elem>Lubelski</elem>
+	</NN>
+	<NN code="PL315">
+		<elem>Puławski</elem>
+	</NN>
+	<NN code="PL323">
+		<elem>Krośnieński</elem>
+	</NN>
+	<NN code="PL324">
+		<elem>Przemyski</elem>
+	</NN>
+	<NN code="PL325">
+		<elem>Rzeszowski</elem>
+	</NN>
+	<NN code="PL326">
+		<elem>Tarnobrzeski</elem>
+	</NN>
+	<NN code="PL331">
+		<elem>Kielecki</elem>
+	</NN>
+	<NN code="PL332">
+		<elem>Sandomiersko-jędrzejowski</elem>
+	</NN>
+	<NN code="PL343">
+		<elem>Białostocki</elem>
+	</NN>
+	<NN code="PL344">
+		<elem>Łomżyński</elem>
+	</NN>
+	<NN code="PL345">
+		<elem>Suwalski</elem>
+	</NN>
+	<NN code="PL411">
+		<elem>Pilski</elem>
+	</NN>
+	<NN code="PL414">
+		<elem>Koniński</elem>
+	</NN>
+	<NN code="PL415">
+		<elem>Miasto Poznań</elem>
+	</NN>
+	<NN code="PL416">
+		<elem>Kaliski</elem>
+	</NN>
+	<NN code="PL417">
+		<elem>Leszczyński</elem>
+	</NN>
+	<NN code="PL418">
+		<elem>Poznański</elem>
+	</NN>
+	<NN code="PL424">
+		<elem>Miasto Szczecin</elem>
+	</NN>
+	<NN code="PL426">
+		<elem>Koszaliński</elem>
+	</NN>
+	<NN code="PL427">
+		<elem>Szczecinecko-pyrzycki</elem>
+	</NN>
+	<NN code="PL428">
+		<elem>Szczeciński</elem>
+	</NN>
+	<NN code="PL431">
+		<elem>Gorzowski</elem>
+	</NN>
+	<NN code="PL432">
+		<elem>Zielonogórski</elem>
+	</NN>
+	<NN code="PL514">
+		<elem>Miasto Wrocław</elem>
+	</NN>
+	<NN code="PL515">
+		<elem>Jeleniogórski</elem>
+	</NN>
+	<NN code="PL516">
+		<elem>Legnicko-głogowski</elem>
+	</NN>
+	<NN code="PL517">
+		<elem>Wałbrzyski</elem>
+	</NN>
+	<NN code="PL518">
+		<elem>Wrocławski</elem>
+	</NN>
+	<NN code="PL523">
+		<elem>Nyski</elem>
+	</NN>
+	<NN code="PL524">
+		<elem>Opolski</elem>
+	</NN>
+	<NN code="PL613">
+		<elem>Bydgosko-toruński</elem>
+	</NN>
+	<NN code="PL616">
+		<elem>Grudziądzki</elem>
+	</NN>
+	<NN code="PL617">
+		<elem>Inowrocławski</elem>
+	</NN>
+	<NN code="PL618">
+		<elem>Świecki</elem>
+	</NN>
+	<NN code="PL619">
+		<elem>Włocławski</elem>
+	</NN>
+	<NN code="PL621">
+		<elem>Elbląski</elem>
+	</NN>
+	<NN code="PL622">
+		<elem>Olsztyński</elem>
+	</NN>
+	<NN code="PL623">
+		<elem>Ełcki</elem>
+	</NN>
+	<NN code="PL633">
+		<elem>Trójmiejski</elem>
+	</NN>
+	<NN code="PL634">
+		<elem>Gdański</elem>
+	</NN>
+	<NN code="PL636">
+		<elem>Słupski</elem>
+	</NN>
+	<NN code="PL637">
+		<elem>Chojnicki</elem>
+	</NN>
+	<NN code="PL638">
+		<elem>Starogardzki</elem>
+	</NN>
+	<NN code="PLZZZ">
+		<elem>Extra-Regio NUTS 3</elem>
+	</NN>
+	<NN code="PT">
+		<elem>PORTUGAL</elem>
+	</NN>
+	<NN code="PT111">
+		<elem>Alto Minho</elem>
+	</NN>
+	<NN code="PT112">
+		<elem>Cávado</elem>
+	</NN>
+	<NN code="PT119">
+		<elem>Ave</elem>
+	</NN>
+	<NN code="PT11A">
+		<elem>Área Metropolitana do Porto</elem>
+	</NN>
+	<NN code="PT11B">
+		<elem>Alto Tâmega</elem>
+	</NN>
+	<NN code="PT11C">
+		<elem>Tâmega e Sousa</elem>
+	</NN>
+	<NN code="PT11D">
+		<elem>Douro</elem>
+	</NN>
+	<NN code="PT11E">
+		<elem>Terras de Trás-os-Montes</elem>
+	</NN>
+	<NN code="PT150">
+		<elem>Algarve</elem>
+	</NN>
+	<NN code="PT16B">
+		<elem>Oeste</elem>
+	</NN>
+	<NN code="PT16D">
+		<elem>Região de Aveiro</elem>
+	</NN>
+	<NN code="PT16E">
+		<elem>Região de Coimbra</elem>
+	</NN>
+	<NN code="PT16F">
+		<elem>Região de Leiria</elem>
+	</NN>
+	<NN code="PT16G">
+		<elem>Viseu Dão Lafões</elem>
+	</NN>
+	<NN code="PT16H">
+		<elem>Beira Baixa</elem>
+	</NN>
+	<NN code="PT16I">
+		<elem>Médio Tejo</elem>
+	</NN>
+	<NN code="PT16J">
+		<elem>Beiras e Serra da Estrela</elem>
+	</NN>
+	<NN code="PT170">
+		<elem>Área Metropolitana de Lisboa</elem>
+	</NN>
+	<NN code="PT181">
+		<elem>Alentejo Litoral</elem>
+	</NN>
+	<NN code="PT184">
+		<elem>Baixo Alentejo</elem>
+	</NN>
+	<NN code="PT185">
+		<elem>Lezíria do Tejo</elem>
+	</NN>
+	<NN code="PT186">
+		<elem>Alto Alentejo</elem>
+	</NN>
+	<NN code="PT187">
+		<elem>Alentejo Central</elem>
+	</NN>
+	<NN code="PT200">
+		<elem>Região Autónoma dos Açores</elem>
+	</NN>
+	<NN code="PT300">
+		<elem>Região Autónoma da Madeira</elem>
+	</NN>
+	<NN code="PTZZZ">
+		<elem>Extra-Regio NUTS 3</elem>
+	</NN>
+	<NN code="RO">
+		<elem>ROMÂNIA</elem>
+	</NN>
+	<NN code="RO111">
+		<elem>Bihor</elem>
+	</NN>
+	<NN code="RO112">
+		<elem>Bistriţa-Năsăud</elem>
+	</NN>
+	<NN code="RO113">
+		<elem>Cluj</elem>
+	</NN>
+	<NN code="RO114">
+		<elem>Maramureş</elem>
+	</NN>
+	<NN code="RO115">
+		<elem>Satu Mare</elem>
+	</NN>
+	<NN code="RO116">
+		<elem>Sălaj</elem>
+	</NN>
+	<NN code="RO121">
+		<elem>Alba</elem>
+	</NN>
+	<NN code="RO122">
+		<elem>Braşov</elem>
+	</NN>
+	<NN code="RO123">
+		<elem>Covasna</elem>
+	</NN>
+	<NN code="RO124">
+		<elem>Harghita</elem>
+	</NN>
+	<NN code="RO125">
+		<elem>Mureş</elem>
+	</NN>
+	<NN code="RO126">
+		<elem>Sibiu</elem>
+	</NN>
+	<NN code="RO211">
+		<elem>Bacău</elem>
+	</NN>
+	<NN code="RO212">
+		<elem>Botoşani</elem>
+	</NN>
+	<NN code="RO213">
+		<elem>Iaşi</elem>
+	</NN>
+	<NN code="RO214">
+		<elem>Neamţ</elem>
+	</NN>
+	<NN code="RO215">
+		<elem>Suceava</elem>
+	</NN>
+	<NN code="RO216">
+		<elem>Vaslui</elem>
+	</NN>
+	<NN code="RO221">
+		<elem>Brăila</elem>
+	</NN>
+	<NN code="RO222">
+		<elem>Buzău</elem>
+	</NN>
+	<NN code="RO223">
+		<elem>Constanţa</elem>
+	</NN>
+	<NN code="RO224">
+		<elem>Galaţi</elem>
+	</NN>
+	<NN code="RO225">
+		<elem>Tulcea</elem>
+	</NN>
+	<NN code="RO226">
+		<elem>Vrancea</elem>
+	</NN>
+	<NN code="RO311">
+		<elem>Argeş</elem>
+	</NN>
+	<NN code="RO312">
+		<elem>Călăraşi</elem>
+	</NN>
+	<NN code="RO313">
+		<elem>Dâmboviţa</elem>
+	</NN>
+	<NN code="RO314">
+		<elem>Giurgiu</elem>
+	</NN>
+	<NN code="RO315">
+		<elem>Ialomiţa</elem>
+	</NN>
+	<NN code="RO316">
+		<elem>Prahova</elem>
+	</NN>
+	<NN code="RO317">
+		<elem>Teleorman</elem>
+	</NN>
+	<NN code="RO321">
+		<elem>Bucureşti</elem>
+	</NN>
+	<NN code="RO322">
+		<elem>Ilfov</elem>
+	</NN>
+	<NN code="RO411">
+		<elem>Dolj</elem>
+	</NN>
+	<NN code="RO412">
+		<elem>Gorj</elem>
+	</NN>
+	<NN code="RO413">
+		<elem>Mehedinţi</elem>
+	</NN>
+	<NN code="RO414">
+		<elem>Olt</elem>
+	</NN>
+	<NN code="RO415">
+		<elem>Vâlcea</elem>
+	</NN>
+	<NN code="RO421">
+		<elem>Arad</elem>
+	</NN>
+	<NN code="RO422">
+		<elem>Caraş-Severin</elem>
+	</NN>
+	<NN code="RO423">
+		<elem>Hunedoara</elem>
+	</NN>
+	<NN code="RO424">
+		<elem>Timiş</elem>
+	</NN>
+	<NN code="ROZZZ">
+		<elem>Extra-Regio NUTS 3</elem>
+	</NN>
+	<NN code="SI">
+		<elem>SLOVENIJA</elem>
+	</NN>
+	<NN code="SI031">
+		<elem>Pomurska</elem>
+	</NN>
+	<NN code="SI032">
+		<elem>Podravska</elem>
+	</NN>
+	<NN code="SI033">
+		<elem>Koroška</elem>
+	</NN>
+	<NN code="SI034">
+		<elem>Savinjska</elem>
+	</NN>
+	<NN code="SI035">
+		<elem>Zasavska</elem>
+	</NN>
+	<NN code="SI036">
+		<elem>Posavska</elem>
+	</NN>
+	<NN code="SI037">
+		<elem>Jugovzhodna Slovenija</elem>
+	</NN>
+	<NN code="SI038">
+		<elem>Primorsko-notranjska</elem>
+	</NN>
+	<NN code="SI041">
+		<elem>Osrednjeslovenska</elem>
+	</NN>
+	<NN code="SI042">
+		<elem>Gorenjska</elem>
+	</NN>
+	<NN code="SI043">
+		<elem>Goriška</elem>
+	</NN>
+	<NN code="SI044">
+		<elem>Obalno-kraška</elem>
+	</NN>
+	<NN code="SIZZZ">
+		<elem>Extra-Regio NUTS 3</elem>
+	</NN>
+	<NN code="SK">
+		<elem>SLOVENSKO</elem>
+	</NN>
+	<NN code="SK010">
+		<elem>Bratislavský kraj</elem>
+	</NN>
+	<NN code="SK021">
+		<elem>Trnavský kraj</elem>
+	</NN>
+	<NN code="SK022">
+		<elem>Trenčiansky kraj</elem>
+	</NN>
+	<NN code="SK023">
+		<elem>Nitriansky kraj</elem>
+	</NN>
+	<NN code="SK031">
+		<elem>Žilinský kraj</elem>
+	</NN>
+	<NN code="SK032">
+		<elem>Banskobystrický kraj</elem>
+	</NN>
+	<NN code="SK041">
+		<elem>Prešovský kraj</elem>
+	</NN>
+	<NN code="SK042">
+		<elem>Košický kraj</elem>
+	</NN>
+	<NN code="SKZZZ">
+		<elem>Extra-Regio NUTS 3</elem>
+	</NN>
+	<NN code="FI">
+		<elem>SUOMI / FINLAND</elem>
+	</NN>
+	<NN code="FI193">
+		<elem>Keski-Suomi</elem>
+	</NN>
+	<NN code="FI194">
+		<elem>Etelä-Pohjanmaa</elem>
+	</NN>
+	<NN code="FI195">
+		<elem>Pohjanmaa</elem>
+	</NN>
+	<NN code="FI196">
+		<elem>Satakunta</elem>
+	</NN>
+	<NN code="FI197">
+		<elem>Pirkanmaa</elem>
+	</NN>
+	<NN code="FI1B1">
+		<elem>Helsinki-Uusimaa</elem>
+	</NN>
+	<NN code="FI1C1">
+		<elem>Varsinais-Suomi</elem>
+	</NN>
+	<NN code="FI1C2">
+		<elem>Kanta-Häme</elem>
+	</NN>
+	<NN code="FI1C3">
+		<elem>Päijät-Häme</elem>
+	</NN>
+	<NN code="FI1C4">
+		<elem>Kymenlaakso</elem>
+	</NN>
+	<NN code="FI1C5">
+		<elem>Etelä-Karjala</elem>
+	</NN>
+	<NN code="FI1D1">
+		<elem>Etelä-Savo</elem>
+	</NN>
+	<NN code="FI1D2">
+		<elem>Pohjois-Savo</elem>
+	</NN>
+	<NN code="FI1D3">
+		<elem>Pohjois-Karjala</elem>
+	</NN>
+	<NN code="FI1D4">
+		<elem>Kainuu</elem>
+	</NN>
+	<NN code="FI1D5">
+		<elem>Keski-Pohjanmaa</elem>
+	</NN>
+	<NN code="FI1D6">
+		<elem>Pohjois-Pohjanmaa</elem>
+	</NN>
+	<NN code="FI1D7">
+		<elem>Lappi</elem>
+	</NN>
+	<NN code="FI200">
+		<elem>Åland</elem>
+	</NN>
+	<NN code="FIZZZ">
+		<elem>Extra-Regio NUTS 3</elem>
+	</NN>
+	<NN code="SE">
+		<elem>SVERIGE</elem>
+	</NN>
+	<NN code="SE110">
+		<elem>Stockholms län</elem>
+	</NN>
+	<NN code="SE121">
+		<elem>Uppsala län</elem>
+	</NN>
+	<NN code="SE122">
+		<elem>Södermanlands län</elem>
+	</NN>
+	<NN code="SE123">
+		<elem>Östergötlands län</elem>
+	</NN>
+	<NN code="SE124">
+		<elem>Örebro län</elem>
+	</NN>
+	<NN code="SE125">
+		<elem>Västmanlands län</elem>
+	</NN>
+	<NN code="SE211">
+		<elem>Jönköpings län</elem>
+	</NN>
+	<NN code="SE212">
+		<elem>Kronobergs län</elem>
+	</NN>
+	<NN code="SE213">
+		<elem>Kalmar län</elem>
+	</NN>
+	<NN code="SE214">
+		<elem>Gotlands län</elem>
+	</NN>
+	<NN code="SE221">
+		<elem>Blekinge län</elem>
+	</NN>
+	<NN code="SE224">
+		<elem>Skåne län</elem>
+	</NN>
+	<NN code="SE231">
+		<elem>Hallands län</elem>
+	</NN>
+	<NN code="SE232">
+		<elem>Västra Götalands län</elem>
+	</NN>
+	<NN code="SE311">
+		<elem>Värmlands län</elem>
+	</NN>
+	<NN code="SE312">
+		<elem>Dalarnas län</elem>
+	</NN>
+	<NN code="SE313">
+		<elem>Gävleborgs län</elem>
+	</NN>
+	<NN code="SE321">
+		<elem>Västernorrlands län</elem>
+	</NN>
+	<NN code="SE322">
+		<elem>Jämtlands län</elem>
+	</NN>
+	<NN code="SE331">
+		<elem>Västerbottens län</elem>
+	</NN>
+	<NN code="SE332">
+		<elem>Norrbottens län</elem>
+	</NN>
+	<NN code="SEZZZ">
+		<elem>Extra-Regio NUTS 3</elem>
+	</NN>
+	<NN code="UK">
+		<elem>UNITED KINGDOM</elem>
+	</NN>
+	<NN code="UKC11">
+		<elem>Hartlepool and Stockton-on-Tees</elem>
+	</NN>
+	<NN code="UKC12">
+		<elem>South Teesside</elem>
+	</NN>
+	<NN code="UKC13">
+		<elem>Darlington</elem>
+	</NN>
+	<NN code="UKC14">
+		<elem>Durham CC</elem>
+	</NN>
+	<NN code="UKC21">
+		<elem>Northumberland</elem>
+	</NN>
+	<NN code="UKC22">
+		<elem>Tyneside</elem>
+	</NN>
+	<NN code="UKC23">
+		<elem>Sunderland</elem>
+	</NN>
+	<NN code="UKD11">
+		<elem>West Cumbria</elem>
+	</NN>
+	<NN code="UKD12">
+		<elem>East Cumbria</elem>
+	</NN>
+	<NN code="UKD33">
+		<elem>Manchester</elem>
+	</NN>
+	<NN code="UKD34">
+		<elem>Greater Manchester South West</elem>
+	</NN>
+	<NN code="UKD35">
+		<elem>Greater Manchester South East</elem>
+	</NN>
+	<NN code="UKD36">
+		<elem>Greater Manchester North West</elem>
+	</NN>
+	<NN code="UKD37">
+		<elem>Greater Manchester North East</elem>
+	</NN>
+	<NN code="UKD41">
+		<elem>Blackburn with Darwen</elem>
+	</NN>
+	<NN code="UKD42">
+		<elem>Blackpool</elem>
+	</NN>
+	<NN code="UKD44">
+		<elem>Lancaster and Wyre</elem>
+	</NN>
+	<NN code="UKD45">
+		<elem>Mid Lancashire</elem>
+	</NN>
+	<NN code="UKD46">
+		<elem>East Lancashire</elem>
+	</NN>
+	<NN code="UKD47">
+		<elem>Chorley and West Lancashire</elem>
+	</NN>
+	<NN code="UKD61">
+		<elem>Warrington</elem>
+	</NN>
+	<NN code="UKD62">
+		<elem>Cheshire East</elem>
+	</NN>
+	<NN code="UKD63">
+		<elem>Cheshire West and Chester</elem>
+	</NN>
+	<NN code="UKD71">
+		<elem>East Merseyside</elem>
+	</NN>
+	<NN code="UKD72">
+		<elem>Liverpool</elem>
+	</NN>
+	<NN code="UKD73">
+		<elem>Sefton</elem>
+	</NN>
+	<NN code="UKD74">
+		<elem>Wirral</elem>
+	</NN>
+	<NN code="UKE11">
+		<elem>Kingston upon Hull, City of</elem>
+	</NN>
+	<NN code="UKE12">
+		<elem>East Riding of Yorkshire</elem>
+	</NN>
+	<NN code="UKE13">
+		<elem>North and North East Lincolnshire</elem>
+	</NN>
+	<NN code="UKE21">
+		<elem>York</elem>
+	</NN>
+	<NN code="UKE22">
+		<elem>North Yorkshire CC</elem>
+	</NN>
+	<NN code="UKE31">
+		<elem>Barnsley, Doncaster and Rotherham</elem>
+	</NN>
+	<NN code="UKE32">
+		<elem>Sheffield</elem>
+	</NN>
+	<NN code="UKE41">
+		<elem>Bradford</elem>
+	</NN>
+	<NN code="UKE42">
+		<elem>Leeds</elem>
+	</NN>
+	<NN code="UKE44">
+		<elem>Calderdale and Kirklees</elem>
+	</NN>
+	<NN code="UKE45">
+		<elem>Wakefield</elem>
+	</NN>
+	<NN code="UKF11">
+		<elem>Derby</elem>
+	</NN>
+	<NN code="UKF12">
+		<elem>East Derbyshire</elem>
+	</NN>
+	<NN code="UKF13">
+		<elem>South and West Derbyshire</elem>
+	</NN>
+	<NN code="UKF14">
+		<elem>Nottingham</elem>
+	</NN>
+	<NN code="UKF15">
+		<elem>North Nottinghamshire</elem>
+	</NN>
+	<NN code="UKF16">
+		<elem>South Nottinghamshire</elem>
+	</NN>
+	<NN code="UKF21">
+		<elem>Leicester</elem>
+	</NN>
+	<NN code="UKF22">
+		<elem>Leicestershire CC and Rutland</elem>
+	</NN>
+	<NN code="UKF24">
+		<elem>West Northamptonshire</elem>
+	</NN>
+	<NN code="UKF25">
+		<elem>North Northamptonshire</elem>
+	</NN>
+	<NN code="UKF30">
+		<elem>Lincolnshire</elem>
+	</NN>
+	<NN code="UKG11">
+		<elem>Herefordshire, County of</elem>
+	</NN>
+	<NN code="UKG12">
+		<elem>Worcestershire</elem>
+	</NN>
+	<NN code="UKG13">
+		<elem>Warwickshire</elem>
+	</NN>
+	<NN code="UKG21">
+		<elem>Telford and Wrekin</elem>
+	</NN>
+	<NN code="UKG22">
+		<elem>Shropshire CC</elem>
+	</NN>
+	<NN code="UKG23">
+		<elem>Stoke-on-Trent</elem>
+	</NN>
+	<NN code="UKG24">
+		<elem>Staffordshire CC</elem>
+	</NN>
+	<NN code="UKG31">
+		<elem>Birmingham</elem>
+	</NN>
+	<NN code="UKG32">
+		<elem>Solihull</elem>
+	</NN>
+	<NN code="UKG33">
+		<elem>Coventry</elem>
+	</NN>
+	<NN code="UKG36">
+		<elem>Dudley</elem>
+	</NN>
+	<NN code="UKG37">
+		<elem>Sandwell</elem>
+	</NN>
+	<NN code="UKG38">
+		<elem>Walsall</elem>
+	</NN>
+	<NN code="UKG39">
+		<elem>Wolverhampton</elem>
+	</NN>
+	<NN code="UKH11">
+		<elem>Peterborough</elem>
+	</NN>
+	<NN code="UKH12">
+		<elem>Cambridgeshire CC</elem>
+	</NN>
+	<NN code="UKH14">
+		<elem>Suffolk</elem>
+	</NN>
+	<NN code="UKH15">
+		<elem>Norwich and East Norfolk</elem>
+	</NN>
+	<NN code="UKH16">
+		<elem>North and West Norfolk</elem>
+	</NN>
+	<NN code="UKH17">
+		<elem>Breckland and South Norfolk</elem>
+	</NN>
+	<NN code="UKH21">
+		<elem>Luton</elem>
+	</NN>
+	<NN code="UKH23">
+		<elem>Hertfordshire</elem>
+	</NN>
+	<NN code="UKH24">
+		<elem>Bedford</elem>
+	</NN>
+	<NN code="UKH25">
+		<elem>Central Bedfordshire</elem>
+	</NN>
+	<NN code="UKH31">
+		<elem>Southend-on-Sea</elem>
+	</NN>
+	<NN code="UKH32">
+		<elem>Thurrock</elem>
+	</NN>
+	<NN code="UKH34">
+		<elem>Essex Haven Gateway</elem>
+	</NN>
+	<NN code="UKH35">
+		<elem>West Essex</elem>
+	</NN>
+	<NN code="UKH36">
+		<elem>Heart of Essex</elem>
+	</NN>
+	<NN code="UKH37">
+		<elem>Essex Thames Gateway</elem>
+	</NN>
+	<NN code="UKI31">
+		<elem>Camden and City of London</elem>
+	</NN>
+	<NN code="UKI32">
+		<elem>Westminster</elem>
+	</NN>
+	<NN code="UKI33">
+		<elem>Kensington &amp; Chelsea and Hammersmith &amp; Fulham</elem>
+	</NN>
+	<NN code="UKI34">
+		<elem>Wandsworth</elem>
+	</NN>
+	<NN code="UKI41">
+		<elem>Hackney and Newham</elem>
+	</NN>
+	<NN code="UKI42">
+		<elem>Tower Hamlets</elem>
+	</NN>
+	<NN code="UKI43">
+		<elem>Haringey and Islington</elem>
+	</NN>
+	<NN code="UKI44">
+		<elem>Lewisham and Southwark</elem>
+	</NN>
+	<NN code="UKI45">
+		<elem>Lambeth</elem>
+	</NN>
+	<NN code="UKI51">
+		<elem>Bexley and Greenwich</elem>
+	</NN>
+	<NN code="UKI52">
+		<elem>Barking &amp; Dagenham and Havering</elem>
+	</NN>
+	<NN code="UKI53">
+		<elem>Redbridge and Waltham Forest</elem>
+	</NN>
+	<NN code="UKI54">
+		<elem>Enfield</elem>
+	</NN>
+	<NN code="UKI61">
+		<elem>Bromley</elem>
+	</NN>
+	<NN code="UKI62">
+		<elem>Croydon</elem>
+	</NN>
+	<NN code="UKI63">
+		<elem>Merton, Kingston upon Thames and Sutton</elem>
+	</NN>
+	<NN code="UKI71">
+		<elem>Barnet</elem>
+	</NN>
+	<NN code="UKI72">
+		<elem>Brent</elem>
+	</NN>
+	<NN code="UKI73">
+		<elem>Ealing</elem>
+	</NN>
+	<NN code="UKI74">
+		<elem>Harrow and Hillingdon</elem>
+	</NN>
+	<NN code="UKI75">
+		<elem>Hounslow and Richmond upon Thames</elem>
+	</NN>
+	<NN code="UKJ11">
+		<elem>Berkshire</elem>
+	</NN>
+	<NN code="UKJ12">
+		<elem>Milton Keynes</elem>
+	</NN>
+	<NN code="UKJ13">
+		<elem>Buckinghamshire CC</elem>
+	</NN>
+	<NN code="UKJ14">
+		<elem>Oxfordshire</elem>
+	</NN>
+	<NN code="UKJ21">
+		<elem>Brighton and Hove</elem>
+	</NN>
+	<NN code="UKJ22">
+		<elem>East Sussex CC</elem>
+	</NN>
+	<NN code="UKJ25">
+		<elem>West Surrey</elem>
+	</NN>
+	<NN code="UKJ26">
+		<elem>East Surrey</elem>
+	</NN>
+	<NN code="UKJ27">
+		<elem>West Sussex (South West)</elem>
+	</NN>
+	<NN code="UKJ28">
+		<elem>West Sussex (North East)</elem>
+	</NN>
+	<NN code="UKJ31">
+		<elem>Portsmouth</elem>
+	</NN>
+	<NN code="UKJ32">
+		<elem>Southampton</elem>
+	</NN>
+	<NN code="UKJ34">
+		<elem>Isle of Wight</elem>
+	</NN>
+	<NN code="UKJ35">
+		<elem>South Hampshire</elem>
+	</NN>
+	<NN code="UKJ36">
+		<elem>Central Hampshire</elem>
+	</NN>
+	<NN code="UKJ37">
+		<elem>North Hampshire</elem>
+	</NN>
+	<NN code="UKJ41">
+		<elem>Medway</elem>
+	</NN>
+	<NN code="UKJ43">
+		<elem>Kent Thames Gateway</elem>
+	</NN>
+	<NN code="UKJ44">
+		<elem>East Kent</elem>
+	</NN>
+	<NN code="UKJ45">
+		<elem>Mid Kent</elem>
+	</NN>
+	<NN code="UKJ46">
+		<elem>West Kent</elem>
+	</NN>
+	<NN code="UKK11">
+		<elem>Bristol, City of</elem>
+	</NN>
+	<NN code="UKK12">
+		<elem>Bath and North East Somerset, North Somerset and South Gloucestershire</elem>
+	</NN>
+	<NN code="UKK13">
+		<elem>Gloucestershire</elem>
+	</NN>
+	<NN code="UKK14">
+		<elem>Swindon</elem>
+	</NN>
+	<NN code="UKK15">
+		<elem>Wiltshire CC</elem>
+	</NN>
+	<NN code="UKK21">
+		<elem>Bournemouth and Poole</elem>
+	</NN>
+	<NN code="UKK22">
+		<elem>Dorset CC</elem>
+	</NN>
+	<NN code="UKK23">
+		<elem>Somerset</elem>
+	</NN>
+	<NN code="UKK30">
+		<elem>Cornwall and Isles of Scilly</elem>
+	</NN>
+	<NN code="UKK41">
+		<elem>Plymouth</elem>
+	</NN>
+	<NN code="UKK42">
+		<elem>Torbay</elem>
+	</NN>
+	<NN code="UKK43">
+		<elem>Devon CC</elem>
+	</NN>
+	<NN code="UKL11">
+		<elem>Isle of Anglesey</elem>
+	</NN>
+	<NN code="UKL12">
+		<elem>Gwynedd</elem>
+	</NN>
+	<NN code="UKL13">
+		<elem>Conwy and Denbighshire</elem>
+	</NN>
+	<NN code="UKL14">
+		<elem>South West Wales</elem>
+	</NN>
+	<NN code="UKL15">
+		<elem>Central Valleys</elem>
+	</NN>
+	<NN code="UKL16">
+		<elem>Gwent Valleys</elem>
+	</NN>
+	<NN code="UKL17">
+		<elem>Bridgend and Neath Port Talbot</elem>
+	</NN>
+	<NN code="UKL18">
+		<elem>Swansea</elem>
+	</NN>
+	<NN code="UKL21">
+		<elem>Monmouthshire and Newport</elem>
+	</NN>
+	<NN code="UKL22">
+		<elem>Cardiff and Vale of Glamorgan</elem>
+	</NN>
+	<NN code="UKL23">
+		<elem>Flintshire and Wrexham</elem>
+	</NN>
+	<NN code="UKL24">
+		<elem>Powys</elem>
+	</NN>
+	<NN code="UKM21">
+		<elem>Angus and Dundee City</elem>
+	</NN>
+	<NN code="UKM22">
+		<elem>Clackmannanshire and Fife</elem>
+	</NN>
+	<NN code="UKM23">
+		<elem>East Lothian and Midlothian</elem>
+	</NN>
+	<NN code="UKM24">
+		<elem>Scottish Borders</elem>
+	</NN>
+	<NN code="UKM25">
+		<elem>Edinburgh, City of</elem>
+	</NN>
+	<NN code="UKM26">
+		<elem>Falkirk</elem>
+	</NN>
+	<NN code="UKM27">
+		<elem>Perth &amp; Kinross and Stirling</elem>
+	</NN>
+	<NN code="UKM28">
+		<elem>West Lothian</elem>
+	</NN>
+	<NN code="UKM31">
+		<elem>East Dunbartonshire, West Dunbartonshire and Helensburgh &amp; Lomond</elem>
+	</NN>
+	<NN code="UKM32">
+		<elem>Dumfries &amp; Galloway</elem>
+	</NN>
+	<NN code="UKM33">
+		<elem>East Ayrshire and North Ayrshire mainland</elem>
+	</NN>
+	<NN code="UKM34">
+		<elem>Glasgow City</elem>
+	</NN>
+	<NN code="UKM35">
+		<elem>Inverclyde, East Renfrewshire and Renfrewshire</elem>
+	</NN>
+	<NN code="UKM36">
+		<elem>North Lanarkshire</elem>
+	</NN>
+	<NN code="UKM37">
+		<elem>South Ayrshire</elem>
+	</NN>
+	<NN code="UKM38">
+		<elem>South Lanarkshire</elem>
+	</NN>
+	<NN code="UKM50">
+		<elem>Aberdeen City and Aberdeenshire</elem>
+	</NN>
+	<NN code="UKM61">
+		<elem>Caithness &amp; Sutherland and Ross &amp; Cromarty</elem>
+	</NN>
+	<NN code="UKM62">
+		<elem>Inverness &amp; Nairn and Moray, Badenoch &amp; Strathspey</elem>
+	</NN>
+	<NN code="UKM63">
+		<elem>Lochaber, Skye &amp; Lochalsh, Arran &amp; Cumbrae and Argyll &amp; Bute</elem>
+	</NN>
+	<NN code="UKM64">
+		<elem>Eilean Siar (Western Isles)</elem>
+	</NN>
+	<NN code="UKM65">
+		<elem>Orkney Islands</elem>
+	</NN>
+	<NN code="UKM66">
+		<elem>Shetland Islands</elem>
+	</NN>
+	<NN code="UKN01">
+		<elem>Belfast</elem>
+	</NN>
+	<NN code="UKN02">
+		<elem>Outer Belfast</elem>
+	</NN>
+	<NN code="UKN03">
+		<elem>East of Northern Ireland</elem>
+	</NN>
+	<NN code="UKN04">
+		<elem>North of Northern Ireland</elem>
+	</NN>
+	<NN code="UKN05">
+		<elem>West and South of Northern Ireland</elem>
+	</NN>
+	<NN code="UKZZZ">
+		<elem>Extra-Regio NUTS 3</elem>
+	</NN>
+</NUTS_NAME>
+
