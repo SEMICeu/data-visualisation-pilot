@@ -19,7 +19,6 @@ downloadData <- function(pagenum) {
   sep="")
   downloadURL <- URLencode(downloadURL)
   downloadData <- readLines(downloadURL, warn="F") 
-  cat(toJSON(downloadData, pretty=TRUE), file = "../Datasets/APIoutput.js", append = TRUE)
   downloadData <- fromJSON(downloadData)
   downloadData <- downloadData$results 
   return(downloadData)
@@ -48,11 +47,8 @@ remove(PreviousData)
 remove(apiKey)
 remove(pageNum)
 
-#write.table(TEDData, "../Datasets/APIOutput.csv", sep = ",", quote = FALSE, row.names = FALSE)
-
 TEDData <- unique(TEDData)
 
-#cat(toJSON(TEDData, pretty=TRUE), file = "../Datasets/APIoutput.js", append = TRUE)
 
 ### select currently open tenders ###
 currentDate <- format(Sys.Date(), "%Y-%m-%d")
