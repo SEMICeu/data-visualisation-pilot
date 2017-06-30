@@ -36,6 +36,7 @@
             </div>
 
             <div class="explanation">
+              <div id="description">
               The visualisation on this page allows to visualise the number of tenders for each NUTS of the displayed level. Use the filter button
               on the left to display the filters. You can decide to filter on main activities or legal basis,
               or to change the NUTS level to be displayed.
@@ -43,6 +44,7 @@
               Note that, given the zoom and position of the map, some territories are not visible on the map (e.g., French Guyanna). To see
               information about these territories, move and/or reduce the zoom level, dragging the map with your mouse or using the
               zooming buttons on the top left corner.
+              </div>
               <div id="share" class="sharing-div"></div>
             </div>
 
@@ -72,7 +74,7 @@
           if(!texts[userLang]){
             userLang = 'en-US';
           }
-          $('.explanation').html(texts[userLang].mainDescription);
+          $('#description').html(texts[userLang].mainDescription);
         </script>
 	</body>
 </html>
