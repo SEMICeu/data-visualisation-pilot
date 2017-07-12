@@ -15,7 +15,7 @@ downloadData <- function(pagenum) {
 #                       "&sortField=ND&fields=ND,NUTS,DT,NC,ND,PD,PR,TD,MA,DI",
 #                       "&sortField=ND&fields=AA,AC,CY,DS,MA,NC,ND,OC,OJ,OL,OY,PC,PD,PR,RC,RP,TD,TY,NUTS",
 #                       "&sortField=ND&fields=AA,AC,CY,DI,DS,DT,MA,NC,ND,OC,OJ,OL,OY,PC,PD,PR,RC,RN,RP,TD,TY,NUTS,content",
-"&sortField=ND&fields=ND,RC,MA,DI,TD,PD,DT",
+"&sortField=ND&fields=ND,RC,MA,DI,TD,PD,DT,PC",
   sep="")
   downloadURL <- URLencode(downloadURL)
   downloadData <- readLines(downloadURL, warn="F") 
@@ -57,11 +57,11 @@ ListOfValueToKeep <- c("D","M","O","A","3")
 TEDData$DataToKeep <-TEDData$TD %in% ListOfValueToKeep
 TEDData <-TEDData[TEDData$DataToKeep == TRUE, ]
 
-TEDData[is.na(TEDData$PD),] <- currentDate 
+TEDData[is.na(TEDData$PD),]$PD <- currentDate 
 TEDData$DataToKeep <- with(TEDData, currentDate >= as.Date(PD))
 TEDData <-TEDData[TEDData$DataToKeep == TRUE, ]
 
-TEDData[is.na(TEDData$DT),]$DT <- as.Date(currentDate )
+TEDData[is.na(TEDData$DT),]$DT <-currentDate
 TEDData$DataToKeep <- with(TEDData, currentDate <= as.Date(TEDData$DT))
 TEDData <-TEDData[TEDData$DataToKeep == TRUE, ]
 
@@ -78,7 +78,7 @@ save <- TEDData
 
 TEDData <- save
 
-TEDData <- subset(TEDData, select = c("ND","RC","MA","DI"))
+TEDData <- subset(TEDData, select = c("ND","RC","MA","DI", "PC"))
 TEDData <- unique(TEDData)
 ### create output ###
 
@@ -89,7 +89,7 @@ for (i in 1:nrow(TEDData)) { #for each notice
   noticeYear <- substr(noticeID, 1, 4)
   noticeID <- substr(noticeID, 5, nchar(noticeID))
   noticeID <- paste(noticeID, noticeYear, sep = "-")
-  noticeDescription <- list(ID= noticeID, LB= TEDData$DI[[i]], MA=TEDData$MA[[i]])
+  noticeDescription <- list(ID= noticeID, LB= TEDData$DI[[i]], MA=TEDData$MA[[i]], CPV=TEDData$PC[[i]])
   
   for (j in 1:length(TEDData$RC[[i]])) { # for each NUTS
     NUTSregionName <- TEDData$RC[[i]][j]
