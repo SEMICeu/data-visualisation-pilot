@@ -88,7 +88,7 @@ func_BuildLink <- function(dataset) {
         write.table(dataOrg, name, sep = ";", quote = FALSE, row.names = FALSE)
       },
       error=function(cond){
-        message(paste("Error: Could not write edege file: ", name))
+#        message(paste("Error: Could not write edege file: ", name))
       }
     )
     options(scipen = 0)
@@ -121,7 +121,7 @@ func_BuildLink <- function(dataset) {
         write.table(listNode, name, sep = ";", quote = FALSE, row.names = FALSE)
       },
       error=function(cond){
-        message(paste("Error: Could not write node file: ", name))
+        #message(paste("Error: Could not write node file: ", name))
       }
     )
     remove(listNode)

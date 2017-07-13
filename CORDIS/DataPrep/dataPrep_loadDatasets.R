@@ -34,6 +34,16 @@ if ( arg_UpdateMotionChart ) {
   
   #combine the 3 datasets
   cat("combining CORDIS data for motionchart \n")
+  Dataset_FP7Projects$startDate <- gsub('/', '-', Dataset_FP7Projects$startDate)
+  Dataset_FP7Projects$endDate <- gsub('/', '-', Dataset_FP7Projects$endDate)
+  Dataset_FP6Projects[1] <- NULL 
+  Dataset_FP7Projects[1] <- NULL 
+  Dataset_H2020Projects[1] <- NULL 
+  Dataset_FP6Projects$startDate <- as.Date(as.POSIXlt(as.character(Dataset_FP6Projects$startDate), format="%Y-%m-%d"))
+  Dataset_FP7Projects$startDate <- as.Date(as.POSIXlt(as.character(Dataset_FP7Projects$startDate), format="%d-%m-%Y"))
+  Dataset_H2020Projects$startDate <- as.Date(as.POSIXlt(as.character(Dataset_H2020Projects$startDate), format="%Y-%m-%d"))
+  
+  names(Dataset_FP7Projects)[names(Dataset_FP7Projects)=="id"] <- "reference"
   names(Dataset_H2020Projects)[names(Dataset_H2020Projects)=="id"] <- "reference"
   Dataset_Projects <- rbind(rbind(Dataset_FP6Projects, Dataset_FP7Projects), Dataset_H2020Projects)
 
@@ -117,6 +127,8 @@ if ( arg_UpdateChord || arg_UpdateMotionChart ) {
   }
   Dataset_FP6Organizations = read.csv("../Datasets/inputData/cordis-fp6organizations.csv", header=TRUE, sep=";", stringsAsFactors=FALSE, comment.char="")
   Dataset_FP7Organizations = read.csv("../Datasets/inputData/cordis-fp7organizations.csv", header=TRUE, sep=";", stringsAsFactors=FALSE, comment.char="")
+  names(Dataset_FP7Organizations)[names(Dataset_FP7Organizations)=="projectID"] <- "projectReference"
+
 }
 
 if ( arg_UpdateChord || arg_UpdateMotionChart || arg_UpdateOrgNetwork ) {

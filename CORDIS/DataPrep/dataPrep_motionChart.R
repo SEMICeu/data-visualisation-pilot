@@ -18,7 +18,6 @@ Dataset_Projects <- subset(Dataset_Projects, select=-c(reference,acronym,status,
 Dataset_Projects$totalCost <- sub(',', '.',Dataset_Projects$totalCost)
 Dataset_Projects$totalCost <- as.numeric(Dataset_Projects$totalCost)
 
-Dataset_Projects$startDate <- as.Date(as.POSIXlt(as.character(Dataset_Projects$startDate), format="%Y-%m-%d"))
 Dataset_Projects$startDate <- as.numeric(format(Dataset_Projects$startDate, "%Y"))
 
 # remove projects with no start date => ~200 project
@@ -64,6 +63,8 @@ cat("compute the number of project participation (i.e. coordinator or participan
 
 ##### total number of project per country, year, framework contract
 func_TotalNbOfProject <- function (datasetOrg, datasetProject) {
+  #datasetOrg <- Dataset_FP7Organizations
+  #datasetProject <- Dataset_FP7Projects
   tmp <- merge(datasetOrg, datasetProject, by.x=c("projectReference"), by.y=c("reference"), all.x=TRUE)
   tmp <- merge(tmp, Dataset_Countries, by.x=c("country"), by.y=c("euCode"), all.x=TRUE)
   tmp <- tmp[tmp$EU28 == TRUE,]
