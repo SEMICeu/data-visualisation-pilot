@@ -2435,11 +2435,6 @@ var organisations = [
 "activity": "Education Establishments" 
  }, 
 { 
-"name": "University of Florida", 
-"country": "United States", 
-"activity": "Education Establishments" 
- }, 
-{ 
 "name": "FONDATION 2IE ASSOCIATION", 
 "country": "Burkina Faso", 
 "activity": "Education Establishments" 
