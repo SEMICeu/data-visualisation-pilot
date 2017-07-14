@@ -1,7 +1,8 @@
 
-install.packages("optparse",repos = "http://cran.us.r-project.org")
-install.packages("plyr",repos = "http://cran.us.r-project.org")
-install.packages("data.table",repos = "http://cran.us.r-project.org")
+install.packages("./Library/optparse_1.3.2.zip",repos = NULL, type="source")
+install.packages("./Library/plyr_1.8.4.zip",repos = NULL, type="source")
+install.packages("./Library/data.table_1.10.4.zip",repos = NULL, type="source")
+
 library(optparse)
 library(plyr)
 library(data.table)

@@ -5,6 +5,7 @@ require(data.table)
 # ---------------------------------------------------------------------------------------------------------------------------------------------
 subset_H2020Organizations <- subset(Dataset_H2020Organizations, select=c(projectReference, name, activityType, country))
 
+Dataset_Countries = read.csv("../Datasets/inputData/countries.csv", header=TRUE, sep=";", stringsAsFactors=FALSE, comment.char="")
 Countries <- subset(Dataset_Countries, select=c("euCode", "name"))
 Countries <- plyr::rename(Countries, c("name" = "countryName"))
 
@@ -154,6 +155,8 @@ func_prepareDataset <- function (dataset) {
 
 
 func_BuildOrganisationsJS <- function (dataset) {
+  #dataset <- subset_H2020Organizations
+
   dataset <- func_prepareDataset(dataset)
   
   cat('var organisations = [ \n', file = "../Datasets/organisations.js")

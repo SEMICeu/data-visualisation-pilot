@@ -38,7 +38,7 @@ if ( arg_UpdateMotionChart ) {
   Dataset_FP7Projects$endDate <- gsub('/', '-', Dataset_FP7Projects$endDate)
   Dataset_FP6Projects[1] <- NULL 
   Dataset_FP7Projects[1] <- NULL 
-  Dataset_H2020Projects[1] <- NULL 
+  Dataset_H2020Projects[1] <- NULL
   Dataset_FP6Projects$startDate <- as.Date(as.POSIXlt(as.character(Dataset_FP6Projects$startDate), format="%Y-%m-%d"))
   Dataset_FP7Projects$startDate <- as.Date(as.POSIXlt(as.character(Dataset_FP7Projects$startDate), format="%d-%m-%Y"))
   Dataset_H2020Projects$startDate <- as.Date(as.POSIXlt(as.character(Dataset_H2020Projects$startDate), format="%Y-%m-%d"))
@@ -55,6 +55,9 @@ if ( arg_UpdateMotionChart ) {
 
   cat("installing functionalities needed for the automatic download of eurostat data \n")   
   #install packages needed for downloading and transforming data from eurostat
+  install.packages("./Library/eurostat_3.1.1.zip",repos = NULL, type="source")
+  install.packages("./Library/gdata_2.18.0.zip",repos = NULL, type="source")
+  
   install.packages("eurostat",repos = "http://cran.us.r-project.org")
   install.packages("gdata",repos = "http://cran.us.r-project.org")
   library(eurostat)

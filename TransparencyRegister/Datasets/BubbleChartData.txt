@@ -1,38 +1,39 @@
 name,count
-Agriculture,2820
-Audiovisual and Media,2094
-Budget,1552
-Climate Action,3954
-Communication,2284
-Competition,4249
-Consumer Affairs,3783
-Culture,2432
-Customs,1890
-Development,2879
-Economic and Financial Affairs,4055
-Education,3562
-Employment and Social Affairs,3526
-Energy,4246
-Enlargement,1437
-Enterprise,4527
-Environment,5743
-External Relations,2531
-Finance,1222
-Fisheries,1482
-Food Safety,2639
-Security Policy,1753
-General Affairs,2737
-Home Affairs,1730
-Humanitarian Aid,1438
-Information Society,3790
-Internal Market,4656
-Justice,3023
-Public Health,3342
-Regional Policy,2824
-Research and Technology,5240
-Sport,1000
-Taxation,2998
-Trade,3836
-Trans-European Networks,2908
-Transport,3213
-Youth,2201
+,1
+Agriculture,2878
+Audiovisual and Media,2049
+Budget,1576
+Climate Action,4013
+Communication,2295
+Competition,4292
+Consumer Affairs,3823
+Culture,2389
+Customs,1922
+Development,2917
+Economic and Financial Affairs,4096
+Education,3599
+Employment and Social Affairs,3559
+Energy,4278
+Enlargement,1434
+Enterprise,4554
+Environment,5807
+External Relations,2570
+Finance,1343
+Fisheries,1496
+Food Safety,2693
+Security Policy,1771
+General Affairs,2754
+Home Affairs,1738
+Humanitarian Aid,1440
+Information Society,3800
+Internal Market,4684
+Justice,3043
+Public Health,3388
+Regional Policy,2837
+Research and Technology,5304
+Sport,996
+Taxation,3026
+Trade,3863
+Trans-European Networks,2910
+Transport,3260
+Youth,2216

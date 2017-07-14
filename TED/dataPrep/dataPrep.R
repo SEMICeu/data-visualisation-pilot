@@ -1,4 +1,4 @@
-install.packages("jsonlite",repos = "http://cran.us.r-project.org")
+install.packages("./Library/jsonlite_1.5.zip",repos = NULL, type="source")
 library(jsonlite)
 
 
@@ -48,7 +48,15 @@ remove(apiKey)
 remove(pageNum)
 
 TEDData <- unique(TEDData)
+Save2 <- TEDData
 
+
+
+
+TEDData <- Save2 
+  
+  
+cat(toJSON(TEDData, pretty=TRUE), file = "../Datasets/TEDdata-full.json", append = TRUE)
 
 ### select currently open tenders ###
 currentDate <- format(Sys.Date(), "%Y-%m-%d")
@@ -78,8 +86,10 @@ save <- TEDData
 
 TEDData <- save
 
-TEDData <- subset(TEDData, select = c("ND","RC","MA","DI", "PC"))
+TEDData <- subset(TEDData, select = c("ND","RC","MA","DI", "PC", "CY"))
 TEDData <- unique(TEDData)
+
+cat(toJSON(TEDData, pretty=TRUE), file = "../Datasets/TEDdataBeforeLoop.js", append = TRUE)
 ### create output ###
 
 OutputData <- list() 
