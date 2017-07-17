@@ -7,19 +7,33 @@ install.packages("./Library/XML_3.98-1.9.zip",repos = NULL, type="source")
 install.packages("./Library/tm_0.7-1.zip",repos = NULL, type="source")
 install.packages("./Library/RJSONIO_1.3-0.zip",repos = NULL, type="source")
 install.packages("./Library/plyr_1.8.4.zip",repos = NULL, type="source")
+install.packages("./Library/optparse_1.3.2.zip",repos = NULL, type="source")
+
 
 library(RWeka)
 library(XML)
 library(tm)
 library(RJSONIO)
 library(plyr)
+library(optparse)
 library(tools)
+
+option_list = list(
+  make_option(c("-U", "--Update"), type="logical", default=TRUE,
+              help="update data", metavar=NULL)
+);
+opt_parser = OptionParser(option_list=option_list);
+opt = parse_args(opt_parser);
+arg_UpdateData <- opt$U
 
 # ---------------------------------------------------------------------------------------------------------------------------------------------
 # I. LOAD DATA ################################################################################################################################
 # ---------------------------------------------------------------------------------------------------------------------------------------------
-download.file("http://ec.europa.eu/transparencyregister/public/consultation/statistics.do?action=getLobbyistsXml&fileType=NEW", destfile = "../Datasets/full_export_new.xml")
-
+if (arg_UpdateData) {
+  download.file("http://ec.europa.eu/transparencyregister/public/consultation/statistics.do?action=getLobbyistsXml&fileType=NEW", destfile = "../Datasets/full_export_new.xml")
+}
+  
+cat("downloading the transparency data \n")
 xmlfile <-  xmlTreeParse("../Datasets/full_export_new.xml", useInternalNodes = TRUE)
 countries = read.csv("../Datasets/Countries.csv", header=TRUE, sep=";", stringsAsFactors=FALSE, comment.char="")
 
@@ -27,6 +41,7 @@ countries = read.csv("../Datasets/Countries.csv", header=TRUE, sep=";", stringsA
 # ---------------------------------------------------------------------------------------------------------------------------------------------
 # II. TRANSFORM DATA FROM XML TO DATA.FRAME ###################################################################################################
 # ---------------------------------------------------------------------------------------------------------------------------------------------
+cat("Extract the XML \n")
 
 func_parseXMLNodeInterestRepresentative <- function(xmlNode){
   # xmlNode <- rootNode[["resultList"]][i][[1]]
@@ -72,7 +87,7 @@ remove(func_parseXMLNodeInterestRepresentative)
 # ---------------------------------------------------------------------------------------------------------------------------------------------
 # III. BUILD DATA.FRAME FOR MAP ###############################################################################################################
 # ---------------------------------------------------------------------------------------------------------------------------------------------
-
+cat("Prepare data for the map \n")
 func_BuildDatasetForMapBasedOnFilterCategories <- function(data, filterValue){
   data <- data[data$categories == filterValue, ]
   output <-aggregate(data$countries, 
@@ -198,6 +213,9 @@ remove(writeData)
 # ---------------------------------------------------------------------------------------------------------------------------------------------
 # VI. BUILD DATA.FRAME FOR BUBBLE #############################################################################################################
 # ---------------------------------------------------------------------------------------------------------------------------------------------
+
+cat("Prepare data for the bubble chart \n")
+
 listInterest <- paste(dataset$interest, collapse = ';')
 listInterest <- strsplit(listInterest, ";")[[1]]
 listInterest <- as.data.frame(listInterest)
@@ -223,6 +241,8 @@ remove(listInterest)
 # ---------------------------------------------------------------------------------------------------------------------------------------------
 # V. BUILD DATA.FRAME FOR WORDCLOUD ###########################################################################################################
 # ---------------------------------------------------------------------------------------------------------------------------------------------
+
+cat("Prepare data for the wordcloud \n")
 
 func_CleanString <- function(data){
   docs <- VCorpus(VectorSource(data) )
@@ -295,6 +315,9 @@ cat('"
 # ---------------------------------------------------------------------------------------------------------------------------------------------
 # VI. BUILD DATA.FRAME FOR LINECHART ##########################################################################################################
 # ---------------------------------------------------------------------------------------------------------------------------------------------
+
+cat("Prepare data for the linechart \n")
+
 # function to calculate the number of organisations of a certain category (filterValue)
 func_aggregateByCategory <- function(data, filterValue){
   # filter the data to only contain the selected category (filterValue)
