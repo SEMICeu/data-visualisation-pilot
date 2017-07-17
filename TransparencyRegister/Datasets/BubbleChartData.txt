@@ -1,5 +1,4 @@
 name,count
-,1
 Agriculture,2878
 Audiovisual and Media,2049
 Budget,1576

@@ -9,7 +9,6 @@ install.packages("./Library/RJSONIO_1.3-0.zip",repos = NULL, type="source")
 install.packages("./Library/plyr_1.8.4.zip",repos = NULL, type="source")
 install.packages("./Library/optparse_1.3.2.zip",repos = NULL, type="source")
 
-
 library(RWeka)
 library(XML)
 library(tm)
@@ -217,6 +216,8 @@ remove(writeData)
 cat("Prepare data for the bubble chart \n")
 
 listInterest <- paste(dataset$interest, collapse = ';')
+listInterest <- gsub(";;",";", listInterest)
+
 listInterest <- strsplit(listInterest, ";")[[1]]
 listInterest <- as.data.frame(listInterest)
 listInterest <- 
