@@ -2,7 +2,11 @@
 install.packages("./Library/optparse_1.3.2.zip",repos = NULL, type="source")
 install.packages("./Library/plyr_1.8.4.zip",repos = NULL, type="source")
 install.packages("./Library/data.table_1.10.4.zip",repos = NULL, type="source")
+install.packages("./Library/eurostat_3.1.1.zip",repos = NULL, type="source")
+install.packages("./Library/gdata_2.18.0.zip",repos = NULL, type="source")
 
+library(eurostat)
+library(gdata)
 library(optparse)
 library(plyr)
 library(data.table)

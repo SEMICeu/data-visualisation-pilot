@@ -53,16 +53,6 @@ if ( arg_UpdateMotionChart ) {
   # Population by educational attainment level (%) - main indicators (edat_lfse_03): http://appsso.eurostat.ec.europa.eu/nui/show.do?dataset=edat_lfse_03&lang=en - edat_lfse_03_1_Data.csv 
   # Total intramural R&D expenditure (GERD) by sectors of performance: http://appsso.eurostat.ec.europa.eu/nui/show.do?dataset=rd_e_gerdtot&lang=en : rd_e_gerdtot_1_Data.csv
 
-  cat("installing functionalities needed for the automatic download of eurostat data \n")   
-  #install packages needed for downloading and transforming data from eurostat
-  install.packages("./Library/eurostat_3.1.1.zip",repos = NULL, type="source")
-  install.packages("./Library/gdata_2.18.0.zip",repos = NULL, type="source")
-  
-  install.packages("eurostat",repos = "http://cran.us.r-project.org")
-  install.packages("gdata",repos = "http://cran.us.r-project.org")
-  library(eurostat)
-  library(gdata)
-  
   #function for transforming eurostat data
   transformEurostatDataset = function(dataset) {
     dataset = data.frame(dataset)
@@ -76,18 +66,24 @@ if ( arg_UpdateMotionChart ) {
     dataset = dataset[dataset$time >= 2003, ]
   }
   
-  cat("downloading the eurostat data \n")
   #download eurostat data
   
-  Dataset_population = get_eurostat("demo_pjan")
-  Dataset_GDP = get_eurostat("naida_10_gdp")
-  Dataset_PopByEducAttain = get_eurostat("edat_lfse_03")
-  Dataset_RDExpend = get_eurostat("rd_e_gerdtot")
-  
-  write.table(Dataset_population, "../Datasets/inputData/Dataset_population.csv", sep = "\t", quote = FALSE, row.names = FALSE)
-  write.table(Dataset_GDP, "../Datasets/inputData/Dataset_GDP.csv", sep = "\t", quote = FALSE, row.names = FALSE)
-  write.table(Dataset_PopByEducAttain, "../Datasets/inputData/Dataset_PopByEducAttain.csv", sep = "\t", quote = FALSE, row.names = FALSE)
-  write.table(Dataset_RDExpend, "../Datasets/inputData/Dataset_RDExpend.csv", sep = "\t", quote = FALSE, row.names = FALSE)
+  if (arg_UpdateData) {
+    cat("downloading the eurostat data \n")
+    Dataset_population = get_eurostat("demo_pjan")
+    Dataset_GDP = get_eurostat("naida_10_gdp")
+    Dataset_PopByEducAttain = get_eurostat("edat_lfse_03")
+    Dataset_RDExpend = get_eurostat("rd_e_gerdtot")
+    write.table(Dataset_population, "../Datasets/inputData/Dataset_population.csv", sep = "\t", quote = FALSE, row.names = FALSE)
+    write.table(Dataset_GDP, "../Datasets/inputData/Dataset_GDP.csv", sep = "\t", quote = FALSE, row.names = FALSE)
+    write.table(Dataset_PopByEducAttain, "../Datasets/inputData/Dataset_PopByEducAttain.csv", sep = "\t", quote = FALSE, row.names = FALSE)
+    write.table(Dataset_RDExpend, "../Datasets/inputData/Dataset_RDExpend.csv", sep = "\t", quote = FALSE, row.names = FALSE)
+  }
+
+  Dataset_population = read.csv("../Datasets/inputData/Dataset_population.csv", header=TRUE, sep="\t", stringsAsFactors=FALSE, comment.char="")
+  Dataset_GDP = read.csv("../Datasets/inputData/Dataset_GDP.csv", header=TRUE, sep="\t", stringsAsFactors=FALSE, comment.char="")
+  Dataset_PopByEducAttain = read.csv("../Datasets/inputData/Dataset_PopByEducAttain.csv", header=TRUE, sep="\t", stringsAsFactors=FALSE, comment.char="")
+  Dataset_RDExpend = read.csv("../Datasets/inputData/Dataset_RDExpend.csv", header=TRUE, sep="\t", stringsAsFactors=FALSE, comment.char="")
   
   #transform eurostat data
   Dataset_population = transformEurostatDataset(Dataset_population)
@@ -121,13 +117,13 @@ if ( arg_UpdateMotionChart ) {
 }
 
 if ( arg_UpdateChord || arg_UpdateMotionChart ) {
-  cat("loading CORDIS data used for the chord and motionchart. This will download if either one of them is being updated \n")
   # FP6: https://data.europa.eu/euodp/data/dataset/cordisfp6projects
   # FP7: https://data.europa.eu/euodp/data/dataset/cordisfp7projects
   if (arg_UpdateData) {
     download.file("http://cordis.europa.eu/data/cordis-fp6organizations.csv", destfile = "../Datasets/inputData/cordis-fp6organizations.csv")
     download.file("http://cordis.europa.eu/data/cordis-fp7organizations.csv", destfile = "../Datasets/inputData/cordis-fp7organizations.csv")
   }
+  cat("loading CORDIS data used for the chord and motionchart. This will download if either one of them is being updated \n")
   Dataset_FP6Organizations = read.csv("../Datasets/inputData/cordis-fp6organizations.csv", header=TRUE, sep=";", stringsAsFactors=FALSE, comment.char="")
   Dataset_FP7Organizations = read.csv("../Datasets/inputData/cordis-fp7organizations.csv", header=TRUE, sep=";", stringsAsFactors=FALSE, comment.char="")
   names(Dataset_FP7Organizations)[names(Dataset_FP7Organizations)=="projectID"] <- "projectReference"
@@ -135,9 +131,10 @@ if ( arg_UpdateChord || arg_UpdateMotionChart ) {
 }
 
 if ( arg_UpdateChord || arg_UpdateMotionChart || arg_UpdateOrgNetwork ) {
-  cat("downloading CORDIS data used for the chord and organisations network. This will download if either one of them is being updated \n")
+  
   # H2020: https://data.europa.eu/euodp/data/dataset/cordisH2020projects
   if (arg_UpdateData) {
+    cat("downloading CORDIS data used for the chord and organisations network. This will download if either one of them is being updated \n")
     download.file("http://cordis.europa.eu/data/cordis-h2020organizations.csv", destfile = "../Datasets/inputData/cordis-h2020organizations.csv")
   }
   Dataset_H2020Organizations = read.csv("../Datasets/inputData/cordis-h2020organizations.csv", header=TRUE, sep=";", stringsAsFactors=FALSE, comment.char="")
