@@ -2,6 +2,13 @@
 if (Sys.getenv("JAVA_HOME")!="")
   Sys.setenv(JAVA_HOME="")
 
+
+install.packages("./Library/getopt_1.20.0.zip",repos = NULL, type="source")
+install.packages("./Library/slam_0.1-40.zip",repos = NULL, type="source")
+install.packages("./Library/Rcpp_0.12.12.zip",repos = NULL, type="source")
+install.packages("./Library/rJava_0.9-8.zip",repos = NULL, type="source")
+install.packages("./Library/NLP_0.1-10.zip",repos = NULL, type="source")
+install.packages("./Library/RWekajars_3.9.1-3.zip",repos = NULL, type="source")
 install.packages("./Library/RWeka_0.4-34.zip",repos = NULL, type="source")
 install.packages("./Library/XML_3.98-1.9.zip",repos = NULL, type="source")
 install.packages("./Library/tm_0.7-1.zip",repos = NULL, type="source")
