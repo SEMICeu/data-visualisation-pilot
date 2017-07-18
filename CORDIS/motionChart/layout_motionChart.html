@@ -85,7 +85,7 @@
                 <div class="embedcode" style="text-align:left;">
                     <b>Embed Code:</b>
                     <br>
-                    <input id="embededCodeField" type="text" value="<iframe style=&quot;width:985px; height:550px;&quot; scrolling=&quot;no&quot; src=&quot;http://cpsv-ap.semic.eu/data-visualisation-pilot/CORDIS/motionChart/iframe_motionChart.html&quot;></iframe>" style="width:100%">
+					<input id="embededCodeField" type="text" style="width:100%;"></input>
                 </div>
             </div>
 
@@ -111,5 +111,11 @@
             shares: ["email", "twitter", "facebook", "googleplus", "linkedin", "pinterest"]
           });
         </script>
+		<script>
+			var Path = window.location.href;
+			Path = Path.slice(0, Path.lastIndexOf("/")) + "/iframe_motionChart.html";
+			val = "<iframe style=\"width:985px; height:550px\"  scrolling=\"no\" src=\""+Path+"\"></iframe>";
+			document.getElementById("embededCodeField").value = val;
+		</script>
     </body>
 </html>

@@ -61,7 +61,7 @@
                 <iframe style="width:100%; height:650px" scrolling="no" src="./iframe_chord.html"></iframe>
                 <div style="text-align:left">
                     <b>Embed Code:</b>
-                    <input id="embededCodeField" type="text" value="<iframe style=&quot;width:985px; height:650px&quot; scrolling=&quot;no&quot; src=&quot;http://cpsv-ap.semic.eu/data-visualisation-pilot/CORDIS/chordDiagram/iframe_chord.html&quot;></iframe>" style="width:100%;">
+					<input id="embededCodeField" type="text" style="width:100%;"></input>
                 </div>
             </div>
 
@@ -83,5 +83,11 @@
           shares: ["email", "twitter", "facebook", "googleplus", "linkedin", "pinterest"]
         });
       </script>
+		<script>
+			var Path = window.location.href;
+			Path = Path.slice(0, Path.lastIndexOf("/")) + "/iframe_chord.html";
+			val = "<iframe style=\"width:985px; height:650px\"  scrolling=\"no\" src=\""+Path+"\"></iframe>";
+			document.getElementById("embededCodeField").value = val;
+		</script>
     </body>
 </html>

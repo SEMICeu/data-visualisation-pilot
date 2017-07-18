@@ -52,7 +52,7 @@
                 <iframe style="width:100%; height:600px" scrolling="no" src="http://cpsv-ap.semic.eu/data-visualisation-pilot/TED/map/ted_map.html"></iframe>
                 <div style="text-align:left">
                     <b>Embed Code:</b>
-                    <input id="embededCodeField" type="text" value="<iframe style=&quot;width:990px; height:620px&quot; scrolling=&quot;no&quot; src=&quot;http://cpsv-ap.semic.eu/data-visualisation-pilot/TED/map/ted_map.html&quot;></iframe>" style="width:100%;">
+                    <input id="embededCodeField" type="text" style="width:100%;"></input>
                 </div>
             </div>
 
@@ -76,5 +76,11 @@
           }
           $('#description').html(texts[userLang].mainDescription);
         </script>
+		<script>
+			var Path = window.location.href;
+			Path = Path.slice(0, Path.lastIndexOf("/")) + "/ted_map.html";
+			val = "<iframe style=\"width:990px; height:620px\"  scrolling=\"no\" src=\""+Path+"\"></iframe>";
+			document.getElementById("embededCodeField").value = val;
+		</script>
 	</body>
 </html>

@@ -44,7 +44,7 @@
                 <iframe style="width:100%; height:620px" scrolling="no" src="http://cpsv-ap.semic.eu/data-visualisation-pilot/TransparencyRegister/map/iframe_leafletMap.html"></iframe>
                 <div style="text-align:left">
                     <b>Embed Code:</b>
-                    <input id="embededCodeField" type="text" value="<iframe style=&quot;width:990px; height:620px&quot; scrolling=&quot;no&quot; src=&quot;http://cpsv-ap.semic.eu/data-visualisation-pilot/TransparencyRegister/map/iframe_leafletMap.html&quot;></iframe>" style="width:100%;">
+					<input id="embededCodeField" type="text" style="width:100%;"></input>
                 </div>
             </div>
 
@@ -62,5 +62,11 @@
             shares: ["email", "twitter", "facebook", "googleplus", "linkedin", "pinterest"]
           });
         </script>
+		<script>
+			var Path = window.location.href;
+			Path = Path.slice(0, Path.lastIndexOf("/")) + "/iframe_leafletMap.html";
+			val = "<iframe style=\"width:990px; height:620px\"  scrolling=\"no\" src=\""+Path+"\"></iframe>";
+			document.getElementById("embededCodeField").value = val;
+		</script>
 	</body>
 </html>
