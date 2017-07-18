@@ -65,7 +65,10 @@ ListOfValueToKeep <- c("D","M","O","A","3")
 TEDData$DataToKeep <-TEDData$TD %in% ListOfValueToKeep
 TEDData <-TEDData[TEDData$DataToKeep == TRUE, ]
 
-TEDData[is.na(TEDData$PD),]$PD <- currentDate 
+if (sum(is.na(TEDData$PD)) >= 1) {
+  TEDData[is.na(TEDData$PD),]$PD <- currentDate
+  }
+
 TEDData$DataToKeep <- with(TEDData, currentDate >= as.Date(PD))
 TEDData <-TEDData[TEDData$DataToKeep == TRUE, ]
 
@@ -86,7 +89,7 @@ save <- TEDData
 
 TEDData <- save
 
-TEDData <- subset(TEDData, select = c("ND","RC","MA","DI", "PC", "CY"))
+TEDData <- subset(TEDData, select = c("DI","MA","ND", "PC", "RC","TD"))
 TEDData <- unique(TEDData)
 
 cat(toJSON(TEDData, pretty=TRUE), file = "../Datasets/TEDdataBeforeLoop.js", append = TRUE)
