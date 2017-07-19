@@ -1,65 +1,65 @@
 <!DOCTYPE html>
 <html class="no-js" lang="en">
-    <head>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable = no" />
-        <title>delimited | Chord Transitions</title>
-        <script src="bower_components/jquery/dist/jquery.min.js"></script>
-        <script src="bower_components/angular/angular.min.js"></script>
-        <link rel="stylesheet" href="bower_components/foundation/css/foundation.css" />
-        <link rel="stylesheet" type="text/css" href="./css/app.css">
-    </head>
-    <body ng-app="app" ng-cloak ng-controller="mainCntrl">
-        <div class="row" style="position:relative;">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable = no" />
+		<title>delimited | Chord Transitions</title>
+		<script src="bower_components/jquery/dist/jquery.min.js"></script>
+		<script src="bower_components/angular/angular.min.js"></script>
+		<link rel="stylesheet" href="bower_components/foundation/css/foundation.css" />
+		<link rel="stylesheet" type="text/css" href="./css/app.css">
+	</head>
+	<body ng-app="app" ng-cloak ng-controller="mainCntrl">
+		<div class="row" style="position:relative;">
 
-            <aside class="large-2 small-2 columns panel years" style="width:135px;">
-                <h5>Framework contracts</h5>
-                <ul class="side-nav">
-                    <li ng-repeat="frameworkContract in frameworkContracts">
-                        <input ng-model="$parent.selected_frameworkContract" type="radio" name="frameworkContracts" ng-value="frameworkContract" id="frameworkContract_{{ frameworkContract }}">
-                        <label for="frameworkContract_{{ frameworkContract }}">{{ frameworkContract }}</label>
-                    </li>
-                </ul>
-            </aside>
+			<aside class="large-2 small-2 columns panel years" style="width:135px;">
+				<h5>Framework contracts</h5>
+				<ul class="side-nav">
+					<li ng-repeat="frameworkContract in frameworkContracts">
+						<input ng-model="$parent.selected_frameworkContract" type="radio" name="frameworkContracts" ng-value="frameworkContract" id="frameworkContract_{{ frameworkContract }}">
+						<label for="frameworkContract_{{ frameworkContract }}">{{ frameworkContract }}</label>
+					</li>
+				</ul>
+			</aside>
 
-            <div class="large-7 small-6 columns" role="content" style="width:64%;">
-                <div class="help-tip">
-                    <p>Use the side panels to filter the diagram. Click on a country name to grey out/highlight its links. Put your mouse over a specific link to get more information about it.</p>
-                </div>
-                <article>
-                    <chord-diagram style="font-size:20px;"></chord-diagram>
-                    <h6 class="text-center">Number of links for <span>{{ selected_frameworkContract }}</span></h6>
-                </article>
-             </div>
+			<div class="large-7 small-6 columns" role="content" style="width:64%;">
+				<div class="help-tip">
+					<p>Use the side panels to filter the diagram. Click on a country name to grey out/highlight its links. Put your mouse over a specific link to get more information about it.</p>
+				</div>
+				<article>
+					<chord-diagram style="font-size:20px;"></chord-diagram>
+					<h6 class="text-center">Number of links for <span>{{ selected_frameworkContract }}</span></h6>
+				</article>
+			 </div>
 
-            <aside class="large-3 small-4 columns panel countries">
-                <div class="">
-                    <h5 style="position:fixed; top:-3px; padding:25px 75px 5px 0px; background-color:#f2f2f2;">Countries</h5>
-                    <div ng-if="hasFilters === false" style="margin: 15px; opacity: 0.5; margin-top:35px;">
-                        Loading...
-                    </div>
-                    <ul class="side-nav" style="margin-top:35px;">
-                        <li ng-repeat="filter in filters">
-                            <input ng-model="filter.hide" id="{{ filter.name }}" type="checkbox">
-                            <label for="{{ filter.name }}">{{ filter.name }}</label>
-                        </li>
-                    </ul>
-                </div>
-            </aside>
-            <button class="button tiny right" ng-click="resetFilters()" id="resetButton">Unselect all</button>
+			<aside class="large-3 small-4 columns panel countries">
+				<div class="">
+					<h5 style="position:fixed; top:-3px; padding:25px 75px 5px 0px; background-color:#f2f2f2;">Countries</h5>
+					<div ng-if="hasFilters === false" style="margin: 15px; opacity: 0.5; margin-top:35px;">
+						Loading...
+					</div>
+					<ul class="side-nav" style="margin-top:35px;">
+						<li ng-repeat="filter in filters">
+							<input ng-model="filter.hide" id="{{ filter.name }}" type="checkbox">
+							<label for="{{ filter.name }}">{{ filter.name }}</label>
+						</li>
+					</ul>
+				</div>
+			</aside>
+			<button class="button tiny right" ng-click="resetFilters()" id="resetButton">Unselect all</button>
 
-            <fieldset id="tooltip" class="row secondary">
-                <h5>{{ qFormat(tooltip.svalue) }} projects conducted between {{ tooltip.sname }} and {{ tooltip.tname }}</h5>
-            </fieldset>
-        </div>
+			<fieldset id="tooltip" class="row secondary">
+				<h5>{{ qFormat(tooltip.svalue) }} projects conducted between {{ tooltip.sname }} and {{ tooltip.tname }}</h5>
+			</fieldset>
+		</div>
 
-        <script src="bower_components/d3/d3.min.js"></script>
-        <script src="bower_components/foundation/js/foundation.min.js"></script>
-        <script src="js/mainController.js"></script>
-        <script src="js/matrixFactory.js"></script>
-        <script src="js/chordDirective.js"></script>
-        <script>
-            $(document).foundation();
-        </script>
-    </body>
+		<script src="bower_components/d3/d3.min.js"></script>
+		<script src="bower_components/foundation/js/foundation.min.js"></script>
+		<script src="js/mainController.js"></script>
+		<script src="js/matrixFactory.js"></script>
+		<script src="js/chordDirective.js"></script>
+		<script>
+			$(document).foundation();
+		</script>
+	</body>
 </html>

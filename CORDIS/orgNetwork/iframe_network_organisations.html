@@ -2,13 +2,11 @@
 <html lang="en">
 	<head>
 	<script src="../Datasets/organisations.js"></script>
-	 	<meta charset="utf-8">
-        <title>Organisations Network</title>
-        <link rel="stylesheet" href="css/network-org-style.css"/>
-        <link rel="stylesheet" href="css/filtering_panel.css"/>
-        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-
-
+		<meta charset="utf-8">
+		<title>Organisations Network</title>
+		<link rel="stylesheet" href="css/network-org-style.css"/>
+		<link rel="stylesheet" href="css/filtering_panel.css"/>
+		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
 	</head>
 	<body>
@@ -16,863 +14,863 @@
 
 		<div id="dummy_div" style='position:absolute; width:100%; height:100%; z-index:2; display:none;'></div>
 		<div style="position:relative; z-index: 3;" onclick="displayList()" id="searchbar-container">
-                        <input style="float:left" type="text" class="form-control searchBar" id="searchbox" placeholder="Search &hellip;" fjs-search>
-                        <div style="float:left" class="searchicon" onclick="displayList()">
-                            <i class="material-icons md-light">search</i>
-                        </div>
-                    </div>
-                    <div class="searchwindow" id="search" style="width:49%; float:left; top:7px; left:-2px; z-index:2; font-family: Lucida Sans Unicode;">
-                    <div class="FakeDropdownList" id="filterOrgsList">
-                        <div class="" id="orgs" fjs-items="template=#org-template"></div>
-                    </div>
-                    <fieldset id="activity_criteria" class="filter_cb_panel" style="margin-top:45px;">
-                        <legend>Activity types</legend>
-                        <div id="activities">
-                            <div class="checkbox" fjs-criteria="field=activity,ele=#activities input:checkbox">
-                            <label>
-                                <input type="checkbox" value="Education Establishments">
-                                <span>Education Establishments</span>
-                            </label>
-                            </div>
-                            <div class="checkbox" fjs-criteria="field=activity,ele=#activities input:checkbox">
-                            <label>
-                                <input type="checkbox" value="Research Organisations">
-                                <span>Research Organisations</span>
-                            </label>
-                            </div>
-                            <div class="checkbox" fjs-criteria="field=activity,ele=#activities input:checkbox">
-                            <label>
-                                <input type="checkbox" value="Private for-profit">
-                                <span>Private for-profit</span>
-                            </label>
-                            </div>
-                            <div class="checkbox" fjs-criteria="field=activity,ele=#activities input:checkbox">
-                            <label>
-                                <input type="checkbox" value="Public bodies">
-                                <span>Public bodies</span>
-                            </label>
-                            </div>
-                            <div class="checkbox" fjs-criteria="field=activity,ele=#activities input:checkbox">
-                            <label>
-                                <input type="checkbox" value="Other">
-                                <span>Other</span>
-                            </label>
-                            </div>
-                        </div>
-                    </fieldset>
-                    <fieldset id="country_criteria" class="filter_cb_panel">
-                        <legend>Countries</legend>
-                        <div id="countries" style="height:291px; overflow-y: scroll;">
-                            <div class="checkbox" fjs-criteria="field=country,ele=#countries input:checkbox">
-                            <label>
-                                <input type="checkbox" value="Algeria">
-                                <span>Algeria</span>
-                            </label>
-                            </div>
-                            <div class="checkbox" fjs-criteria="field=country,ele=#countries input:checkbox">
-                            <label>
-                                <input type="checkbox" value="Anguilla">
-                                <span>Anguilla</span>
-                            </label>
-                            </div>
-                            <div class="checkbox" fjs-criteria="field=country,ele=#countries input:checkbox">
-                            <label>
-                                <input type="checkbox" value="Argentina">
-                                <span>Argentina</span>
-                            </label>
-                            </div>
-                            <div class="checkbox" fjs-criteria="field=country,ele=#countries input:checkbox">
-                            <label>
-                                <input type="checkbox" value="Armenia">
-                                <span>Armenia</span>
-                            </label>
-                            </div>
-                            <div class="checkbox" fjs-criteria="field=country,ele=#countries input:checkbox">
-                            <label>
-                                <input type="checkbox" value="Australia">
-                                <span>Australia</span>
-                            </label>
-                            </div>
-                            <div class="checkbox" fjs-criteria="field=country,ele=#countries input:checkbox">
-                            <label>
-                                <input type="checkbox" value="Austria">
-                                <span>Austria</span>
-                            </label>
-                            </div>
-                            <div class="checkbox" fjs-criteria="field=country,ele=#countries input:checkbox">
-                            <label>
-                                <input type="checkbox" value="Azerbaijan">
-                                <span>Azerbaijan</span>
-                            </label>
-                            </div>
-                            <div class="checkbox" fjs-criteria="field=country,ele=#countries input:checkbox">
-                            <label>
-                                <input type="checkbox" value="Bangladesh">
-                                <span>Bangladesh</span>
-                            </label>
-                            </div>
-                            <div class="checkbox" fjs-criteria="field=country,ele=#countries input:checkbox">
-                            <label>
-                                <input type="checkbox" value="Belarus">
-                                <span>Belarus</span>
-                            </label>
-                            </div>
-                            <div class="checkbox" fjs-criteria="field=country,ele=#countries input:checkbox">
-                            <label>
-                                <input type="checkbox" value="Belgium">
-                                <span>Belgium</span>
-                            </label>
-                            </div>
-                            <div class="checkbox" fjs-criteria="field=country,ele=#countries input:checkbox">
-                            <label>
-                                <input type="checkbox" value="Benin">
-                                <span>Benin</span>
-                            </label>
-                            </div>
-                            <div class="checkbox" fjs-criteria="field=country,ele=#countries input:checkbox">
-                            <label>
-                                <input type="checkbox" value="Bosnia and Herzegovina">
-                                <span>Bosnia and Herzegovina</span>
-                            </label>
-                            </div>
-                            <div class="checkbox" fjs-criteria="field=country,ele=#countries input:checkbox">
-                            <label>
-                                <input type="checkbox" value="Botswana">
-                                <span>Botswana</span>
-                            </label>
-                            </div>
-                            <div class="checkbox" fjs-criteria="field=country,ele=#countries input:checkbox">
-                            <label>
-                                <input type="checkbox" value="Brazil">
-                                <span>Brazil</span>
-                            </label>
-                            </div>
-                            <div class="checkbox" fjs-criteria="field=country,ele=#countries input:checkbox">
-                            <label>
-                                <input type="checkbox" value="British Virgin Islands">
-                                <span>British Virgin Islands</span>
-                            </label>
-                            </div>
-                            <div class="checkbox" fjs-criteria="field=country,ele=#countries input:checkbox">
-                            <label>
-                                <input type="checkbox" value="Bulgaria">
-                                <span>Bulgaria</span>
-                            </label>
-                            </div>
-                            <div class="checkbox" fjs-criteria="field=country,ele=#countries input:checkbox">
-                            <label>
-                                <input type="checkbox" value="Burkina Faso">
-                                <span>Burkina Faso</span>
-                            </label>
-                            </div>
-                            <div class="checkbox" fjs-criteria="field=country,ele=#countries input:checkbox">
-                            <label>
-                                <input type="checkbox" value="Burundi">
-                                <span>Burundi</span>
-                            </label>
-                            </div>
-                            <div class="checkbox" fjs-criteria="field=country,ele=#countries input:checkbox">
-                            <label>
-                                <input type="checkbox" value="Cambodia">
-                                <span>Cambodia</span>
-                            </label>
-                            </div>
-                            <div class="checkbox" fjs-criteria="field=country,ele=#countries input:checkbox">
-                            <label>
-                                <input type="checkbox" value="Cameroon">
-                                <span>Cameroon</span>
-                            </label>
-                            </div>
-                            <div class="checkbox" fjs-criteria="field=country,ele=#countries input:checkbox">
-                            <label>
-                                <input type="checkbox" value="Canada">
-                                <span>Canada</span>
-                            </label>
-                            </div>
-                            <div class="checkbox" fjs-criteria="field=country,ele=#countries input:checkbox">
-                            <label>
-                                <input type="checkbox" value="Cape Verde">
-                                <span>Cape Verde</span>
-                            </label>
-                            </div>
-                            <div class="checkbox" fjs-criteria="field=country,ele=#countries input:checkbox">
-                            <label>
-                                <input type="checkbox" value="Chile">
-                                <span>Chile</span>
-                            </label>
-                            </div>
-                            <div class="checkbox" fjs-criteria="field=country,ele=#countries input:checkbox">
-                            <label>
-                                <input type="checkbox" value="China">
-                                <span>China</span>
-                            </label>
-                            </div>
-                            <div class="checkbox" fjs-criteria="field=country,ele=#countries input:checkbox">
-                            <label>
-                                <input type="checkbox" value="Colombia">
-                                <span>Colombia</span>
-                            </label>
-                            </div>
-                            <div class="checkbox" fjs-criteria="field=country,ele=#countries input:checkbox">
-                            <label>
-                                <input type="checkbox" value="Costa Rica">
-                                <span>Costa Rica</span>
-                            </label>
-                            </div>
-                            <div class="checkbox" fjs-criteria="field=country,ele=#countries input:checkbox">
-                            <label>
-                                <input type="checkbox" value="Cote d'Ivoire">
-                                <span>Cote d'Ivoire</span>
-                            </label>
-                            </div>
-                            <div class="checkbox" fjs-criteria="field=country,ele=#countries input:checkbox">
-                            <label>
-                                <input type="checkbox" value="Croatia">
-                                <span>Croatia</span>
-                            </label>
-                            </div>
-                            <div class="checkbox" fjs-criteria="field=country,ele=#countries input:checkbox">
-                            <label>
-                                <input type="checkbox" value="Cuba">
-                                <span>Cuba</span>
-                            </label>
-                            </div>
-                            <div class="checkbox" fjs-criteria="field=country,ele=#countries input:checkbox">
-                            <label>
-                                <input type="checkbox" value="Cyprus">
-                                <span>Cyprus</span>
-                            </label>
-                            </div>
-                            <div class="checkbox" fjs-criteria="field=country,ele=#countries input:checkbox">
-                            <label>
-                                <input type="checkbox" value="Czech Republic">
-                                <span>Czech Republic</span>
-                            </label>
-                            </div>
-                            <div class="checkbox" fjs-criteria="field=country,ele=#countries input:checkbox">
-                            <label>
-                                <input type="checkbox" value="Denmark">
-                                <span>Denmark</span>
-                            </label>
-                            </div>
-                            <div class="checkbox" fjs-criteria="field=country,ele=#countries input:checkbox">
-                            <label>
-                                <input type="checkbox" value="Ecuador">
-                                <span>Ecuador</span>
-                            </label>
-                            </div>
-                            <div class="checkbox" fjs-criteria="field=country,ele=#countries input:checkbox">
-                            <label>
-                                <input type="checkbox" value="Egypt">
-                                <span>Egypt</span>
-                            </label>
-                            </div>
-                            <div class="checkbox" fjs-criteria="field=country,ele=#countries input:checkbox">
-                            <label>
-                                <input type="checkbox" value="Estonia">
-                                <span>Estonia</span>
-                            </label>
-                            </div>
-                            <div class="checkbox" fjs-criteria="field=country,ele=#countries input:checkbox">
-                            <label>
-                                <input type="checkbox" value="Ethiopia">
-                                <span>Ethiopia</span>
-                            </label>
-                            </div>
-                            <div class="checkbox" fjs-criteria="field=country,ele=#countries input:checkbox">
-                            <label>
-                                <input type="checkbox" value="Faeroe Islands">
-                                <span>Faeroe Islands</span>
-                            </label>
-                            </div>
-                            <div class="checkbox" fjs-criteria="field=country,ele=#countries input:checkbox">
-                            <label>
-                                <input type="checkbox" value="Finland">
-                                <span>Finland</span>
-                            </label>
-                            </div>
-                            <div class="checkbox" fjs-criteria="field=country,ele=#countries input:checkbox">
-                            <label>
-                                <input type="checkbox" value="Former Yugoslav Republic of Macedonia">
-                                <span>Former Yugoslav Republic of Macedonia</span>
-                            </label>
-                            </div>
-                            <div class="checkbox" fjs-criteria="field=country,ele=#countries input:checkbox">
-                            <label>
-                                <input type="checkbox" value="France">
-                                <span>France</span>
-                            </label>
-                            </div>
-                            <div class="checkbox" fjs-criteria="field=country,ele=#countries input:checkbox">
-                            <label>
-                                <input type="checkbox" value="French Polynesia">
-                                <span>French Polynesia</span>
-                            </label>
-                            </div>
-                            <div class="checkbox" fjs-criteria="field=country,ele=#countries input:checkbox">
-                            <label>
-                                <input type="checkbox" value="Gabon">
-                                <span>Gabon</span>
-                            </label>
-                            </div>
-                            <div class="checkbox" fjs-criteria="field=country,ele=#countries input:checkbox">
-                            <label>
-                                <input type="checkbox" value="Georgia">
-                                <span>Georgia</span>
-                            </label>
-                            </div>
-                            <div class="checkbox" fjs-criteria="field=country,ele=#countries input:checkbox">
-                            <label>
-                                <input type="checkbox" value="Germany">
-                                <span>Germany</span>
-                            </label>
-                            </div>
-                            <div class="checkbox" fjs-criteria="field=country,ele=#countries input:checkbox">
-                            <label>
-                                <input type="checkbox" value="Ghana">
-                                <span>Ghana</span>
-                            </label>
-                            </div>
-                            <div class="checkbox" fjs-criteria="field=country,ele=#countries input:checkbox">
-                            <label>
-                                <input type="checkbox" value="Gibraltar">
-                                <span>Gibraltar</span>
-                            </label>
-                            </div>
-                            <div class="checkbox" fjs-criteria="field=country,ele=#countries input:checkbox">
-                            <label>
-                                <input type="checkbox" value="Greece">
-                                <span>Greece</span>
-                            </label>
-                            </div>
-                            <div class="checkbox" fjs-criteria="field=country,ele=#countries input:checkbox">
-                            <label>
-                                <input type="checkbox" value="Greenland">
-                                <span>Greenland</span>
-                            </label>
-                            </div>
-                            <div class="checkbox" fjs-criteria="field=country,ele=#countries input:checkbox">
-                            <label>
-                                <input type="checkbox" value="Guatemala">
-                                <span>Guatemala</span>
-                            </label>
-                            </div>
-                            <div class="checkbox" fjs-criteria="field=country,ele=#countries input:checkbox">
-                            <label>
-                                <input type="checkbox" value="Hong Kong">
-                                <span>Hong Kong</span>
-                            </label>
-                            </div>
-                            <div class="checkbox" fjs-criteria="field=country,ele=#countries input:checkbox">
-                            <label>
-                                <input type="checkbox" value="Hungary">
-                                <span>Hungary</span>
-                            </label>
-                            </div>
-                            <div class="checkbox" fjs-criteria="field=country,ele=#countries input:checkbox">
-                            <label>
-                                <input type="checkbox" value="Iceland">
-                                <span>Iceland</span>
-                            </label>
-                            </div>
-                            <div class="checkbox" fjs-criteria="field=country,ele=#countries input:checkbox">
-                            <label>
-                                <input type="checkbox" value="India">
-                                <span>India</span>
-                            </label>
-                            </div>
-                            <div class="checkbox" fjs-criteria="field=country,ele=#countries input:checkbox">
-                            <label>
-                                <input type="checkbox" value="Indonesia">
-                                <span>Indonesia</span>
-                            </label>
-                            </div>
-                            <div class="checkbox" fjs-criteria="field=country,ele=#countries input:checkbox">
-                            <label>
-                                <input type="checkbox" value="Iran">
-                                <span>Iran</span>
-                            </label>
-                            </div>
-                            <div class="checkbox" fjs-criteria="field=country,ele=#countries input:checkbox">
-                            <label>
-                                <input type="checkbox" value="Iraq">
-                                <span>Iraq</span>
-                            </label>
-                            </div>
-                            <div class="checkbox" fjs-criteria="field=country,ele=#countries input:checkbox">
-                            <label>
-                                <input type="checkbox" value="Ireland">
-                                <span>Ireland</span>
-                            </label>
-                            </div>
-                            <div class="checkbox" fjs-criteria="field=country,ele=#countries input:checkbox">
-                            <label>
-                                <input type="checkbox" value="Israel">
-                                <span>Israel</span>
-                            </label>
-                            </div>
-                            <div class="checkbox" fjs-criteria="field=country,ele=#countries input:checkbox">
-                            <label>
-                                <input type="checkbox" value="Italy">
-                                <span>Italy</span>
-                            </label>
-                            </div>
-                            <div class="checkbox" fjs-criteria="field=country,ele=#countries input:checkbox">
-                            <label>
-                                <input type="checkbox" value="Jamaica">
-                                <span>Jamaica</span>
-                            </label>
-                            </div>
-                            <div class="checkbox" fjs-criteria="field=country,ele=#countries input:checkbox">
-                            <label>
-                                <input type="checkbox" value="Japan">
-                                <span>Japan</span>
-                            </label>
-                            </div>
-                            <div class="checkbox" fjs-criteria="field=country,ele=#countries input:checkbox">
-                            <label>
-                                <input type="checkbox" value="Jersey">
-                                <span>Jersey</span>
-                            </label>
-                            </div>
-                            <div class="checkbox" fjs-criteria="field=country,ele=#countries input:checkbox">
-                            <label>
-                                <input type="checkbox" value="Jordan">
-                                <span>Jordan</span>
-                            </label>
-                            </div>
-                            <div class="checkbox" fjs-criteria="field=country,ele=#countries input:checkbox">
-                            <label>
-                                <input type="checkbox" value="Kazakhstan">
-                                <span>Kazakhstan</span>
-                            </label>
-                            </div>
-                            <div class="checkbox" fjs-criteria="field=country,ele=#countries input:checkbox">
-                            <label>
-                                <input type="checkbox" value="Kenya">
-                                <span>Kenya</span>
-                            </label>
-                            </div>
-                            <div class="checkbox" fjs-criteria="field=country,ele=#countries input:checkbox">
-                            <label>
-                                <input type="checkbox" value="Kosovo">
-                                <span>Kosovo</span>
-                            </label>
-                            </div>
-                            <div class="checkbox" fjs-criteria="field=country,ele=#countries input:checkbox">
-                            <label>
-                                <input type="checkbox" value="Kyrgyzstan">
-                                <span>Kyrgyzstan</span>
-                            </label>
-                            </div>
-                            <div class="checkbox" fjs-criteria="field=country,ele=#countries input:checkbox">
-                            <label>
-                                <input type="checkbox" value="Latvia">
-                                <span>Latvia</span>
-                            </label>
-                            </div>
-                            <div class="checkbox" fjs-criteria="field=country,ele=#countries input:checkbox">
-                            <label>
-                                <input type="checkbox" value="Lebanon">
-                                <span>Lebanon</span>
-                            </label>
-                            </div>
-                            <div class="checkbox" fjs-criteria="field=country,ele=#countries input:checkbox">
-                            <label>
-                                <input type="checkbox" value="Lesotho">
-                                <span>Lesotho</span>
-                            </label>
-                            </div>
-                            <div class="checkbox" fjs-criteria="field=country,ele=#countries input:checkbox">
-                            <label>
-                                <input type="checkbox" value="Liberia">
-                                <span>Liberia</span>
-                            </label>
-                            </div>
-                            <div class="checkbox" fjs-criteria="field=country,ele=#countries input:checkbox">
-                            <label>
-                                <input type="checkbox" value="Libya">
-                                <span>Libya</span>
-                            </label>
-                            </div>
-                            <div class="checkbox" fjs-criteria="field=country,ele=#countries input:checkbox">
-                            <label>
-                                <input type="checkbox" value="Liechtenstein">
-                                <span>Liechtenstein</span>
-                            </label>
-                            </div>
-                            <div class="checkbox" fjs-criteria="field=country,ele=#countries input:checkbox">
-                            <label>
-                                <input type="checkbox" value="Lithuania">
-                                <span>Lithuania</span>
-                            </label>
-                            </div>
-                            <div class="checkbox" fjs-criteria="field=country,ele=#countries input:checkbox">
-                            <label>
-                                <input type="checkbox" value="Luxembourg">
-                                <span>Luxembourg</span>
-                            </label>
-                            </div>
-                            <div class="checkbox" fjs-criteria="field=country,ele=#countries input:checkbox">
-                            <label>
-                                <input type="checkbox" value="Madagascar">
-                                <span>Madagascar</span>
-                            </label>
-                            </div>
-                            <div class="checkbox" fjs-criteria="field=country,ele=#countries input:checkbox">
-                            <label>
-                                <input type="checkbox" value="Malawi">
-                                <span>Malawi</span>
-                            </label>
-                            </div>
-                            <div class="checkbox" fjs-criteria="field=country,ele=#countries input:checkbox">
-                            <label>
-                                <input type="checkbox" value="Malaysia">
-                                <span>Malaysia</span>
-                            </label>
-                            </div>
-                            <div class="checkbox" fjs-criteria="field=country,ele=#countries input:checkbox">
-                            <label>
-                                <input type="checkbox" value="Mali">
-                                <span>Mali</span>
-                            </label>
-                            </div>
-                            <div class="checkbox" fjs-criteria="field=country,ele=#countries input:checkbox">
-                            <label>
-                                <input type="checkbox" value="Malta">
-                                <span>Malta</span>
-                            </label>
-                            </div>
-                            <div class="checkbox" fjs-criteria="field=country,ele=#countries input:checkbox">
-                            <label>
-                                <input type="checkbox" value="Mauritius">
-                                <span>Mauritius</span>
-                            </label>
-                            </div>
-                            <div class="checkbox" fjs-criteria="field=country,ele=#countries input:checkbox">
-                            <label>
-                                <input type="checkbox" value="Mexico">
-                                <span>Mexico</span>
-                            </label>
-                            </div>
-                            <div class="checkbox" fjs-criteria="field=country,ele=#countries input:checkbox">
-                            <label>
-                                <input type="checkbox" value="Moldova">
-                                <span>Moldova</span>
-                            </label>
-                            </div>
-                            <div class="checkbox" fjs-criteria="field=country,ele=#countries input:checkbox">
-                            <label>
-                                <input type="checkbox" value="Montenegro">
-                                <span>Montenegro</span>
-                            </label>
-                            </div>
-                            <div class="checkbox" fjs-criteria="field=country,ele=#countries input:checkbox">
-                            <label>
-                                <input type="checkbox" value="Morocco">
-                                <span>Morocco</span>
-                            </label>
-                            </div>
-                            <div class="checkbox" fjs-criteria="field=country,ele=#countries input:checkbox">
-                            <label>
-                                <input type="checkbox" value="Mozambique">
-                                <span>Mozambique</span>
-                            </label>
-                            </div>
-                            <div class="checkbox" fjs-criteria="field=country,ele=#countries input:checkbox">
-                            <label>
-                                <input type="checkbox" value="Namibia">
-                                <span>Namibia</span>
-                            </label>
-                            </div>
-                            <div class="checkbox" fjs-criteria="field=country,ele=#countries input:checkbox">
-                            <label>
-                                <input type="checkbox" value="Nepal">
-                                <span>Nepal</span>
-                            </label>
-                            </div>
-                            <div class="checkbox" fjs-criteria="field=country,ele=#countries input:checkbox">
-                            <label>
-                                <input type="checkbox" value="Netherlands">
-                                <span>Netherlands</span>
-                            </label>
-                            </div>
-                            <div class="checkbox" fjs-criteria="field=country,ele=#countries input:checkbox">
-                            <label>
-                                <input type="checkbox" value="New Caledonia">
-                                <span>New Caledonia</span>
-                            </label>
-                            </div>
-                            <div class="checkbox" fjs-criteria="field=country,ele=#countries input:checkbox">
-                            <label>
-                                <input type="checkbox" value="New Zealand">
-                                <span>New Zealand</span>
-                            </label>
-                            </div>
-                            <div class="checkbox" fjs-criteria="field=country,ele=#countries input:checkbox">
-                            <label>
-                                <input type="checkbox" value="Nigeria">
-                                <span>Nigeria</span>
-                            </label>
-                            </div>
-                            <div class="checkbox" fjs-criteria="field=country,ele=#countries input:checkbox">
-                            <label>
-                                <input type="checkbox" value="Norway">
-                                <span>Norway</span>
-                            </label>
-                            </div>
-                            <div class="checkbox" fjs-criteria="field=country,ele=#countries input:checkbox">
-                            <label>
-                                <input type="checkbox" value="Pakistan">
-                                <span>Pakistan</span>
-                            </label>
-                            </div>
-                            <div class="checkbox" fjs-criteria="field=country,ele=#countries input:checkbox">
-                            <label>
-                                <input type="checkbox" value="Palestine">
-                                <span>Palestine</span>
-                            </label>
-                            </div>
-                            <div class="checkbox" fjs-criteria="field=country,ele=#countries input:checkbox">
-                            <label>
-                                <input type="checkbox" value="Peru">
-                                <span>Peru</span>
-                            </label>
-                            </div>
-                            <div class="checkbox" fjs-criteria="field=country,ele=#countries input:checkbox">
-                            <label>
-                                <input type="checkbox" value="Philippines">
-                                <span>Philippines</span>
-                            </label>
-                            </div>
-                            <div class="checkbox" fjs-criteria="field=country,ele=#countries input:checkbox">
-                            <label>
-                                <input type="checkbox" value="Poland">
-                                <span>Poland</span>
-                            </label>
-                            </div>
-                            <div class="checkbox" fjs-criteria="field=country,ele=#countries input:checkbox">
-                            <label>
-                                <input type="checkbox" value="Portugal">
-                                <span>Portugal</span>
-                            </label>
-                            </div>
-                            <div class="checkbox" fjs-criteria="field=country,ele=#countries input:checkbox">
-                            <label>
-                                <input type="checkbox" value="Qatar">
-                                <span>Qatar</span>
-                            </label>
-                            </div>
-                            <div class="checkbox" fjs-criteria="field=country,ele=#countries input:checkbox">
-                            <label>
-                                <input type="checkbox" value="Romania">
-                                <span>Romania</span>
-                            </label>
-                            </div>
-                            <div class="checkbox" fjs-criteria="field=country,ele=#countries input:checkbox">
-                            <label>
-                                <input type="checkbox" value="Russia">
-                                <span>Russia</span>
-                            </label>
-                            </div>
-                            <div class="checkbox" fjs-criteria="field=country,ele=#countries input:checkbox">
-                            <label>
-                                <input type="checkbox" value="Rwanda">
-                                <span>Rwanda</span>
-                            </label>
-                            </div>
-                            <div class="checkbox" fjs-criteria="field=country,ele=#countries input:checkbox">
-                            <label>
-                                <input type="checkbox" value="Senegal">
-                                <span>Senegal</span>
-                            </label>
-                            </div>
-                            <div class="checkbox" fjs-criteria="field=country,ele=#countries input:checkbox">
-                            <label>
-                                <input type="checkbox" value="Serbia">
-                                <span>Serbia</span>
-                            </label>
-                            </div>
-                            <div class="checkbox" fjs-criteria="field=country,ele=#countries input:checkbox">
-                            <label>
-                                <input type="checkbox" value="Singapore">
-                                <span>Singapore</span>
-                            </label>
-                            </div>
-                            <div class="checkbox" fjs-criteria="field=country,ele=#countries input:checkbox">
-                            <label>
-                                <input type="checkbox" value="Slovakia">
-                                <span>Slovakia</span>
-                            </label>
-                            </div>
-                            <div class="checkbox" fjs-criteria="field=country,ele=#countries input:checkbox">
-                            <label>
-                                <input type="checkbox" value="Slovenia">
-                                <span>Slovenia</span>
-                            </label>
-                            </div>
-                            <div class="checkbox" fjs-criteria="field=country,ele=#countries input:checkbox">
-                            <label>
-                                <input type="checkbox" value="South Africa">
-                                <span>South Africa</span>
-                            </label>
-                            </div>
-                            <div class="checkbox" fjs-criteria="field=country,ele=#countries input:checkbox">
-                            <label>
-                                <input type="checkbox" value="South Korea">
-                                <span>South Korea</span>
-                            </label>
-                            </div>
-                            <div class="checkbox" fjs-criteria="field=country,ele=#countries input:checkbox">
-                            <label>
-                                <input type="checkbox" value="Spain">
-                                <span>Spain</span>
-                            </label>
-                            </div>
-                            <div class="checkbox" fjs-criteria="field=country,ele=#countries input:checkbox">
-                            <label>
-                                <input type="checkbox" value="Sri Lanka">
-                                <span>Sri Lanka</span>
-                            </label>
-                            </div>
-                            <div class="checkbox" fjs-criteria="field=country,ele=#countries input:checkbox">
-                            <label>
-                                <input type="checkbox" value="Swaziland">
-                                <span>Swaziland</span>
-                            </label>
-                            </div>
-                            <div class="checkbox" fjs-criteria="field=country,ele=#countries input:checkbox">
-                            <label>
-                                <input type="checkbox" value="Sweden">
-                                <span>Sweden</span>
-                            </label>
-                            </div>
-                            <div class="checkbox" fjs-criteria="field=country,ele=#countries input:checkbox">
-                            <label>
-                                <input type="checkbox" value="Switzerland">
-                                <span>Switzerland</span>
-                            </label>
-                            </div>
-                            <div class="checkbox" fjs-criteria="field=country,ele=#countries input:checkbox">
-                            <label>
-                                <input type="checkbox" value="Taiwan">
-                                <span>Taiwan</span>
-                            </label>
-                            </div>
-                            <div class="checkbox" fjs-criteria="field=country,ele=#countries input:checkbox">
-                            <label>
-                                <input type="checkbox" value="Tajikistan">
-                                <span>Tajikistan</span>
-                            </label>
-                            </div>
-                            <div class="checkbox" fjs-criteria="field=country,ele=#countries input:checkbox">
-                            <label>
-                                <input type="checkbox" value="Tanzania">
-                                <span>Tanzania</span>
-                            </label>
-                            </div>
-                            <div class="checkbox" fjs-criteria="field=country,ele=#countries input:checkbox">
-                            <label>
-                                <input type="checkbox" value="Thailand">
-                                <span>Thailand</span>
-                            </label>
-                            </div>
-                            <div class="checkbox" fjs-criteria="field=country,ele=#countries input:checkbox">
-                            <label>
-                                <input type="checkbox" value="Togo">
-                                <span>Togo</span>
-                            </label>
-                            </div>
-                            <div class="checkbox" fjs-criteria="field=country,ele=#countries input:checkbox">
-                            <label>
-                                <input type="checkbox" value="Tunisia">
-                                <span>Tunisia</span>
-                            </label>
-                            </div>
-                            <div class="checkbox" fjs-criteria="field=country,ele=#countries input:checkbox">
-                            <label>
-                                <input type="checkbox" value="Turkey">
-                                <span>Turkey</span>
-                            </label>
-                            </div>
-                            <div class="checkbox" fjs-criteria="field=country,ele=#countries input:checkbox">
-                            <label>
-                                <input type="checkbox" value="Uganda">
-                                <span>Uganda</span>
-                            </label>
-                            </div>
-                            <div class="checkbox" fjs-criteria="field=country,ele=#countries input:checkbox">
-                            <label>
-                                <input type="checkbox" value="Ukraine">
-                                <span>Ukraine</span>
-                            </label>
-                            </div>
-                            <div class="checkbox" fjs-criteria="field=country,ele=#countries input:checkbox">
-                            <label>
-                                <input type="checkbox" value="United Kingdom">
-                                <span>United Kingdom</span>
-                            </label>
-                            </div>
-                            <div class="checkbox" fjs-criteria="field=country,ele=#countries input:checkbox">
-                            <label>
-                                <input type="checkbox" value="United States">
-                                <span>United States</span>
-                            </label>
-                            </div>
-                            <div class="checkbox" fjs-criteria="field=country,ele=#countries input:checkbox">
-                            <label>
-                                <input type="checkbox" value="Uruguay">
-                                <span>Uruguay</span>
-                            </label>
-                            </div>
-                            <div class="checkbox" fjs-criteria="field=country,ele=#countries input:checkbox">
-                            <label>
-                                <input type="checkbox" value="Vietnam">
-                                <span>Vietnam</span>
-                            </label>
-                            </div>
-                            <div class="checkbox" fjs-criteria="field=country,ele=#countries input:checkbox">
-                            <label>
-                                <input type="checkbox" value="Yemen">
-                                <span>Yemen</span>
-                            </label>
-                            </div>
-                            <div class="checkbox" fjs-criteria="field=country,ele=#countries input:checkbox">
-                            <label>
-                                <input type="checkbox" value="Zambia">
-                                <span>Zambia</span>
-                            </label>
-                            </div>
-                        </div>
-                    </fieldset>
-                </div>
+						<input style="float:left" type="text" class="form-control searchBar" id="searchbox" placeholder="Search &hellip;" fjs-search>
+						<div style="float:left" class="searchicon" onclick="displayList()">
+							<i class="material-icons md-light">search</i>
+						</div>
+					</div>
+					<div class="searchwindow" id="search" style="width:49%; float:left; top:7px; left:-2px; z-index:2; font-family: Lucida Sans Unicode;">
+					<div class="FakeDropdownList" id="filterOrgsList">
+						<div class="" id="orgs" fjs-items="template=#org-template"></div>
+					</div>
+					<fieldset id="activity_criteria" class="filter_cb_panel" style="margin-top:45px;">
+						<legend>Activity types</legend>
+						<div id="activities">
+							<div class="checkbox" fjs-criteria="field=activity,ele=#activities input:checkbox">
+							<label>
+								<input type="checkbox" value="Education Establishments">
+								<span>Education Establishments</span>
+							</label>
+							</div>
+							<div class="checkbox" fjs-criteria="field=activity,ele=#activities input:checkbox">
+							<label>
+								<input type="checkbox" value="Research Organisations">
+								<span>Research Organisations</span>
+							</label>
+							</div>
+							<div class="checkbox" fjs-criteria="field=activity,ele=#activities input:checkbox">
+							<label>
+								<input type="checkbox" value="Private for-profit">
+								<span>Private for-profit</span>
+							</label>
+							</div>
+							<div class="checkbox" fjs-criteria="field=activity,ele=#activities input:checkbox">
+							<label>
+								<input type="checkbox" value="Public bodies">
+								<span>Public bodies</span>
+							</label>
+							</div>
+							<div class="checkbox" fjs-criteria="field=activity,ele=#activities input:checkbox">
+							<label>
+								<input type="checkbox" value="Other">
+								<span>Other</span>
+							</label>
+							</div>
+						</div>
+					</fieldset>
+					<fieldset id="country_criteria" class="filter_cb_panel">
+						<legend>Countries</legend>
+						<div id="countries" style="height:291px; overflow-y: scroll;">
+							<div class="checkbox" fjs-criteria="field=country,ele=#countries input:checkbox">
+							<label>
+								<input type="checkbox" value="Algeria">
+								<span>Algeria</span>
+							</label>
+							</div>
+							<div class="checkbox" fjs-criteria="field=country,ele=#countries input:checkbox">
+							<label>
+								<input type="checkbox" value="Anguilla">
+								<span>Anguilla</span>
+							</label>
+							</div>
+							<div class="checkbox" fjs-criteria="field=country,ele=#countries input:checkbox">
+							<label>
+								<input type="checkbox" value="Argentina">
+								<span>Argentina</span>
+							</label>
+							</div>
+							<div class="checkbox" fjs-criteria="field=country,ele=#countries input:checkbox">
+							<label>
+								<input type="checkbox" value="Armenia">
+								<span>Armenia</span>
+							</label>
+							</div>
+							<div class="checkbox" fjs-criteria="field=country,ele=#countries input:checkbox">
+							<label>
+								<input type="checkbox" value="Australia">
+								<span>Australia</span>
+							</label>
+							</div>
+							<div class="checkbox" fjs-criteria="field=country,ele=#countries input:checkbox">
+							<label>
+								<input type="checkbox" value="Austria">
+								<span>Austria</span>
+							</label>
+							</div>
+							<div class="checkbox" fjs-criteria="field=country,ele=#countries input:checkbox">
+							<label>
+								<input type="checkbox" value="Azerbaijan">
+								<span>Azerbaijan</span>
+							</label>
+							</div>
+							<div class="checkbox" fjs-criteria="field=country,ele=#countries input:checkbox">
+							<label>
+								<input type="checkbox" value="Bangladesh">
+								<span>Bangladesh</span>
+							</label>
+							</div>
+							<div class="checkbox" fjs-criteria="field=country,ele=#countries input:checkbox">
+							<label>
+								<input type="checkbox" value="Belarus">
+								<span>Belarus</span>
+							</label>
+							</div>
+							<div class="checkbox" fjs-criteria="field=country,ele=#countries input:checkbox">
+							<label>
+								<input type="checkbox" value="Belgium">
+								<span>Belgium</span>
+							</label>
+							</div>
+							<div class="checkbox" fjs-criteria="field=country,ele=#countries input:checkbox">
+							<label>
+								<input type="checkbox" value="Benin">
+								<span>Benin</span>
+							</label>
+							</div>
+							<div class="checkbox" fjs-criteria="field=country,ele=#countries input:checkbox">
+							<label>
+								<input type="checkbox" value="Bosnia and Herzegovina">
+								<span>Bosnia and Herzegovina</span>
+							</label>
+							</div>
+							<div class="checkbox" fjs-criteria="field=country,ele=#countries input:checkbox">
+							<label>
+								<input type="checkbox" value="Botswana">
+								<span>Botswana</span>
+							</label>
+							</div>
+							<div class="checkbox" fjs-criteria="field=country,ele=#countries input:checkbox">
+							<label>
+								<input type="checkbox" value="Brazil">
+								<span>Brazil</span>
+							</label>
+							</div>
+							<div class="checkbox" fjs-criteria="field=country,ele=#countries input:checkbox">
+							<label>
+								<input type="checkbox" value="British Virgin Islands">
+								<span>British Virgin Islands</span>
+							</label>
+							</div>
+							<div class="checkbox" fjs-criteria="field=country,ele=#countries input:checkbox">
+							<label>
+								<input type="checkbox" value="Bulgaria">
+								<span>Bulgaria</span>
+							</label>
+							</div>
+							<div class="checkbox" fjs-criteria="field=country,ele=#countries input:checkbox">
+							<label>
+								<input type="checkbox" value="Burkina Faso">
+								<span>Burkina Faso</span>
+							</label>
+							</div>
+							<div class="checkbox" fjs-criteria="field=country,ele=#countries input:checkbox">
+							<label>
+								<input type="checkbox" value="Burundi">
+								<span>Burundi</span>
+							</label>
+							</div>
+							<div class="checkbox" fjs-criteria="field=country,ele=#countries input:checkbox">
+							<label>
+								<input type="checkbox" value="Cambodia">
+								<span>Cambodia</span>
+							</label>
+							</div>
+							<div class="checkbox" fjs-criteria="field=country,ele=#countries input:checkbox">
+							<label>
+								<input type="checkbox" value="Cameroon">
+								<span>Cameroon</span>
+							</label>
+							</div>
+							<div class="checkbox" fjs-criteria="field=country,ele=#countries input:checkbox">
+							<label>
+								<input type="checkbox" value="Canada">
+								<span>Canada</span>
+							</label>
+							</div>
+							<div class="checkbox" fjs-criteria="field=country,ele=#countries input:checkbox">
+							<label>
+								<input type="checkbox" value="Cape Verde">
+								<span>Cape Verde</span>
+							</label>
+							</div>
+							<div class="checkbox" fjs-criteria="field=country,ele=#countries input:checkbox">
+							<label>
+								<input type="checkbox" value="Chile">
+								<span>Chile</span>
+							</label>
+							</div>
+							<div class="checkbox" fjs-criteria="field=country,ele=#countries input:checkbox">
+							<label>
+								<input type="checkbox" value="China">
+								<span>China</span>
+							</label>
+							</div>
+							<div class="checkbox" fjs-criteria="field=country,ele=#countries input:checkbox">
+							<label>
+								<input type="checkbox" value="Colombia">
+								<span>Colombia</span>
+							</label>
+							</div>
+							<div class="checkbox" fjs-criteria="field=country,ele=#countries input:checkbox">
+							<label>
+								<input type="checkbox" value="Costa Rica">
+								<span>Costa Rica</span>
+							</label>
+							</div>
+							<div class="checkbox" fjs-criteria="field=country,ele=#countries input:checkbox">
+							<label>
+								<input type="checkbox" value="Cote d'Ivoire">
+								<span>Cote d'Ivoire</span>
+							</label>
+							</div>
+							<div class="checkbox" fjs-criteria="field=country,ele=#countries input:checkbox">
+							<label>
+								<input type="checkbox" value="Croatia">
+								<span>Croatia</span>
+							</label>
+							</div>
+							<div class="checkbox" fjs-criteria="field=country,ele=#countries input:checkbox">
+							<label>
+								<input type="checkbox" value="Cuba">
+								<span>Cuba</span>
+							</label>
+							</div>
+							<div class="checkbox" fjs-criteria="field=country,ele=#countries input:checkbox">
+							<label>
+								<input type="checkbox" value="Cyprus">
+								<span>Cyprus</span>
+							</label>
+							</div>
+							<div class="checkbox" fjs-criteria="field=country,ele=#countries input:checkbox">
+							<label>
+								<input type="checkbox" value="Czech Republic">
+								<span>Czech Republic</span>
+							</label>
+							</div>
+							<div class="checkbox" fjs-criteria="field=country,ele=#countries input:checkbox">
+							<label>
+								<input type="checkbox" value="Denmark">
+								<span>Denmark</span>
+							</label>
+							</div>
+							<div class="checkbox" fjs-criteria="field=country,ele=#countries input:checkbox">
+							<label>
+								<input type="checkbox" value="Ecuador">
+								<span>Ecuador</span>
+							</label>
+							</div>
+							<div class="checkbox" fjs-criteria="field=country,ele=#countries input:checkbox">
+							<label>
+								<input type="checkbox" value="Egypt">
+								<span>Egypt</span>
+							</label>
+							</div>
+							<div class="checkbox" fjs-criteria="field=country,ele=#countries input:checkbox">
+							<label>
+								<input type="checkbox" value="Estonia">
+								<span>Estonia</span>
+							</label>
+							</div>
+							<div class="checkbox" fjs-criteria="field=country,ele=#countries input:checkbox">
+							<label>
+								<input type="checkbox" value="Ethiopia">
+								<span>Ethiopia</span>
+							</label>
+							</div>
+							<div class="checkbox" fjs-criteria="field=country,ele=#countries input:checkbox">
+							<label>
+								<input type="checkbox" value="Faeroe Islands">
+								<span>Faeroe Islands</span>
+							</label>
+							</div>
+							<div class="checkbox" fjs-criteria="field=country,ele=#countries input:checkbox">
+							<label>
+								<input type="checkbox" value="Finland">
+								<span>Finland</span>
+							</label>
+							</div>
+							<div class="checkbox" fjs-criteria="field=country,ele=#countries input:checkbox">
+							<label>
+								<input type="checkbox" value="Former Yugoslav Republic of Macedonia">
+								<span>Former Yugoslav Republic of Macedonia</span>
+							</label>
+							</div>
+							<div class="checkbox" fjs-criteria="field=country,ele=#countries input:checkbox">
+							<label>
+								<input type="checkbox" value="France">
+								<span>France</span>
+							</label>
+							</div>
+							<div class="checkbox" fjs-criteria="field=country,ele=#countries input:checkbox">
+							<label>
+								<input type="checkbox" value="French Polynesia">
+								<span>French Polynesia</span>
+							</label>
+							</div>
+							<div class="checkbox" fjs-criteria="field=country,ele=#countries input:checkbox">
+							<label>
+								<input type="checkbox" value="Gabon">
+								<span>Gabon</span>
+							</label>
+							</div>
+							<div class="checkbox" fjs-criteria="field=country,ele=#countries input:checkbox">
+							<label>
+								<input type="checkbox" value="Georgia">
+								<span>Georgia</span>
+							</label>
+							</div>
+							<div class="checkbox" fjs-criteria="field=country,ele=#countries input:checkbox">
+							<label>
+								<input type="checkbox" value="Germany">
+								<span>Germany</span>
+							</label>
+							</div>
+							<div class="checkbox" fjs-criteria="field=country,ele=#countries input:checkbox">
+							<label>
+								<input type="checkbox" value="Ghana">
+								<span>Ghana</span>
+							</label>
+							</div>
+							<div class="checkbox" fjs-criteria="field=country,ele=#countries input:checkbox">
+							<label>
+								<input type="checkbox" value="Gibraltar">
+								<span>Gibraltar</span>
+							</label>
+							</div>
+							<div class="checkbox" fjs-criteria="field=country,ele=#countries input:checkbox">
+							<label>
+								<input type="checkbox" value="Greece">
+								<span>Greece</span>
+							</label>
+							</div>
+							<div class="checkbox" fjs-criteria="field=country,ele=#countries input:checkbox">
+							<label>
+								<input type="checkbox" value="Greenland">
+								<span>Greenland</span>
+							</label>
+							</div>
+							<div class="checkbox" fjs-criteria="field=country,ele=#countries input:checkbox">
+							<label>
+								<input type="checkbox" value="Guatemala">
+								<span>Guatemala</span>
+							</label>
+							</div>
+							<div class="checkbox" fjs-criteria="field=country,ele=#countries input:checkbox">
+							<label>
+								<input type="checkbox" value="Hong Kong">
+								<span>Hong Kong</span>
+							</label>
+							</div>
+							<div class="checkbox" fjs-criteria="field=country,ele=#countries input:checkbox">
+							<label>
+								<input type="checkbox" value="Hungary">
+								<span>Hungary</span>
+							</label>
+							</div>
+							<div class="checkbox" fjs-criteria="field=country,ele=#countries input:checkbox">
+							<label>
+								<input type="checkbox" value="Iceland">
+								<span>Iceland</span>
+							</label>
+							</div>
+							<div class="checkbox" fjs-criteria="field=country,ele=#countries input:checkbox">
+							<label>
+								<input type="checkbox" value="India">
+								<span>India</span>
+							</label>
+							</div>
+							<div class="checkbox" fjs-criteria="field=country,ele=#countries input:checkbox">
+							<label>
+								<input type="checkbox" value="Indonesia">
+								<span>Indonesia</span>
+							</label>
+							</div>
+							<div class="checkbox" fjs-criteria="field=country,ele=#countries input:checkbox">
+							<label>
+								<input type="checkbox" value="Iran">
+								<span>Iran</span>
+							</label>
+							</div>
+							<div class="checkbox" fjs-criteria="field=country,ele=#countries input:checkbox">
+							<label>
+								<input type="checkbox" value="Iraq">
+								<span>Iraq</span>
+							</label>
+							</div>
+							<div class="checkbox" fjs-criteria="field=country,ele=#countries input:checkbox">
+							<label>
+								<input type="checkbox" value="Ireland">
+								<span>Ireland</span>
+							</label>
+							</div>
+							<div class="checkbox" fjs-criteria="field=country,ele=#countries input:checkbox">
+							<label>
+								<input type="checkbox" value="Israel">
+								<span>Israel</span>
+							</label>
+							</div>
+							<div class="checkbox" fjs-criteria="field=country,ele=#countries input:checkbox">
+							<label>
+								<input type="checkbox" value="Italy">
+								<span>Italy</span>
+							</label>
+							</div>
+							<div class="checkbox" fjs-criteria="field=country,ele=#countries input:checkbox">
+							<label>
+								<input type="checkbox" value="Jamaica">
+								<span>Jamaica</span>
+							</label>
+							</div>
+							<div class="checkbox" fjs-criteria="field=country,ele=#countries input:checkbox">
+							<label>
+								<input type="checkbox" value="Japan">
+								<span>Japan</span>
+							</label>
+							</div>
+							<div class="checkbox" fjs-criteria="field=country,ele=#countries input:checkbox">
+							<label>
+								<input type="checkbox" value="Jersey">
+								<span>Jersey</span>
+							</label>
+							</div>
+							<div class="checkbox" fjs-criteria="field=country,ele=#countries input:checkbox">
+							<label>
+								<input type="checkbox" value="Jordan">
+								<span>Jordan</span>
+							</label>
+							</div>
+							<div class="checkbox" fjs-criteria="field=country,ele=#countries input:checkbox">
+							<label>
+								<input type="checkbox" value="Kazakhstan">
+								<span>Kazakhstan</span>
+							</label>
+							</div>
+							<div class="checkbox" fjs-criteria="field=country,ele=#countries input:checkbox">
+							<label>
+								<input type="checkbox" value="Kenya">
+								<span>Kenya</span>
+							</label>
+							</div>
+							<div class="checkbox" fjs-criteria="field=country,ele=#countries input:checkbox">
+							<label>
+								<input type="checkbox" value="Kosovo">
+								<span>Kosovo</span>
+							</label>
+							</div>
+							<div class="checkbox" fjs-criteria="field=country,ele=#countries input:checkbox">
+							<label>
+								<input type="checkbox" value="Kyrgyzstan">
+								<span>Kyrgyzstan</span>
+							</label>
+							</div>
+							<div class="checkbox" fjs-criteria="field=country,ele=#countries input:checkbox">
+							<label>
+								<input type="checkbox" value="Latvia">
+								<span>Latvia</span>
+							</label>
+							</div>
+							<div class="checkbox" fjs-criteria="field=country,ele=#countries input:checkbox">
+							<label>
+								<input type="checkbox" value="Lebanon">
+								<span>Lebanon</span>
+							</label>
+							</div>
+							<div class="checkbox" fjs-criteria="field=country,ele=#countries input:checkbox">
+							<label>
+								<input type="checkbox" value="Lesotho">
+								<span>Lesotho</span>
+							</label>
+							</div>
+							<div class="checkbox" fjs-criteria="field=country,ele=#countries input:checkbox">
+							<label>
+								<input type="checkbox" value="Liberia">
+								<span>Liberia</span>
+							</label>
+							</div>
+							<div class="checkbox" fjs-criteria="field=country,ele=#countries input:checkbox">
+							<label>
+								<input type="checkbox" value="Libya">
+								<span>Libya</span>
+							</label>
+							</div>
+							<div class="checkbox" fjs-criteria="field=country,ele=#countries input:checkbox">
+							<label>
+								<input type="checkbox" value="Liechtenstein">
+								<span>Liechtenstein</span>
+							</label>
+							</div>
+							<div class="checkbox" fjs-criteria="field=country,ele=#countries input:checkbox">
+							<label>
+								<input type="checkbox" value="Lithuania">
+								<span>Lithuania</span>
+							</label>
+							</div>
+							<div class="checkbox" fjs-criteria="field=country,ele=#countries input:checkbox">
+							<label>
+								<input type="checkbox" value="Luxembourg">
+								<span>Luxembourg</span>
+							</label>
+							</div>
+							<div class="checkbox" fjs-criteria="field=country,ele=#countries input:checkbox">
+							<label>
+								<input type="checkbox" value="Madagascar">
+								<span>Madagascar</span>
+							</label>
+							</div>
+							<div class="checkbox" fjs-criteria="field=country,ele=#countries input:checkbox">
+							<label>
+								<input type="checkbox" value="Malawi">
+								<span>Malawi</span>
+							</label>
+							</div>
+							<div class="checkbox" fjs-criteria="field=country,ele=#countries input:checkbox">
+							<label>
+								<input type="checkbox" value="Malaysia">
+								<span>Malaysia</span>
+							</label>
+							</div>
+							<div class="checkbox" fjs-criteria="field=country,ele=#countries input:checkbox">
+							<label>
+								<input type="checkbox" value="Mali">
+								<span>Mali</span>
+							</label>
+							</div>
+							<div class="checkbox" fjs-criteria="field=country,ele=#countries input:checkbox">
+							<label>
+								<input type="checkbox" value="Malta">
+								<span>Malta</span>
+							</label>
+							</div>
+							<div class="checkbox" fjs-criteria="field=country,ele=#countries input:checkbox">
+							<label>
+								<input type="checkbox" value="Mauritius">
+								<span>Mauritius</span>
+							</label>
+							</div>
+							<div class="checkbox" fjs-criteria="field=country,ele=#countries input:checkbox">
+							<label>
+								<input type="checkbox" value="Mexico">
+								<span>Mexico</span>
+							</label>
+							</div>
+							<div class="checkbox" fjs-criteria="field=country,ele=#countries input:checkbox">
+							<label>
+								<input type="checkbox" value="Moldova">
+								<span>Moldova</span>
+							</label>
+							</div>
+							<div class="checkbox" fjs-criteria="field=country,ele=#countries input:checkbox">
+							<label>
+								<input type="checkbox" value="Montenegro">
+								<span>Montenegro</span>
+							</label>
+							</div>
+							<div class="checkbox" fjs-criteria="field=country,ele=#countries input:checkbox">
+							<label>
+								<input type="checkbox" value="Morocco">
+								<span>Morocco</span>
+							</label>
+							</div>
+							<div class="checkbox" fjs-criteria="field=country,ele=#countries input:checkbox">
+							<label>
+								<input type="checkbox" value="Mozambique">
+								<span>Mozambique</span>
+							</label>
+							</div>
+							<div class="checkbox" fjs-criteria="field=country,ele=#countries input:checkbox">
+							<label>
+								<input type="checkbox" value="Namibia">
+								<span>Namibia</span>
+							</label>
+							</div>
+							<div class="checkbox" fjs-criteria="field=country,ele=#countries input:checkbox">
+							<label>
+								<input type="checkbox" value="Nepal">
+								<span>Nepal</span>
+							</label>
+							</div>
+							<div class="checkbox" fjs-criteria="field=country,ele=#countries input:checkbox">
+							<label>
+								<input type="checkbox" value="Netherlands">
+								<span>Netherlands</span>
+							</label>
+							</div>
+							<div class="checkbox" fjs-criteria="field=country,ele=#countries input:checkbox">
+							<label>
+								<input type="checkbox" value="New Caledonia">
+								<span>New Caledonia</span>
+							</label>
+							</div>
+							<div class="checkbox" fjs-criteria="field=country,ele=#countries input:checkbox">
+							<label>
+								<input type="checkbox" value="New Zealand">
+								<span>New Zealand</span>
+							</label>
+							</div>
+							<div class="checkbox" fjs-criteria="field=country,ele=#countries input:checkbox">
+							<label>
+								<input type="checkbox" value="Nigeria">
+								<span>Nigeria</span>
+							</label>
+							</div>
+							<div class="checkbox" fjs-criteria="field=country,ele=#countries input:checkbox">
+							<label>
+								<input type="checkbox" value="Norway">
+								<span>Norway</span>
+							</label>
+							</div>
+							<div class="checkbox" fjs-criteria="field=country,ele=#countries input:checkbox">
+							<label>
+								<input type="checkbox" value="Pakistan">
+								<span>Pakistan</span>
+							</label>
+							</div>
+							<div class="checkbox" fjs-criteria="field=country,ele=#countries input:checkbox">
+							<label>
+								<input type="checkbox" value="Palestine">
+								<span>Palestine</span>
+							</label>
+							</div>
+							<div class="checkbox" fjs-criteria="field=country,ele=#countries input:checkbox">
+							<label>
+								<input type="checkbox" value="Peru">
+								<span>Peru</span>
+							</label>
+							</div>
+							<div class="checkbox" fjs-criteria="field=country,ele=#countries input:checkbox">
+							<label>
+								<input type="checkbox" value="Philippines">
+								<span>Philippines</span>
+							</label>
+							</div>
+							<div class="checkbox" fjs-criteria="field=country,ele=#countries input:checkbox">
+							<label>
+								<input type="checkbox" value="Poland">
+								<span>Poland</span>
+							</label>
+							</div>
+							<div class="checkbox" fjs-criteria="field=country,ele=#countries input:checkbox">
+							<label>
+								<input type="checkbox" value="Portugal">
+								<span>Portugal</span>
+							</label>
+							</div>
+							<div class="checkbox" fjs-criteria="field=country,ele=#countries input:checkbox">
+							<label>
+								<input type="checkbox" value="Qatar">
+								<span>Qatar</span>
+							</label>
+							</div>
+							<div class="checkbox" fjs-criteria="field=country,ele=#countries input:checkbox">
+							<label>
+								<input type="checkbox" value="Romania">
+								<span>Romania</span>
+							</label>
+							</div>
+							<div class="checkbox" fjs-criteria="field=country,ele=#countries input:checkbox">
+							<label>
+								<input type="checkbox" value="Russia">
+								<span>Russia</span>
+							</label>
+							</div>
+							<div class="checkbox" fjs-criteria="field=country,ele=#countries input:checkbox">
+							<label>
+								<input type="checkbox" value="Rwanda">
+								<span>Rwanda</span>
+							</label>
+							</div>
+							<div class="checkbox" fjs-criteria="field=country,ele=#countries input:checkbox">
+							<label>
+								<input type="checkbox" value="Senegal">
+								<span>Senegal</span>
+							</label>
+							</div>
+							<div class="checkbox" fjs-criteria="field=country,ele=#countries input:checkbox">
+							<label>
+								<input type="checkbox" value="Serbia">
+								<span>Serbia</span>
+							</label>
+							</div>
+							<div class="checkbox" fjs-criteria="field=country,ele=#countries input:checkbox">
+							<label>
+								<input type="checkbox" value="Singapore">
+								<span>Singapore</span>
+							</label>
+							</div>
+							<div class="checkbox" fjs-criteria="field=country,ele=#countries input:checkbox">
+							<label>
+								<input type="checkbox" value="Slovakia">
+								<span>Slovakia</span>
+							</label>
+							</div>
+							<div class="checkbox" fjs-criteria="field=country,ele=#countries input:checkbox">
+							<label>
+								<input type="checkbox" value="Slovenia">
+								<span>Slovenia</span>
+							</label>
+							</div>
+							<div class="checkbox" fjs-criteria="field=country,ele=#countries input:checkbox">
+							<label>
+								<input type="checkbox" value="South Africa">
+								<span>South Africa</span>
+							</label>
+							</div>
+							<div class="checkbox" fjs-criteria="field=country,ele=#countries input:checkbox">
+							<label>
+								<input type="checkbox" value="South Korea">
+								<span>South Korea</span>
+							</label>
+							</div>
+							<div class="checkbox" fjs-criteria="field=country,ele=#countries input:checkbox">
+							<label>
+								<input type="checkbox" value="Spain">
+								<span>Spain</span>
+							</label>
+							</div>
+							<div class="checkbox" fjs-criteria="field=country,ele=#countries input:checkbox">
+							<label>
+								<input type="checkbox" value="Sri Lanka">
+								<span>Sri Lanka</span>
+							</label>
+							</div>
+							<div class="checkbox" fjs-criteria="field=country,ele=#countries input:checkbox">
+							<label>
+								<input type="checkbox" value="Swaziland">
+								<span>Swaziland</span>
+							</label>
+							</div>
+							<div class="checkbox" fjs-criteria="field=country,ele=#countries input:checkbox">
+							<label>
+								<input type="checkbox" value="Sweden">
+								<span>Sweden</span>
+							</label>
+							</div>
+							<div class="checkbox" fjs-criteria="field=country,ele=#countries input:checkbox">
+							<label>
+								<input type="checkbox" value="Switzerland">
+								<span>Switzerland</span>
+							</label>
+							</div>
+							<div class="checkbox" fjs-criteria="field=country,ele=#countries input:checkbox">
+							<label>
+								<input type="checkbox" value="Taiwan">
+								<span>Taiwan</span>
+							</label>
+							</div>
+							<div class="checkbox" fjs-criteria="field=country,ele=#countries input:checkbox">
+							<label>
+								<input type="checkbox" value="Tajikistan">
+								<span>Tajikistan</span>
+							</label>
+							</div>
+							<div class="checkbox" fjs-criteria="field=country,ele=#countries input:checkbox">
+							<label>
+								<input type="checkbox" value="Tanzania">
+								<span>Tanzania</span>
+							</label>
+							</div>
+							<div class="checkbox" fjs-criteria="field=country,ele=#countries input:checkbox">
+							<label>
+								<input type="checkbox" value="Thailand">
+								<span>Thailand</span>
+							</label>
+							</div>
+							<div class="checkbox" fjs-criteria="field=country,ele=#countries input:checkbox">
+							<label>
+								<input type="checkbox" value="Togo">
+								<span>Togo</span>
+							</label>
+							</div>
+							<div class="checkbox" fjs-criteria="field=country,ele=#countries input:checkbox">
+							<label>
+								<input type="checkbox" value="Tunisia">
+								<span>Tunisia</span>
+							</label>
+							</div>
+							<div class="checkbox" fjs-criteria="field=country,ele=#countries input:checkbox">
+							<label>
+								<input type="checkbox" value="Turkey">
+								<span>Turkey</span>
+							</label>
+							</div>
+							<div class="checkbox" fjs-criteria="field=country,ele=#countries input:checkbox">
+							<label>
+								<input type="checkbox" value="Uganda">
+								<span>Uganda</span>
+							</label>
+							</div>
+							<div class="checkbox" fjs-criteria="field=country,ele=#countries input:checkbox">
+							<label>
+								<input type="checkbox" value="Ukraine">
+								<span>Ukraine</span>
+							</label>
+							</div>
+							<div class="checkbox" fjs-criteria="field=country,ele=#countries input:checkbox">
+							<label>
+								<input type="checkbox" value="United Kingdom">
+								<span>United Kingdom</span>
+							</label>
+							</div>
+							<div class="checkbox" fjs-criteria="field=country,ele=#countries input:checkbox">
+							<label>
+								<input type="checkbox" value="United States">
+								<span>United States</span>
+							</label>
+							</div>
+							<div class="checkbox" fjs-criteria="field=country,ele=#countries input:checkbox">
+							<label>
+								<input type="checkbox" value="Uruguay">
+								<span>Uruguay</span>
+							</label>
+							</div>
+							<div class="checkbox" fjs-criteria="field=country,ele=#countries input:checkbox">
+							<label>
+								<input type="checkbox" value="Vietnam">
+								<span>Vietnam</span>
+							</label>
+							</div>
+							<div class="checkbox" fjs-criteria="field=country,ele=#countries input:checkbox">
+							<label>
+								<input type="checkbox" value="Yemen">
+								<span>Yemen</span>
+							</label>
+							</div>
+							<div class="checkbox" fjs-criteria="field=country,ele=#countries input:checkbox">
+							<label>
+								<input type="checkbox" value="Zambia">
+								<span>Zambia</span>
+							</label>
+							</div>
+						</div>
+					</fieldset>
+				</div>
 
-            <div id="org_label2"><span id="org_label"></span></div>
+			<div id="org_label2"><span id="org_label"></span></div>
 
-            <div class="help-tip">
-                <p>Hover on a node to see more information about the organisation. You can drag the chart or move nodes independently.
-                    Click the search button to choose an organisation or filter on the choices suggested in the list.
-                    Use the mousewheel to zoom in or out the chart.</p>
-            </div>
+			<div class="help-tip">
+				<p>Hover on a node to see more information about the organisation. You can drag the chart or move nodes independently.
+				Click the search button to choose an organisation or filter on the choices suggested in the list.
+				Use the mousewheel to zoom in or out the chart.</p>
+			</div>
 
-            <div id="chartID" style="width:100%; float:right; height:550px; overflow:hidden; position:relative;"></div>
+			<div id="chartID" style="width:100%; float:right; height:550px; overflow:hidden; position:relative;"></div>
 
-            <div class="legend-div" >
-	          	<div class="legend" style="background-color: #2ca02c;"></div>
-	          	<p class="legend-label">Education Establishments</p>
-	          	<div  class="legend" style="background-color: #9467bd;"></div>
-	          	<p class="legend-label">research organisations</p>
-	          	<div  class="legend" style="background-color: #ff7f0e;"></div>
-	          	<p class="legend-label">Private for-profit</p>
-	          	<div class="legend" style="background-color: #1f77b4;"></div>
-	          	<p class="legend-label">Public bodies</p>
-	          	<div class="legend" style="background-color: #ffbb78;"></div>
-	          	<p class="legend-label">Other</p>
-          	</div>
-        </div>
+			<div class="legend-div" >
+				<div class="legend" style="background-color: #2ca02c;"></div>
+				<p class="legend-label">Education Establishments</p>
+				<div  class="legend" style="background-color: #9467bd;"></div>
+				<p class="legend-label">research organisations</p>
+				<div  class="legend" style="background-color: #ff7f0e;"></div>
+				<p class="legend-label">Private for-profit</p>
+				<div class="legend" style="background-color: #1f77b4;"></div>
+				<p class="legend-label">Public bodies</p>
+				<div class="legend" style="background-color: #ffbb78;"></div>
+				<p class="legend-label">Other</p>
+			</div>
+		</div>
 
-        <div id="sidepanel">
-        <div id="countryInfo" class="panel_off"></div>
+		<div id="sidepanel">
+			<div id="countryInfo" class="panel_off"></div>
 			<script src="js/jquery-1.11.3.min.js" type="text/javascript"></script>
 			<script src="js/jquery-ui-1.10.2.custom.min.js" type="text/javascript"></script>
 			<script src="js/orgsList.js" type="text/javascript"></script>
@@ -885,14 +883,14 @@
 			<script src="js/sigma.min.js"></script>
 			<script src="js/gexf-parser.js"></script>
 			<script src="js/sigma.parsers.gexf.js"></script>
-		<script id="org-template" type="text/html">
-            <div class="orgLine" onclick="filterOrgSelected(this)">
-            <p class="org-entry"><%= name %></p>
-            </div>
-        </script>
+			<script id="org-template" type="text/html">
+				<div class="orgLine" onclick="filterOrgSelected(this)">
+					<p class="org-entry"><%= name %></p>
+				</div>
+			</script>
 
-        <script>
-        	parseGexf();
+		<script>
+			parseGexf();
 			function parseGexf() {
 				var datafile = typeof currentOrg !== "undefined" ? "../Datasets/orgNetwork/"+currentOrg+'.gexf' : "../Datasets/orgNetwork/"+orgsList[Math.floor(Math.random() * (orgsList.length-1))];//ADANA_METROPOLITAN_MUNICIPALITY.gexf";
 				if(typeof currentOrg == "undefined") {

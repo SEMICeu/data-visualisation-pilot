@@ -1,93 +1,113 @@
 <!doctype html>
 <html class="no-js" lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="Content-Language" content="en">
-    <meta name="description" content="Chord diagram allowing to explore the collaboration between EU-28 countries on projects finded under the FP6, FP7 and H2020 Framework Porgrammes.">
-    <meta name="classification" content="04000">
-    <meta name="keywords" content="Information, Visual, European Commission, European Union, EU">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable = no" />
-    <title>delimited | Chord Transitions</title>
-    <!--<link rel="stylesheet" href="../bower_components/foundation/css/foundation.css" />-->
-    <link rel="stylesheet" type="text/css" href="./css/app.css">
-    <link rel="stylesheet" href="../../main.css"/>
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="Content-Language" content="en">
+		<meta name="description" content="Chord diagram allowing to explore the collaboration between EU-28 countries on projects finded under the FP6, FP7 and H2020 Framework Porgrammes.">
+		<meta name="classification" content="04000">
+		<meta name="keywords" content="Information, Visual, European Commission, European Union, EU">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable = no" />
+		<title>delimited | Chord Transitions</title>
+		<!--<link rel="stylesheet" href="../bower_components/foundation/css/foundation.css" />-->
+		<link rel="stylesheet" type="text/css" href="./css/app.css">
+		<link rel="stylesheet" href="../../main.css"/>
 
-    <!-- social media share -->
-    <script type="text/javascript" src='../js/jquery-1.11.0.min.js'></script>
-    <script type="text/javascript" src="../js/jssocials.min.js"></script>
-    <link type="text/css" rel="stylesheet" href="../js/jssocials.css" />
-    <link type="text/css" rel="stylesheet" href="../js/jssocials-theme-flat.css" />
-    <script src="../js/bfab9f1eb9.js"></script>
+		<!-- social media share -->
+		<script type="text/javascript" src='../js/jquery-1.11.0.min.js'></script>
+		<script type="text/javascript" src="../js/jssocials.min.js"></script>
+		<link   type="text/css" rel="stylesheet" href="../js/jssocials.css" />
+		<link   type="text/css" rel="stylesheet" href="../js/jssocials-theme-flat.css" />
+		<script type="text/javascript" src="../js/bfab9f1eb9.js"></script>
+	</head>
 
 
-  </head>
 
-  <body>
+	<body>
 
-        <div class='page'>
-            <h1>Collaboration between EU-28 countries on EU-funded projects</h1>
-            <h1>CORDIS data (FP6, FP7, H2020)</h1>
+		<div class='page'>
+			<h1>Collaboration between EU-28 countries on EU-funded projects</h1>
+			<h1>CORDIS data (FP6, FP7, H2020)</h1>
 
-            <div class="menu-header">
-                <ul class="menu-header-links">
-                    <li class="menu-button"><a class="menu-button" href="../">Home page</a></li>
-                    <li class="menu-button"><a class="menu-button" href="../motionChart/layout_motionChart.html">Motion chart</a></li>
-                    <li class="menu-button"><a class="menu-button" href="../orgNetwork/layout_network_organisations.html">Network chart</a></li>
-                    <li class="menu-button selected"><a class="menu-button selected" href="../chordDiagram/layout_chord.html">Chord diagram</a></li>
-                </ul>
-            </div>
+			<div class="menu-header">
+				<ul class="menu-header-links">
+					<li class="menu-button"><a class="menu-button" href="../">Home page</a></li>
+					<li class="menu-button"><a class="menu-button" href="../motionChart/layout_motionChart.html">Motion chart</a></li>
+					<li class="menu-button"><a class="menu-button" href="../orgNetwork/layout_network_organisations.html">Network chart</a></li>
+					<li class="menu-button selected"><a class="menu-button selected" href="../chordDiagram/layout_chord.html">Chord diagram</a></li>
+				</ul>
+			</div>
 
-            <div class="explanation">
-                Discover <a href="http://cordis.europa.eu/home_en.html" target="_blank">CORDIS</a> data:
-              <ul>
-                <li><p>CORDIS stands for Community Research and Development Information Service;</p></li>
-                <li><p>It is the European Commission's primary public repository and portal
-                  to disseminate information on all EU-funded research projects and their results in the broadest sense.</p></li>
-              </ul>
-                The visualisation on this page allows exploring the collaboration between
-                EU-28 countries on projects funded under the FP6 (2002-2006),
-                FP7 (2007-2013), and H2020 (2014-2020) Framework Programmes:
-              <ul>
-                <li><p>The countries are arranged radially around a circle, sorted according to their number of projects;</p></li>
-                <li><p>The links between the countries represent the number of projects
-                  that include at least one organisation of these two countries;</p></li>
-                <li><p>The size of the arc depends on the number of projects in which the country participated; and</p></li>
-                <li><p>The size of the link depends on the number of projects between the two linked countries.</p></li>
-              </ul>
-              <div id="share" class="sharing-div"></div>
-            </div>
+			<div class="explanation">
+				Discover <a href="http://cordis.europa.eu/home_en.html" target="_blank">CORDIS</a> data:
+				<ul>
+					<li><p>CORDIS stands for Community Research and Development Information Service;</p></li>
+					<li><p>It is the European Commission's primary public repository and portal
+					  to disseminate information on all EU-funded research projects and their results in the broadest sense.</p></li>
+				</ul>
+				The visualisation on this page allows exploring the collaboration between
+				EU-28 countries on projects funded under the FP6 (2002-2006),
+				FP7 (2007-2013), and H2020 (2014-2020) Framework Programmes:
+				<ul>
+					<li><p>The countries are arranged radially around a circle, sorted according to their number of projects;</p></li>
+					<li><p>The links between the countries represent the number of projects
+						that include at least one organisation of these two countries;</p></li>
+					<li><p>The size of the arc depends on the number of projects in which the country participated; and</p></li>
+					<li><p>The size of the link depends on the number of projects between the two linked countries.</p></li>
+				</ul>
+				<div id="share" class="sharing-div"></div>
+			</div>
 
-            <div class="content">
-                <iframe style="width:100%; height:650px" scrolling="no" src="./iframe_chord.html"></iframe>
-                <div style="text-align:left">
-                    <b>Embed Code:</b>
+			<div class="content">
+				<iframe style="width:100%; height:650px" scrolling="no" src="./iframe_chord.html"></iframe>
+				<div style="text-align:left">
+					<b>Embed Code:</b>
 					<input id="embededCodeField" type="text" style="width:100%;"></input>
-                </div>
-            </div>
+				</div>
+			</div>
 
-            <div class="footer">
-                This visualisation has been developed by  <a href="http://www.pwc.be/" target="_blank">PwC EU services</a> for the <a href="http://publications.europa.eu/en/home" target="_blank">Publications Office of the EU</a>
-                using <a href="https://d3js.org/" target="_blank">the d3js library</a>
-                and is based on datasets provided on the <a href="http://data.europa.eu/euodp/en/data" target="_blank">European Union Data Portal</a> by CORDIS
-                (<a href="https://data.europa.eu/euodp/data/dataset/cordisfp6projects" target="_blank">FP6 framework programme</a>,
-                <a href="https://data.europa.eu/euodp/data/dataset/cordisfp7projects" target="_blank">FP7 framework programme</a>,
-                <a href="https://data.europa.eu/euodp/data/dataset/cordisH2020projects" target="_blank">H2020 framework programme</a>)
-                and is inspired from <a target="_blank" href="https://github.com/sghall/chord-transitions">chord-transitions</a>
-                <br><br>
-                The source code of this visualisation can be found on the following <a href="https://github.com/SEMICeu/data-visualisation-pilot" target="_blank">Github repository</a>.
-            </div>
-        </div>
-        <script>
-        $("#share").jsSocials({
-          showLabel: false,
-          shares: ["email", "twitter", "facebook", "googleplus", "linkedin", "pinterest"]
-        });
-      </script>
+			<div class="footer">
+				This visualisation has been developed by  <a href="http://www.pwc.be/" target="_blank">PwC EU services</a> for the <a href="http://publications.europa.eu/en/home" target="_blank">Publications Office of the EU</a>
+				using <a href="https://d3js.org/" target="_blank">the d3js library</a>
+				and is based on datasets provided on the <a href="http://data.europa.eu/euodp/en/data" target="_blank">European Union Data Portal</a> by CORDIS
+				(<a href="https://data.europa.eu/euodp/data/dataset/cordisfp6projects" target="_blank">FP6 framework programme</a>,
+				<a href="https://data.europa.eu/euodp/data/dataset/cordisfp7projects" target="_blank">FP7 framework programme</a>,
+				<a href="https://data.europa.eu/euodp/data/dataset/cordisH2020projects" target="_blank">H2020 framework programme</a>)
+				and is inspired from <a target="_blank" href="https://github.com/sghall/chord-transitions">chord-transitions</a>
+				<br><br>
+				The source code of this visualisation can be found on the following <a href="https://github.com/SEMICeu/data-visualisation-pilot" target="_blank">Github repository</a>.
+				<p id="UpdateDate"></p>
+			</div>
+		</div>
+		<script>
+			$("#share").jsSocials({
+				showLabel: false,
+				shares: ["email", "twitter", "facebook", "googleplus", "linkedin", "pinterest"]
+			});
+		</script>
 		<script>
 			var Path = window.location.href;
 			Path = Path.slice(0, Path.lastIndexOf("/")) + "/iframe_chord.html";
 			val = "<iframe style=\"width:985px; height:650px\"  scrolling=\"no\" src=\""+Path+"\"></iframe>";
 			document.getElementById("embededCodeField").value = val;
+			
+			function readTextFile(file)
+			{
+				var rawFile = new XMLHttpRequest();
+				rawFile.open("GET", file, true);
+				rawFile.onreadystatechange = function ()
+				{
+					if(rawFile.readyState === 4)
+					{
+						if(rawFile.status === 200 || rawFile.status == 0)
+						{
+							var allText = rawFile.responseText;
+							document.getElementById("UpdateDate").innerHTML = "This visualisation has been updated the: " + allText;
+						}
+					}
+				}
+				rawFile.send(null);
+			}
+			readTextFile("../Datasets/UpdateDateChord.txt");
 		</script>
-    </body>
+	</body>
 </html>

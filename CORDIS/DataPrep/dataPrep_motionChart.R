@@ -298,3 +298,10 @@ writeColNames(output)
 writeData(output)
 
 
+
+today <- Sys.Date()
+today <- format(today, format="%d/%m/%Y")
+fileConn<-file("../Datasets/UpdateMotionChart.txt")
+write(today, fileConn)
+close(fileConn)
+

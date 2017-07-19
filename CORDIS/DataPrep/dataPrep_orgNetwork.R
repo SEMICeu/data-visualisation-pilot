@@ -197,3 +197,11 @@ Sys.time()
 func_BuildLink(subset_H2020Organizations)
 func_BuildOrganisationsJS(subset_H2020Organizations)
 Sys.time()
+
+
+today <- Sys.Date()
+today <- format(today, format="%d/%m/%Y")
+fileConn<-file("../Datasets/UpdateOrgNetwork.txt")
+write(today, fileConn)
+close(fileConn)
+

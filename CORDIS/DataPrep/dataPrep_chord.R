@@ -105,3 +105,9 @@ options(scipen = 10)
 write.table(Dataset_link, "../Datasets/chord.csv", sep = ",", quote = FALSE, row.names = FALSE)
 options(scipen = 0)
 
+today <- Sys.Date()
+today <- format(today, format="%d/%m/%Y")
+fileConn<-file("../Datasets/UpdateDateChord.txt")
+write(today, fileConn)
+close(fileConn)
+

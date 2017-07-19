@@ -1,103 +1,101 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-        <script type="text/javascript" src="https://www.google.com/jsapi"></script>
-        <script type="text/javascript" src="../Datasets/motionChart.js"></script>
-        <script type="text/javascript">
-              google.charts.load('upcoming', {'packages':['motionchart']});
-              google.charts.setOnLoadCallback(drawCharts);
-              function drawCharts() {
+	<head>
+		<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+		<script type="text/javascript" src="https://www.google.com/jsapi"></script>
+		<script type="text/javascript" src="../Datasets/motionChart.js"></script>
+		<script type="text/javascript">
+			google.charts.load('upcoming', {'packages':['motionchart']});
+			google.charts.setOnLoadCallback(drawCharts);
+			function drawCharts() {
 
-                var dt = google.visualization.arrayToDataTable(data);
+				var dt = google.visualization.arrayToDataTable(data);
 
-              /* var dateFormatter = new google.visualization.DateFormat({pattern: "dd/MM/YYYY" });
-                dateFormatter.format(data, 1);*/
-                var options = {
-                  state: '{"uniColorForNonSelected":false,"yZoomedDataMin":78036,"orderedByX":false,"dimensions":{"iconDimensions":["dim0"]},"yLambda":1,"showTrails":true,"nonSelectedAlpha":0.4,"xZoomedDataMin":1,"colorOption":"4","yAxisOption":"3","playDuration":40000,"time":"2003","duration":{"timeUnit":"Y","multiplier":1},"sizeOption":"5","yZoomedDataMax":3226669226.55,"xLambda":1,"xAxisOption":"2","orderedByY":false,"iconKeySettings":[],"xZoomedDataMax":1013,"xZoomedIn":false,"iconType":"BUBBLE","yZoomedIn":false}',
-                  width: 970,
-                  height: 500,
-                  hAxis: {
-                    minValue: 1000
-                  }
-                };
+				/* var dateFormatter = new google.visualization.DateFormat({pattern: "dd/MM/YYYY" });
+				dateFormatter.format(data, 1);*/
+				var options = {
+					state: '{"uniColorForNonSelected":false,"yZoomedDataMin":78036,"orderedByX":false,"dimensions":{"iconDimensions":["dim0"]},"yLambda":1,"showTrails":true,"nonSelectedAlpha":0.4,"xZoomedDataMin":1,"colorOption":"4","yAxisOption":"3","playDuration":40000,"time":"2003","duration":{"timeUnit":"Y","multiplier":1},"sizeOption":"5","yZoomedDataMax":3226669226.55,"xLambda":1,"xAxisOption":"2","orderedByY":false,"iconKeySettings":[],"xZoomedDataMax":1013,"xZoomedIn":false,"iconType":"BUBBLE","yZoomedIn":false}',
+					width: 970,
+					height: 500,
+					hAxis: {
+						minValue: 1000
+					}
+				};
 
-                var chart = new google.visualization.MotionChart(document.getElementById('chart_div'));
+				var chart = new google.visualization.MotionChart(document.getElementById('chart_div'));
 
-                chart.draw(dt, options);
-              }
-        </script>
-        <style>
-              .help-tip {
-                  position: relative;
-                  top: -5px;
-                  left: 950px;
-                  text-align: center;
-                  background-color: #BCDBEA;
-                  border-radius: 50%;
-                  width: 24px;
-                  height: 24px;
-                  font-size: 14px;
-                  line-height: 26px;
-                  cursor: help;
-              }
+				chart.draw(dt, options);
+				}
+		</script>
+		<style>
+			.help-tip {
+				position: relative;
+				top: -5px;
+				left: 950px;
+				text-align: center;
+				background-color: #BCDBEA;
+				border-radius: 50%;
+				width: 24px;
+				height: 24px;
+				font-size: 14px;
+				line-height: 26px;
+				cursor: help;
+			}
 
-              .help-tip:before{
-                content:'?';
-                font-weight: bold;
-                color:#fff;
-              }
+			.help-tip:before{
+				content:'?';
+				font-weight: bold;
+				color:#fff;
+			}
 
-              .help-tip:hover p{
-                display:block;
-                transform-origin: 100% 0%;
+			.help-tip:hover p{
+				display:block;
+				transform-origin: 100% 0%;
+				-webkit-animation: fadeIn 0.3s ease-in-out;
+				animation: fadeIn 0.3s ease-in-out;
+			}
 
-                -webkit-animation: fadeIn 0.3s ease-in-out;
-                animation: fadeIn 0.3s ease-in-out;
+			.help-tip p{  /* The tooltip */
+				display: none;
+				text-align: left;
+				background-color: #1E2021;
+				padding: 20px;
+				width: 300px;
+				position: absolute;
+				border-radius: 3px;
+				box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
+				right: 0px;
+				color: #FFF;
+				font-size: 13px;
+				line-height: 1.4;
+			}
 
-              }
+			.help-tip p:before{ /* The pointer of the tooltip */
+				position: absolute;
+				content: '';
+				width:0;
+				height: 0;
+				border:6px solid transparent;
+				border-bottom-color:#1E2021;
+				right:10px;
+				top:-12px;
+			}
 
-              .help-tip p{  /* The tooltip */
-                display: none;
-                text-align: left;
-                background-color: #1E2021;
-                padding: 20px;
-                width: 300px;
-                position: absolute;
-                border-radius: 3px;
-                box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
-                right: 0px;
-                color: #FFF;
-                font-size: 13px;
-                line-height: 1.4;
-              }
-
-              .help-tip p:before{ /* The pointer of the tooltip */
-                position: absolute;
-                content: '';
-                width:0;
-                height: 0;
-                border:6px solid transparent;
-                border-bottom-color:#1E2021;
-                right:10px;
-                top:-12px;
-              }
-
-              .help-tip p:after{ /* Prevents the tooltip from being hidden */
-                width:100%;
-                height:40px;
-                content:'';
-                position: absolute;
-                top:-40px;
-                left:0;
-          }
-        </style>
-    </head>
-    <body>
-        <div class="help-tip">
-            <p>Use the dropdown menu on the axis and the right panel to configure the chart. Click play to start the animation or move the slider to see the data at a certain point.
-            Use the three tabs to see different type of charts.</p>
-        </div>
-        <div id="chart_div"></div>
-    </body>
+			.help-tip p:after{ /* Prevents the tooltip from being hidden */
+				width:100%;
+				height:40px;
+				content:'';
+				position: absolute;
+				top:-40px;
+				left:0;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="help-tip">
+			<p>Use the dropdown menu on the axis and the right panel to configure the chart. Click play to start the animation or move the slider to see the data at a certain point.
+			Use the three tabs to see different type of charts.</p>
+		</div>
+		<div id="chart_div"></div>
+	</body>
 </html>
