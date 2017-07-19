@@ -1,763 +1,697 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>EU Transparency Register</title>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="shortcut icon" type="image/x-icon" href="docs/images/favicon.ico" />
-        <link rel="stylesheet" href="css/leaflet.css" />
-        <script src='js/jquery-1.11.0.min.js' type="text/javascript"></script>
-        <script src="js/leaflet.js"></script>
-        <script src='http://underscorejs.org/underscore-min.js' type="text/javascript"></script>
+	<head>
+		<title>EU Transparency Register</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="shortcut icon" type="image/x-icon" href="docs/images/favicon.ico" />
+		<link rel="stylesheet" href="css/leaflet.css" />
+		<script type="text/javascript" src='js/jquery-1.11.0.min.js'></script>
+		<script type="text/javascript" src="js/leaflet.js"></script>
+		<script type="text/javascript" src='js/underscore-min.js'></script>
 
-
-        <style>
-
-
-          #map {
-            width: 969px;
-            height: 600px;
-          }
-
-          .info {
-            padding: 6px 12px;
-            background: white;
-            /*font: 14px/16px Arial, Helvetica, sans-serif;*/
-            background: rgba(255,255,255,0.8);
-            box-shadow: 0 0 15px rgba(0,0,0,0.2);
-            border-radius: 5px;
-          }
-
-          .info h4 {
-            margin: 0 0 5px;
-            color: #777;
-          }
-
-          .legend {
-            text-align: left;
-            line-height: 18px;
-            color: #555;
-            /*width: 120px;*/
-          }
-
-          .legend i {
-            width: 40px;
-            height: 18px;
-            float: left;
-            margin-right: 21px;
-            opacity: 1;
-          }
-
-          select { text-indent: 20px; }
-
-          .filter_panel {
-            position: absolute;
-            //background-color: #DDD;
-            z-index:10006;
-            font-size: 14px;
-            height: 575px;
-            top:0;
-            padding-top:25px;
-            width:450px!important;
-            background:rgba(255,255,255,0.8);
-            box-shadow: 0 0 15px rgba(0,0,0,0.2);
-          }
-
-          #openFilterPanel {
-            position: relative;
-            top:115px;
-            z-index:9999;
-            background-image:url(images/Filter.svg);
-            width:30px;
-            height: 30px;
-          }
-
-          #closeFilterPanel {
-            width:30px;
-            height: 30px;
-            background-image:url(images/ic_highlight_off_black_24px.svg);
-            position: relative;
-            top:6px;
-            left:308px;
-            background-color:transparent;
-            background-repeat: no-repeat;
-            border:none;
-          }
-
-          .filters_title {
-            margin: 8px 8px 8px 3px;
-          }
-
-          .filter-button{
-            position: relative;
-            z-index: 10007;
-            top: -10px;
-            height: 25px;
-            width: 154px;
-            background-color: #F9F9F9;
-            border: 1px solid #777;
-            background-image:url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxOCIgaGVpZ2h0PSIxOCIgdmlld0JveD0iMCAwIDE4IDE4Ij4KICAgIDxwYXRoIGQ9Ik01IDhsNCA0IDQtNHoiLz4KICAgIDxwYXRoIGQ9Ik0wIDBoMTh2MThIMHoiIGZpbGw9Im5vbmUiLz4KPC9zdmc+Cg==);
-            background-repeat:no-repeat;
-            background-position: right;
-          }
-
-          #mainActivity-filter-button {
-            right: 0px;
-          }
-
-          #legalBasis-filter-button {
-            right: 5px;
-          }
-
-          #nuts-filter-button {
-            right: 10px;
-          }
-
-          #NUTS-filter-button {
-            float: left;
-            z-index: 10007;
-            position: relative;
-            top: -10px;
-            left:258px;
-            border: 1px solid #777;
-          }
-
-          #NUTS-filter-dd {
-            height: 23px;
-            width: 130px;
-          }
-
-          #mainActivity_filterColumn {
-            display:none;
-            padding-left:10px;
-          }
-
-          #legalBasis_filterColumn {
-            display:none;
-            padding-left:10px;
-          }
-
-          #nuts_filterColumn {
-            display:none;
-            padding-left:10px;
-          }
-
-          #tenders-list {
-            position:absolute;
-            top:32px;
-            left:155px;
-            text-align:center;
-            font: 14px/16px Arial, Helvetica, sans-serif;
-            z-index: 10006;
-            //background-color: #EEE;
-            width: 645px;
-            display: none;
-            padding-bottom:23px;
-            background:rgba(255,255,255,0.8);
-            box-shadow: 0 0 15px rgba(0,0,0,0.2);
-            border-radius: 5px;
-          }
-
-          .click-div {
-            width:900px;
-            height:600px;
-            z-index:10005;
-            position:absolute;
-            top:0;
-            left:0;
-            display: none;
-          }
-
-          .leaflet-control-zoom {
-            margin-top: 30px!important;
-          }
-
-        </style>
-    </head>
-
-    <body>
-        <div class="click-div"></div>
-        <div id="map_frame">
-          <button class="filter-button" id="mainActivity-filter-button" onclick="openMAPanel()">Main activities</button>
-          <button class="filter-button" id="legalBasis-filter-button" onclick="openLBPanel()">Legal Basis</button>
-          <button class="filter-button" id="nuts-filter-button" onclick="openNUTSPanel()">NUTS</button>
-
-          <!--<button id="openFilterPanel" onclick="openFilterPanel()"></button>-->
-          <!--<div id="filter_panel">-->
-            <!--<h2 style="padding-left:10px; float:left; width:90%">Filters</h2>-->
-            <div class="filter_panel" id="mainActivity_filterColumn">
-              <form>
-                <input id="mamain0" class="main-cb" type="checkbox" name="mainActivity" checked onClick="JavaScript:setColors(this)"><label id="ma-title-0" for="mamain0" class="filters_title" style="font-weight:bold;">Main activities for notices publishes by a contracting authority</label><br>
-                &emsp;<input class="mamain0" id= "ma0" type="checkbox" name="mainActivity" value="A" checked onClick="JavaScript:setColors(this)"><label id="ma0_label" for="ma0">Housing and community amenities</label><br>
-                &emsp;<input class="mamain0" id= "ma1" type="checkbox" name="mainActivity" value="B" checked onClick="JavaScript:setColors(this)"><label id="ma1_label" for="ma1">Social protection</label><br>
-                &emsp;<input class="mamain0" id= "ma2" type="checkbox" name="mainActivity" value="C" checked onClick="JavaScript:setColors(this)"><label id="ma2_label" for="ma2">Recreation, culture and religion</label><br>
-                &emsp;<input class="mamain0" id= "ma3" type="checkbox" name="mainActivity" value="D" checked onClick="JavaScript:setColors(this)"><label id="ma3_label" for="ma3">Defence</label><br>
-                &emsp;<input class="mamain0" id= "ma4" type="checkbox" name="mainActivity" value="E" checked onClick="JavaScript:setColors(this)"><label id="ma4_label" for="ma4">Environment</label><br>
-                &emsp;<input class="mamain0" id= "ma5" type="checkbox" name="mainActivity" value="F" checked onClick="JavaScript:setColors(this)"><label id="ma5_label" for="ma5">Economic and financial affairs</label><br>
-                &emsp;<input class="mamain0" id= "ma6" type="checkbox" name="mainActivity" value="H" checked onClick="JavaScript:setColors(this)"><label id="ma6_label" for="ma6">Health</label><br>
-                &emsp;<input class="mamain0" id= "ma7" type="checkbox" name="mainActivity" value="I" checked onClick="JavaScript:setColors(this)"><label id="ma7_label" for="ma7">Airport-related activities</label><br>
-                &emsp;<input class="mamain0" id= "ma8" type="checkbox" name="mainActivity" value="K" checked onClick="JavaScript:setColors(this)"><label id="ma8_label" for="ma8">Port-realted activities / Maritime or inland waterways</label><br>
-                &emsp;<input class="mamain0" id= "ma9" type="checkbox" name="mainActivity" value="L" checked onClick="JavaScript:setColors(this)"><label id="ma9_label" for="ma9">Education</label><br>
-                &emsp;<input class="mamain0" id= "ma10" type="checkbox" name="mainActivity" value="S" checked onClick="JavaScript:setColors(this)"><label id="ma10_label" for="ma10">General public services</label><br>
-                &emsp;<input class="mamain0" id= "ma11" type="checkbox" name="mainActivity" value="U" checked onClick="JavaScript:setColors(this)"><label id="ma11_label" for="ma11">Public order and safety</label><br>
-                <input id="mamain1" class="main-cb" type="checkbox" name="mainActivity" checked onClick="JavaScript:setColors(this)"><label id="ma-title-1" for="mamain1" class="filters_title" style="font-weight:bold;">Main activities for notices publishes by a contracting entity</label><br>
-                &emsp;<input class="mamain1" id= "ma12" type="checkbox" name="mainActivity" value="G" checked onClick="JavaScript:setColors(this)"><label id="ma12_label" for="ma12">Production, transport and distribution of gas and heat</label><br>
-                &emsp;<input class="mamain1" id= "ma13" type="checkbox" name="mainActivity" value="J" checked onClick="JavaScript:setColors(this)"><label id="ma13_label" for="ma13">Extraction of gas and oil</label><br>
-                &emsp;<input class="mamain1" id= "ma14" type="checkbox" name="mainActivity" value="M" checked onClick="JavaScript:setColors(this)"><label id="ma14_label" for="ma14">Exploration and extraction of coal and other solid fuels</label><br>
-                &emsp;<input class="mamain1" id= "ma15" type="checkbox" name="mainActivity" value="N" checked onClick="JavaScript:setColors(this)"><label id="ma15_label" for="ma15">Electricity</label><br>
-                &emsp;<input class="mamain1" id= "ma16" type="checkbox" name="mainActivity" value="P" checked onClick="JavaScript:setColors(this)"><label id="ma16_label" for="ma16">Postal services</label><br>
-                &emsp;<input class="mamain1" id= "ma17" type="checkbox" name="mainActivity" value="R" checked onClick="JavaScript:setColors(this)"><label id="ma17_label" for="ma17">Railway services</label><br>
-                &emsp;<input class="mamain1" id= "ma18" type="checkbox" name="mainActivity" value="S" checked onClick="JavaScript:setColors(this)"><label id="ma18_label" for="ma18">General public services</label><br>
-                &emsp;<input class="mamain1" id= "ma19" type="checkbox" name="mainActivity" value="T" checked onClick="JavaScript:setColors(this)"><label id="ma19_label" for="ma19">Urban railway/light rail, metro, tramway, trolleybus or bus services</label><br>
-                &emsp;<input class="mamain1" id= "ma20" type="checkbox" name="mainActivity" value="W" checked onClick="JavaScript:setColors(this)"><label id="ma20_label" for="ma20">Water</label><br>
-                <input id="mamain2" class="main-cb" type="checkbox" name="mainActivity" checked onClick="JavaScript:setColors(this)"><label id="ma-title-2" for="mamain2" class="filters_title" style="font-weight:bold;">Other activity</label><br>
-                &emsp;<input class="mamain2" id= "ma21" type="checkbox" name="mainActivity" value="O" checked onClick="JavaScript:setColors(this)"><label id="ma21_label" for="ma21">Other activity</label><br>
-              </form>
-            </div>
-            <div id="legalBasis_filterColumn" class="filter_panel">
-              <form action="/action_page.php" method="get">
-                <h4 id="lb-title-0" class="filters_title">Legal basis</h4>
-                <input id= "lb0" type="checkbox" name="legalBasis" value="2004/18/EC" checked onClick="JavaScript:setColors(this)">Classical Directive (2004/18/EC)<br>
-                <input id= "lb1" type="checkbox" name="legalBasis" value="2004/17/EC" checked onClick="JavaScript:setColors(this)">Utilities Directive (2004/17/EC)<br>
-                <input id= "lb2" type="checkbox" name="legalBasis" value="2009/81/EC" checked onClick="JavaScript:setColors(this)">Defence Directive (2009/81/EC)<br>
-                <input id= "lb3" type="checkbox" name="legalBasis" value='1370/2007' checked onClick="JavaScript:setColors(this)">Regulation "Public passenger transport" (1370/2007)<br>
-                <input id= "lb4" type="checkbox" name="legalBasis" value="2014/23/EU" checked onClick="JavaScript:setColors(this)">Concession contract Directive (2014/23/EU)<br>
-                <input id= "lb5" type="checkbox" name="legalBasis" value="2014/24/EU" checked onClick="JavaScript:setColors(this)">Public procurement Directive (2014/24/EU)<br>
-                <input id= "lb6" type="checkbox" name="legalBasis" value="2014/25/EU" checked onClick="JavaScript:setColors(this)">Utilities (water, energy, transport and postal services) Directive (2014/25/EU)<br>
-              </form>
-            </div>
-            <div id="nuts_filterColumn" class="filter_panel">
-              <form action="/action_page.php" method="get">
-                <h4 class="filters_title">NUTS</h4>
-                <input type="radio" name="nuts" value="nuts0_data" checked onClick="JavaScript:selectNuts(this)">NUTS 0<br>
-                <input type="radio" name="nuts" value="nuts1_data" onClick="JavaScript:selectNuts(this)">NUTS 1<br>
-                <input type="radio" name="nuts" value="nuts2_data" onClick="JavaScript:selectNuts(this)">NUTS 2<br>
-                <input type="radio" name="nuts" value='nuts3_data' onClick="JavaScript:selectNuts(this)">NUTS 3<br>
-              </form>
-            </div>
-          <!--</div>-->
-          <div id="map_container" style="position:absolute;top:0;">
-            <div id='map'></div>
-          </div>
-        </div>
-        <div id="tenders-list" class="tenders_list" style="overflow-y:auto;">
-          <button id="closeFilterPanel" onclick="closeTendersList()"></button>
-          <div style="text-align:center;">
-            <h1 id="list-header" style="margin-top:2px;"></h1>
-            <h1 id='list-nuts-name'></h1>
-          </div>
-          <div id="list" style="height:420px; overflow-y:scroll; width:100%;"><div>
-        </div>
-
-        <script type="text/javascript" src="../datasets/languages.js"></script>
-        <script type="text/javascript" src="../datasets/TEDdata.js"></script>
-        <script type="text/javascript" src="../datasets/nuts_0.js"></script>
-        <script type="text/javascript" src="../datasets/nuts_1.js"></script>
-        <script type="text/javascript" src="../datasets/nuts_2.js"></script>
-        <script type="text/javascript" src="../datasets/nuts_3.js"></script>
-        <script type="text/javascript">
-
-        $(document).bind('click', function(e) {
-            if ($(e.target).hasClass("click-div"))
-            {
-                $("#tenders-list").hide();
-                $('#legalBasis_filterColumn').hide();
-                $('#mainActivity_filterColumn').hide();
-                $('#nuts_filterColumn').hide();
-                $('.click-div').hide();
-            }
-        });
-
-          var filtersList = [ "A", "B", "C", "D", "E", "F", "H", "I", "K", "L", "S", "U",
-                              "G", "J", "M", "N", "P", "R", "S", "T", "W", "O",
-                              "2004/18/EC", "2004/17/EC",
-                              "2009/81/EC",
-                              '1370/2007',
-                              "2014/23/EU",
-                              "2014/24/EU",
-                              "2014/25/EU"];
-
-          var cb_attr = ["A", "B", "C", "D", "E", "F", "H", "I", "K", "L", "S",
-                         "U", "G", "J", "M", "N", "P", "R", "S", "T", "W", "O"];
-
-          var cb_attr_lb = ["2004/18/EC", "2004/17/EC",
-          "2009/81/EC",
-          '1370/2007',
-          "2014/23/EU",
-          "2014/24/EU",
-          "2014/25/EU"];
-
-          var ma_language={};
-          var lb_language={};
-          var nuts_mapping={};
-
-          var geojson;
-          var scale;
-
-          function closeTendersList() {
-            $("#tenders-list").hide();
-            $('.click-div').hide();
-          }
-
-          function openMAPanel(){
-            $('#legalBasis_filterColumn').hide();
-            $('#nuts_filterColumn').hide();
-            $("#tenders-list").hide();
-            if($('#mainActivity_filterColumn').is(':visible')){
-              $('#mainActivity_filterColumn').hide();
-              ('.click-div').hide();
-            }
-            else {
-              $('.click-div').show();
-              $('#mainActivity_filterColumn').show();
-            }
-          }
-
-          function openLBPanel(){
-            $('#mainActivity_filterColumn').hide();
-            $('#nuts_filterColumn').hide();
-            $("#tenders-list").hide();
-            if($('#legalBasis_filterColumn').is(':visible')){
-              $('#legalBasis_filterColumn').hide();
-              $('.click-div').hide();
-            }
-            else {
-              $('.click-div').show();
-              $('#legalBasis_filterColumn').show();
-            }
-          }
-
-          function openNUTSPanel(){
-            $('#mainActivity_filterColumn').hide();
-            $('#legalBasis_filterColumn').hide();
-            $("#tenders-list").hide();
-            if($('#nuts_filterColumn').is(':visible')){
-              $('#nuts_filterColumn').hide();
-              $('.click-div').hide();
-            }
-            else {
-              $('.click-div').show();
-              $('#nuts_filterColumn').show();
-            }
-          }
-
-          var userLang = navigator.language || navigator.userLanguage;
-		  console.log(userLang);
-          if(!texts[userLang]){
-            userLang = 'en-US';
-          }
-          $('#list-header').text(texts[userLang].tList);
-          $('#mainActivity-filter-button').text(texts[userLang].mainActivities);
-          $('#legalBasis-filter-button').text(texts[userLang].legalBasis);
-          $('#ma-title-0').text(texts[userLang].matitle0);
-          $('#ma-title-1').text(texts[userLang].matitle1);
-          $('#ma-title-2').text(texts[userLang].matitle2);
-          $('#lb-title-0').text(texts[userLang].legalBasis);
-
-
-          var xmlLang = userLang.split('-')[0].toUpperCase();
-
-
-			var xhttp = new XMLHttpRequest();
-			xhttp.onreadystatechange = function() {
-				if (this.readyState == 4 && this.status == 200) {
-					updateLabels(this);
-				}
-			};
-			xhttp.open("GET", "../datasets/Doc/code_mainactivities.xml", true);
-			xhttp.send();
-
-			function updateLabels(xml) {
-				var xmlDoc = xml.responseXML;
-				var x = xmlDoc.getElementsByTagName('MA')[0].getElementsByTagName('elem')[0];
-				var y = x.childNodes[0];
-
-        for(var i = 0; i < xmlDoc.getElementsByTagName('MA').length; i++){
-          if(cb_attr.indexOf(xmlDoc.getElementsByTagName('MA')[i].getAttribute('code')) > -1){
-            for(var j=0; j<xmlDoc.getElementsByTagName('MA')[i].getElementsByTagName('elem').length; j++){
-              if(xmlDoc.getElementsByTagName('MA')[i].getElementsByTagName('elem')[j].getAttribute('lg')==xmlLang){
-                $('#ma'+cb_attr.indexOf(xmlDoc.getElementsByTagName('MA')[i].getAttribute('code'))+'_label').text(xmlDoc.getElementsByTagName('MA')[i].getElementsByTagName('elem')[j].childNodes[0].nodeValue);
-                ma_language[xmlDoc.getElementsByTagName('MA')[i].getAttribute('code')] = xmlDoc.getElementsByTagName('MA')[i].getElementsByTagName('elem')[j].childNodes[0].nodeValue;
-              }
-            }
-          }
-        }
+		<style>
+			#map {
+				width: 969px;
+				height: 600px;
+			}
+			.info {
+				padding: 6px 12px;
+				background: white;
+				/*font: 14px/16px Arial, Helvetica, sans-serif;*/
+				background: rgba(255,255,255,0.8);
+				box-shadow: 0 0 15px rgba(0,0,0,0.2);
+				border-radius: 5px;
 			}
 
-      var xhttp2 = new XMLHttpRequest();
-			xhttp2.onreadystatechange = function() {
-				if (this.readyState == 4 && this.status == 200) {
-					updateLabelsLB(this);
-				}
-			};
-			xhttp2.open("GET", "../datasets/Doc/LegalBasis.xml", true);
-			xhttp2.send();
-
-      function updateLabelsLB(xml) {
-				var xmlDoc = xml.responseXML;
-
-        var x = xmlDoc.getElementsByTagName('LB')[0].getElementsByTagName('elem')[0];
-				var y = x.childNodes[0];
-
-        for(var i = 0; i < xmlDoc.getElementsByTagName('LB').length; i++){
-          if(cb_attr_lb.indexOf(xmlDoc.getElementsByTagName('LB')[i].getAttribute('code')) > -1){
-
-            var found=false;
-            for(var j=0; j<xmlDoc.getElementsByTagName('LB')[i].getElementsByTagName('elem').length; j++){
-              if(xmlDoc.getElementsByTagName('LB')[i].getElementsByTagName('elem')[j].getAttribute('lg')==xmlLang){
-                found=true;
-                $('#lb'+cb_attr.indexOf(xmlDoc.getElementsByTagName('LB')[i].getAttribute('code'))+'_label').text(xmlDoc.getElementsByTagName('LB')[i].getElementsByTagName('elem')[j].childNodes[0].nodeValue);
-                lb_language[xmlDoc.getElementsByTagName('LB')[i].getAttribute('code')] = xmlDoc.getElementsByTagName('LB')[i].getElementsByTagName('elem')[j].childNodes[0].nodeValue;
-              }
-            }
-            if(!found){
-              for(var j=0; j<xmlDoc.getElementsByTagName('LB')[i].getElementsByTagName('elem').length; j++){
-                if(xmlDoc.getElementsByTagName('LB')[i].getElementsByTagName('elem')[j].getAttribute('lg')=="EN"){
-                  $('#lb'+cb_attr.indexOf(xmlDoc.getElementsByTagName('LB')[i].getAttribute('code'))+'_label').text(xmlDoc.getElementsByTagName('LB')[i].getElementsByTagName('elem')[j].childNodes[0].nodeValue);
-                  lb_language[xmlDoc.getElementsByTagName('LB')[i].getAttribute('code')] = xmlDoc.getElementsByTagName('LB')[i].getElementsByTagName('elem')[j].childNodes[0].nodeValue;
-                }
-              }
-            }
-          }
-        }
+			.info h4 {
+				margin: 0 0 5px;
+				color: #777;
 			}
 
-      var xhttp3 = new XMLHttpRequest();
-			xhttp3.onreadystatechange = function() {
-				if (this.readyState == 4 && this.status == 200) {
-					getNUTSname(this);
-				}
-			};
-			xhttp3.open("GET", "../datasets/Doc/NUTS_NAME.xml", true);
-			xhttp3.send();
-
-      function getNUTSname(xml) {
-				var xmlDoc = xml.responseXML;
-
-        console.log(xmlDoc.getElementsByTagName('NN')[0]);
-        console.log(xmlDoc.getElementsByTagName('NN')[0].getAttribute('code'));
-        console.log(xmlDoc.getElementsByTagName('NN')[0].getElementsByTagName('elem'));
-        console.log(xmlDoc.getElementsByTagName('NN')[0].getElementsByTagName('elem')[0].childNodes[0].nodeValue);
-
-
-        for(var i = 0; i < xmlDoc.getElementsByTagName('NN').length; i++){
-          nuts_mapping[xmlDoc.getElementsByTagName('NN')[i].getAttribute('code')]=xmlDoc.getElementsByTagName('NN')[i].getElementsByTagName('elem')[0].childNodes[0].nodeValue;
-        }
+			.legend {
+				text-align: left;
+				line-height: 18px;
+				color: #555;
+				/*width: 120px;*/
 			}
 
+			.legend i {
+				width: 40px;
+				height: 18px;
+				float: left;
+				margin-right: 21px;
+				opacity: 1;
+			}
 
-          drawMap(nuts0_data);
+			select { text-indent: 20px; }
 
-          function selectNuts(option) {
-            drawMap(window[option.value]);
-          }
+			.filter_panel {
+				position: absolute;
+				//background-color: #DDD;
+				z-index:10006;
+				font-size: 14px;
+				height: 575px;
+				top:0;
+				padding-top:25px;
+				width:450px!important;
+				background:rgba(255,255,255,0.8);
+				box-shadow: 0 0 15px rgba(0,0,0,0.2);
+			}
 
-          function drawMap(statesData){
+			#openFilterPanel {
+				position: relative;
+				top:115px;
+				z-index:9999;
+				background-image:url(images/Filter.svg);
+				width:30px;
+				height: 30px;
+			}
 
-              var myNode = document.getElementById("map_container");
-              while (myNode.firstChild) {
-                myNode.removeChild(myNode.firstChild);
-              }
-              $("#map_container").append("<div id='map'></div>");
+			#closeFilterPanel {
+				width:30px;
+				height: 30px;
+				background-image:url(images/ic_highlight_off_black_24px.svg);
+				position: relative;
+				top:6px;
+				left:308px;
+				background-color:transparent;
+				background-repeat: no-repeat;
+				border:none;
+			}
 
-              var map = L.map('map').setView([52, 15], 4);
+			.filters_title {
+				margin: 8px 8px 8px 3px;
+			}
 
-			var cartodbAttribution = '&copy; <a target="_blank" href="http://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, Credit; <a target="_blank" href="http://ec.europa.eu/eurostat/web/gisco/overview">EC-GISCO</a>';
+			.filter-button{
+				position: relative;
+				z-index: 10007;
+				top: -10px;
+				height: 25px;
+				width: 154px;
+				background-color: #F9F9F9;
+				border: 1px solid #777;
+				background-image:url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxOCIgaGVpZ2h0PSIxOCIgdmlld0JveD0iMCAwIDE4IDE4Ij4KICAgIDxwYXRoIGQ9Ik01IDhsNCA0IDQtNHoiLz4KICAgIDxwYXRoIGQ9Ik0wIDBoMTh2MThIMHoiIGZpbGw9Im5vbmUiLz4KPC9zdmc+Cg==);
+				background-repeat:no-repeat;
+				background-position: right;
+			}
 
-			var positron = L.tileLayer('http://europa.eu/webtools/maps/tiles/coast/{z}/{y}/{x}', {
-				attribution: cartodbAttribution
-			}).addTo(map);
+			#mainActivity-filter-button {
+				right: 0px;
+			}
+
+			#legalBasis-filter-button {
+				right: 5px;
+			}
+
+			#nuts-filter-button {
+				right: 10px;
+			}
+
+			#NUTS-filter-button {
+				float: left;
+				z-index: 10007;
+				position: relative;
+				top: -10px;
+				left:258px;
+				border: 1px solid #777;
+			}
+
+			#NUTS-filter-dd {
+				height: 23px;
+				width: 130px;
+			}
+
+			#mainActivity_filterColumn {
+				display:none;
+				padding-left:10px;
+			}
+
+			#legalBasis_filterColumn {
+				display:none;
+				padding-left:10px;
+			}
+
+			#nuts_filterColumn {
+				display:none;
+				padding-left:10px;
+			}
+
+			#tenders-list {
+				position:absolute;
+				top:32px;
+				left:155px;
+				text-align:center;
+				font: 14px/16px Arial, Helvetica, sans-serif;
+				z-index: 10006;
+				//background-color: #EEE;
+				width: 645px;
+				display: none;
+				padding-bottom:23px;
+				background:rgba(255,255,255,0.8);
+				box-shadow: 0 0 15px rgba(0,0,0,0.2);
+				border-radius: 5px;
+			}
+
+			.click-div {
+				width:900px;
+				height:600px;
+				z-index:10005;
+				position:absolute;
+				top:0;
+				left:0;
+				display: none;
+			}
+
+			.leaflet-control-zoom {
+				margin-top: 30px!important;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div class="click-div"></div>
+
+		<div id="map_frame">
+			<button class="filter-button" id="mainActivity-filter-button" onclick="openMAPanel()">Main activities</button>
+			<button class="filter-button" id="legalBasis-filter-button" onclick="openLBPanel()">Legal Basis</button>
+			<button class="filter-button" id="nuts-filter-button" onclick="openNUTSPanel()">NUTS</button>
+			<div class="filter_panel" id="mainActivity_filterColumn">
+				<form>
+					<input id="mamain0" class="main-cb" type="checkbox" name="mainActivity" checked onClick="JavaScript:setColors(this)"><label id="ma-title-0" for="mamain0" class="filters_title" style="font-weight:bold;">Main activities for notices publishes by a contracting authority</label><br>
+					&emsp;<input class="mamain0" id= "ma0" type="checkbox" name="mainActivity" value="A" checked onClick="JavaScript:setColors(this)"><label id="ma0_label" for="ma0">Housing and community amenities</label><br>
+					&emsp;<input class="mamain0" id= "ma1" type="checkbox" name="mainActivity" value="B" checked onClick="JavaScript:setColors(this)"><label id="ma1_label" for="ma1">Social protection</label><br>
+					&emsp;<input class="mamain0" id= "ma2" type="checkbox" name="mainActivity" value="C" checked onClick="JavaScript:setColors(this)"><label id="ma2_label" for="ma2">Recreation, culture and religion</label><br>
+					&emsp;<input class="mamain0" id= "ma3" type="checkbox" name="mainActivity" value="D" checked onClick="JavaScript:setColors(this)"><label id="ma3_label" for="ma3">Defence</label><br>
+					&emsp;<input class="mamain0" id= "ma4" type="checkbox" name="mainActivity" value="E" checked onClick="JavaScript:setColors(this)"><label id="ma4_label" for="ma4">Environment</label><br>
+					&emsp;<input class="mamain0" id= "ma5" type="checkbox" name="mainActivity" value="F" checked onClick="JavaScript:setColors(this)"><label id="ma5_label" for="ma5">Economic and financial affairs</label><br>
+					&emsp;<input class="mamain0" id= "ma6" type="checkbox" name="mainActivity" value="H" checked onClick="JavaScript:setColors(this)"><label id="ma6_label" for="ma6">Health</label><br>
+					&emsp;<input class="mamain0" id= "ma7" type="checkbox" name="mainActivity" value="I" checked onClick="JavaScript:setColors(this)"><label id="ma7_label" for="ma7">Airport-related activities</label><br>
+					&emsp;<input class="mamain0" id= "ma8" type="checkbox" name="mainActivity" value="K" checked onClick="JavaScript:setColors(this)"><label id="ma8_label" for="ma8">Port-realted activities / Maritime or inland waterways</label><br>
+					&emsp;<input class="mamain0" id= "ma9" type="checkbox" name="mainActivity" value="L" checked onClick="JavaScript:setColors(this)"><label id="ma9_label" for="ma9">Education</label><br>
+					&emsp;<input class="mamain0" id= "ma10" type="checkbox" name="mainActivity" value="S" checked onClick="JavaScript:setColors(this)"><label id="ma10_label" for="ma10">General public services</label><br>
+					&emsp;<input class="mamain0" id= "ma11" type="checkbox" name="mainActivity" value="U" checked onClick="JavaScript:setColors(this)"><label id="ma11_label" for="ma11">Public order and safety</label><br>
+					<input id="mamain1" class="main-cb" type="checkbox" name="mainActivity" checked onClick="JavaScript:setColors(this)"><label id="ma-title-1" for="mamain1" class="filters_title" style="font-weight:bold;">Main activities for notices publishes by a contracting entity</label><br>
+					&emsp;<input class="mamain1" id= "ma12" type="checkbox" name="mainActivity" value="G" checked onClick="JavaScript:setColors(this)"><label id="ma12_label" for="ma12">Production, transport and distribution of gas and heat</label><br>
+					&emsp;<input class="mamain1" id= "ma13" type="checkbox" name="mainActivity" value="J" checked onClick="JavaScript:setColors(this)"><label id="ma13_label" for="ma13">Extraction of gas and oil</label><br>
+					&emsp;<input class="mamain1" id= "ma14" type="checkbox" name="mainActivity" value="M" checked onClick="JavaScript:setColors(this)"><label id="ma14_label" for="ma14">Exploration and extraction of coal and other solid fuels</label><br>
+					&emsp;<input class="mamain1" id= "ma15" type="checkbox" name="mainActivity" value="N" checked onClick="JavaScript:setColors(this)"><label id="ma15_label" for="ma15">Electricity</label><br>
+					&emsp;<input class="mamain1" id= "ma16" type="checkbox" name="mainActivity" value="P" checked onClick="JavaScript:setColors(this)"><label id="ma16_label" for="ma16">Postal services</label><br>
+					&emsp;<input class="mamain1" id= "ma17" type="checkbox" name="mainActivity" value="R" checked onClick="JavaScript:setColors(this)"><label id="ma17_label" for="ma17">Railway services</label><br>
+					&emsp;<input class="mamain1" id= "ma18" type="checkbox" name="mainActivity" value="S" checked onClick="JavaScript:setColors(this)"><label id="ma18_label" for="ma18">General public services</label><br>
+					&emsp;<input class="mamain1" id= "ma19" type="checkbox" name="mainActivity" value="T" checked onClick="JavaScript:setColors(this)"><label id="ma19_label" for="ma19">Urban railway/light rail, metro, tramway, trolleybus or bus services</label><br>
+					&emsp;<input class="mamain1" id= "ma20" type="checkbox" name="mainActivity" value="W" checked onClick="JavaScript:setColors(this)"><label id="ma20_label" for="ma20">Water</label><br>
+					<input id="mamain2" class="main-cb" type="checkbox" name="mainActivity" checked onClick="JavaScript:setColors(this)"><label id="ma-title-2" for="mamain2" class="filters_title" style="font-weight:bold;">Other activity</label><br>
+					&emsp;<input class="mamain2" id= "ma21" type="checkbox" name="mainActivity" value="O" checked onClick="JavaScript:setColors(this)"><label id="ma21_label" for="ma21">Other activity</label><br>
+				</form>
+			</div>
+			<div id="legalBasis_filterColumn" class="filter_panel">
+				<form action="/action_page.php" method="get">
+					<h4 id="lb-title-0" class="filters_title">Legal basis</h4>
+					<input id= "lb0" type="checkbox" name="legalBasis" value="2004/18/EC" checked onClick="JavaScript:setColors(this)">Classical Directive (2004/18/EC)<br>
+					<input id= "lb1" type="checkbox" name="legalBasis" value="2004/17/EC" checked onClick="JavaScript:setColors(this)">Utilities Directive (2004/17/EC)<br>
+					<input id= "lb2" type="checkbox" name="legalBasis" value="2009/81/EC" checked onClick="JavaScript:setColors(this)">Defence Directive (2009/81/EC)<br>
+					<input id= "lb3" type="checkbox" name="legalBasis" value='1370/2007' checked onClick="JavaScript:setColors(this)">Regulation "Public passenger transport" (1370/2007)<br>
+					<input id= "lb4" type="checkbox" name="legalBasis" value="2014/23/EU" checked onClick="JavaScript:setColors(this)">Concession contract Directive (2014/23/EU)<br>
+					<input id= "lb5" type="checkbox" name="legalBasis" value="2014/24/EU" checked onClick="JavaScript:setColors(this)">Public procurement Directive (2014/24/EU)<br>
+					<input id= "lb6" type="checkbox" name="legalBasis" value="2014/25/EU" checked onClick="JavaScript:setColors(this)">Utilities (water, energy, transport and postal services) Directive (2014/25/EU)<br>
+				</form>
+			</div>
+			<div id="nuts_filterColumn" class="filter_panel">
+				<form action="/action_page.php" method="get">
+					<h4 class="filters_title">NUTS</h4>
+					<input type="radio" name="nuts" value="nuts0_data" checked onClick="JavaScript:selectNuts(this)">NUTS 0<br>
+					<input type="radio" name="nuts" value="nuts1_data" onClick="JavaScript:selectNuts(this)">NUTS 1<br>
+					<input type="radio" name="nuts" value="nuts2_data" onClick="JavaScript:selectNuts(this)">NUTS 2<br>
+					<input type="radio" name="nuts" value='nuts3_data' onClick="JavaScript:selectNuts(this)">NUTS 3<br>
+				</form>
+			</div>
+			<div id="map_container" style="position:absolute;top:0;">
+				<div id='map'></div>
+			</div>
+		</div>
+
+		<div id="tenders-list" class="tenders_list" style="overflow-y:auto;">
+			<button id="closeFilterPanel" onclick="closeTendersList()"></button>
+			<div style="text-align:center;">
+				<h1 id="list-header" style="margin-top:2px;"></h1>
+				<h1 id='list-nuts-name'></h1>
+			</div>
+			<div id="list" style="height:420px; overflow-y:scroll; width:100%;"></div>
+		</div>
+
+		<script type="text/javascript" src="../datasets/languages.js"></script>
+		<script type="text/javascript" src="../datasets/TEDdata.js"></script>
+		<script type="text/javascript" src="../datasets/nuts_0.js"></script>
+		<script type="text/javascript" src="../datasets/nuts_1.js"></script>
+		<script type="text/javascript" src="../datasets/nuts_2.js"></script>
+		<script type="text/javascript" src="../datasets/nuts_3.js"></script>
+		<script type="text/javascript">
+			$(document).bind('click', function(e) {
+					if ($(e.target).hasClass("click-div"))
+					{
+						$("#tenders-list").hide();
+						$('#legalBasis_filterColumn').hide();
+						$('#mainActivity_filterColumn').hide();
+						$('#nuts_filterColumn').hide();
+						$('.click-div').hide();
+					}
+				});
+
+				var filtersList = [ "A", "B", "C", "D", "E", "F", "H", "I", "K", "L", "S", "U",
+									"G", "J", "M", "N", "P", "R", "S", "T", "W", "O",
+									"2004/18/EC", "2004/17/EC",
+									"2009/81/EC",
+									'1370/2007',
+									"2014/23/EU",
+									"2014/24/EU",
+									"2014/25/EU"];
+				var cb_attr = ["A", "B", "C", "D", "E", "F", "H", "I", "K", "L", "S",
+							   "U", "G", "J", "M", "N", "P", "R", "S", "T", "W", "O"];
+				var cb_attr_lb = ["2004/18/EC", 
+								  "2004/17/EC",
+								  "2009/81/EC",
+								  '1370/2007',
+								  "2014/23/EU",
+								  "2014/24/EU",
+								  "2014/25/EU"];
+				var ma_language={};
+				var lb_language={};
+				var nuts_mapping={};
+				var geojson;
+				var scale;
+
+				function closeTendersList() {
+					$("#tenders-list").hide();
+					$('.click-div').hide();
+				}
+
+				function openMAPanel(){
+					$('#legalBasis_filterColumn').hide();
+					$('#nuts_filterColumn').hide();
+					$("#tenders-list").hide();
+					if($('#mainActivity_filterColumn').is(':visible')){
+						$('#mainActivity_filterColumn').hide();
+						('.click-div').hide();
+					}
+					else {
+						$('.click-div').show();
+						$('#mainActivity_filterColumn').show();
+					}
+				}
+
+				function openLBPanel(){
+					$('#mainActivity_filterColumn').hide();
+					$('#nuts_filterColumn').hide();
+					$("#tenders-list").hide();
+					if($('#legalBasis_filterColumn').is(':visible')){
+						$('#legalBasis_filterColumn').hide();
+						$('.click-div').hide();
+					}
+					else {
+						$('.click-div').show();
+						$('#legalBasis_filterColumn').show();
+					}
+				}
+
+				function openNUTSPanel(){
+					$('#mainActivity_filterColumn').hide();
+					$('#legalBasis_filterColumn').hide();
+					$("#tenders-list").hide();
+					if($('#nuts_filterColumn').is(':visible')){
+						$('#nuts_filterColumn').hide();
+						$('.click-div').hide();
+					}
+					else {
+						$('.click-div').show();
+						$('#nuts_filterColumn').show();
+					}
+				}
+
+				var userLang = navigator.language || navigator.userLanguage;
+				console.log(userLang);
+				if(!texts[userLang]){
+					userLang = 'en-US';
+				}
+				$('#list-header').text(texts[userLang].tList);
+				$('#mainActivity-filter-button').text(texts[userLang].mainActivities);
+				$('#legalBasis-filter-button').text(texts[userLang].legalBasis);
+				$('#ma-title-0').text(texts[userLang].matitle0);
+				$('#ma-title-1').text(texts[userLang].matitle1);
+				$('#ma-title-2').text(texts[userLang].matitle2);
+				$('#lb-title-0').text(texts[userLang].legalBasis);
+
+				var xmlLang = userLang.split('-')[0].toUpperCase();
+
+				var xhttp = new XMLHttpRequest();
+				xhttp.onreadystatechange = function() {
+					if (this.readyState == 4 && this.status == 200) {
+						updateLabels(this);
+					}
+				};
+				xhttp.open("GET", "../datasets/Doc/code_mainactivities.xml", true);
+				xhttp.send();
+
+				function updateLabels(xml) {
+					var xmlDoc = xml.responseXML;
+					var x = xmlDoc.getElementsByTagName('MA')[0].getElementsByTagName('elem')[0];
+					var y = x.childNodes[0];
+
+					for(var i = 0; i < xmlDoc.getElementsByTagName('MA').length; i++){
+						if(cb_attr.indexOf(xmlDoc.getElementsByTagName('MA')[i].getAttribute('code')) > -1){
+							for(var j=0; j<xmlDoc.getElementsByTagName('MA')[i].getElementsByTagName('elem').length; j++){
+								if(xmlDoc.getElementsByTagName('MA')[i].getElementsByTagName('elem')[j].getAttribute('lg')==xmlLang){
+									$('#ma'+cb_attr.indexOf(xmlDoc.getElementsByTagName('MA')[i].getAttribute('code'))+'_label').text(xmlDoc.getElementsByTagName('MA')[i].getElementsByTagName('elem')[j].childNodes[0].nodeValue);
+									ma_language[xmlDoc.getElementsByTagName('MA')[i].getAttribute('code')] = xmlDoc.getElementsByTagName('MA')[i].getElementsByTagName('elem')[j].childNodes[0].nodeValue;
+								}
+							}
+						}
+					}
+				}
+
+				var xhttp2 = new XMLHttpRequest();
+					xhttp2.onreadystatechange = function() {
+						if (this.readyState == 4 && this.status == 200) {
+							updateLabelsLB(this);
+						}
+					};
+				xhttp2.open("GET", "../datasets/Doc/LegalBasis.xml", true);
+				xhttp2.send();
+
+				function updateLabelsLB(xml) {
+					var xmlDoc = xml.responseXML;
+					var x = xmlDoc.getElementsByTagName('LB')[0].getElementsByTagName('elem')[0];
+					var y = x.childNodes[0];
+					for(var i = 0; i < xmlDoc.getElementsByTagName('LB').length; i++){
+						if(cb_attr_lb.indexOf(xmlDoc.getElementsByTagName('LB')[i].getAttribute('code')) > -1){
+							var found=false;
+							for(var j=0; j<xmlDoc.getElementsByTagName('LB')[i].getElementsByTagName('elem').length; j++){
+								if(xmlDoc.getElementsByTagName('LB')[i].getElementsByTagName('elem')[j].getAttribute('lg')==xmlLang){
+									found=true;
+									$('#lb'+cb_attr.indexOf(xmlDoc.getElementsByTagName('LB')[i].getAttribute('code'))+'_label').text(xmlDoc.getElementsByTagName('LB')[i].getElementsByTagName('elem')[j].childNodes[0].nodeValue);
+									lb_language[xmlDoc.getElementsByTagName('LB')[i].getAttribute('code')] = xmlDoc.getElementsByTagName('LB')[i].getElementsByTagName('elem')[j].childNodes[0].nodeValue;
+								}
+							}
+							if(!found){
+								for(var j=0; j<xmlDoc.getElementsByTagName('LB')[i].getElementsByTagName('elem').length; j++){
+									if(xmlDoc.getElementsByTagName('LB')[i].getElementsByTagName('elem')[j].getAttribute('lg')=="EN"){
+									$('#lb'+cb_attr.indexOf(xmlDoc.getElementsByTagName('LB')[i].getAttribute('code'))+'_label').text(xmlDoc.getElementsByTagName('LB')[i].getElementsByTagName('elem')[j].childNodes[0].nodeValue);
+									lb_language[xmlDoc.getElementsByTagName('LB')[i].getAttribute('code')] = xmlDoc.getElementsByTagName('LB')[i].getElementsByTagName('elem')[j].childNodes[0].nodeValue;
+									}
+								}
+							}
+						}
+					}
+				}
+
+				var xhttp3 = new XMLHttpRequest();
+				xhttp3.onreadystatechange = function() {
+					if (this.readyState == 4 && this.status == 200) {
+						getNUTSname(this);
+					}
+				};
+				xhttp3.open("GET", "../datasets/Doc/NUTS_NAME.xml", true);
+				xhttp3.send();
+
+				function getNUTSname(xml) {
+					var xmlDoc = xml.responseXML;
+					console.log(xmlDoc.getElementsByTagName('NN')[0]);
+					console.log(xmlDoc.getElementsByTagName('NN')[0].getAttribute('code'));
+					console.log(xmlDoc.getElementsByTagName('NN')[0].getElementsByTagName('elem'));
+					console.log(xmlDoc.getElementsByTagName('NN')[0].getElementsByTagName('elem')[0].childNodes[0].nodeValue);
+					for(var i = 0; i < xmlDoc.getElementsByTagName('NN').length; i++){
+						nuts_mapping[xmlDoc.getElementsByTagName('NN')[i].getAttribute('code')]=xmlDoc.getElementsByTagName('NN')[i].getElementsByTagName('elem')[0].childNodes[0].nodeValue;
+					}
+				}
+
+				drawMap(nuts0_data);
+
+				function selectNuts(option) {
+					drawMap(window[option.value]);
+				}
+
+				function drawMap(statesData){
+					var myNode = document.getElementById("map_container");
+					while (myNode.firstChild) {
+						myNode.removeChild(myNode.firstChild);
+					}
+					$("#map_container").append("<div id='map'></div>");
+					var map = L.map('map').setView([52, 15], 4);
+					var cartodbAttribution = '&copy; <a target="_blank" href="http://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, Credit; <a target="_blank" href="http://ec.europa.eu/eurostat/web/gisco/overview">EC-GISCO</a>';
+					var positron = L.tileLayer('http://europa.eu/webtools/maps/tiles/coast/{z}/{y}/{x}', {
+						attribution: cartodbAttribution
+					}).addTo(map);
+					// control that shows state info on hover
+					var info = L.control();
+					info.onAdd = function (map) {
+						this._div = L.DomUtil.create('div', 'info');
+						this.update();
+						return this._div;
+					};
+					info.update = function (props) {
+						var nbrTenders;
+						if(props) {
+							if(TEDdata[props.NUTS_ID] == undefined){
+								nbrTenders = 0;
+							} else {
+								nbrTenders = getNumberOfTenders(props.NUTS_ID);
+							}
+						}
+						this._div.innerHTML = (props ?
+							'<b>' + nuts_mapping[props.NUTS_ID] + '</b><br />' + texts[userLang].nTenders + nbrTenders
+						: texts[userLang].hover);
+					};
+					info.addTo(map);
+
+					function style(feature) {
+						return {
+							weight: 1,
+							opacity: 1,
+							color: 'white',
+							fillOpacity: 1,
+							/* fillColor: getColor(feature.properties.density)*/
+						};
+					}
+
+					function highlightFeature(e) {
+						var layer = e.target;
+						layer.setStyle({
+							fillOpacity: 0.7
+						});
+						if (!L.Browser.ie && !L.Browser.opera && !L.Browser.edge) {
+							layer.bringToFront();
+						}
+						info.update(layer.feature.properties);
+					}
+
+					function resetHighlight(e) {
+						var layer = e.target;
+						layer.setStyle({
+							fillOpacity: 1
+						});
+						if (!L.Browser.ie && !L.Browser.opera && !L.Browser.edge) {
+							layer.bringToBack();
+						}
+						info.update();
+					}
+
+					function zoomToFeature(e) {
+						map.fitBounds(e.target.getBounds());
+					}
+
+					function onEachFeature(feature, layer) {
+						layer.on({
+							mouseover: highlightFeature,
+							mouseout: resetHighlight,
+							click: updatePanel
+						});
+					}
+
+					geojson = L.geoJson(statesData, {
+						style: style,
+						onEachFeature: onEachFeature
+					}).addTo(map);
 
 
+					function updatePanel(e){
+						$('#mainActivity_filterColumn').hide();
+						$('#legalBasis_filterColumn').hide();
+						if($('#tenders-list').is(':visible')){
+							$('#tenders-list').hide();
+						}
+						else {
+							$('#list-nuts-name').text('('+nuts_mapping[e.target.feature.properties.NUTS_ID]+')');
+							$('#tenders-list').show();
+							$('.click-div').show();
+							var myNode = document.getElementById("list");
+							while (myNode.firstChild) {
+								myNode.removeChild(myNode.firstChild);
+							}
+							if(TEDdata[e.target.feature.properties.NUTS_ID] == undefined){
+								$('#list').append('<h3 style="text-align:center;">'+texts[userLang].noTenders+'</h3>');
+							}
+							else {
+								$('#list').append("<div id='first-col' style='width:130px; float:left; text-align:left; padding-left:10px;'></div>");
+								$('#first-col').append('<h3>ID</h3>');
+								$('#list').append("<div id='second-col' style='width:245px; float:left; text-align:left;'></div>");
+								$('#second-col').append('<h3>'+texts[userLang].mainActivities+'</h3>');
+								$('#list').append("<div id='third-col' style='width:210px; float:left; text-align:left;'></div>");
+								$('#third-col').append('<h3>'+texts[userLang].legalBasis+'</h3>');
+								for (var t in TEDdata[e.target.feature.properties.NUTS_ID]){
+									if( filtersList.indexOf(TEDdata[e.target.feature.properties.NUTS_ID][t]['MA'][0]) >= 0
+										&& filtersList.indexOf(TEDdata[e.target.feature.properties.NUTS_ID][t]['LB'][0]) >= 0) {
+										var url = "http://ted.europa.eu/udl?uri=TED:NOTICE:" + TEDdata[e.target.feature.properties.NUTS_ID][t]['ID'][0] + ":TEXT:EN:HTML";
+										$('#list').append( "<div class='row' style='width:100%;'>"+
+											"<div style='width:130px; float:left; text-align:left; padding-left:10px;'>"+
+												'<a target="_blank" href='+url+'>'+TEDdata[e.target.feature.properties.NUTS_ID][t]['ID'][0]+'</a>'+
+												"</div>"+
+												"<div style='width:245px; float:left; text-align:left;'>"+
+													ma_language[TEDdata[e.target.feature.properties.NUTS_ID][t]['MA'][0]]+
+												"</div>"+
+												"<div style='width:210px; float:left; text-align:left;'>"+
+													lb_language[TEDdata[e.target.feature.properties.NUTS_ID][t]['LB'][0]]+
+												"</div>"+
+											"</div>");
+									}
+								}
+							}
+						}
+					}
 
-               // control that shows state info on hover
-              var info = L.control();
+					var legend = L.control({position: 'bottomright'});
 
-              info.onAdd = function (map) {
-                  this._div = L.DomUtil.create('div', 'info');
-                  this.update();
-                  return this._div;
-              };
+					//define color scale
+					/*var*/ scale = [];
+					var max = 0;
+					geojson.eachLayer(function(layer) {
+						if(TEDdata[layer.feature.properties.NUTS_ID] != undefined) {
+							max =  _.size(TEDdata[layer.feature.properties.NUTS_ID]) > max ?  _.size(TEDdata[layer.feature.properties.NUTS_ID]) : max;
+						}
+					});
 
-              info.update = function (props) {
-                  var nbrTenders;
-                  if(props) {
-                    if(TEDdata[props.NUTS_ID] == undefined){
-                      nbrTenders = 0;
-                    } else {
-                      nbrTenders = getNumberOfTenders(props.NUTS_ID);
-                    }
-                  }
-                  this._div.innerHTML = (props ?
-                      '<b>' + nuts_mapping[props.NUTS_ID] + '</b><br />' + texts[userLang].nTenders + nbrTenders
-                      : texts[userLang].hover);
-              };
+					if(max < 5) {
+						max = 5;
+					}
 
-              info.addTo(map);
+					for(var i=1; i<=5; i++){
+						scale.push(Math.round(max/5)*i);
+					}
 
-              function style(feature) {
-                  return {
-                      weight: 1,
-                      opacity: 1,
-                      color: 'white',
-                      fillOpacity: 1,
-              /* fillColor: getColor(feature.properties.density)*/
-                  };
-              }
+					legend.onAdd = function (map) {
+						var div = L.DomUtil.create('div', 'info legend'),
+							grades = [0, 1, scale[0], scale[1], scale[2], scale[3]],
+							labels = [],
+							from, to;
+						for (var i = 0; i < grades.length; i++) {
+							from = grades[i];
+							to = grades[i+1] -1;
+							labels.push(
+								'<i style="background:' + getColor(from) + '"></i> ' +
+								from + (from==to ? '' : (to ? '&ndash;' + to : '&ndash;' +  scale[4])));
+						}
+						div.innerHTML = labels.join('<br>');
+						return div;
+					};
+					legend.addTo(map);
+					setColors();
+				}
 
-              function highlightFeature(e) {
-                  var layer = e.target;
+				function getNumberOfTenders(nid){
+					var count=0;
+					for (var t in TEDdata[nid]){
+						var idx = filtersList.indexOf(TEDdata[nid][t]['MA'][0]);
+						var idx2 = filtersList.indexOf(TEDdata[nid][t]['LB'][0]);
+						if(idx >= 0 && idx2 >= 0) {
+							count+=1;
+						}
+					}
+					return count;
+				}
 
-                  layer.setStyle({
-                      fillOpacity: 0.7
-                  });
+				function updateCBs(cbID) {
+					if($("#"+cbID).hasClass("main-cb")){
+						if($("#"+cbID).is(":checked")){
+							$('.'+cbID).each(function(){
+								$(this).prop('checked', true);
+								filtersList.push($(this).attr("value"));
+							});
+						}
+						else{
+							$('.'+cbID).each(function(){
+								$(this).prop('checked', false);
+								filtersList.splice(filtersList.indexOf($(this).attr("value")),1);
+							});
+						}
+					}
+					else {
+						if($("#"+cbID).is(":checked")){
+							filtersList.push($("#"+cbID).attr("value"));
+							var uncheckedCount = 0;
+							$('.'+$("#"+cbID).attr("class")).each(function(){
+								if(!$(this).is(':checked')){
+									uncheckedCount+=1;
+								}
+							});
+							if(uncheckedCount > 0){
+								$('#'+$("#"+cbID).attr("class")).prop("indeterminate", false);
+								$('#'+$("#"+cbID).attr("class")).prop('checked', true);
+							}
+							else{
+								$('#'+$("#"+cbID).attr("class")).prop('checked', false);
+								$('#'+$("#"+cbID).attr("class")).prop("indeterminate", true);
+							}
+						}
+						else{
+							filtersList.splice(filtersList.indexOf($("#"+cbID).attr("value")),1);
+							var checkedCount = 0;
+							$('.'+$("#"+cbID).attr("class")).each(function(){
+								if($(this).is(':checked')){
+									checkedCount+=1;
+								}
+							});
+							if(checkedCount == 0){
+								$('#'+$("#"+cbID).attr("class")).prop('checked', false);
+								$('#'+$("#"+cbID).attr("class")).prop("indeterminate", false);
+							}
+							else{
+								$('#'+$("#"+cbID).attr("class")).prop('checked', false);
+								$('#'+$("#"+cbID).attr("class")).prop("indeterminate", true);
+							}
+						}
+					}
+				}
 
-                  if (!L.Browser.ie && !L.Browser.opera && !L.Browser.edge) {
-                      layer.bringToFront();
-                  }
+				function setColors(elem) {
+					if(elem != undefined) {
+						updateCBs(elem.id);
+					}
+					console.log(filtersList);
+					geojson.eachLayer(function(layer) {
+						if(TEDdata[layer.feature.properties.NUTS_ID] != undefined) {
+							var val = getNumberOfTenders(layer.feature.properties.NUTS_ID);
+							layer.setStyle({
+								fillColor: getColor(val)
+							});
+						}
+						else{
+							console.log("undefined")
+							layer.setStyle({
+								fillColor: getColor(0)
+							});
+						}
+					});
+				}
 
-               info.update(layer.feature.properties);
-              }
-
-              function resetHighlight(e) {
-                  var layer = e.target;
-
-                  layer.setStyle({
-                      fillOpacity: 1
-                  });
-
-                  if (!L.Browser.ie && !L.Browser.opera && !L.Browser.edge) {
-                      layer.bringToBack();
-                  }
-
-               info.update();
-              }
-
-              function zoomToFeature(e) {
-                  map.fitBounds(e.target.getBounds());
-              }
-
-              function onEachFeature(feature, layer) {
-                  layer.on({
-                      mouseover: highlightFeature,
-                      mouseout: resetHighlight,
-                      click: updatePanel
-                  });
-              }
-
-              geojson = L.geoJson(statesData, {
-                  style: style,
-                  onEachFeature: onEachFeature
-              }).addTo(map);
-
-
-              function updatePanel(e){
-                $('#mainActivity_filterColumn').hide();
-                $('#legalBasis_filterColumn').hide();
-                if($('#tenders-list').is(':visible')){
-                  $('#tenders-list').hide();
-                }
-                else {
-                  $('#list-nuts-name').text('('+nuts_mapping[e.target.feature.properties.NUTS_ID]+')');
-                  $('#tenders-list').show();
-                  $('.click-div').show();
-                  var myNode = document.getElementById("list");
-                  while (myNode.firstChild) {
-                    myNode.removeChild(myNode.firstChild);
-                  }
-                  if(TEDdata[e.target.feature.properties.NUTS_ID] == undefined){
-                    $('#list').append('<h3 style="text-align:center;">'+texts[userLang].noTenders+'</h3>');
-                  }
-                  else {
-                    $('#list').append("<div id='first-col' style='width:130px; float:left; text-align:left; padding-left:10px;'></div>");
-                    $('#first-col').append('<h3>ID</h3>');
-                    $('#list').append("<div id='second-col' style='width:245px; float:left; text-align:left;'></div>");
-                    $('#second-col').append('<h3>'+texts[userLang].mainActivities+'</h3>');
-                    $('#list').append("<div id='third-col' style='width:210px; float:left; text-align:left;'></div>");
-                    $('#third-col').append('<h3>'+texts[userLang].legalBasis+'</h3>');
-                    for (var t in TEDdata[e.target.feature.properties.NUTS_ID]){
-                      if( filtersList.indexOf(TEDdata[e.target.feature.properties.NUTS_ID][t]['MA'][0]) >= 0
-                          && filtersList.indexOf(TEDdata[e.target.feature.properties.NUTS_ID][t]['LB'][0]) >= 0) {
-                            var url = "http://ted.europa.eu/udl?uri=TED:NOTICE:" + TEDdata[e.target.feature.properties.NUTS_ID][t]['ID'][0] + ":TEXT:EN:HTML";
-                            $('#list').append( "<div class='row' style='width:100%;'>"+
-                                                      "<div style='width:130px; float:left; text-align:left; padding-left:10px;'>"+
-                                                            '<a target="_blank" href='+url+'>'+TEDdata[e.target.feature.properties.NUTS_ID][t]['ID'][0]+'</a>'+
-                                                      "</div>"+
-                                                      "<div style='width:245px; float:left; text-align:left;'>"+
-                                                            ma_language[TEDdata[e.target.feature.properties.NUTS_ID][t]['MA'][0]]+
-                                                      "</div>"+
-                                                      "<div style='width:210px; float:left; text-align:left;'>"+
-                                                            lb_language[TEDdata[e.target.feature.properties.NUTS_ID][t]['LB'][0]]+
-                                                      "</div>"+
-                                                "</div>");
-                            /*$('#first-col').append('<div style="text-align:left;">'+
-                                              '<a target="_blank" href='+url+'>'+TEDdata[e.target.feature.properties.NUTS_ID][t]['ID'][0]+'</a>'+
-                                              '</div>'
-                                              );
-                            $('#second-col').append('<div style="text-align:left;">'+
-                                              ma_language[TEDdata[e.target.feature.properties.NUTS_ID][t]['MA'][0]]+
-                                              '</div>'
-                                              );
-                            $('#third-col').append('<div style="text-align:left;">'+
-                                              lb_language[TEDdata[e.target.feature.properties.NUTS_ID][t]['LB'][0]]+
-                                              '</div>'
-                                            );*/
-                      }
-                    }
-                    /*TEDdata[e.target.feature.properties.NUTS_ID].forEach(function(t){
-                      var url = "http://ted.europa.eu/udl?uri=TED:NOTICE:" + t + ":TEXT:EN:HTML";
-                      $('#list').append('<div style="border-bottom: 0.5px solid grey; text-align:center;"><a target="_blank" href='+url+'>'+t+'</a></div>');
-                    });*/
-                  }
-                }
-              }
-
-              var legend = L.control({position: 'bottomright'});
-
-              //define color scale
-              /*var*/ scale = [];
-              var max = 0;
-              geojson.eachLayer(function(layer) {
-                if(TEDdata[layer.feature.properties.NUTS_ID] != undefined) {
-                  max =  _.size(TEDdata[layer.feature.properties.NUTS_ID]) > max ?  _.size(TEDdata[layer.feature.properties.NUTS_ID]) : max;
-                }
-              });
-
-              if(max < 5) {
-                max = 5;
-              }
-
-              for(var i=1; i<=5; i++){
-                scale.push(Math.round(max/5)*i);
-              }
-
-
-              legend.onAdd = function (map) {
-
-                  var div = L.DomUtil.create('div', 'info legend'),
-                      grades = [0, 1, scale[0], scale[1], scale[2], scale[3]],
-                      labels = [],
-                      from, to;
-
-                  for (var i = 0; i < grades.length; i++) {
-                      from = grades[i];
-                      to = grades[i+1] -1;
-
-                      labels.push(
-                          '<i style="background:' + getColor(from) + '"></i> ' +
-                          from + (from==to ? '' : (to ? '&ndash;' + to : '&ndash;' +  scale[4])));
-                  }
-
-                  div.innerHTML = labels.join('<br>');
-                  return div;
-              };
-
-              legend.addTo(map);
-
-              setColors();
-
-          }
-
-          function getNumberOfTenders(nid){
-            var count=0;
-            for (var t in TEDdata[nid]){
-              var idx = filtersList.indexOf(TEDdata[nid][t]['MA'][0]);
-              var idx2 = filtersList.indexOf(TEDdata[nid][t]['LB'][0]);
-              if(idx >= 0 && idx2 >= 0) {
-                count+=1;
-              }
-            }
-            return count;
-          }
-
-          function updateCBs(cbID) {
-            if($("#"+cbID).hasClass("main-cb")){
-              if($("#"+cbID).is(":checked")){
-                $('.'+cbID).each(function(){
-                  $(this).prop('checked', true);
-                  filtersList.push($(this).attr("value"));
-                });
-              }
-              else{
-                $('.'+cbID).each(function(){
-                  $(this).prop('checked', false);
-                  filtersList.splice(filtersList.indexOf($(this).attr("value")),1);
-                });
-              }
-            }
-            else {
-              if($("#"+cbID).is(":checked")){
-                filtersList.push($("#"+cbID).attr("value"));
-                var uncheckedCount = 0;
-                $('.'+$("#"+cbID).attr("class")).each(function(){
-                  if(!$(this).is(':checked')){
-                    uncheckedCount+=1;
-                  }
-                });
-                if(uncheckedCount > 0){
-                  $('#'+$("#"+cbID).attr("class")).prop("indeterminate", false);
-                  $('#'+$("#"+cbID).attr("class")).prop('checked', true);
-                }
-                else{
-                  $('#'+$("#"+cbID).attr("class")).prop('checked', false);
-                  $('#'+$("#"+cbID).attr("class")).prop("indeterminate", true);
-                }
-              }
-              else{
-                filtersList.splice(filtersList.indexOf($("#"+cbID).attr("value")),1);
-                var checkedCount = 0;
-                $('.'+$("#"+cbID).attr("class")).each(function(){
-                  if($(this).is(':checked')){
-                    checkedCount+=1;
-                  }
-                });
-                if(checkedCount == 0){
-                  $('#'+$("#"+cbID).attr("class")).prop('checked', false);
-                  $('#'+$("#"+cbID).attr("class")).prop("indeterminate", false);
-                }
-                else{
-                  $('#'+$("#"+cbID).attr("class")).prop('checked', false);
-                  $('#'+$("#"+cbID).attr("class")).prop("indeterminate", true);
-                }
-              }
-            }
-          }
-
-          function setColors(elem) {
-              if(elem != undefined) {
-                updateCBs(elem.id);
-              }
-
-              console.log(filtersList);
-
-              geojson.eachLayer(function(layer) {
-                  if(TEDdata[layer.feature.properties.NUTS_ID] != undefined) {
-                    var val = getNumberOfTenders(layer.feature.properties.NUTS_ID);
-                    layer.setStyle({
-                        fillColor: getColor(val)
-                    });
-                  }
-                  else{
-                    console.log("undefined")
-                    layer.setStyle({
-                        fillColor: getColor(0)
-                    });
-                  }
-              });
-          }
-
-          // get color depending on value
-          function getColor(d) {
-              return  d >= scale[3]  ? '#145FAB' :
-                      d >= scale[2]  ? '#0092C2' :
-                      d >= scale[1]  ? '#47B5C0' :
-                      d >= scale[0]  ? '#80CCBA' :
-                      d >= 1         ? '#C5E9B0' :
-                                       '#F5F59C' ;
-          }
-
-
-
-        </script>
-    </body>
+				// get color depending on value
+				function getColor(d) {
+					return  d >= scale[3]  ? '#145FAB' :
+							d >= scale[2]  ? '#0092C2' :
+							d >= scale[1]  ? '#47B5C0' :
+							d >= scale[0]  ? '#80CCBA' :
+							d >= 1		   ? '#C5E9B0' :
+											 '#F5F59C' ;
+				}
+		</script>
+	</body>
 </html>

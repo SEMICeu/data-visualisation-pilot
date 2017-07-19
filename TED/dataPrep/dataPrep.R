@@ -15,7 +15,7 @@ downloadData <- function(pagenum) {
 #                       "&sortField=ND&fields=ND,NUTS,DT,NC,ND,PD,PR,TD,MA,DI",
 #                       "&sortField=ND&fields=AA,AC,CY,DS,MA,NC,ND,OC,OJ,OL,OY,PC,PD,PR,RC,RP,TD,TY,NUTS",
 #                       "&sortField=ND&fields=AA,AC,CY,DI,DS,DT,MA,NC,ND,OC,OJ,OL,OY,PC,PD,PR,RC,RN,RP,TD,TY,NUTS,content",
-"&sortField=ND&fields=ND,RC,MA,DI,TD,PD,DT,PC",
+"&sortField=ND&fields=ND,RC,MA,DI,TD,PD,DT",
   sep="")
   downloadURL <- URLencode(downloadURL)
   downloadData <- readLines(downloadURL, warn="F") 
@@ -89,7 +89,7 @@ save <- TEDData
 
 TEDData <- save
 
-TEDData <- subset(TEDData, select = c("DI","MA","ND", "PC", "RC","TD"))
+TEDData <- subset(TEDData, select = c("DI","MA","ND", "RC","TD"))
 TEDData <- unique(TEDData)
 
 cat(toJSON(TEDData, pretty=TRUE), file = "../Datasets/TEDdataBeforeLoop.js", append = TRUE)
@@ -102,7 +102,7 @@ for (i in 1:nrow(TEDData)) { #for each notice
   noticeYear <- substr(noticeID, 1, 4)
   noticeID <- substr(noticeID, 5, nchar(noticeID))
   noticeID <- paste(noticeID, noticeYear, sep = "-")
-  noticeDescription <- list(ID= noticeID, LB= TEDData$DI[[i]], MA=TEDData$MA[[i]], CPV=TEDData$PC[[i]])
+  noticeDescription <- list(ID= noticeID, LB= TEDData$DI[[i]], MA=TEDData$MA[[i]])
   
   for (j in 1:length(TEDData$RC[[i]])) { # for each NUTS
     NUTSregionName <- TEDData$RC[[i]][j]
@@ -126,3 +126,11 @@ for (i in 1:nrow(TEDData)) { #for each notice
 ### write file ###
 cat('var TEDdata = \n', file = "../Datasets/TEDdata.js")
 cat(toJSON(OutputData, pretty=TRUE), file = "../Datasets/TEDdata.js", append = TRUE)
+
+
+today <- Sys.Date()
+today <- format(today, format="%d/%m/%Y")
+fileConn<-file("../Datasets/UpdateDate.txt")
+write(today, fileConn)
+close(fileConn)
+
