@@ -1,72 +1,91 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
+	<head>
 		<meta charset="utf-8" />
-        <meta http-equiv="Content-Language" content="en">
-        <meta name="description" content="Map of Europe displaying the distribution of registrants.">
-        <meta name="classification" content="04000">
-        <meta name="keywords" content="Information, Visual, European Commission, European Union, EU">
-        <link rel="stylesheet" href="../../main.css"/>
+		<meta http-equiv="Content-Language" content="en">
+		<meta name="description" content="Map of Europe displaying the distribution of registrants.">
+		<meta name="classification" content="04000">
+		<meta name="keywords" content="Information, Visual, European Commission, European Union, EU">
+		<link rel="stylesheet" href="../../main.css"/>
 
-        <!-- social media share -->
-        <script src='http://code.jquery.com/jquery-1.11.0.min.js' type="text/javascript"></script>
-        <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery.jssocials/1.4.0/jssocials.min.js"></script>
-        <link type="text/css" rel="stylesheet" href="https://cdn.jsdelivr.net/jquery.jssocials/1.4.0/jssocials.css" />
-        <link type="text/css" rel="stylesheet" href="https://cdn.jsdelivr.net/jquery.jssocials/1.4.0/jssocials-theme-flat.css" />
-        <script src="https://use.fontawesome.com/bfab9f1eb9.js"></script>
+		<!-- social media share -->
+		<script src='../js/jquery-1.11.0.min.js' type="text/javascript"></script>
+		<script type="text/javascript" src="../js/jssocials.min.js"></script>
+		<link type="text/css" rel="stylesheet" href="../js/jssocials.css" />
+		<link type="text/css" rel="stylesheet" href="../js/jssocials-theme-flat.css" />
+		<script src="../js/bfab9f1eb9.js"></script>
+		<title>EU Transparency Register</title>
+	</head>
 
-        <title>EU Transparency Register</title>
-    </head>
+	<body>
+		<div class="page">
+			<h1>EU Transparency Register</h1>
+			<div class="menu-header">
+				<ul class="menu-header-links">
+				<li class="menu-button"><a class="menu-button" href="../index.html">Home page</a></li>
+				<li class="menu-button"><a class="menu-button" href="../bubbleChart/layout_bubble.html">Fields of interest</a></li>
+				<li class="menu-button"><a class="menu-button" href="../wordCloud/layout_wordcloud.html">EU activities focus</a></li>
+				<li class="menu-button"><a class="menu-button" href="../lineChart/layout_linechart.html">Evolution of registrations</a></li>
+				<li class="menu-button selected"><a class="menu-button selected" href="./layout_leafletMap.html">Distribution of registrants</a></li>
+			  </ul>
+			</div>
 
-    <body>
-        <div class="page">
-            <h1>EU Transparency Register</h1>
-            <div class="menu-header">
-              <ul class="menu-header-links">
-                <li class="menu-button"><a class="menu-button" href="../index.html">Home page</a></li>
-                <li class="menu-button"><a class="menu-button" href="../bubbleChart/layout_bubble.html">Fields of interest</a></li>
-                <li class="menu-button"><a class="menu-button" href="../wordCloud/layout_wordcloud.html">EU activities focus</a></li>
-                <li class="menu-button"><a class="menu-button" href="../lineChart/layout_linechart.html">Evolution of registrations</a></li>
-                <li class="menu-button selected"><a class="menu-button selected" href="./layout_leafletMap.html">Distribution of registrants</a></li>
-              </ul>
-            </div>
+			<div class="explanation">
+				The visualisation on this page allows seeing the distribution of registrants in Europe based on head office figures.
+				<br><br>
+				Note that, given the zoom and position of the map, some territories are not visible on the map (e.g., French Guyanna). To see
+				information about these territories, move and/or reduce the zoom level, dragging the map with your mouse or using the
+				zooming buttons on the top left corner.
+				<div id="share" class="sharing-div"></div>
+			</div>
 
-            <div class="explanation">
-              The visualisation on this page allows seeing the distribution of registrants in Europe based on head office figures.
-              <br><br>
-            Note that, given the zoom and position of the map, some territories are not visible on the map (e.g., French Guyanna). To see
-            information about these territories, move and/or reduce the zoom level, dragging the map with your mouse or using the
-            zooming buttons on the top left corner.
-              <div id="share" class="sharing-div"></div>
-            </div>
-
-            <div class="content">
-                <iframe style="width:100%; height:620px" scrolling="no" src="http://cpsv-ap.semic.eu/data-visualisation-pilot/TransparencyRegister/map/iframe_leafletMap.html"></iframe>
-                <div style="text-align:left">
-                    <b>Embed Code:</b>
+			<div class="content">
+				<iframe style="width:100%; height:620px" scrolling="no" src="http://cpsv-ap.semic.eu/data-visualisation-pilot/TransparencyRegister/map/iframe_leafletMap.html"></iframe>
+				<div style="text-align:left">
+					<b>Embed Code:</b>
 					<input id="embededCodeField" type="text" style="width:100%;"></input>
-                </div>
-            </div>
+				</div>
+			</div>
 
-            <div class="footer">
-                This visualisation has been developed by  <a href="http://www.pwc.be/" target="_blank">PwC EU services</a> for the <a href="http://publications.europa.eu/en/home" target="_blank">Publications Office of the EU</a>
-                using <a href="http://leafletjs.com/" target="_blank">the leafletjs library</a>
-                and is based on datasets provided on the <a href="http://ec.europa.eu/transparencyregister/public/homePage.do" target="_blank">Transparency Register</a>.
-                <br><br>
-                The source code of this visualisation can be found on the following <a href="https://github.com/SEMICeu/data-visualisation-pilot" target="_blank">Github repository</a>.
-            </div>
-        </div>
-        <script>
-          $("#share").jsSocials({
-            showLabel: false,
-            shares: ["email", "twitter", "facebook", "googleplus", "linkedin", "pinterest"]
-          });
-        </script>
+			<div class="footer">
+				This visualisation has been developed by  <a href="http://www.pwc.be/" target="_blank">PwC EU services</a> for the <a href="http://publications.europa.eu/en/home" target="_blank">Publications Office of the EU</a>
+				using <a href="http://leafletjs.com/" target="_blank">the leafletjs library</a>
+				and is based on datasets provided on the <a href="http://ec.europa.eu/transparencyregister/public/homePage.do" target="_blank">Transparency Register</a>.
+				<br><br>
+				The source code of this visualisation can be found on the following <a href="https://github.com/SEMICeu/data-visualisation-pilot" target="_blank">Github repository</a>.
+				<p id="UpdateDate"></p>
+			</div>
+		</div>
+		<script>
+			$("#share").jsSocials({
+				showLabel: false,
+				shares: ["email", "twitter", "facebook", "googleplus", "linkedin", "pinterest"]
+			});
+		</script>
 		<script>
 			var Path = window.location.href;
 			Path = Path.slice(0, Path.lastIndexOf("/")) + "/iframe_leafletMap.html";
 			val = "<iframe style=\"width:990px; height:620px\"  scrolling=\"no\" src=\""+Path+"\"></iframe>";
 			document.getElementById("embededCodeField").value = val;
+			
+			function readTextFile(file)
+			{
+				var rawFile = new XMLHttpRequest();
+				rawFile.open("GET", file, true);
+				rawFile.onreadystatechange = function ()
+				{
+					if(rawFile.readyState === 4)
+					{
+						if(rawFile.status === 200 || rawFile.status == 0)
+						{
+							var allText = rawFile.responseText;
+							document.getElementById("UpdateDate").innerHTML = "This visualisation has been updated the: " + allText;
+						}
+					}
+				}
+				rawFile.send(null);
+			}
+			readTextFile("../Datasets/UpdateDate.txt");
 		</script>
 	</body>
 </html>

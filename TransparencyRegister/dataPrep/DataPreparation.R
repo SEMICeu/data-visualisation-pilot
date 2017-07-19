@@ -388,3 +388,13 @@ write.table(dataLinechart, "../Datasets/Data_linechart.csv", sep = ",", quote = 
 # remove variables
 rm(matching, long, short, listCategory, j, newData, data, dataLinechart)
 
+
+# ---------------------------------------------------------------------------------------------------------------------------------------------
+# VII. UPDATE DATE ############################################################################################################################
+# ---------------------------------------------------------------------------------------------------------------------------------------------
+today <- Sys.Date()
+today <- format(today, format="%d/%m/%Y")
+fileConn<-file("../Datasets/UpdateDate.txt")
+write(today, fileConn)
+close(fileConn)
+
